@@ -1,17 +1,15 @@
 name: Domenico Luciani
-description: My blog
-meta_description: "blogging"
+meta_description: "programming, coding, security, computer science"
 
 markdown: redcarpet
 highlighter: pygments
 logo: false
 paginate: 15
 baseurl: /
-domain_name: 'http://domenicolucianicom'
-google_analytics: 'UA-XXXXXXXX-X'
+domain_name: 'http://domenicoluciani.com'
 
 # Details for the RSS feed generator
-url:            'http://domenicoluciani.com/feed/'
+url:            'http://domenicoluciani.com/feed.xml'
 author:         'Domenico Luciani'
 gems:
     - jekyll-feed

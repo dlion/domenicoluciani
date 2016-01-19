@@ -13,3 +13,5 @@ google_analytics: 'UA-XXXXXXXX-X'
 # Details for the RSS feed generator
 url:            'http://domenicoluciani.com/feed/'
 author:         'Domenico Luciani'
+gems:
+    - jekyll-feed

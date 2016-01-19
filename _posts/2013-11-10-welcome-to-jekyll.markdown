@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2013-11-10 10:18:00
-categories: Thriller Comedy Horror
+title:  "New domain, new blog"
+date:   2016-01-19 23:00:00
+categories: Personal
+cover: http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-320125.jpg
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

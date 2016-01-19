@@ -3,7 +3,7 @@ layout: post
 title:  "New domain, new blog"
 date:   2016-01-19 23:00:00
 categories: Personal
-cover: http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-320125.jpg
+cover: "http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-320125.jpg"
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!

@@ -1,0 +1,15 @@
+name: Domenico Luciani
+description: My blog
+meta_description: "blogging"
+
+markdown: redcarpet
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'http://domenicolucianicom'
+google_analytics: 'UA-XXXXXXXX-X'
+
+# Details for the RSS feed generator
+url:            'http://domenicoluciani.com/feed/'
+author:         'Domenico Luciani'

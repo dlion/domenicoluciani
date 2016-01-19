@@ -49,7 +49,7 @@ post_class: post-template
             {{content}}
         </section>
 
-        {% if page.archive %}
+	{% if page.archive and site.posts.size > 1 %}
         <section class="archive">
             <h5>Archive</h5>
             <ul>

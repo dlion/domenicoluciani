@@ -2,11 +2,6 @@
 	display:inline;
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"syntax"
-;
-
 .emoji {
 	margin: 0px !important;
 	padding: 0px !important;

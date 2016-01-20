@@ -12,7 +12,7 @@ google_analytics: false
 # Details for the RSS feed generator
 url:            'http://domenicoluciani.com/feed.xml'
 author:         'Domenico Luciani'
-bio: Software engineer, runner, maker, computer vision fanatic and IT security lover
+bio: Software engineer, runner, maker, computer vision fanatic and IT security lover.
 location: Palermo, Italy
 website: http://domenicoluciani.com
 gems:

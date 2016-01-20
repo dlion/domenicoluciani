@@ -15,7 +15,7 @@ navigation:
 # Details for the RSS feed generator
 url:            'http://domenicoluciani.com/feed.xml'
 author:         'Domenico Luciani'
-bio: Software engineer, runner, maker, computer vision fanatic and IT security lover. Linkedin: https://it.linkedin.com/in/dlion Github: https://github.com/dlion
+bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover. Linkedin: https://it.linkedin.com/in/dlion Github: https://github.com/dlion'
 location: Palermo, Italy
 website: http://domenicoluciani.com
 gems:

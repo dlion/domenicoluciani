@@ -42,7 +42,9 @@ about: false
                 <img class="author-thumb" src="/assets/images/profile.jpg" alt="Author's profile picture" nopin="nopin" />
                 {{ site.author }}
             {% endif %}
+	    {% if post.categories.size > 0 %}
 		{{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+	    {% endif %}
             <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {{ post.date | date_to_string }}
             </time>

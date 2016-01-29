@@ -30,7 +30,7 @@ I found in the source the css file `media/versioned/20130318210837/themes/deskto
 
 I tried to set a font and to sniff the request using Live HTTP headers, an firefox plugin and I saw this
 
-![four](/asssets/images/posts/workflowy4.jpg)
+![four](/assets/images/posts/workflowy4.jpg)
 
 To change the font the page send a simple `font=serif` parameter to the `/change_settings` route, very interesting! So I tried to reply a request sending `theme=hacker` as parameter and **BAANG** `{"success": true}` I'm in!
 

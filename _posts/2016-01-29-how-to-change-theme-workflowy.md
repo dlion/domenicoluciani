@@ -24,18 +24,18 @@ But for to do that I have to pay...
 
 ### Local sweet Local
 
-I found in the source the css file `media/versioned/20130318210837/themes/desktop.default.css` so using the developers tools I changed that changed that with `media/versioned/20130318210837/themes/desktop.hacker.css` and **TADAAN** everything worked like a charm but I don't even satisfied, I want to know more about it.
+I found in the source the css file `media/versioned/20130318210837/themes/desktop.default.css` so using the developers tools I changed that with `media/versioned/20130318210837/themes/desktop.hacker.css` and **TADAAN** everything worked like a charm but I don't even satisfied, I want to know more about it.
 
 ### May the theme be with you
 
-I tried to set a font and to sniff the request using Live HTTP headers, an firefox plugin and I saw this
+I tried to set a font and to sniff the request using Live HTTP headers, a firefox's plugin and I saw this
 
 ![four](/assets/images/posts/workflowy4.jpg)
 
-To change the font the page send a simple `font=serif` parameter to the `/change_settings` route, very interesting! So I tried to reply a request sending `theme=hacker` as parameter and **BAANG** `{"success": true}` I'm in!
+To change the font the page send a simple `font=serif` parameter to the `/change_settings` route, very interesting! So I tried to reply a request sending `theme=hacker` as parameter and **BAANG** `{"success": true}` I'm *in*!
 
 ![five](/assets/images/posts/workflowy5.jpg)
 
-Check if I'm a **pro** user it's enough to fix it, obviously I reported that to the admin.
+Checking if I'm a **pro** user it's enough to fix it, obviously I reported that to the admin.
 
-Currently I don't want to do else, it's enough, I have my hacker theme setted and I'm happy. :satisfied:
+Currently I don't want to do else, it's enough for me, I have my hacker theme setted and I'm happy now. :satisfied:

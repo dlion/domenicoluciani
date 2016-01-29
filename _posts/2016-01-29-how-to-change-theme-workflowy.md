@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Workflowy, how to change theme with an hack"
+title: "Workflowy, how to change a theme with an hack"
 date: 2016-01-29 01:00:05
-categories: [Past, Programming, Hacking]
+categories: [Past, Programming, Hacking, Security]
 cover: "/assets/images/covers/mrobot.png"
 ---
 

@@ -6,9 +6,9 @@ categories: [Past, Electronics, Programming]
 cover: "/assets/images/covers/joystick.png"
 ---
 
-I found a cool library online to interface my pc with any usb joystick I have in my house... so why not move my cursor pointer with a joystick ?
+I found a cool library online to interface my pc with any usb joystick I have in my house... so why not to move my cursor pointer with a joystick ?
 
-**PLib** is the name of the library that I choose, obviously I made everything on a Linux distro, here the source:
+**PLib** is the name of the library I choose, I obviously I made everything on a Linux distro, here the source:
 
 {% highlight c linenos=table %}
 /*###############################################################################
@@ -73,7 +73,7 @@ int main()
 }
 {% endhighlight %}
 
-The source is very simple and clean: I initialize everything, detect the joystick, get the coords and set the pointer showing everything on the sreen.
+The source is very simple and clear: I initialize everything, detect the joystick, get the coords and set the pointer showing everything on the sreen.
 
 To compile this source:
 

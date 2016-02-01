@@ -1,8 +1,7 @@
 name: Domenico Luciani
 meta_description: "programming, coding, security, computer science"
 
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
 logo: false
 paginate: 15
 baseurl: /

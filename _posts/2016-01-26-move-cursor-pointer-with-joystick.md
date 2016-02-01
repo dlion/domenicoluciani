@@ -10,7 +10,7 @@ I found a cool library online to interface my pc with any usb joystick I have in
 
 **PLib** is the name of the library I choose, I obviously I made everything on a Linux distro, here the source:
 
-{% highlight c linenos=table %}
+```c
 /*###############################################################################
 *# @Author : Domenico Luciani aka DLion
 *# @Description: Simple snippet for move the pointer on the screen using a joystick
@@ -71,7 +71,7 @@ int main()
 
     return 0;
 }
-{% endhighlight %}
+```
 
 The source is very simple and clear: I initialize everything, detect the joystick, get the coords and set the pointer showing everything on the sreen.
 

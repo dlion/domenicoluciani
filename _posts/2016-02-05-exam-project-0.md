@@ -2,7 +2,7 @@
 layout: post
 title: "Exam Project 0"
 date: 2016-02-05 12:25:00
-categories: [ComputerVision, Past, Programming, OpenCV]
+categories: [Past, Programming, ComputerVision, OpenCV]
 cover: "/assets/images/covers/eyes.jpg"
 ---
 

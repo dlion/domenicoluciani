@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ExamProject 0"
+title: "Exam Project 0"
 date: 2016-02-05 12:25:00
 categories: [ComputerVision, Past, Programming, OpenCV]
 cover: "/assets/images/covers/eyes.jpg"

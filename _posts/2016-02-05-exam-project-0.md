@@ -6,7 +6,7 @@ categories: [Past, Programming, ComputerVision, OpenCV]
 cover: "/assets/images/covers/eyes.jpg"
 ---
 
-I'm very fascinated about the possibility to give sight to a machine so for my final high school exam I made a computer vision project
+I'm very fascinated about the possibility to give sight to a machine so for my final high school exam I made a computer vision project...
 
 The project is subdivided in many software that I wrote using the famous OpenCV[^1] libraries.   
 I wrote 5 software in C language and tested on Slackware[^2].

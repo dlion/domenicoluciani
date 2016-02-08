@@ -3,7 +3,7 @@ layout: post
 title: "ToxiProxy node client"
 date: 2016-02-08 10:10:00
 categories: [Past, Programming, Node]
-cover: "http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-158058.jpg"
+cover: "/assets/images/covers/comment.jpg"
 ---
 
 I saw on github a nice tool to test my applications under certain network and system condition to prove that my tests never fail...

@@ -6,13 +6,13 @@ categories: [Past, Programming, Node]
 cover: "/assets/images/covers/comment.jpg"
 ---
 
-I saw on github a nice tool to test my applications under certain network and system condition to prove that my tests never fail...
+I saw on github a nice tool to test my applications under certain networks and system condition to prove that my tests never fail...
 
 [ToxiProxy](https://github.com/shopify/toxiproxy) is the name of this tool, using it you can reproduce latency issues, network limitations, etc.   
 Basically is a TCP proxy, to use it you have to set the configuration options to simulate issues and specific network conditions and after that you have to set it as a proxy on your application, that's all!
 
 ## Clients
-To use it I saw many clients write in many languages:
+To use it I saw many clients written in many languages:
 
 > [toxiproxy-ruby](https://github.com/Shopify/toxiproxy-ruby)   
 > [toxiproxy-go](https://github.com/Shopify/toxiproxy/tree/master/client)   

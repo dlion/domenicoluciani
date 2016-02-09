@@ -1,11 +1,8 @@
 ---
-published: false
+title: "SmagenBot"
 layout: post
-date: {}
-categories: 
-  - Past
-  - Programming
-  - Node
+date: 2016-02-09 12:56:00
+categories: [Past, Programming, Node]
 cover: "http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31309.jpg"
 ---
 

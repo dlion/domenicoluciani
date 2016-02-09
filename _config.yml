@@ -9,7 +9,7 @@ domain_name: 'http://domenicoluciani.com'
 google_analytics: false
 navigation:
     - label: Home
-      url: /
+    - url: /
 
 # Details for the RSS feed generator
 url:            'http://domenicoluciani.com'

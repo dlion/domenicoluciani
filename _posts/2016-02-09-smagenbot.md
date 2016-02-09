@@ -3,7 +3,7 @@ layout: post
 title: "SmagenBot"
 date: 2016-02-09 18:51:00
 categories: [Past, Programming, Node]
-cover: "http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31309.jpg"
+cover: "/assets/images/covers/hal.jpg"
 ---
 
 

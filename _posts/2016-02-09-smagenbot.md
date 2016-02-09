@@ -1,12 +1,17 @@
 ---
-title: "SmagenBot"
+title: SmagenBot
 layout: post
-date: 2016-02-09 12:56:00
-categories: [Past, Programming, Node]
+date: {}
+categories: 
+  - Past
+  - Programming
+  - Node
 cover: "http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-31309.jpg"
+published: true
 ---
 
-I use Telegram, what's app alternative messaging application, it contains more features than what's app and many benefits, one of these is the possibility to create bots and to try it I decided to created one.
+
+I use Telegram, what's app alternative messaging application, it contains more features than what's app and many benefits, one of these is the possibility to create bots and to try it I decided to created one just for fun.
 
 ## Initial Configuration
 For API docs you can see [here](https://core.telegram.org/bots/api), everything is very clear and simple, first of all you have to contact the Father's bot to receive a security token to use and register your bot.

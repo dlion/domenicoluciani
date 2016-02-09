@@ -7,13 +7,13 @@ cover: "/assets/images/covers/hal.jpg"
 ---
 
 
-I use Telegram, what's app alternative messaging application, it contains more features than what's app and many benefits, one of these is the possibility to create bots and to try it I decided to created one just for fun.
+I use Telegram, whatsapp alternative messaging application, it contains more features than whatsapp and many benefits, one of these is the possibility to create bots and to try it I decided to make one just for fun.
 
 ## Initial Configuration
 For API docs you can see [here](https://core.telegram.org/bots/api), everything is very clear and simple, first of all you have to contact the Father's bot to receive a security token to use and register your bot.
 
 ## SmagenBot
-It's a simple plugins based bot wrote in node.js, you can insert new plugins when the bot is alive without restart it and to use it is enough type `/pluginname` this feature allows the bot to ever stay up, to insert new functionalities put a simple script into a `plugins` directory and after that put the name of the plugins in the `list.json` file.
+It's a simple plugins based on bot written in node.js, you can insert new plugins when the bot is alive without restart it and to use it, it is enough to type `/pluginname` this feature allows the bot to stay up always, to insert new functionalities put a simple script into a `plugins` directory and after that put the name of the plugins in the `list.json` file.
 
 ## Plugin's template
 To create a simple plugin you can see many examples in the `plugins` directory, for example to retrieve os information:
@@ -43,10 +43,10 @@ var exec = function (param, cb) {
 module.exports = exec;
 ```
 
-Everything must be done inside the `exec` function and it must be return a callback that returns an array of objects as first parameter and an array of strings as second parameters. The first parameter is composed by an array of objects that contains the information that have to be to returns and the second parameters specify which type of datas will be return and it can be *text*, *photo* and *video*.
+Everything must be done inside the `exec` function and it must be return a callback that returns an array of objects as first parameter and an array of strings as second parameters. The first parameter is composed by an array of objects that contains the information that has to be returned and the second parameter specifies which type of datas will be return and they can be *text*, *photo* and *video*.
 
 Here you can find the repo: [SmagenBot](https://github.com/dlion/smagenBot) 
 
-I made SmagenBot per personal use so I wrote many plugins for my own needs, if you want to contribute with plugins you are welcome!
+I made SmagenBot fo personal use so I wrote many plugins for my own needs, if you want to contribute with plugins you are welcome!
 
 ![Example](/assets/images/posts/smagenbot.png)

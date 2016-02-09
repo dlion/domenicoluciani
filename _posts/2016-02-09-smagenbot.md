@@ -49,4 +49,4 @@ Here you can find the repo: [SmagenBot](https://github.com/dlion/smagenBot)
 
 I made SmagenBot per personal use so I wrote many plugins for my own needs, if you want to contribute with plugins you are welcome!
 
-![Example](https://camo.githubusercontent.com/9a41999bf648a82ef806b235fa1ed5a8a2ede779/687474703a2f2f692e696d6775722e636f6d2f5a4d324d7a4b612e706e67)
+![Example](/assets/images/posts/smagenbot.png)

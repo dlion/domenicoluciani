@@ -12,7 +12,7 @@ navigation:
       url: /
 
 # Details for the RSS feed generator
-url:            'http://domenicoluciani.com/feed.xml'
+url:            'http://domenicoluciani.com'
 author:         'Domenico Luciani'
 bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover. </br>Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a></br>Github: <a href="https://github.com/dlion">https://github.com/dlion</a>'
 location: Palermo, Italy
@@ -20,4 +20,7 @@ website: http://domenicoluciani.com
 gems:
     - jekyll-feed
     - jemoji
+    - jekyll-mentions
+    - jekyll-redirect-from
+    - jekyll-sitemap
 

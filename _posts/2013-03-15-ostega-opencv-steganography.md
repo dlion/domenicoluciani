@@ -10,7 +10,7 @@ The steganography[^1] is a technique that allows to "hide" informations inside a
 
 I named my library **OStega**, the header file contains two functions prototype, one for encrypt and one for decrypt:
 
-###Prototipes
+### Prototipes
 
 ```c
 /*
@@ -199,6 +199,6 @@ You can find the project here: [OStega](https://github.com/dlion/OStega)
 
 * * *
 
-[^1]: https://en.wikipedia.org/wiki/Steganography
+[^1]: [Steganography](https://en.wikipedia.org/wiki/Steganography)
 
 

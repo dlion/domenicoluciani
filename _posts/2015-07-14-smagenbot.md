@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SmagenBot"
-date: 2016-02-09 18:51:00
+date: 2015-07-14 18:51:00
 categories: [Past, Programming, Node]
 cover: "/assets/images/covers/hal.jpg"
 ---

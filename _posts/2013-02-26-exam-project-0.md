@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Exam Project 0"
-date: 2016-02-05 12:25:00
+date: 2013-02-26 12:25:00
 categories: [Past, Programming, ComputerVision, OpenCV]
 cover: "/assets/images/covers/eyes.jpg"
 ---

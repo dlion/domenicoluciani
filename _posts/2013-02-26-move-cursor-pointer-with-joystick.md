@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Move the cursor pointer with a joystick"
-date: 2016-01-26 01:00:00
+date: 2013-02-26 01:00:00
 categories: [Past, Electronics, Programming]
 cover: "/assets/images/covers/joystick.png"
 ---

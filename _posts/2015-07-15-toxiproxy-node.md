@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ToxiProxy node client"
-date: 2016-02-08 10:10:00
+date: 2015-07-15 10:10:00
 categories: [Past, Programming, Node]
 cover: "/assets/images/covers/comment.jpg"
 ---

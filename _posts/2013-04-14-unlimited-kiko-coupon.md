@@ -39,7 +39,7 @@ FB.getLoginStatus(function(response) {
 
 So if I'm logged the application retrieves and saves my `fb_uid` and my `fb_at` otherwise I will redirect to login... very clean.
 
-The UID means "User Identificator", a univoc code to identify an user inside Facebook, the AT means "AccessToken" and it's a random temporary code to use the Facebook's API. To more information you can see the Facebook developers page[^1].
+The UID means "User Identificator", a univocal code to identify an user inside Facebook, the AT means "AccessToken" and it's a random temporary code to use the Facebook's API. To more information you can see the Facebook developers page[^1].
 
 Looking in the code I saw a very interesting thing:
 

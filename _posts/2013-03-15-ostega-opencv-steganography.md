@@ -6,7 +6,7 @@ categories: [Past, Programming, OpenCV]
 cover: "/assets/images/covers/hide.jpg"
 ---
 
-The steganography[^1] is a technique that allows to "hide" informations inside an image or an audio files, it's a very interesting security field, I can hide "secrets" into an image, pass it to my friend and he, using a decoder can read what I wrote. Very useful to keep my "secrets" secret; so I wrote a simple C library to hide words into a bitmap images using the OpenCV libraries just for fun and profit...
+The steganography[^1] is a technique that allows to "hide" information inside an image or an audio files, it's a very interesting security field, I can hide "secrets" into an image, pass it to my friend and he, using a decoder can read what I wrote. Very useful to keep my "secrets" secret; so I wrote a simple C library to hide words into a bitmap images using the OpenCV libraries just for fun and profit...
 
 I named my library **OStega**, the header file contains two functions prototype, one for encrypt and one for decrypt:
 
@@ -35,7 +35,7 @@ char *imgDestega(IplImage*);
 ```
 
 * The first function accepts two parameters: the first one expects an Image and the second a char pointer, it returns an integer to warning you about the result.
-* The second function accepts one paramater: the image that you want to decrypt, it return a char pointer.
+* The second function accepts one parameter: the image that you want to decrypt, it returns a char pointer.
 
 ### imgStega - Encoder
 
@@ -73,11 +73,11 @@ int imgStega(IplImage *img, char *msg)
 ```
 
 As I said before this function accepts two parameters: an image and a message.
-it takes the width of the image and the lenght of the message.
+it takes the width of the image and the length of the message.
 
-**Pay attenction, the image must to be a bitmap, so only .bpm format is supported**
+**Pay attention, the image must be a bitmap, so only .bpm format is supported**
 
-The function creates a string long *msg*+2 and it puts into the first and the last position the `$` character and between these positions it inserts the *msg* so for example we pass "dog" as msg to the function, it's puts into the image "$dog$", the loop cycle loop through the image and every 3 pixels it puts a character of the msg (`$` characters included); if everything is fine it returns 0;
+The function creates a string long *msg*+2 and it puts into the first and the last position the `$` character and between these positions it inserts the *msg* so for example we pass "dog" as msg to the function, it puts into the image "$dog$", the loop cycle loop through the image and every 3 pixels it puts a character of the msg (`$` characters included); if everything is fine it returns 0;
 
 ### imgDestega - Decoder
 
@@ -124,7 +124,7 @@ char *imgDestega(IplImage *img)
 }
 ```
 
-As I said before the decode function accepts one paramater, the image that we want to decode, the algorithm is very clean: we scans the image from 0 to *wid* that is the widht of the image, if we found at the start the character `$` we continue the research and every 3 pixels we put the character on the output buffer until we find again the `$` character.
+The decode function accepts one paramater, the image that we want to decode, the algorithm is very clear: we scans the image from 0 to *wid* that is the width of the image, if we found at the start the character `$` we continue the research and every 3 pixels we put the character on the output buffer until we find again the `$` character.
 
 ### Usage
 
@@ -193,7 +193,7 @@ int main(int argc, char **argv)
 
 I included the necessary libraries and pass through the shell these parameters: `./stega 1 image.bmp Hello` to crypt the word "Hello" into the *image.bmp* image and to decrypt it `./stega 2 image.bmp`
 
-Ok the code sucks, the algorithm is very simple, etc. etc. but this is a little example of as I can use OpenCV to manipulate image's pixels, just to learn something of new, you know.. :yum:
+Ok the code sucks, the algorithm is very simple, etc. etc. but this is a little example of how I can use OpenCV to manipulate image's pixels, just to learn something of new, you know.. :yum:
 
 You can find the project here: [OStega](https://github.com/dlion/OStega)
 

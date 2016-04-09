@@ -1,2 +1,8 @@
 # domenicoluciani
-Domenico Luciani's domain
+
+# Author
+Domenico Luciani
+
+# LICENSE
+Creative Commons
+

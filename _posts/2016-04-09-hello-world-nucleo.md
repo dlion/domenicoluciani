@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Hello World, NUCLEO"
-date: 2016-04-09 17:00:00
-categories: [Programming, Electronics, Nucleo, mbed, ST, Cpp]
+title: "Hello World NUCLEO"
+date: 2016-04-09 17:24:00
+categories: [Programming, Electronics, Nucleo, MBED, ST]
 cover: "/assets/images/covers/helloworldnucleo.jpg"
 ---
 

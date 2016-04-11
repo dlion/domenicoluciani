@@ -4,34 +4,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>{{ site.name }}</title>
+    <title>{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}</title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Twitter Cards -->
-    <meta name="twitter:title" content="{{ site.name }}">
+    <meta name="twitter:title" content="{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site.domain_name}}/assets/images/covers/robot.png">
+    <meta name="twitter:image" content="//{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
 
     <!-- Open Graph -->
     <meta property="og:locale" content="en_EN">
-    <meta property="og:title" content="{{ site.name }}">
-    <meta property="og:url" content="{{ site.domain_name }}">
-    <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.domain_name }}/assets/images/covers/robot.png">
+    <meta property="og:title" content="{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}">
+    <meta property="og:url" content="//{{ site.domain_name }}{% if page.url %}{{page.url}}{% endif %}">
+    <meta property="og:site_name" content="{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}">
+    <meta property="og:image" content="//{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
 
     <!-- Icons -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.domain_name }}/favicon.ico?">
+    <link rel="shortcut icon" type="image/x-icon" href="//{{site.domain_name}}/favicon.ico?">
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//{{site.domain_name}}/assets/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="//{{site.domain_name}}/assets/css/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="//{{site.domain_name}}/assets/css/main.css" />
 
-    <link rel='alternate' type='application/rss+xml' title='RSS' href='/feed.xml'>
+    <link rel='alternate' type='application/rss+xml' title='RSS' href='//{{site.domain_name}}/feed.xml'>
 
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %} nav-closed">
@@ -46,7 +46,7 @@
 
       <footer class="site-footer clearfix">
         <section class="copyright">
-          <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy;
+		<a href="//{{ site.domain_name}}">{{ site.name }}</a> &copy;
                 {{'now' | date: "%Y"}} &bull; All rights reserved.
         </section>
         <section class="poweredby">Proudly published with <a href="https://jekyllrb.com">Jekyll</a>.</section>
@@ -55,8 +55,8 @@
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="//{{site.domain_name}}/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="//{{site.domain_name}}/assets/js/index.js"></script>
 
     {% if site.google_analytics %}
     <!-- Google Analytics Tracking code -->

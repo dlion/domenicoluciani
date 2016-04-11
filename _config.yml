@@ -1,5 +1,6 @@
 name: Domenico Luciani
 meta_description: "programming, coding, security, computer science"
+permalink: '/:year/:month/:day/:title.html'
 
 markdown: kramdown
 logo: false
@@ -16,7 +17,7 @@ url:            'https://domenicoluciani.com'
 author:         'Domenico Luciani'
 bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover. </br>Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a></br>Github: <a href="https://github.com/dlion">https://github.com/dlion</a>'
 location: Palermo, Italy
-website: http://domenicoluciani.com
+website: https://domenicoluciani.com
 gems:
     - jekyll-feed
     - jemoji

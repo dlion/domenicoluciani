@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BLE Nucleo observer"
+title: "BLE NUCLEO observer"
 date: 2016-04-10 20:05:00 +0100
 categories: [Programming, Electronics, Nucleo, MBED, ST, BLE]
 cover: "/assets/images/covers/observer.jpg"

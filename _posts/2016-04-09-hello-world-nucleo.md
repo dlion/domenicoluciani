@@ -21,7 +21,7 @@ Connect your board through usb and mount it (i.e. `mount /dev/sdb /mnt/board`), 
 
 Click on "Compiler", after the init process click on "My Programs" with the right button and select "New Program".   
 Choose your platform, choose "Empty Program" template and insert the name of your program.   
-First of all we have to add to our project an MBED library to work withe the our board; click on the project with the right button and choose "Import Library" and "From Import Wizard".
+First of all we have to add to our project the MBED library to work with the our board; click on the project with the right button and choose "Import Library" and "From Import Wizard".
 
 ![mbed1](/assets/images/posts/mbed1.png)
 
@@ -30,7 +30,7 @@ Search `mbed` and select the first one.
 
 ![mbed2](/assets/images/posts/mbed2.png)
 
-The *mbed* library is the official library by MBED, it provides the main functions to use Nucleo.
+The [mbed](https://developer.mbed.org/users/mbed_official/code/mbed/) library is the official library by MBED, it provides the main functions to use Nucleo.
 
 Now we have to create a new source file; left click on your project icon and on "New File", choosing `main.cpp` as name.
 

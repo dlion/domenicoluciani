@@ -4,7 +4,7 @@ meta_description: "programming, coding, security, computer science"
 markdown: kramdown
 logo: false
 paginate: 15
-baseurl: /
+baseurl: 
 domain_name: 'https://domenicoluciani.com'
 google_analytics: false
 navigation:

@@ -41,7 +41,7 @@ void main(void) {
 }
 ```
 
-To use this software you need to import two libraries: [BLE_API](https://developer.mbed.org/teams/Bluetooth-Low-Energy/code/BLE_API/) and [X_NUCLEO_IDB0XA1](https://developer.mbed.org/teams/ST/code/X_NUCLEO_IDB0XA1/). (Follow the [previous post](/programming/electronics/nucleo/mbed/st/2016/04/09/hello-world-nucleo.html) to know how to do this)
+To use this software you need to import two libraries: [BLE_API](https://developer.mbed.org/teams/Bluetooth-Low-Energy/code/BLE_API/) and [X_NUCLEO_IDB0XA1](https://developer.mbed.org/teams/ST/code/X_NUCLEO_IDB0XA1/). (Follow the [previous post](/2016/04/09/hello-world-nucleo.html) to know how to do this)
 
 The first instruction `ble.init()` initializes the BLE module.
 

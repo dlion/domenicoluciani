@@ -18,7 +18,7 @@
     <!-- Open Graph -->
     <meta property="og:locale" content="en_EN">
     <meta property="og:title" content="{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}">
-    <meta property="og:url" content="//{{ site.domain_name }}{% if page.url %}{{page.url}}{% endif %}">
+    <meta property="og:url" content="{{ site.domain_name }}{% if page.url %}{{page.url}}{% endif %}">
     <meta property="og:site_name" content="{{ site.name }}{%if page.title %} - {{ page.title }}{% endif %}">
     <meta property="og:image" content="//{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
 

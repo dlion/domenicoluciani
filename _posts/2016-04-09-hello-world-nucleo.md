@@ -6,7 +6,7 @@ categories: [Programming, Electronics, Nucleo, MBED, ST]
 cover: "/assets/images/covers/helloworldnucleo.jpg"
 ---
 
-For university reasons now I own a NUCLEO-F401RE board by ST Microeletronics, it works with STM32 microcontrollers, it is arduino compatible, supported by MBED, it has 3 leds and 2 pushbuttons on board; Obviously is fully programmable... but how ? Let's do it!
+For academic purposes now I own a NUCLEO-F401RE board by ST Microeletronics, it works with STM32 microcontrollers, it is arduino compatible, supported by MBED, it has 3 leds and 2 pushbuttons on board; Obviously is fully programmable... but how ? Let's do it!
 
 ## Compiler
 

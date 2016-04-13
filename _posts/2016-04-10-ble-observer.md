@@ -6,7 +6,7 @@ categories: [Programming, Electronics, Nucleo, MBED, ST, BLE]
 cover: "/assets/images/covers/observer.jpg"
 ---
 
-For university reasons I have to work with BLE, a new technology often used nowadays, with a NUCLEO-F401RE board and the NUCLEO-IDB04A1 BLE extension board by ST
+For academic purposes I have to work with BLE, a new technology often used nowadays, with a NUCLEO-F401RE board and the NUCLEO-IDB04A1 BLE extension board by ST
 
 To test it I wrote a small software to discovery a BLE peripheral around me, I named it "BLE Observer".
 

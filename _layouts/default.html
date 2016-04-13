@@ -9,9 +9,11 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{% if page.layout == "post" %} {{page.excerpt | strip_html }} {% else %} {{ site.description }} {% endif %}" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:title" content="{{ site.name }}{%if page.title and page.title != 'Home' %} - {{ page.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.layout == "post" %} {{page.excerpt | strip_html }} {% else %} {{ site.description }} {% endif %}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@dlion92">
     <meta name="twitter:creator" content="@dlion92">
@@ -26,6 +28,8 @@
     <meta property="og:url" content="{{ site.domain_name }}{% if page.url %}{{page.url}}{% endif %}">
     <meta property="og:site_name" content="{{ site.name }}{%if page.title and page.title != 'Home' %} - {{ page.title }}{% endif %}">
     <meta property="og:image" content="{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
+    <meta name="og:description" content="{% if page.layout == "post" %} {{page.excerpt | strip_html }} {% else %} {{ site.description }} {% endif %}"/>
+
 
     <!-- Icons -->
     <link rel="shortcut icon" type="image/x-icon" href="{{site.domain_name}}/favicon.ico?">

@@ -28,7 +28,7 @@
     <meta property="og:url" content="{{ site.domain_name }}{% if page.url %}{{page.url}}{% endif %}">
     <meta property="og:site_name" content="{{ site.name }}{%if page.title and page.title != 'Home' %} - {{ page.title }}{% endif %}">
     <meta property="og:image" content="{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
-    <meta name="og:description" content="{% if page.layout == "post" %} {{page.excerpt | strip_html }} {% else %} {{ site.description }} {% endif %}"/>
+    <meta property="og:description" content="{% if page.layout == "post" %} {{page.excerpt | strip_html }} {% else %} {{ site.description }} {% endif %}"/>
 
 
     <!-- Icons -->

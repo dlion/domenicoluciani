@@ -5,7 +5,7 @@ date: 2013-02-26 16:00:00
 categories: [Past, Programming, ComputerVision, OpenCV]
 cover: "/assets/images/covers/roboteye.png"
 ---
-In the [previous article](https://domenicoluciani.com/2013/02/26/exam-project-0.html) I introduced you my exam project about a computer vision, now I'm going to explain to you how it works but first let me introduce a small header file I wrote to reuse useful functions and structs.
+In the [previous article](https://domenicoluciani.com/2013/02/26/exam-project-0.html) I introduced you my exam project about computer vision, now I'm going to explain to you how it works but first let me introduce a small header file I wrote to reuse useful functions and structs.
 
 Firs of all, you can find the project [here](https://github.com/DLion/ExamProject), you can find the header file in the `lib` directory.
 
@@ -174,12 +174,18 @@ The `leggiConf` (readConfiguration) functions has as parameters two HSV struct p
 
 The opposite of `leggiConf` is the `scriviConf`(writeConfiguration) function, it allows to save the value of the our configuration.
 
-The function `diminuisci`(decrease) allows to decrease the size of an image to a specific percentage choice by us; the function return a pointer to an IplImage struct defined in the OpenCV libraries. Inside the function we create a smaller image using `cvCreateImage` function indicating the size of the new image (width * percentage / 100), the number of bit per pixels and the number of channels (1 to 4) passing it to the function`cvResize` that will deecrease the initial image to adapt it to the final image.
+The function `diminuisci`(decrease) allows to decrease the size of an image to a specific percentage choice by us; the function return a pointer to an *IplImage* struct defined in the OpenCV libraries. Inside the function we create a smaller image using `cvCreateImage` function indicating the size of the new image (width * percentage / 100), the number of bits per pixel and the number of channels (1 to 4) passing it to the function`cvResize` that will deecrease the initial image to adapt it to the final one.
 
-The function `riduciNoise` (reduceNoise) allows to dilate, eroding and in the end smoothing an image passed by param (opening[^2] and closing[^3] operation) looking for avoiding possible false positive.
+The function `riduciNoise` (reduceNoise) allows to dilate, eroding and in the end smoothing an image passed by param (opening[^2] and closing[^3] operation) looking for to avoiding possible false positives.
 
-The function `inserisci` has as parameters a big and a small images and 2 integer; it allows to insert a small image into a bigger one in the coordinates defined by the 2 integer. Inside the function we set a **ROI** that allows us to operate **ONLY** in that region of an image leave intact the rest.
+The function `inserisci` has as parameters a big and a small images and 2 integer; it allows to insert a small image into a bigger one in the coordinates defined by the 2 integers. Inside the function we set a **ROI** that allows us to operate **ONLY** in that region of an image leave intact the rest.
 
 ![ROI](/assets/images/posts/roi.gif)
 
 That's all! In the next posts I will introduce the rest of the project, stay tuned!
+
+* * *
+
+[^1]: [HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
+[^2]: [opening](https://en.wikipedia.org/wiki/Opening_(morphology))
+[^3]: [closing](https://en.wikipedia.org/wiki/Closing_(morphology))

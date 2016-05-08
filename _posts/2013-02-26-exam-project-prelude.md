@@ -174,7 +174,7 @@ The `leggiConf` (readConfiguration) functions has as parameters two HSV struct p
 
 The opposite of `leggiConf` is the `scriviConf`(writeConfiguration) function, it allows to save the value of the our configuration.
 
-The function `diminuisci`(decrease) allows to decrease the size of an image to a specific percentage choice by us; the function return a pointer to an *IplImage* struct defined in the OpenCV libraries. Inside the function we create a smaller image using `cvCreateImage` function indicating the size of the new image (width * percentage / 100), the number of bits per pixel and the number of channels (1 to 4) passing it to the function`cvResize` that will deecrease the initial image to adapt it to the final one.
+The function `diminuisci`(decrease) allows to decrease the size of an image to a specific percentage choice by us; the function returns a pointer to an *IplImage* struct defined in the OpenCV libraries. Inside the function we create a smaller image using `cvCreateImage` function indicating the size of the new image (width * percentage / 100), the number of bits per pixel and the number of channels (1 to 4) passing it to the function`cvResize` that will deecrease the initial image to adapt it to the final one.
 
 The function `riduciNoise` (reduceNoise) allows to dilate, eroding and in the end smoothing an image passed by param (opening[^2] and closing[^3] operation) looking for to avoiding possible false positives.
 

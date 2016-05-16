@@ -9,7 +9,7 @@ cover: "/assets/images/covers/nunchuck.jpg"
 Walking around the city I found a cheap nunchuck and obviously I felt the need to do something. This time I chose to interface my raspberry pi with it.   
 Let's see how!
 
-### What we need
+### What you need
 
 * Breadboard
 * nunchuck (or in this case funchuck)
@@ -47,7 +47,7 @@ I bought "Funchuck" a cheap nunchuck for 5euros.
 
 ### On the raspi
 
-Once you connected everything we need to configure the raspberry to comunicate with the device, I used the [wiringPi](http://wiringpi.com) libraries to do this.
+Once you connected everything you need to configure the raspberry to comunicate with the device, I used the [wiringPi](http://wiringpi.com) libraries to do this.
 
 1. Load the i2c module with `sudo gpio load i2c`
 2. To verify that the device is seen by the raspberry execute `sudo gpio i2cd`, you will have an output like this:
@@ -196,9 +196,9 @@ int comunica(char *buffer, int ndati, int mod)
 }
 ```
 
-Pay attenction, if you have rev-1 raspberry pi rathen than rev-2 you have to change `/dev/i2c-1` with `/dev/i2c-0`
+Pay attention, if you have rev-1 raspberry pi rathen than rev-2 you have to change `/dev/i2c-1` with `/dev/i2c-0`
 
-The device uses the I²C[^1] master/slave protocol and comunicate at 400KHz; to use it we need to provide an initial byte sequence and an address (`0x52` in the our case) to comunicate with the device; this sequence on the original devices is `0x40 0x00` and on the our device is `0xF0 0x55` and at the end we need to send a stop sequence `0x00`. As output we will receive the position of X/Y analogic axes, if we pressed C/Z buttons and the coordinates X/Y/Z axes of accelerometer.
+The device uses the I²C[^1] master/slave protocol and comunicate at 400KHz; to use it you need to provide an initial byte sequence and an address (`0x52` in the our case) to comunicate with the device; this sequence on the original devices is `0x40 0x00` and on the our device is `0xF0 0x55` and at the end you need to send a stop sequence `0x00`. As output you will receive the position of X/Y analogic axes, if you pressed C/Z buttons and the coordinates X/Y/Z axes of accelerometer.
 
 <script type="text/javascript" src="https://asciinema.org/a/8812.js" id="asciicast-8812" async ></script>
 

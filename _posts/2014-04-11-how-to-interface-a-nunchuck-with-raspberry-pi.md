@@ -198,7 +198,7 @@ int comunica(char *buffer, int ndati, int mod)
 
 Pay attention, if you have rev-1 raspberry pi rathen than rev-2 you have to change `/dev/i2c-1` with `/dev/i2c-0`
 
-The device uses the I²C[^1] master/slave protocol and comunicate at 400KHz; to use it you need to provide an initial byte sequence and an address (`0x52` in the our case) to comunicate with the device; this sequence on the original devices is `0x40 0x00` and on the our device is `0xF0 0x55` and at the end you need to send a stop sequence `0x00`. As output you will receive the position of X/Y analogic axes, if you pressed C/Z buttons and the coordinates X/Y/Z axes of accelerometer.
+The device uses the I²C[^1] master/slave protocol and comunicate at 400KHz; to use it you need to provide an initial byte sequence and an address (`0x52` in our case) to comunicate with the device; this sequence on the original devices is `0x40 0x00` and on our device is `0xF0 0x55` and at the end you need to send a stop sequence `0x00`. As output you will receive the position of X/Y analogic axes, if you pressed C/Z buttons and the coordinates X/Y/Z axes of accelerometer.
 
 <script type="text/javascript" src="https://asciinema.org/a/8812.js" id="asciicast-8812" async ></script>
 

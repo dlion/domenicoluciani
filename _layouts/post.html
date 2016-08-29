@@ -75,6 +75,9 @@ post_class: post-template
                     <!-- Author Bio -->
                     {%if site.bio%}
                     <p>{{site.bio}}</p>
+		    {% for link in site.links %}
+			    <p>{{link}}</p>
+		    {% endfor %}
                     {%else%}
                     <p>Read <a href="{{site.domain_name}}">more posts</a> by this author.</p>
                     {%endif%}

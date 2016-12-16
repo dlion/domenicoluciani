@@ -4,6 +4,7 @@ title: "BLE NUCLEO observer"
 date: 2016-04-10 20:05:00 +0100
 categories: [Programming, Electronics, Nucleo, MBED, ST, BLE]
 cover: "/assets/images/covers/observer.jpg"
+lang: en
 ---
 
 For academic purposes I have to work with BLE, a new technology often used nowadays, with a NUCLEO-F401RE board and the NUCLEO-IDB04A1 BLE extension board by ST

@@ -4,6 +4,7 @@ title: "How to interface a nunchuck with raspberry pi"
 date: 2014-04-11 23:00:00
 categories: [Past, Programming, Nunchuck, RaspberryPi, Electronics]
 cover: "/assets/images/covers/nunchuck.jpg"
+lang: en
 ---
 
 Walking around the city I found a cheap nunchuck and obviously I felt the need to do something. This time I chose to interface my raspberry pi with it.   

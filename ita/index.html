@@ -3,6 +3,7 @@ layout: default
 title: Home
 cover: /assets/images/covers/robot.png
 about: false
+lang: ita
 ---
 
 <header class="main-header {%if page.cover%}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
@@ -17,7 +18,7 @@ about: false
             <h1 class="page-title">{{site.name}}</h1>
         </div>
     </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scendi giù</span></a>
 </header>
 
 
@@ -27,9 +28,8 @@ about: false
         {% include pagination.html %}
     </div>
 
+    {% assign paginator.posts=pagination.posts | where:"lang", "ita" %}
 
-    {% assign paginator.posts=paginator.posts | where:"lang", "en" %}
-    
     {% for post in paginator.posts %}
 
     <article class="post">

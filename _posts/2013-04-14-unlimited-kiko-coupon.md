@@ -4,6 +4,7 @@ title: "Unlimited Kiko Coupon"
 date: 2013-04-14 22:12:00
 categories: [Past, Security, Programming]
 cover: "/assets/images/covers/kiko.jpg"
+lang: en
 ---
 
 A few weeks ago I saw a Facebook application that allows to get a coupon to receive a "free nail varnish", it's very simple and clear: Put a "like", insert yours data and done, you will receive your coupon and your free nail varnish, but there is a limitation: You can take it only once.... maybe.

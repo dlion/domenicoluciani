@@ -4,6 +4,7 @@ title: "Exam Project Prelude"
 date: 2013-02-26 16:00:00
 categories: [Past, Programming, ComputerVision, OpenCV]
 cover: "/assets/images/covers/roboteye.png"
+lang: en
 ---
 In the [previous article](https://domenicoluciani.com/2013/02/26/exam-project-0.html) I introduced you my exam project about computer vision, now I'm going to explain to you how it works but first let me introduce a small header file I wrote to reuse useful functions and structs.
 

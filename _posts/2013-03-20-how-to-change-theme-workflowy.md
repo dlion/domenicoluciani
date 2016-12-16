@@ -4,6 +4,7 @@ title: "Workflowy, how to change a theme with an hack"
 date: 2013-03-20 01:00:05
 categories: [Past, Programming, Hacking, Security]
 cover: "/assets/images/covers/mrobot.png"
+lang: en
 ---
 
 I was advised about a nice site that allows to organize my thoughts using many hierarchical lists, every programmer should try it!

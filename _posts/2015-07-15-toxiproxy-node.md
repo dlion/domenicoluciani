@@ -4,6 +4,7 @@ title: "ToxiProxy node client"
 date: 2015-07-15 10:10:00
 categories: [Past, Programming, Node]
 cover: "/assets/images/covers/comment.jpg"
+lang: en
 ---
 
 I saw on github a nice tool to test my applications under certain networks and system condition to prove that my tests never fail...

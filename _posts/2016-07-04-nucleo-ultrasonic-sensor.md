@@ -5,6 +5,7 @@ date: 2016-07-04 10:20:00
 categories: [Programming, Electronics, Nucleo, MBED, ST, ultrasonic, sensor]
 cover: "/assets/images/covers/ultrasonic.jpg"
 excerpt_separator: <!--more-->
+lang: en
 ---
 
 For academic purpose I have to interface the F401RE NUCLEO board with the HY-SRF05 ultrasonic sensor, it uses the sonar principle to allow to measure the distance to an obstacle.

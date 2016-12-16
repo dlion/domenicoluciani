@@ -20,7 +20,12 @@
     <meta name="twitter:image" content="{{site.domain_name}}{% if page.cover %}{{page.cover}}{% else %}/assets/images/covers/robot.png{% endif %}">
 
     <!-- Open Graph -->
+    {% if page.lang == "ita" %}
+    <meta property="og:locale" content="it_IT" />
+    {% else %}
     <meta property="og:locale" content="en_US" />
+    {% endif %}
+
     {% if page.layout == "post" %}
 	    <meta property="og:type" content="article" />
     {% endif %}

@@ -26,3 +26,8 @@ gems:
     - jekyll-mentions
     - jekyll-redirect-from
     - jekyll-sitemap
+collections:
+  category:
+    output: true
+    permalink: /category/:path/
+

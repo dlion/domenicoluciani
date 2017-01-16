@@ -1,0 +1,53 @@
+---
+layout: default
+title: Category - RaspberryPi
+cover: /assets/images/covers/robot.png
+about: false
+
+---
+
+<header class="main-header {%if page.cover%}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
+    <nav class="main-nav overlay clearfix">
+        {%if site.logo %}<a class="blog-logo" href="{{site.domain_name}}"><img src="{{site.logo}}" alt="{{site.name}}" /></a>{% endif %}
+        {%if site.navigation %}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {% endif %}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{site.name}}</h1>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+
+<main id="content" class="content" role="main">
+
+    {% for post in site.posts %}
+
+	    {% if post.categories contains "RaspberryPi" %}
+    <article class="post">
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
+        </section>
+        <footer class="post-meta">
+            {% if site.author %}
+		    <img class="author-thumb" src="{{site.domain_name}}/assets/images/profile.jpg" alt="Author's profile picture" nopin="nopin" />
+                {{ site.author }}
+            {% endif %}
+	    {% if post.categories.size > 0 %}
+		{{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+	    {% endif %}
+            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                {{ post.date | date_to_string }}
+            </time>
+        </footer>
+     </article>
+	{% endif %}
+    {% endfor %}
+
+</main>

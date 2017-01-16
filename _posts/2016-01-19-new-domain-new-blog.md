@@ -2,7 +2,7 @@
 layout: post
 title:  "New domain, new blog"
 date:   2016-01-19 23:00:00
-categories: Personal
+categories: [Personal]
 cover: "/assets/images/covers/roger.jpg"
 lang: en
 ---

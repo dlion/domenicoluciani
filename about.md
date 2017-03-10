@@ -19,7 +19,3 @@ I am a maker and [Raspberry Pi](/category/raspberrypi) owner.
 * Keybase: [https://keybase.io/DLion](https://keybase.io/DLion)
 * Twitter: [https://twitter.com/dlion92](https://twitter.com/dlion92)
 * Instagram: [https://instagram.com/Smagen92](https://instagram.com/Smagen92)
-
- <figure class="author-image" style="top: auto">
- <a class="img" href="{{ site.domain_name }}" style="background-image: url(/assets/images/profile.jpg)"></a>
- </figure>

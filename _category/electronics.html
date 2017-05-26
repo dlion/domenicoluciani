@@ -39,7 +39,10 @@ about: false
                 {{ site.author }}
             {% endif %}
 	    {% if post.categories.size > 0 %}
-		{{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+		 on 
+	        {% for cat in post.categories %}
+	            <a href="{{site.domain_name}}/category/{{cat | downcase}}">{{cat}}</a>{% unless forloop.last %}, {% endunless %}
+	       {% endfor %}
 	    {% endif %}
             <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {{ post.date | date_to_string }}

@@ -18,7 +18,7 @@ url:            'https://domenicoluciani.com'
 author:         'Domenico Luciani'
 bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover.'
 links: ['Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
-location: Palermo, Italy
+location: Milan, Italy
 website: https://domenicoluciani.com
 gems:
     - jekyll-feed

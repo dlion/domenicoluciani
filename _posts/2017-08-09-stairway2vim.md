@@ -26,6 +26,8 @@ I use [Ale](https://github.com/w0rp/ale), a plugin for providing linting while y
 I use [vim-scala](https://github.com/derekwyatt/vim-scala), and if you install [FuzzyFinder](https://github.com/vim-scripts/FuzzyFinder) you will able to switch from src to
 test dirs with `<leader>fs` and `<leader>ft`
 
+I found another important piece of tools that can improve your use of scala, it's called [Ensime](http://ensime.org/), using the [vim plugin](http://ensime.org/editors/vim/) and the [sbt plugin](http://ensime.org/build_tools/sbt/) you will be able to navigate through the project, for example with `:EnDeclaration` you will able to go directly on the method declaration and using `C-X C-O` you can see the completition of it and so on.
+
 ## Misc
 
 I also use some plugins to improve my workflow like:

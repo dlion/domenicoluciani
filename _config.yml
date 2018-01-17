@@ -20,14 +20,18 @@ bio: 'Software engineer, runner, maker, computer vision fanatic and IT security 
 links: ['Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
 location: Milan, Italy
 website: https://domenicoluciani.com
-gems:
+plugins:
     - jekyll-feed
     - jemoji
     - jekyll-mentions
     - jekyll-redirect-from
     - jekyll-sitemap
+    - jekyll-paginate
+    - jekyll-github-metadata
 collections:
   category:
     output: true
     permalink: /category/:path/
+
+repository: dlion/domenicoluciani
 

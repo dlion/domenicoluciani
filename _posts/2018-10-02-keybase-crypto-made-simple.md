@@ -11,7 +11,7 @@ For years cryptography was considered like a witchcraft, until now! Let's see ho
 
 ## History?
 
-From ancient times humankind ever wanted to communicate secrets or sensitive informations with each others, we invented a lot of method to do that, today we will se 2 of them:
+From ancient times humankind ever wanted to communicate secrets or sensitive informations with each others, we invented a lot of method to do that, today we will see 2 of them:
 
 ## Symmetric
 

@@ -115,7 +115,7 @@ Me -> hey keybase, give me the public key of my friend with nick `<nick>`, pleas
 
 Me -> encrypt using the public key retrieved using keybase -> encrypted message in output
 
-Using keybase we can be sure that public key belongs to our receiver fo real, nice!
+Using keybase we can be sure that public key belongs to our receiver for real, nice!
 
 
 > Ok now I can trust of you but why in 2018 I have to use a terminal...?

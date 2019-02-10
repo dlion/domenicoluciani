@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Hacktoberfest"
+title: "Hacktoberfest 2017"
 date: 2018-01-10 10:00:00
 categories: [Programming, Life]
-cover: "/assets/images/covers/hacktoberfest.jpg"
+cover: "/assets/images/covers/hacktoberfest_17.jpg"
 lang: en
 ---
 

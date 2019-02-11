@@ -640,7 +640,7 @@ body.nav-opened .nav {
     font-size: 1.2rem;
     vertical-align: bottom;
     color: #B8B8B8;
-    content: counter(item, lower-roman);
+    content: counter(item, upper-roman);
     counter-increment: item;
 }
 .nav li {

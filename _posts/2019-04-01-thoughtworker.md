@@ -13,12 +13,12 @@ After a long period in Milan, I decided finally to move abroad. I decided finall
 
 From today I will live in Barcelona, Spain. What is the name of the company I will work for?
 
-### Thoughtwork
+### Thoughtworks
 
 TW doesn't need any kind of presentation, who works in this field already know how cool is this company.
 
 So: new life, new city, new job, new friends, new new new.
 
-Wish me luck! :stars:
+Wish me luck!
 
 ![tw](/assets/images/posts/tw.jpg)

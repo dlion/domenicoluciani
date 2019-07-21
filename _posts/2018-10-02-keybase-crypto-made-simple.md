@@ -11,7 +11,7 @@ For years cryptography was considered like a witchcraft, until now! Let's see ho
 
 ## History?
 
-From ancient times humankind ever wanted to communicate secrets or sensitive informations with each others, we invented a lot of method to do that, today we will see 2 of them:
+From ancient times humankind ever wanted to communicate secrets or sensitive information with each other we invented a lot of method to do that, today we will see 2 of them:
 
 ## Symmetric
 
@@ -31,9 +31,9 @@ Alice (A) wants to send a SuPeRsEcReT message to Bob (B), how she can do that us
 
 Simple and clean BUT how can you see there is a problem here: Alice and Bob need to use **THE SAME KEY** to communicate each other and from it borns other problems:
 * How can Alice pass the *KEY* to Bob?
-* What happens if Bob lose his key or someone else steal it from him?
+* What happens if Bob lose his key or someone else steals it from him?
 
-All of these hypothesis allows an attacker to read **ALL** messages from and to Alice/Bob/SomeoneElseWhoUseThatKey.
+All of these hypotheses allows an attacker to read **ALL** messages from and to Alice/Bob/SomeoneElseWhoUseThatKey.
 
 ### PROS:
 
@@ -65,11 +65,11 @@ Alice (A) wants to send a SuPeRsEcReT message to Bob (B), how she can do that us
 ### PROS:
 * Alice doesn't need to pass the own private key
 * It's enough for Bob to share his public key
-* If someone else steal the key pair of Alice he can't read messages sent by another person to Bob
+* If someone else steals the key pair of Alice he can't read messages sent by another person to Bob
 
 ## Why not both? OpenPGP
 
-Currently these worlds are combined to achieve a smart result, infact the asymmetric encryption is used to wrap the message encrypted using a symmetric encryption, it allows to share in security the message preserving speed.
+Currently, these worlds are combined to achieve a smart result, infact the asymmetric encryption is used to wrap the message encrypted using a symmetric encryption, it allows to sharing in security the message preserving speed.
 
 ![pgp](/assets/images/posts/pgp.png)
 
@@ -88,7 +88,7 @@ To helps people to use more crypto in their lives [Keybase](https://keybase.io/)
 ## Is this public key yours?
 
 One of the problem with PGP is that you aren't secure of the public key you want to use.   
-If you want to send a message to me you need my public key, right? Ok so an attacker send to you his public key, how can you say THAT public key is mine or not without ask to me? (and if the attacker pretend to be me through a fake account on a social network like Twitter? How can you be sure that account is really "me"?)   
+If you want to send a message to me you need my public key, right? Ok so an attacker send to you his public key, how can you say THAT public key is mine or not without ask me? (and if the attacker pretend to be me through a fake account on a social network like Twitter? How can you be sure that account is really "me"?)   
 Keybase solve this problem in a nice way
 
 ![my_account](/assets/images/posts/keybaseAccount.png)

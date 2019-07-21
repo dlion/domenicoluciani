@@ -13,7 +13,7 @@ Each plugin is compiled as shared object library that can be loaded at runtime, 
 
 ## Preface
 
-Currently plugins are only supported on Linux and MacOS and with the latest build of Go (1.11 currently) are been almost deprecated by [Modules](https://github.com/golang/go/wiki/Modules).
+Currently, plugins are only supported on Linux and MacOS and with the latest build of Go (1.11 currently) are been almost deprecated by [Modules](https://github.com/golang/go/wiki/Modules).
 
 ## How build a plugin
 
@@ -41,7 +41,7 @@ func Speak() string {
 }
 ```
 
-We just defined a `Speak` function that will be exported (pay attention to the uppercase naming convention) to return a english localized string.
+We just defined a `Speak` function that will be exported (pay attention to the uppercase naming convention) to return an english localized string.
 
 Compiling with `go build -buildmode=plugin -o languages/english/english.so languages/english/english.go` will produce and `english.so` file inside our `english` directory, that is our plugin.
 
@@ -164,7 +164,7 @@ func Speak() string {
 
 Compile it with `go build -buildmode=plugin -o languages/chinese/chinese.so languages/chinese/chinese.go`
 
-and BAM!
+And BAM!
 
 ```
 $:> go run main.go chinese
@@ -236,8 +236,8 @@ Insert which language do you prefer: chinese
 Writing modular software using Go plugins allows to have a lot of benefits like:
 
 * Single Responsability: Every plugin should do *ONE* thing.
-* Plugin Independence: Every plugin is a independence piece of software
-* Well-documented: Every plugin should be well-documented; to produce a working plugin you should respect the contract of the interface or the casting that we have on our main so we need to know how it is.
+* Plugin Independence: Every plugin is an independence piece of software
+* Well-documented: Every plugin should be well-documented; to produce a working plugin you should respect the contract of the interface or the casting that we have on our main, so we need to know how it is.
 * New Deployment paradigm: To extend our software we can just `push` our plugin on the right directory and *DONE*. We don't need to recompile to extend the software functionalities.
 
 ## Links

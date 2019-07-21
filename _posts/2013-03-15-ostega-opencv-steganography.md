@@ -7,7 +7,7 @@ cover: "/assets/images/covers/hide.jpg"
 lang: en
 ---
 
-The steganography[^1] is a technique that allows to "hide" information inside an image or an audio files, it's a very interesting security field, I can hide "secrets" into an image, pass it to my friend and he, using a decoder can read what I wrote. Very useful to keep my "secrets" secret; so I wrote a simple C library to hide words into a bitmap images using the OpenCV libraries just for fun and profit...
+The steganography[^1] is a technique that allows to "hide" information inside an image or an audio files, it's a very interesting security field, I can hide "secrets" into an image, pass it to my friend, and he, using a decoder can read what I wrote. Very useful to keep my "secrets" secret; so I wrote a simple C library to hide words into a bitmap images using the OpenCV libraries just for fun and profit...
 
 I named my library **OStega**, the header file contains two functions prototype, one for encrypt and one for decrypt:
 
@@ -15,14 +15,14 @@ I named my library **OStega**, the header file contains two functions prototype,
 
 ```c
 /*
-A simple libraries to use steganography with OpenCV
+A simple library to use steganography with OpenCV
 Thinking and created by Domenico Luciani aka DLion
 */
 
 #include "OStega.c"
 
 
-/* Function to insert and crypt a message into an bmp image.
+/* Function to insert and crypt a message into a bmp image.
  * first parameter is an image, second parameter is a message.
  * It returns -1 to error or 0 to complete successfull.
  */
@@ -74,7 +74,7 @@ int imgStega(IplImage *img, char *msg)
 ```
 
 As I said before this function accepts two parameters: an image and a message.
-it takes the width of the image and the length of the message.
+It takes the width of the image and the length of the message.
 
 **Pay attention, the image must be a bitmap, so only .bpm format is supported**
 
@@ -125,7 +125,7 @@ char *imgDestega(IplImage *img)
 }
 ```
 
-The decode function accepts one paramater, the image that we want to decode, the algorithm is very clear: we scans the image from 0 to *wid* that is the width of the image, if we found at the start the character `$` we continue the research and every 3 pixels we put the character on the output buffer until we find again the `$` character.
+The decoding function accepts one paramater, the image that we want to decode, the algorithm is very clear: we scans the image from 0 to *wid* that is the width of the image, if we found at the start the character `$` we continue the research and every 3 pixels we put the character on the output buffer until we find again the `$` character.
 
 ### Usage
 

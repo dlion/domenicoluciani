@@ -106,4 +106,4 @@ Well done the incident is solved, we learned from it, our stakeholders have been
 
 ## Thanks
 
-I want to say thank you to [AutoScout24](https://autoscout24.com) to provide us the opportunity to take part of this workshop also if you want to know more about how AS24 works take a look into their [engineering blog](https://medium.com/scout24-engineering).
+I want to say thank you to [AutoScout24](https://autoscout24.com) to provide to us the opportunity to take part in this workshop also if you want to know more about how AS24 works take a look into their [engineering blog](https://medium.com/scout24-engineering).

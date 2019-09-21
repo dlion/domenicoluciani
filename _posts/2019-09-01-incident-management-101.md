@@ -46,7 +46,7 @@ Every incident has severity and depends on that you should act differently, use 
 O captain! My captain!   
 Now you are in charge of leading the team to solve the incident as fast as possible, what should you do to be a great incident commander?
 
-> Stay calm: take your time to think and use your judgement.
+> Stay calm: take your time to think and use your judgment.
 
 ![panic](https://media2.giphy.com/media/z9AUvhAEiXOqA/source.gif)
 
@@ -103,3 +103,7 @@ It's a table where to document all of the AI that you have done to mitigate the 
 Well done the incident is solved, we learned from it, our stakeholders have been informed and the team now deserve a big glass of beer to celebrate this victory but remember: we won the battle, not the war.
 
 ![welldone](https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif)
+
+## Thanks
+
+I want to say thank you to [AutoScout24](https://autoscout24.com) to provide us the opportunity to take part of this workshop also if you want to know more about how AS24 works take a look into their [engineering blog](https://medium.com/scout24-engineering).

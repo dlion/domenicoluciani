@@ -12,6 +12,9 @@ My usual post of the year about the Hacktoberfest is back! Even this year I part
 Since 2014 I try every year to participate in this incredible initiative and I learn always something new obtaining amazing official swags.
 
 This year I focused my PR on a single project: GoCV.   
+
+![Contributions](/assets/images/posts/hacktoberfest19.png)
+
 [I've already contributed to it in the past](https://domenicoluciani.com/2019/02/10/hacktoberfest-18.html) so this year I was more confident to continue it, simple and effective.
 
 

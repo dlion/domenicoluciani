@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hacktoberfest 2019"
-date: 2020-01-19 8:00:00
+date: 2019-12-18 8:00:00
 categories: [Programming, Life]
 cover: "/assets/images/covers/hacktoberfest_19.png"
 lang: en

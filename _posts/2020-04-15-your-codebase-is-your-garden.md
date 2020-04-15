@@ -11,16 +11,18 @@ I always liked `your codebase is like a garden` metaphor, it says that writing s
 
 ## Refacto-what?
 
-The first very pragmatic case where we can find the word `refactor` is during the TDD cycle: Red -> Green -> Refactor.   
-We have a specific step where we have to focus on making our code better.
+The first very pragmatic case where we can find the word `refactor` is during the [TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) cycle: Red -> Green -> Refactor.   
+We have a specific step where we have to focus on making our code cleaner and better.
 
 ![red-green-refactoring](/assets/images/posts/red-green-refactor.png)
+
+This part is so importat that we need to separate it from the implementation part. It's like we are wearing two hat. The first hat is for the implementation, so create and add code. The second hat is about improving it.
 
 Essentially:
 
 > Rewriting, reworking and re-architecting code is called refactoring.
 
-But remember, when we talk about refactoring we assume that we don't change our code's behaviour.
+But remember, when we talk about refactoring we assume that we don't change our code's behaviour. We are wearing another hat.
 
 ## When should I refactor then?
 
@@ -65,7 +67,7 @@ let's think about our need to refactor as growth. Removing it requires invasive 
 
 ![heart-flower](/assets/images/posts/heart-flower.gif)
 
-But I think the most important thing to mention to your boss is about economics. Martin Fowler talked about the [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html), which show us that a clean and well-maintained codebase help us to deliver more features faster.
+But I think the most important thing to mention to your boss is about economics. Martin Fowler talked about the [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html), which show us that a clean and well-maintained codebase help us to deliver more features faster answering to the question `why should I refactor my code?`
 
 Sometimes it's difficult to find time to do a refactoring that could take days to be finished so often we think that will be a better time to do our refactoring finding an excuse to avoid it but trust me, finding the right time later is difficult and often it never happen. In my team, for example, we thought about a basic solution: use a tech-debt dashboard.   
 Every sprint we put in our board a tech-debt task to be sure to allocate some time to do something we left behind avoiding to let it grows. This is also called [Planned Refactoring](https://martinfowler.com/articles/workflowsOfRefactoring/fallback.html), it's still a smell but sometimes is a necessary evil.

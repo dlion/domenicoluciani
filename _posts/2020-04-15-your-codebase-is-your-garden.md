@@ -52,7 +52,7 @@ The nature of our software is evolving by time so we have to update business and
 
 Of course, if we can improve our software's performances in terms of using the right data structure or using a better algorithm we should do it as much as we can.
 
-## The practice makes us perfect
+## The practice makes perfect
 
 Identify these smells is a matter of experience, my advice is to do some katas about refactoring, you can find many of them online, for example, the [trip service kata by Sandro Mancuso](https://github.com/sandromancuso/trip-service-kata) or the [tennis-refactoring kata by Emily Bache](https://github.com/emilybache/Tennis-Refactoring-Kata).
 
@@ -67,8 +67,8 @@ let's think about our need to refactor as growth. Removing it requires invasive 
 
 But I think the most important thing to mention to your boss is about economics. Martin Fowler talked about the [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html), which show us that a clean and well-maintained codebase help us to deliver more features faster.
 
-Sometimes it's difficult to find time to do a refactoring that could take days to be finished so often we think that will be a better time to do our refactoring finding an excuse to avoid it and I can say that find the time later is rare so in my team, for example, we thought about a basic solution: use a tech-debt dashboard.   
-Every sprint we put in our board a tech-debt task to be sure to allocate some time to do something we left behind avoiding to let it grows. This is also called [Planned Refactoring](https://martinfowler.com/articles/workflowsOfRefactoring/fallback.html).
+Sometimes it's difficult to find time to do a refactoring that could take days to be finished so often we think that will be a better time to do our refactoring finding an excuse to avoid it but trust me, finding the right time later is difficult and often it never happen. In my team, for example, we thought about a basic solution: use a tech-debt dashboard.   
+Every sprint we put in our board a tech-debt task to be sure to allocate some time to do something we left behind avoiding to let it grows. This is also called [Planned Refactoring](https://martinfowler.com/articles/workflowsOfRefactoring/fallback.html), it's still a smell but sometimes is a necessary evil.
 
 ## General advice
 
@@ -84,6 +84,8 @@ To maintain our garden beautiful and flourishing we should follow these steps as
  - Have fun
 
 ![forest](/assets/images/posts/forest.jpeg)
+
+Happy gardening! 
 
 ## Resources
 

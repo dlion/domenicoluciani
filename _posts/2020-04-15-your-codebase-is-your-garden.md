@@ -7,7 +7,7 @@ cover: "/assets/images/covers/garden.png"
 lang: en
 ---
 
-I always liked `your codebase is like a garden` metaphor, it says that writing software is like gardening, you have to take care of your garden in many ways and time to time you have to move plantings relative to each other, consider how to take advantage of the wind, rain and sunlight to help your plants to grow and have good health. Every day you have to monitor them and make adjustments as needed. Like your code. But how can we do it in practice becoming good gardeners?
+I always liked the `your codebase is like a garden` metaphor, it says that writing software is like gardening, you have to take care of your garden in many ways and from time to time you have to move plants around relative to each other, consider how to take advantage of the wind, rain and sunlight to help your plants grow and stay healthy. Every day you have to monitor them and make adjustments as needed. Like your code. But how can we do it in practice and become good gardeners?
 
 ## Refacto-what?
 

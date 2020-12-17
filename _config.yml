@@ -36,3 +36,5 @@ collections:
 
 repository: dlion/domenicoluciani
 
+posts_dir: /assets/images/posts
+covers_dir: /assets/images/covers

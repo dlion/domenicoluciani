@@ -11,6 +11,8 @@ With me other five developers who are working around the world, talking about th
 
 It was a very nice experience, we had a nice exchange of opinions regardin many topics like remote working, salary, difficulties encountered and much more.
 
+![screenshot](/assets/images/posts/sviluppatori_italiani.png)
+
 The discussion was in Italian only, sorry for that but I'm pretty sure Youtube can provide a very good translation.
 
 You can find the video here, enjoy!

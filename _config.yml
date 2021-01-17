@@ -15,12 +15,23 @@ navigation:
     - url: /
 
 # Details for the RSS feed generator
-url:            'https://domenicoluciani.com'
-author:         'Domenico Luciani'
+url: 'https://domenicoluciani.com'
+author: 'Domenico Luciani'
 bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover.'
 links: ['Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
 location: Barcelona, Spain
 website: https://domenicoluciani.com
+twitter:
+  username: dlion92
+  card: summary
+logo: /assets/images/covers/robot.png
+social:
+  name: Domenico Luciani
+  links:
+    - https://twitter.com/DLion92
+    - https://linkedin.com/in/dlion
+    - https://github.com/DLion
+    - https://keybase.io/dlion
 plugins:
     - jekyll-feed
     - jemoji
@@ -29,6 +40,7 @@ plugins:
     - jekyll-sitemap
     - jekyll-paginate
     - jekyll-github-metadata
+    - jekyll-seo-tag
 collections:
   category:
     output: true

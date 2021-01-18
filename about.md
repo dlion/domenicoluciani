@@ -12,11 +12,11 @@ I am (or at least I try to be) a maker, I'm a [Raspberry Pi](/category/raspberry
 
 My Github Stats
 
-![Metrics](https://github.com/dlion/dlion/blob/main/metrics.svg)
-![Calendar](https://github.com/dlion/dlion/blob/main/calendar.svg)
-![Habits](https://github.com/dlion/dlion/blob/main/habits.svg)
-![Languages](https://github.com/dlion/dlion/blob/main/languages.svg)
-![Activity](https://github.com/dlion/dlion/blob/main/activity.svg)
+![Metrics](https://raw.githubusercontent.com/dlion/dlion/main/metrics.svg)
+![Calendar](https://raw.githubusercontent.com/dlion/dlion/main/calendar.svg)
+![Habits](https://raw.githubusercontent.com/dlion/dlion/main/habits.svg)
+![Languages](https://raw.githubusercontent.com/dlion/dlion/main/languages.svg)
+![Activity](https://raw.githubusercontent.com/dlion/dlion/main/activity.svg)
 
 
 ---

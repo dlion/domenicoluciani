@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-Passionate [programmer](/category/programming), 28 years old at the moment, I have more than 9 yars of experience and I currently work as Agile Software Engineer at [ThoughtWorks](https://www.thoughtworks.com/) living in Barcelona, Spain.
+Passionate [programmer](/category/programming), 28 years old at the moment, I have more than 9 years of experience and a bachelor degree in computer science. I currently work as Agile Software Engineer at [ThoughtWorks](https://www.thoughtworks.com/) living in Barcelona, Spain.
 
 I'm [Computer Vision](/category/opencv) enthusiast, I love [security](/category/security), and writing silly [pieces of code](https://github.com/DLion). I usually like to improve my knowledge about TDD, Clean Code and Extreme Programming.
 

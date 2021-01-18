@@ -9,8 +9,9 @@ I'm [Computer Vision](/category/opencv) enthusiast, I love [security](/category/
 
 I am (or at least I try to be) a maker, I'm a [Raspberry Pi](/category/raspberrypi) owner.
 
+---
 
-My Github Stats
+## My Github Stats
 
 ![Metrics](https://raw.githubusercontent.com/dlion/dlion/main/metrics.svg)
 ![Calendar](https://raw.githubusercontent.com/dlion/dlion/main/calendar.svg)

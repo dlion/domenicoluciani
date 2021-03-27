@@ -20,7 +20,7 @@ So far, I found it essential for my learning process, and I really suggest tryin
 
 It can be used in many different ways. For example, you can save your open tabs as a single collection differentiating it by time and date.
 
-You can just create an account and sync your resources, so using different devices won't be a problem. You will always have the possibility to have them by hand logging in. You can also export all your stuff using various formats to have an offline backup to have your things available when you need them.
+You can just create an account and sync your resources, so using different devices is not a problem. You will always have the possibility to have them by hand logging in. You can also export all your stuff using various formats to have an offline backup to have your things available when you need them.
 
 I've set Toby up as my new-tab homepage as a reminder to dedicate time to read/watch what I found during the week.
 

@@ -24,5 +24,7 @@ You can just create an account and sync your resources, so using different devic
 
 I've set Toby up as my new-tab homepage as a reminder to dedicate time to read/watch what I found during the week.
 
+![toby2](/assets/images/posts/toby2.png)
+
 You can download Toby directly from the store, it's free, and it also works on [Brave](https://brave.com): [Toby](https://chrome.google.com/webstore/detail/toby-for-chrome/hddnkoipeenegfoeaoibdmnaalmgkpip).
 

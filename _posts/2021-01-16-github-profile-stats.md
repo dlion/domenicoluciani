@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to show useful stats about your open source activites on your Github profile"
+title: "How to show useful stats about your open source activities on your Github profile"
 date: 2021-01-16 00:00:00
 categories: [Programming, Life]
 cover: "/assets/images/covers/github_stats.png"

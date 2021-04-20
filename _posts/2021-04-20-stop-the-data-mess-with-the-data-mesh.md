@@ -72,6 +72,8 @@ Of course, the topic is huge, and it should require more words and use cases to 
 * [Data Mesh in Practice: How Europe's Leading Online Platform for Fashion Goes Beyond the Data Lake](https://databricks.com/session_eu20/data-mesh-in-practice-how-europes-leading-online-platform-for-fashion-goes-beyond-the-data-lake) by Max Schultze and Arif Wider
 * [Data mesh: it's not just about tech, it's about ownership and communication](https://www.thoughtworks.com/insights/blog/data-mesh-its-not-about-tech-its-about-ownership-and-communication) by Arif Wider
 * [Data Mesh whitepaper](https://www.thoughtworks.com/ebook/data-mesh) by ThoughtWorks
+* [What is a Data Mesh and How not mesh it up](https://towardsdatascience.com/what-is-a-data-mesh-and-how-not-to-mesh-it-up-210710bb41e0)
+* [The Data Mesh: Re-Thinking Data Integration](https://www.eckerson.com/articles/the-data-mesh-re-thinking-data-integration)
 
 * * *
 

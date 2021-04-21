@@ -21,7 +21,7 @@ It seems friendly and relatively straightforward, but it's not always the best s
 
 ## Let's fix this mess
 
-Essentially a Data Mesh helps to get rid of this problem by having a centralized location where to have our data (a DB or a distributed Data Lake) with each team/business area responsible for handling their ETL pipeline. It means more flexibility and autonomy.
+Essentially a Data Mesh helps to get rid of this problem by having each team/business area responsible for handling their ETL pipeline. It means more flexibility and autonomy. It should be supported by a good self-service data platform, but while the data might be physically centralised in the platform, ownership of it is decentralised.
 
 ![good_team](/assets/images/posts/good_team.png)
 

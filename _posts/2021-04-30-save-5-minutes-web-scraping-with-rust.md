@@ -26,11 +26,11 @@ I used the [reqwest](https://crates.io/crates/reqwest) crave; I just need to add
 reqwest = { version = "0.11", features = ["blocking", "cookies"] }
 ```
 
-to our `Cargo.toml` file to have the `blocking` and `cookies` support since I don't need any async operation and need to save the session from one request to another.
+to my `Cargo.toml` file to use it and have the `blocking` and `cookies` support since I don't need any async operation and need to save the session from one request to another.
 
 Then let's start with the login:
 
-```
+```rust
 let client = reqwest::blocking::Client::builder().cookie_store(true).build()?;
 client.post("https://www.lycamobile.es/wp-admin/admin-ajax.php")
     .form(&[
@@ -42,16 +42,16 @@ client.post("https://www.lycamobile.es/wp-admin/admin-ajax.php")
     .send()?;
 ```
 
-Yes, that's it. If everything is as it should be, I should have logged in. No, in this article, I won't do any further check for simplicity.
+Yes, that's it. If everything is as it should be, I should have logged in. No, in this article, I won't do any further checks for simplicity.
 
 Once I have done the login, I should get into my profile to get my stats; I can do it with these two lines of code:
 
-```
+```rust
 let response = client.get("https://www.lycamobile.es/es/my-account/").send()?;
 let body_response = response.text()?;
 ```
 
-If everything went well, I should have gotten the page's body right into our `body_response` variable. Easy no?
+If everything went well, I should have gotten the page's body right into the `body_response` variable. Easy no?
 
 ![easy](https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif)
 
@@ -69,13 +69,13 @@ to my `Cargo.toml` file to be able to use it.
 
 First of all, we need to parse our document that, in this case, is in the `body_response` variable.
 
-```
+```rust
 let parsed_html = Html::parse_document(&body_response)
 ```
 
 and then we can start scraping it:
 
-```
+```rust
 let selector = &Selector::parse("p.bdl-balance > span")
     .expect("Error during the parsing using the given selector");
 let span_text = parsed_html
@@ -100,8 +100,7 @@ Same thing for all the information I need, just a bit of walking through the DOM
 
 For example, the internet data left:
 
-```
-
+```rust
 let selector = &Selector::parse("div.bdl-mins")
     .expect("Error during the parsing using the given selector");
 let div_text = parsed_html
@@ -112,7 +111,7 @@ let div_text = parsed_html
 
 and
 
-```
+```rust
 div_text.get(2..)
 .unwrap_or_else(||"Can't get the internet balance correctly")
 .to_string()
@@ -124,7 +123,7 @@ I spent like 20minutes in total to get it done, the crate's documentation and th
 
 Later on, I decided that maybe this could have been helpful for someone else, so I decided to add more things like reading the credentials from a YAML file, having a pretty output, and checking more errors during the process.
 
-I made it public on my Github: https://github.com/dlion/rustyca
+I made it public on my Github: [https://github.com/dlion/rustyca](https://github.com/dlion/rustyca)
 
 Here an example of the final output:
 
@@ -145,7 +144,7 @@ Nice uh?
 
 ![bello](https://media.giphy.com/media/l4hLByhJfsbv87PJC/giphy.gif)
 
-My final thoughts about it are that I haven't had any issues using new crates or reading through the documentation and that the major problem I had was related to the fact that I'm still learning the language. I need more time to get used to the basics; doing that, I'm pretty sure I will speed up even the "let's do the right things in the right ways" part. 
+My final thoughts about it are that I haven't had any issues using new crates or reading through the documentation and that the major problem I had was related to the fact that I'm still learning the language. I need more time to get used to the basics; doing that, I'm pretty sure I will speed up even the "let's do the right things in the right ways" part (the one that I care more, to be honest). 
 
 Of course, any constructive feedback is welcome.
 

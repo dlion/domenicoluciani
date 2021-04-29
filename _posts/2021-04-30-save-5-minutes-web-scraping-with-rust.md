@@ -22,7 +22,7 @@ As the first task, I needed to log in and keep the session alive. How to do it i
 
 I used the [reqwest](https://crates.io/crates/reqwest) crave; I just need to add 
 
-```
+```toml
 reqwest = { version = "0.11", features = ["blocking", "cookies"] }
 ```
 
@@ -61,7 +61,7 @@ Now the tricky part, scraping the page's body; how to do it?
 
 I used the [Scraper](https://crates.io/crates/scraper) crate; I need to add 
 
-```
+```toml
 scraper = "0.12.0"
 ```
 
@@ -88,7 +88,7 @@ Here, I'm navigating the DOM of the page as I'm using JQuery. I say to the scrap
 
 Then a bit of text manipulation: 
 
-```
+```rust
 span_text.split("hasta").nth(1)
     .expect("Can't get the expiration date correctly")
     .trim_start().to_string()
@@ -123,7 +123,7 @@ I spent like 20minutes in total to get it done, the crate's documentation and th
 
 Later on, I decided that maybe this could have been helpful for someone else, so I decided to add more things like reading the credentials from a YAML file, having a pretty output, and checking more errors during the process.
 
-I made it public on my Github: [https://github.com/dlion/rustyca](https://github.com/dlion/rustyca)
+I made it public on my Github: [https://github.com/dlion/rustyca](https://github.com/dlion/rustyca), of course, any constructive feedback is welcome.
 
 Here an example of the final output:
 
@@ -146,25 +146,6 @@ Nice uh?
 
 My final thoughts about it are that I haven't had any issues using new crates or reading through the documentation and that the major problem I had was related to the fact that I'm still learning the language. I need more time to get used to the basics; doing that, I'm pretty sure I will speed up even the "let's do the right things in the right ways" part (the one that I care more, to be honest). 
 
-Of course, any constructive feedback is welcome.
-
 * * * 
 
 [^1]: Actually I've had some problems with this cheap company but it's another another story
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-Passionate [programmer](/category/programming), I'm 28, 10 years of experience and a bachelor degree in Computer Science. I currently work as Agile Software Engineer at [ThoughtWorks](https://www.thoughtworks.com/), living in Barcelona, Spain.
+Passionate [programmer](/category/programming), more than 10 years of experience including 4 years as extreme programmer and a bachelor degree in Computer Science. I currently work as Senior Agile Software Engineer at [VMware](https://www.vmware.com/), living in Barcelona, Spain.
 
 I'm [Computer Vision](/category/opencv) enthusiast, I love [security](/category/security), and writing silly [pieces of code](https://github.com/DLion). I usually like to improve my knowledge about TDD, Clean Code and Extreme Programming.
 

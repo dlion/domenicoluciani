@@ -31,12 +31,12 @@ Let's see a diagram of what can happen in a real use case scenario
 ![diagram](/assets/images/posts/distributed-tracing-diagram.png)
 
 To track and monitor this entire request flow, considering that we have multiple instances of the web app and other services running, an `origination id` is needed that spans the request as the whole flow.   
-Each step must generate and use `span ids` to helps us to view each step is still considered as part of a bigger request flow.
+Each step must generate and use `span ids` to helps us to considers each step as part of a bigger request flow.
 
 For instance:   
 A user requests a webpage, so we will generate an `Origination Id: 123` and a `Span Id: 1`, then the page calls another service to get the profile detail, so we are going to have an `Origination Id: 123` and a `Span Id: 2`, and so on.   
 
-This is important to trace logs to reverse a sequence diagram from the available data for any request. Having enough context will be simpler and faster, helping us to react quickly when needed.
+This is important to trace logs in a way to help us to reverse a sequence diagram from the available data for any request. Having enough context it will be simpler and faster, helping us to react quickly when needed.
 
 ## How to implement it
 

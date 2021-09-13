@@ -48,4 +48,4 @@ I really recommend not reinvent the wheel. Nowadays, there are many already well
 
 Distributed tracing is essential for troubleshooting microservices applications; most modern distributed tracing solutions are based on the [Google Dapper Whitepaper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36356.pdf) that I suggest reading.
 
-Nowadays observability is one of the most important things, it helps us to identify problems and act in time. Definetely going deeper on this topic is a must to whoever wants to be founded ready.
+Nowadays, observability is one of the most important things; it helps us identify problems and act in time. Definitely, going deeper on this topic is a must to whoever wants to be founded ready.

@@ -8,6 +8,8 @@ lang: en
 ---
 
 It's been a while when I started using notional tools for my day to day. I use these tools constantly, trying to use it as a second brain.   
+
+
 I used Notion for 3 months and it was amazing.
 I could organize my entire life creating my life's dashboard, work section and so on.   
 I could track everything quite smoothly for those 3 months and it's been an happy journey till I found myself on an airplane.

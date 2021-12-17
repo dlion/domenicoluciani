@@ -46,6 +46,18 @@ Most of the authors use their plugins which are open source, so it means that th
 You can find the available plugins on Settings → Community Plugins → Browse   
 I really recommend to use few plugins to enrich your experience according to your needs.
 
+My favorite plugins are:
+* Calendar
+* Kanban
+* Admonition
+* Banners
+* Highlightr
+* Natural Language Dates
+* Reminder
+* Obsidian Git
+* Dictionary
+* Zettelcasten prefixer
+
 ### Themes
 You can customize the Obsidian's theme using different themes made by the community, having a comfortable environment is the key.   
 You can find them on Settings → Appearance → Manage

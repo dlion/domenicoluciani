@@ -62,7 +62,7 @@ It backups my files every 15minutes with a specific commit.
 You can customize your settings as you prefer and it is fully integrated with your git instance so you don't need to provide any kind of token or credential.
 
 ## Mobile App
-There is also a mobile application that you can use: [https://obsidian.md/mobile)](https://obsidian.md/mobile)    
+There is also a mobile application that you can use: [https://obsidian.md/mobile](https://obsidian.md/mobile)    
 I found a way to integrate my backup on my mobile phone using the free plan but that is a topic for another article.
 
 ## My Obsidian

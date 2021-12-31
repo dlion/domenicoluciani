@@ -81,6 +81,7 @@ pkg install openssh
 Now you need to add the ssh key to the Github's account, just following these instructions: [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 To get the ssh key you can just type on termux `cat .ssh/id_ed25519.pub` copying the key and pasting it into the `key` field of Github's form adding the ssh key to your account.   
+
 Once we have followed these steps we can try to clone the repo:
 
 ```bash

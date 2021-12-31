@@ -75,7 +75,7 @@ You can customize your settings as you prefer and it is fully integrated with yo
 
 ## Mobile App
 There is also a mobile application that you can use: [https://obsidian.md/mobile](https://obsidian.md/mobile)    
-I found a way to integrate my backup on my mobile phone using the free plan but that is a topic for another article.
+I found a way to integrate my backup on my mobile phone using the free plan but that is a topic for [another article](https://domenicoluciani.com/2021/12/31/how-to-sync-your-obsidian-vault-on-android.html).
 
 ## My Obsidian
 

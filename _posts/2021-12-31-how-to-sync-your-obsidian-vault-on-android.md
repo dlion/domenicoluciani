@@ -138,4 +138,4 @@ From now on, you can push and pull executing those scripts with:
 
 Be aware that this solution doesn't handle possible conflicts which I try to avoid as much as possible resetting my mobile vault considering the desktop one as the most up to date (having regular backups helps me to validate this assumption easily).
 
-Of course, there is surely a window of improvement on this solution but I'm ok right now, it's easy to open termux, type `./pull.sh` and then exit right after that I updated my vault.
+Of course, there is surely a window of improvement on this solution but I'm ok right now with this one, it's easy to open termux, type `./pull.sh` and then exit right after that I updated my vault.

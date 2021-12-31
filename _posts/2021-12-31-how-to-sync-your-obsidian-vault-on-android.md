@@ -48,12 +48,12 @@ git commit -m "First commit"
 git push
 ```
 
-Now your Obsidian vault is on Github 🎉
+Now the Obsidian vault is on Github 🎉
 
 ## Android
 
-Okay, your vault is online, but how can we sync it on our android mobile phone?   
-We can install [https://termux.com/](https://termux.com/) to get a Linux shell on our Android, then we can install `git` and clone the repo.   
+Okay, the vault is online, but how can we sync it on your android mobile phone?   
+We can install [https://termux.com/](https://termux.com/) to get a Linux shell on your Android, then you can install `git` and clone the repo.   
 You can install termux from the Play Store and then execute it, installing and configuring what we need with:
 
 ```bash
@@ -61,11 +61,11 @@ You can install termux from the Play Store and then execute it, installing and c
 > termux-setup-storage #to make storage available
 ```
 
-Now let's configure our Github credentials.
+Now let's configure the Github credentials.
 
 ### Github credentials
 
-First of all, we need to generate an ssh key for our Android
+First of all, you need to generate an ssh key for the Android mobile phone
 
 ```bash
 ssh-keygen -t ed25519 -C "email@provider.com"
@@ -78,10 +78,10 @@ If you don't have ssh installed type
 pkg install openssh
 ```
 
-Now we need to add our ssh key to our Github's account, just following these instructions: [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+Now you need to add the ssh key to the Github's account, just following these instructions: [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-To get our ssh key we can just type on termux `cat .ssh/id_ed25519.pub` copying the key and pasting it into the `key` field of Github's form adding the ssh key to your account.   
-Once we have followed these steps we can try to clone our repo:
+To get the ssh key you can just type on termux `cat .ssh/id_ed25519.pub` copying the key and pasting it into the `key` field of Github's form adding the ssh key to your account.   
+Once we have followed these steps we can try to clone the repo:
 
 ```bash
 git clone git@github.com:YOUR_USER/YOUR_REPO_NAME.git
@@ -93,18 +93,18 @@ and then let's move it to the shared folder so you can access it from any Androi
 mv YOUR_REPO_NAME/ storage/shared/
 ```
 
-Now you can just open the directory from your Obsidian application and here we go, we have our vault up to date with our latest changes.   
+Now you can just open the directory from your Obsidian application and here we go, we have the vault up to date with the latest changes.   
 I also suggest putting inside your vault a `.nomedia` file so you won't see the image contained in your vault in your gallery.   
 
-But how can we simplify the pull/push process?
+But how can make this process simpler?
 
-Let's first create a soft link to our repo to simplify the process:
+Let's first create a soft link to the repo to simplify the process:
 
 ```bash
 ln -s storage/shared/YOUR_REPO_NAME YOUR_REPO_NAME
 ```
 
-And then let's create a `pull.sh` script that we will run to pull the latest changes from our repo:
+And then let's create a `pull.sh` script that you will run to pull the latest changes from the repo:
 
 ```bash
 cd YOUR_REPO_NAME/
@@ -128,7 +128,7 @@ then let's make them executable:
 chmod +x push.sh pull.sh
 ```
 
-From now on, we can push and pull executing those scripts with:
+From now on, you can push and pull executing those scripts with:
 
 
 ```bash

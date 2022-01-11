@@ -48,7 +48,7 @@ For you to obtain more tuned content and for me to understand you better.
 It's free, you just need to subscribe, and once in a while, you will receive my issues.   
 I don't have a specific plan for them, I don't want to put to myself any kind of constraint and I don't want to set any kind of expectation.
 
-You can find the newsletter here: [Inner Space 🚀](https://innerspace.domenicoluciani.com)
+You can find the newsletter here: [InnerSpace 🚀](https://innerspace.domenicoluciani.com)
 
 I don't know how it goes, but I'm looking forward to seeing it!
 

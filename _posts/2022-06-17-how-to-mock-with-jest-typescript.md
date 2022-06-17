@@ -161,7 +161,8 @@ import { Mapper } from "../mappers/mapper";
 
 jest.mock("../mappers/mapper", () => ({
   Mapper: {
-    mapSomethingToSomethingElse: jest.fn().mockImplementation(() => {
+    mapSomethingToSomethingElse: jest.fn()
+    .mockImplementation(() => {
       return "dummyMock";
     }),
   }

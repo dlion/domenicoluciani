@@ -78,7 +78,8 @@ it("Should test something", () => {
    const obj = new ClassUnderTest();
    obj.methodUnderTest(mockedDependency);
 
-   expect(mockedDependency.functionIneedToMock).toHaveBeenCalledTimes(2);
+   expect(mockedDependency.functionIneedToMock)
+   .toHaveBeenCalledTimes(2);
 })
 ```
 
@@ -129,7 +130,8 @@ it("Should publish the message", () => {
   const manager = new Manager();
   manager.methodWhichUseLotsOfDependencies();
   
-  expect(spiedPublishMessageService).toHaveBeenCalledWith("hello");
+  expect(spiedPublishMessageService)
+  .toHaveBeenCalledWith("hello");
 }
 ```
 
@@ -169,7 +171,8 @@ jest.mock("../mappers/mapper", () => ({
 And then we can perform some assertions like:
 
 ```ts
-expect(Mapper.mapSomethingToSomethingElse).toHaveBeenCalledTimes(1);
+expect(Mapper.mapSomethingToSomethingElse)
+.toHaveBeenCalledTimes(1);
 ```
 
 ## What about AWS Lambda handlers?
@@ -204,7 +207,8 @@ it("Should test the handler", () => {
 	  dummyContext as Context
 	);
 
-	expect(mockedAuthService).toHaveBeenCalledTimes(1);
+	expect(mockedAuthService)
+  .toHaveBeenCalledTimes(1);
 })
 
 ```

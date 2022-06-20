@@ -142,7 +142,6 @@ Of course we can always program the mocked dependency behaviour since the `jest.
 
 Often in legacy codebases we may find multiple static methods, used improperly.   
 How can we handle them with Jest?   
-Here an example:
 
 We have a `Mapper` class with a static `mapSomethingToSomethingElse` method that we want to mock, for instance:
 
@@ -218,4 +217,5 @@ As you can see we used the [`Partial`](https://www.typescriptlang.org/docs/handb
 
 ## Just the tip of the iceberg
 
-I still need to learn more than a bunch of things around this very powerful language and I've just scratched the top of the iceberg and I'm looking forward continuing exploring this world called Typescript.
+I still need to learn more than a bunch of things around this very powerful language and I've just scratched the top of the iceberg and I'm looking forward continuing exploring this world called Typescript.   
+As an Extreme Programmer I like to explore new things, I like to try new stuff and I like to solve problems and overcome challenges and jumping from one project to another keep me pushing my self outside my comfort zone trying to learn at least something new, every day.

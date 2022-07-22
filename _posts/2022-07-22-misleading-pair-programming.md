@@ -32,12 +32,12 @@ Another false assumption is that pairing slows you down.
   
 > Why have two people on the same task when you can have two people on two different tasks and speed up the development?  
 
-<div style="width:100%;height:0;padding-bottom:70%;position:relative;"><iframe src="https://giphy.com/embed/3oriO7A7bt1wsEP4cw" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/newquest-coffee-hands-3oriO7A7bt1wsEP4cw">via GIPHY</a></p>
+![slow](https://media.giphy.com/media/3oriO7A7bt1wsEP4cw/giphy.gif)
   
 It seems a fair statement, but it doesn't take into consideration the result of doing that, let's explore a few of them:
   
 ## Code Reviews
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/3o7WTL4qQCbbLLV2Pm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/chuber-qa-quality-assurance-3o7WTL4qQCbbLLV2Pm">via GIPHY</a></p>
+![code review](https://media.giphy.com/media/3o7WTL4qQCbbLLV2Pm/giphy.gif)
 
 Doing code reviews is a common practice. Once you are done with your story, another (or more than just one) person has to review and accept your code to be merged.   
 What are the pitfalls of this practice?   
@@ -47,13 +47,14 @@ What are the pitfalls of this practice?
 - **Fake Code Reviews**: Reading others' code is complex, and it requires concentration, especially without the context becoming time-consuming, so what do usually people do? Read quickly through the code, acting like a linter or a compiler. It is like doing a fake code review. It doesn't add any value; it can lead to side problems in the codebase and give the team a fake feeling of security. It often happens, especially when the team is in a rush due to imposed deadlines or constraints.
 
 ## Bus Factor and Collective Ownership
-<div style="width:100%;height:0;padding-bottom:43%;position:relative;"><iframe src="https://giphy.com/embed/9qnogucSKuQ8g" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/9qnogucSKuQ8g">via GIPHY</a></p>
+![bus factor](https://media.giphy.com/media/9qnogucSKuQ8g/giphy-downsized-large.gif)
 
 Working alone on a task is cool until the rest of the team needs to know what you have done and how but you are not available.   
 Handing over your knowledge around that task will require spending some time with the team explaining to them the code you have written, giving them the context and the choices you have made, and hoping they get it quickly. It could involve having different sessions with different people, drawing flows and having multiple discussions.   
-All the things you can mitigate by having another person pair with you.
- In that scenario, two people are getting the same knowledge around a specific task; frequently rotating helps to spread this knowledge increasing the collective ownership of the codebase.   
- Are you off tomorrow? No worries, you are covered by another person who knows what you know without the need to wait for you to be back.
+
+All the things you can mitigate by having another person pair with you.   
+In that scenario, two people are getting the same knowledge around a specific task; frequently rotating helps to spread this knowledge increasing the collective ownership of the codebase.   
+Are you off tomorrow? No worries, you are covered by another person who knows what you know without the need to wait for you to be back.
 
 # Sometimes I don't think that pairing is a good idea!
 > Then don't do it!
@@ -65,13 +66,15 @@ If you see a task that doesn't require pairing, then you can just go ahead and d
 True, remote pairing is more complicated than pairing physically, and it is a fact. However, nowadays, we have some tools, precautions and equipment to overcome this situation as much as possible.
 * **Slow internet connection**: Be ensure to have an internet connection that can support your pairing activities seamlessly. Without a good internet connection, the whole pairing activity will degrade, and it is no longer working anymore.
 * **High-quality audio channel**: pairing forces you to communicate as much as possible. It's about sharing your thoughts; it's about having discussions and telling what you will do while driving. During the pairing sessions, **properly communicating is key**. Having a good headset with a good microphone (with noise reductions, for example) will allow you to not bother your pair with annoying noises and, on the other hand, to have a smooth call listening to your colleague seamlessly.
-* **High-quality camera**: The body language is an essential part of the pairing session; it allows you to understand what the other person thinks (even unconsciously) and whether that person is following you or not. It will enable you to have a more human centre experience.
-These critical factors are missing during the remote pairing session. For this reason, it is essential to emulate the physical pairing as much as possible, having the camera on and streaming high-quality video, if possible. Having the camera on allows you to see the other person's expression and feeling of not being alone. It helps you to ensure to be listened to and force the other person to not be distracted. Turning your camera off is okay _if you need it or if you have a problem with your internet connection_. It's okay turning it off during your breaks, and it's okay if you are not feeling comfortable, but be conscious that you will lose lots of communication, making the session harder.
+* **High-quality camera**: The body language is an essential part of the pairing session; it allows you to understand what the other person thinks (even unconsciously) and whether that person is following you or not. It will enable you to have a more human centre experience.   
+These critical factors are missing during the remote pairing session. For this reason, it is essential to emulate the physical pairing as much as possible, having the camera on and streaming high-quality video.   
+
+Having the camera on allows you to see the other person's expression and feeling of not being alone. It helps you to ensure to be listened to and force the other person to not be distracted. Turning your camera off is okay _if you need it or if you have a problem with your internet connection_. It's okay turning it off during your breaks, and it's okay if you are not feeling comfortable, but be conscious that you will lose lots of communication, making the session harder.
 * **Use the right tool**: Don't stick with a single tool; if you need to use multiple tools, do it. The smoother the session is, the better. For instance, if you find the Zoom screen sharing pretty bad, try to use Visual Studio Live Code and use Zoom just for the call. Sure, you will use more resources, but it is the right thing to do if it improves your pairing session. Nowadays, there are a lot of tools you can try; use the one you and your pair find more comfortable.
 * **Breaks breaks breaks!**: Pairing is a brain power-consuming activity, so if by default you need breaks, when remote, you need it even more. Don't be shy and ask whenever you need a break preventing zoom's fatigue or, in general, being exhausted at the end of the day.
 
 # I have less experience than my pair
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/qQJ1xyQXVuVfW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/top-driving-distractions-qQJ1xyQXVuVfW">via GIPHY</a></p>
+![less experience](https://media.giphy.com/media/qQJ1xyQXVuVfW/giphy.gif)
 
 Pairing is not only about showing what you know but also showing what you don't know.   
 It's totally fine saying "I don't know" during a pairing session. It's fine admitting you have less experience or are just blocked.
@@ -88,6 +91,10 @@ The pairing session is also an excellent way to clarify whether or not you under
 I'm pretty sure there are many other complaints we can consider and address, but the result will always be the same.   
 Pair programming brings to your team tons of benefits if it is done correctly.   
 My advice would also be to set the right expectations at the beginning of the session. Let's agree on what the pairing session would look like and clarify the style with your pair to avoid wrong assumptions and behaviours that can degrade the experience for both of you.
+
+Happy Pairing!
+
+![happy](https://media.giphy.com/media/toXKzaJP3WIgM/giphy.gif)
 
 # Other resources
 

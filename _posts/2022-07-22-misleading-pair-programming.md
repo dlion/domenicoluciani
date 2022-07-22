@@ -9,7 +9,9 @@ lang: en
 
 I often read tweets, threads and posts full of complaints about this weird practice called **Pair Programming**, frequently due to a lack of understanding and wrong implementation.   
 Today I'd like to spend some time clarifying why those complaints are misleading and why you should keep doing pair programming.
-  
+
+----
+
 # It's tiring!
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use pair programming? How do you do it?<br><br>It often feels like a more tiring way to move slower to me. Great for solving gnarly bugs together, but not for coding.</p>&mdash; Swizec Teller encouraging you to Be An Expert (@Swizec) <a href="https://twitter.com/Swizec/status/1363938310276583430?ref_src=twsrc%5Etfw">February 22, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

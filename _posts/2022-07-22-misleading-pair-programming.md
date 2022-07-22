@@ -44,12 +44,12 @@ What are the pitfalls of this practice?
 - **Lack of context**: the person reviewing your code doesn't have the same context as you, it will lead to possible misunderstanding or long debates due to this deficiency, delaying the integration and having a longer feedback loop.   
 - **It requires another person's availability**: waiting for another person to review your code leads to a significant delay creating a bottleneck within the team.   
 - **Context Switch**: the other person probably is busy doing something else, like working on a different task. That person, just for unblocking you, has to do a context switch, review your code and then get back to the task by doing another context switch again. It has been proved that doing context switching often leads to spending lots of time restoring concentration and getting back on track.   
-- **Fake Code Reviews**: Reading others' code is complex, and it requires concentration, especially without the context becoming time-consuming, so what do usually people do? Read quickly through the code, acting like a linter or a compiler. It is like doing a fake code review. It doesn't add any value; it can lead to side problems in the codebase and give the team a fake feeling of security. It often happens, especially when the team is in a rush due to imposed deadlines or constraints.
+- **Fake Code Reviews**: reading others' code is complex, and it requires concentration, especially without the context, becoming time-consuming, so what do usually people do? Read quickly through the code, acting like a linter or a compiler. It is like doing a fake code review. It doesn't add any value; it can lead to have side problems in the codebase and give the team a fake feeling of security. It often happens, especially when the team is in a rush due to imposed deadlines or time constraints.
 
-## Bus Factor and Collective Ownership
+## Bus Factor
 ![bus factor](https://media.giphy.com/media/9qnogucSKuQ8g/giphy-downsized-large.gif)
 
-Working alone on a task is cool until the rest of the team needs to know what you have done and how but you are not available.   
+Working alone on a task is cool until the rest of the team needs to know what you have done and how, but you are not available.   
 Handing over your knowledge around that task will require spending some time with the team explaining to them the code you have written, giving them the context and the choices you have made, and hoping they get it quickly. It could involve having different sessions with different people, drawing flows and having multiple discussions.   
 
 All the things you can mitigate by having another person pair with you.   
@@ -63,27 +63,27 @@ Pairing is a valuable activity with multiple benefits, but it has to be used whe
 If you see a task that doesn't require pairing, then you can just go ahead and do it by yourself. It is okay to have a sole moment, and it's up to you to decide whether or not to pair with someone else.
 
 # Remotely is harder!
-True, remote pairing is more complicated than pairing physically, and it is a fact. However, nowadays, we have some tools, precautions and equipment to overcome this situation as much as possible.
-* **Slow internet connection**: Be ensure to have an internet connection that can support your pairing activities seamlessly. Without a good internet connection, the whole pairing activity will degrade, and it is no longer working anymore.
-* **High-quality audio channel**: pairing forces you to communicate as much as possible. It's about sharing your thoughts; it's about having discussions and telling what you will do while driving. During the pairing sessions, **properly communicating is key**. Having a good headset with a good microphone (with noise reductions, for example) will allow you to not bother your pair with annoying noises and, on the other hand, to have a smooth call listening to your colleague seamlessly.
+True, remote pairing is more complicated than pairing physically, and it is a fact. However, nowadays, we have some tools, precautions and equipments to overcome this situation as much as possible.
+* **Slow internet connection**: Be ensure to have an internet connection that can support your pairing activities seamlessly. Without a good internet connection, the whole pairing activity will degrade, and it becomes painfully.
+* **High-quality audio channel**: pairing forces you to communicate as much as possible. It's about sharing your thoughts; it's about having discussions and telling what you will do while driving or navigating. During the pairing sessions, communicate properly **is key**. Having a good headset with a good microphone (with noise reductions, for example) will allow you to not bother your pair with annoying noises and, on the other hand, to have a smooth experience listening to your colleague like in person.
 * **High-quality camera**: The body language is an essential part of the pairing session; it allows you to understand what the other person thinks (even unconsciously) and whether that person is following you or not. It will enable you to have a more human centre experience.   
-These critical factors are missing during the remote pairing session. For this reason, it is essential to emulate the physical pairing as much as possible, having the camera on and streaming high-quality video. Having the camera on allows you to see the other person's expression and feeling of not being alone. It helps you to ensure to be listened to and force the other person to not be distracted. Turning your camera off is okay _if you need it or if you have a problem with your internet connection_. It's okay turning it off during your breaks, and it's okay if you are not feeling comfortable, but be conscious that you will lose lots of communication, making the session harder.
-* **Use the right tool**: Don't stick with a single tool; if you need to use multiple tools, do it. The smoother the session is, the better. For instance, if you find the Zoom screen sharing pretty bad, try to use Visual Studio Live Code and use Zoom just for the call. Sure, you will use more resources, but it is the right thing to do if it improves your pairing session. Nowadays, there are a lot of tools you can try; use the one you and your pair find more comfortable.
+These critical factors are missing during the remote pairing session. For this reason, it is essential to emulate the physical pairing as much as possible, having the camera on and streaming high-quality video. It allows you to see the other person's expressions. It helps you to ensure to be listened to and force the other person to not be distracted. Turning your camera off is okay _if you need it or if you have a problem with your internet connection_. It's okay during your breaks, and it's okay if you are not feeling comfortable showing yourself, but be conscious that you will lose lots of communication, making the pairing session harder.
+* **Use the right tool**: Don't stick with a single tool; if you need to use multiple tools, do it. The smoother the session is, the better. For instance, if you find the Zoom screen sharing pretty bad, try to use Visual Studio Live Code and use Zoom just for the call. Sure, you will use more resources, but it is the right thing to do if it improves your experience. Nowadays, there are a lot of tools you can try; use the one you and your pair find more comfortable with.
 * **Breaks breaks breaks!**: Pairing is a brain power-consuming activity, so if by default you need breaks, when remote, you need it even more. Don't be shy and ask whenever you need a break preventing zoom's fatigue or, in general, being exhausted at the end of the day.
 
 # I have less experience than my pair
 ![less experience](https://media.giphy.com/media/qQJ1xyQXVuVfW/giphy.gif)
 
 Pairing is not only about showing what you know but also showing what you don't know.   
-It's totally fine saying "I don't know" during a pairing session. It's fine admitting you have less experience or are just blocked.
+It's totally fine saying "I don't know" during a pairing session. It's fine admitting you have less experience or that you are just blocked.
 Your pair have to support, unblock and guide you.   
 Pairing has this colossal benefit that cultivation is part of this activity. It helps juniors grow together by getting more confident, and it allows seniors to learn from less experienced engineers (it happens frequently).   
-Pairing is about trust and being honest and open with your pair, so don't be afraid. Learning is a beautiful journey, and pairing is the safest way to do so.
+Pairing is about trust and being honest and open with your pair, so don't be afraid. Learning is a beautiful journey, and pairing is the safest way to do it.
 
 # I have more experience than my pair
 Having more experience than your pair shouldn't be a problem; it should be an occasion to do mentoring and cultivation.   
 As a more experienced person, you should adjust your speed accordingly.   
-The pairing session is also an excellent way to clarify whether or not you understood something; if you can explain it in simple words, then you understood it. It is a perfect way to improve your skills.
+The pairing session is also an excellent way to clarify whether or not you understood something; if you can explain it in simple words, then you understood it. It is a perfect way to improve your speaking and teaching skills.
 
 # Yara Yara
 I'm pretty sure there are many other complaints we can consider and address, but the result will always be the same.   
@@ -98,6 +98,6 @@ Happy Pairing!
 
 Here there are some resources you can find useful to convince your boss that doing pair programming is the way:
 
-* https://tanzu.vmware.com/developer/learningpaths/application-development/pair-programming/
-* https://martinfowler.com/articles/on-pair-programming.html
-* http://www.extremeprogramming.org/rules/pair.html
+* [https://tanzu.vmware.com/developer/learningpaths/application-development/pair-programming/](https://tanzu.vmware.com/developer/learningpaths/application-development/pair-programming/)
+* [https://martinfowler.com/articles/on-pair-programming.html](https://martinfowler.com/articles/on-pair-programming.html)
+* [http://www.extremeprogramming.org/rules/pair.html](http://www.extremeprogramming.org/rules/pair.html)

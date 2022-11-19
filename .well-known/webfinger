@@ -5,7 +5,7 @@
     "https://mastodon.social/users/dlion"
   ],
   "links": [
-     {
+    {
       "rel": "http://webfinger.net/rel/profile-page",
       "type": "text/html",
       "href": "https://mastodon.social/@dlion"

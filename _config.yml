@@ -16,6 +16,9 @@ navigation:
     - url: /
 
 include: ["/.well-known" ]
+exclude:
+    - README.md
+    - _config.yml
 # Details for the RSS feed generator
 url:            'https://domenicoluciani.com'
 author:         'Domenico Luciani'

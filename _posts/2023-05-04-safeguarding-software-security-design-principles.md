@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Safeguarding Software: Embracing Security Design Principles in Software Development"

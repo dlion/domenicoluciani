@@ -14,6 +14,13 @@ Learn from feedback and grow the number of people with whom I interact.
 
 So, today I decided to create my newsletter called: InnerSpace 🚀
 
+
+# UPDATE
+
+Elon Musk decided to delete Revue so for now I decided to stop deliverying it ~
+
+---
+
 ## RSS? Can you eat it?
 
 I don't know how many people still use feed RSS nowadays.   

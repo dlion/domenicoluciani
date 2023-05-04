@@ -1,6 +1,6 @@
 name: Domenico Luciani
 title: Domenico Luciani
-description: "Software engineer, runner, maker, computer vision fanatic and IT security lover."
+description: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer @ VMware, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
 meta_description: "programming, coding, security, computer science"
 permalink: '/:year/:month/:day/:title.html'
 mastodon: dlion@mastodon.social
@@ -23,8 +23,8 @@ exclude:
 # Details for the RSS feed generator
 url:            'https://domenicoluciani.com'
 author:         'Domenico Luciani'
-bio: 'Software engineer, runner, maker, computer vision fanatic and IT security lover.'
-links: ['InnerSpace 🚀 Newsletter: <a href="https://innerspace.domenicoluciani.com">https://innerspace.domenicoluciani.com</a>', 'Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
+bio: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer @ VMware, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
+links: ['Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Twitter: <a href="https://twitter.com/DLion92">https://twitter.com/DLion92</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
 location: Remote 🛰, Spain
 website: https://domenicoluciani.com
 plugins:

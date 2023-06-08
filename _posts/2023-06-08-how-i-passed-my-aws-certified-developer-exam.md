@@ -23,7 +23,7 @@ It started for fun and it became even funnier over time, digging deeper into AWS
 certification.   
 **I LOVE GOING OUTSIDE MY COMFORT-ZONE** 
 
->Did I need it? No.
+>Did I need it? No.   
 >Do you need it? Probably not.
 
 It was just a matter of challenging myself, nothing more 🤭 so my advice is to enjoy the journey, learn as much as possible but just for your own sake, it will give you the extra motivation you need to pass the exam at the first 
@@ -45,7 +45,7 @@ So I felt that I needed, for my career and for my own interest (📚) to fill ou
 
 ### A Cloud Guru
 
-Working at VMware also means I have lots of benefits 😌🙏 and one between them is the possibility to access https://acloudguru.com/ courses/resources/labs **FOR FREE**! ✨   
+Working at VMware also means I have lots of benefits 😌🙏 and one between them is the possibility to access [https://acloudguru.com/](https://acloudguru.com/) courses/resources/labs **FOR FREE**! ✨   
 A Cloud Guru it is well known to be very expensive but to have one of the best playground out there.
 
 #### Playground?
@@ -55,19 +55,19 @@ Open a new session of their sandbox and log-in.
 
 From that moment till a bunch of hours you will have the chance to play with an almost real AWS environment, bill-free. 👀
 
-![playground-aws-1](/assets/posts/playground-aws-1.png)
+![playground-aws-1](/assets/images/posts/playground-aws-1.png)
 
 #### Developer Associate Course
 
-Of course, A Cloud Guru has it's own course: https://learn.acloud.guru/course/aws-certified-developer-associate   
+Of course, A Cloud Guru has it's own course: [https://learn.acloud.guru/course/aws-certified-developer-associate](https://learn.acloud.guru/course/aws-certified-developer-associate)   
 I took it and I can definitely say that it covers more or less everything you need to know to pass the exam.   
 Especially I want to call-out the 4 mocked exams which have been super useful to get to know the exam env and the questions' style.
 
-![mocked-exam](/assets/posts/mocked-exam-aws.png)
+![mocked-exam](/asjets/posts/mocked-exam-aws.png)
 
 ### Tutorials Dojo
 
-Another resource I found useful to reinforce my knowledge was https://tutorialsdojo.com/   
+Another resource I found useful to reinforce my knowledge was [https://tutorialsdojo.com/](https://tutorialsdojo.com/)   
 It's a website that contains study-path for each certification.   
 Here the one for the Developer Associate: [ https://tutorialsdojo.com/aws-certified-developer-associate-exam-guide-study-path-dva-c02/](https://tutorialsdojo.com/aws-certified-developer-associate-exam-guide-study-path-dva-c02/)
 
@@ -93,7 +93,7 @@ Having a full-time job it's always complicate to find the time and the energy to
 The certification itself IMHO doesn't add anything up to your skills-set.   
 I studied for 2 months more or less, dedicating to it almost every day at least 25minutes.
 
-> Something I would like to highlight here is that I have more than 10 years of experience as a Software Engineer so your experience can be different and you might need more time and resources.
+> Something I would like to highlight here is that **I have more than 10 years of experience** as a Software Engineer so your experience can be different and you might need more time and resources.
 
 ### Obsidian
 
@@ -111,7 +111,7 @@ Worth to mention that Obsidian has an [Excalidraw plugin](https://github.com/zsv
 
 For me having a visual representation works quite well and it helps to remember better.
 
-![excalidrw-aws](/assets/posts/excalidraw-aws.png)
+![excalidrw-aws](/assets/images/posts/excalidraw-aws.png)
 
 ### Mocked Exams
 

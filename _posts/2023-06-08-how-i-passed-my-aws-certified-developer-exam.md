@@ -63,7 +63,7 @@ Of course, A Cloud Guru has it's own course: [https://learn.acloud.guru/course/a
 I took it and I can definitely say that it covers more or less everything you need to know to pass the exam.   
 Especially I want to call-out the 4 mocked exams which have been super useful to get to know the exam env and the questions' style.
 
-![mocked-exam](/asjets/posts/mocked-exam-aws.png)
+![mocked-exam](/assets/images/posts/mocked-exam-aws.png)
 
 ### Tutorials Dojo
 

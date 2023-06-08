@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I passed my AWS Certified Developer Exam"
-date: 2023-06-09 08:00:00
+date: 2023-06-08 08:00:00
 categories: [Programming]
 cover: "/assets/images/covers/cloud_cert_aws.png"
 lang: en

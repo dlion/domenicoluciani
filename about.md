@@ -20,7 +20,6 @@ I'm a [Raspberry Pi](/category/raspberrypi) owner.
 ![Activity](https://raw.githubusercontent.com/dlion/dlion/main/activity.svg)
 ![Stack](https://raw.githubusercontent.com/dlion/dlion/main/stack.svg)
 
-
 ---
 
 ## Follow me

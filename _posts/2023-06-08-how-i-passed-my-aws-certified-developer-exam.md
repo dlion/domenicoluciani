@@ -19,7 +19,7 @@ I'd like to start by saying that I'm not a big fan of getting as many certificat
 > This indeed is my first real certification.
 
 I started to study AWS **just for fun** and to desire to become a better professional. **I wasn't really interested to get any certification.**   
-I started it for fun and it became even funnier over time, digging deeper into AWS services and use cases, so at the end of the path/course I felt that after all the effort I could try to challenge myself even more by getting the 
+I started it for fun and it became even more fun over time, digging deeper into AWS services and use cases, so at the end of the path/course I felt that after all the effort I could try to challenge myself even more by getting the 
 certification.   
 **I LOVE GOING OUTSIDE MY COMFORT ZONE** 
 
@@ -135,7 +135,7 @@ Don't focus too much on the specific questions but more on the topics they cover
 ### Hands-on Lab
 
 A Cloud Guru helps a lot with the hands-on part but it doesn't mean you can't open an AWS free-tier account and try by yourself to play with AWS services.   
-Right now the exam is composed of 65 multi-choice questions so at first it seems not hands-on oriented but it is wrong.   
+Right now the exam is composed of 65 multi-choice questions so at first it seems not hands-on oriented but that would be the wrong assumption.   
 Lots of questions are about specific technical details and particular services options that it's easier to know if you had the chance to play with them and having a hands-on experience is always better considering the 
 nature of this certification.
 

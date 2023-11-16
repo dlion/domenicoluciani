@@ -20,9 +20,7 @@ I'd like to start with how I ended up working full-time on an open-source projec
 Every team that needs some help or that is open to accepting temporary new joiners can publish an opportunity in an internal platform. Sometimes they require specific skills, proficiency in a particular stack, or just people with the motivation to learn new things.   
 
 Everyone who has the approval can apply to those opportunities, and have a conversation with the manager who published it to verify whether that person might be a good fit or not.   
-As you can imagine I went through this process early this July and, I applied for a Take3 to join a small open-source team called 
-
-> **CNB** - **Cloud Native Buildpacks**. 👀
+As you can imagine I went through this process early this July and, I applied for a Take3 to join a small open-source team called **CNB** - **Cloud Native Buildpacks**.
 
 ## What do Buildpacks do?
 

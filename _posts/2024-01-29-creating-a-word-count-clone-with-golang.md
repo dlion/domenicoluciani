@@ -655,6 +655,9 @@ If you want to have a look at the code, you can find it on my Github Profile: [h
 So what do you think about my solution?   
 Did I miss something? Can I improve it? Can it be more idiomatic?
 
+Of course this solution can be definitely improved, and the exercise wasn't about reading large files (given the example file).   
+In that case I would have implemented the reader in a different way in order to not have the entire file in memory and so on.
+
 Implement your solution and let me know what you think about this challenge.
 
 Happy Coding!

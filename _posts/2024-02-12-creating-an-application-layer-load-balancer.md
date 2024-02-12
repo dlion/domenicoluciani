@@ -124,6 +124,7 @@ func (m *MockClient) HealthCheck() {
 ```
 
 * I provide my mocked client as a parameter for my load balancer server that I called `SpartimilluServer`.
+
 ```go
 type SpartimilluServer struct {  
     client client.Client  

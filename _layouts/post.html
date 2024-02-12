@@ -31,15 +31,11 @@ post_class: post-template
         <section class="post-content">
             {{content}}
       {%- if content contains 'mermaid' -%}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.8.0/mermaid.min.js"></script>
         <script>
         const config = {
             startOnLoad:true,
-            theme: 'forest',
-            flowchart: {
-                useMaxWidth:false,
-                htmlLabels:true
-                }
+            theme: 'neutral',
         };
         mermaid.initialize(config);
         window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));

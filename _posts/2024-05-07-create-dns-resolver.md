@@ -11,16 +11,17 @@ Following the previous post about [creating an Application Layer Load Balancer](
 
 ## DNS Resolver what?
 
-A DNS Resolver is a crucial component that allows you to resolve an IP address from a certain domain.
-For instance, it allows your browser to know where to find the server associated with a specific domain. (let's say, domenicoluciani.com → 172.67.144.42)
+A DNS Resolver is a crucial component that allows you to resolve an IP address from a certain domain.   
+For instance, it allows your browser to know where to find the server associated with a specific domain.   
+(i.e. domenicoluciani.com → 172.67.144.42)
 
 ## The Coding Challenge
 
-The coding challenge consists of building a simple DNS Resolver that is capable of resolving an IP address from a certain domain. I'd like to highlight about the _simple_ part.
-You can find the challenge here: https://codingchallenges.fyi/challenges/challenge-dns-resolver/
+The coding challenge consists of building a simple DNS Resolver that is capable of resolving an IP address from a certain domain. I'd like to highlight about the _simple_ part.   
+You can find the challenge here: [https://codingchallenges.fyi/challenges/challenge-dns-resolver/](https://codingchallenges.fyi/challenges/challenge-dns-resolver/)
 
 ## Preface
-As I did in the previous posts, I took this challenge just for fun and dive deeper into how a DNS resolver works. It's a weekend project that obviously can contain errors, so if you find one -or more-, please let me know, never stop learning, right?
+As I did in the previous posts, I took this challenge just for fun and dive deeper into how a DNS resolver works. It's a weekend project that obviously can contain errors, so if you find one -or more-, please let me know, never stop learning, right? 📚
 
 ## Things I learned with this challenge
 
@@ -30,19 +31,19 @@ As I did in the previous posts, I took this challenge just for fun and dive deep
 * Went deeper into binary protocols and how they work
     * And how to fill a structure with binary data in Go.
 * The [DNS RFC](https://datatracker.ietf.org/doc/html/rfc1035) is super clear (well done authors!)
-* Testing saved me from a lot of debugging time
+* Testing and ChatGPT saved me from a lot of debugging time
 
 Are you interested in one of these things? Then keep reading! 🕵🏻‍♂️
 
 ## Step 0
 
-For this challenge, I decided to use Go and I tried to use a Test Driven Development approach as usual, even tho not completely since my goal wasn't to apply it perfectly but to have a good simple design.
+For this challenge, I decided to use Go and I tried to use a Test Driven Development approach as usual, even tho not completely since my goal wasn't to apply it perfectly but to have a good simple design. 🙏🏻
 
 ## Step 1
 This step is about creating a query message that we have to send to the name server, composed of these fields:
 
 1. A header.
-2. A questions section.
+2. A question section.
 3. An answer section.
 4. An authority section.
 5. An additional section.
@@ -70,7 +71,7 @@ The header is always present, and it is composed in this way
 ```
 
 * Query ID
-* Some flags (at the beginning for the challenge we set this flags to 1 and then to 0 because at the beginning we contact a dns resolver to then switch to a Root NS)
+* Some flags (at the beginning for the challenge we set this flags to 1 and then to 0 because at the beginning we contact a dns resolver to then switch to an authoritative nameserver)
 * QDCOUNT = Number of questions
 * ANCOUNT = Number of answers
 * NSCOUNT =  Number of authorities
@@ -100,16 +101,16 @@ The question section is composed in this way:
 * QCLASS = class type (i.e. `internet`)
 
 The details are defined in these sections of the RFC: 
-* Question: https://datatracker.ietf.org/doc/html/rfc1035#section-4.1.2
-* Type: https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.2
-* Class: https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.4
+* Question: [https://datatracker.ietf.org/doc/html/rfc1035#section-4.1.2]( https://datatracker.ietf.org/doc/html/rfc1035#section-4.1.2)
+* Type: [https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.2](https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.2)
+* Class: [https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.4](https://datatracker.ietf.org/doc/html/rfc1035#section-3.2.2)
 
 ## Query
 Both sections need to be encoded in bytes and put together in order to form the final query.
 
 When we send the request we don't don't need to compose authorities and additionals, they are going to be filled out in the response.
 
-## Let's see the code
+## Let's see the code 👀
 
 Let's take a look at how I created and converted these two structures into bytes.
 
@@ -417,10 +418,12 @@ func getBackTheDomainFromTheHeader(reader *bytes.Reader, lengthByte byte) string
 ```
 
 I created a recursive function for simplicity; basically if the buffer starts with `0xC0` it means we are in front of a “DNS compression algorithm”.   
-The algorithm consists of a pointer towards the domain name we previously got in the buffer in order to not being repeated and save space. So, we calculate the offset, move there, read the domain name, and then get back to the original position, continuing with the parsing.   
-Of course this is a very basic algorithm and it can lead to multiple problems (like for example a malicious server can create a pointer to itself creating an infinite loop but you know, it was out of the scope of this challenge 😇)
 
-And last but not the least parsing record function
+The algorithm consists of a pointer towards the domain name we previously got in the buffer in order to not being repeated and save space. So, we calculate the offset, move there, read the domain name, and then get back to the original position, continuing with the parsing.   
+
+Of course this is a very basic algorithm and it can lead to [multiple problems](https://jvns.ca/blog/2022/01/15/some-ways-dns-can-break/) (like for example a malicious server can create a pointer to itself creating an infinite loop but you know, it was out of the scope of this challenge 😇)
+
+And last but not the least, let's parse the records we got:
 ```go
 
 func TestResponse(t *testing.T) {
@@ -505,6 +508,115 @@ The record part is the most important one because it might be:
 * `AUTHORITIES`: A list of NS servers that potentially can have what we are looking for
 * `ADDITIONALS`: A list of IP addresses of the NS servers we got from the `AUTHORITITES` section.
 
+
+## Let's put everything together
+Now it's time to use all these function together:
+```go
+func resolve(domainName string, questionType uint16) string {
+	nameServer := "198.41.0.4"
+	for {
+		fmt.Printf("Querying %s for %s\n", nameServer, domainName)
+		dnsResponse := sendQuery(nameServer, domainName, questionType)
+		dnsPacket := getDnsPacketFromResponse(dnsResponse)
+
+		if ip := getAnswer(dnsPacket.answers); ip != "" {
+			return ip
+		}
+
+		if nsIp := getNameServerIp(dnsPacket.additionals); nsIp != "" {
+			nameServer = nsIp
+			continue
+		}
+
+		if nsDomain := getNameServer(dnsPacket.authorities); nsDomain != "" {
+			nameServer = resolve(nsDomain, packet.TYPE_A)
+		}
+	}
+}
+```
+
+Where `SendQuery`:
+```go
+func sendQuery(nameServer, domainName string, questionType uint16) []byte {
+	query := packet.NewQuery(
+		packet.NewHeader(22, 0, 1, 0, 0, 0),
+		packet.NewQuestion(domainName, questionType, packet.CLASS_IN),
+	)
+
+	client := network.NewClient(nameServer, 53)
+	return client.SendQuery(query)
+}
+```
+
+Creates the query from the header and the question and then send the query to the nameserver.
+
+Then we get the `DNSPacket` from the response parsing it:
+```go
+func getDnsPacketFromResponse(dnsResponse []byte) *DNSPacket {
+	var (
+		header      *packet.Header
+		questions   []*packet.Question
+		answers     []*packet.Record
+		authorities []*packet.Record
+		additionals []*packet.Record
+	)
+
+	reader := bytes.NewReader(dnsResponse)
+	header, err := packet.ParseHeader(reader)
+	if err != nil {
+		fmt.Printf("Can't parse the response header: %v\n", err)
+		os.Exit(-1)
+	}
+	for range header.QdCount {
+		questions = append(questions, packet.ParseQuestion(reader))
+	}
+
+	for range header.AnCount {
+		answers = append(answers, packet.ParseRecord(reader))
+	}
+
+	for range header.NsCount {
+		authorities = append(authorities, packet.ParseRecord(reader))
+	}
+
+	for range header.ArCount {
+		additionals = append(additionals, packet.ParseRecord(reader))
+	}
+
+	return &DNSPacket{
+		header:      header,
+		questions:   questions,
+		answers:     answers,
+		authorities: authorities,
+		additionals: additionals,
+	}
+}
+```
+
+and at the end we check what results we get from the other sections:
+```go
+func getAnswer(answers []*packet.Record) string {
+	return getRecord(answers)
+}
+
+func getNameServerIp(additionals []*packet.Record) string {
+	return getRecord(additionals)
+}
+
+func getNameServer(authorities []*packet.Record) string {
+	return getRecord(authorities)
+}
+
+func getRecord(records []*packet.Record) string {
+	for _, record := range records {
+		if record.Type == packet.TYPE_A || record.Type == packet.TYPE_NS {
+			return record.Rdata
+		}
+	}
+	return ""
+}
+```
+
 ## The code and the output?
 
 As always you can find the code on my Github, at this url: [https://github.com/dlion/unnije](https://github.com/dlion/unnije).
@@ -542,31 +654,9 @@ I had lot of fun doing this challenge, I studied how the DNS works in the past b
 Some articles I found helpful to understand better how to overcome this challenge:
 * [DNS RFC](https://datatracker.ietf.org/doc/html/rfc1035)
 * Julia Evans blog:
-    * https://jvns.ca/blog/2023/07/28/why-is-dns-still-hard-to-learn/
-    * https://jvns.ca/blog/2022/11/06/making-a-dns-query-in-ruby-from-scratch/
-    * https://jvns.ca/blog/2022/02/14/some-dns-terminology/
+    * [https://jvns.ca/blog/2023/07/28/why-is-dns-still-hard-to-learn/](https://jvns.ca/blog/2023/07/28/why-is-dns-still-hard-to-learn/)
+    * [https://jvns.ca/blog/2022/11/06/making-a-dns-query-in-ruby-from-scratch/](https://jvns.ca/blog/2022/11/06/making-a-dns-query-in-ruby-from-scratch/)
+    * [https://jvns.ca/blog/2022/02/14/some-dns-terminology/](https://jvns.ca/blog/2022/02/14/some-dns-terminology/)
 * ChatGPT
 
 During this challenge I found extremely helpful pairing with ChatGPT, when using binary protocols having a `machine` that talk that language is key to dealing with problems and weird behaviors, but be careful using it if you are not sure about what you are doing, sometimes it allucinates and generates funny things. 🥸
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

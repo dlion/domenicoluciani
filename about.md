@@ -4,11 +4,11 @@ title: About me
 ---
 
 
-A passionate [programmer](/category/programming), 🧑🏻‍💻   
-more than 10 years of experience as a backend developer including more than 7 years as extreme programmer 🪂🤸   
-Currently working as a Senior Agile Software Engineer at [VMware](https://vmware.com) 🖥️   
-Working remotely from anywhere in Spain, currently living in Málaga. 🛰️ 🇪🇸   
-Open Source enthusiast and greedy learner. 📚🧑🏻‍🏫🧑🏻‍🎓   
+A passionate [programmer](/category/programming), 🧑🏻‍💻
+more than 10 years of experience as a backend developer including more than 7 years as extreme programmer 🪂🤸
+Currently working as a Staff Software Engineer at [Qonto](https://qonto.com/) 🖥️
+Working remotely from anywhere in Spain, currently living in Málaga. 🛰️ 🇪🇸
+Open Source enthusiast and greedy learner. 📚🧑🏻‍🏫🧑🏻‍🎓
 Currently focusing on software craftsmanship. 🪚🔨📐
 
 ![trip1](/assets/images/about/trip1.png) ![trip2](/assets/images/about/trip2.png) ![trip3](/assets/images/about/trip3.png)

@@ -6,11 +6,9 @@ title: About me
 
 A passionate [programmer](/category/programming), 🧑🏻‍💻
 
-more than 10 years of experience as a backend developer including more than 7 years as extreme programmer 🪂🤸
+more than 10 years of experience as a backend developer including more than 8 years as extreme programmer 🪂🤸
 
-Currently working as a Staff Software Engineer at [Qonto](https://qonto.com/) 🖥️
-
-Previously at VMware and Thoughtworks.
+Ex-VMware, Ex-Thoughtworks.
 
 Working remotely from anywhere in Spain, currently living in Málaga. 🛰️ 🇪🇸
 

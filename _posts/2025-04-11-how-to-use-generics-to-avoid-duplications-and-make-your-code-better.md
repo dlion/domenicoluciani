@@ -7,8 +7,6 @@ cover: "/assets/images/covers/go_generics.jpg"
 lang: en
 ---
 
-# How to use  generics to avoid duplications and make your code better
-
 I recently worked on a project that had a lot of code duplication due to repeated implementations of the same interfaces. I quickly realized it was a great opportunity to refactor the code, remove the duplication and make the code more scalable and maintainable.
 
 ---
@@ -19,7 +17,7 @@ Implementing external interfaces is quite common in Go projects, but sometimes w
 
 For example, we can have something like this into an external dependency, let's say something that helps us to return a particular response having a particular format:
 
-```go=
+```go
 //External dependency, living in an external project
 type JSONResponse interface {
     Name() string
@@ -29,7 +27,7 @@ type JSONResponse interface {
 
 And then, we have in our code:
 
-```go=
+```go
 type TypeOneResponse struct {
     ...
 }
@@ -41,7 +39,7 @@ func (r *TypeOneResponse) GetSomething() SomeThing { ..logic to return something
 
 Now let's imagine that we have to implement it for all our responses, we are going to have:
 
-```go=
+```go
 type TypeOneResponse struct {
     ...
 }
@@ -68,7 +66,7 @@ Luckily Go introduced [Generics](https://go.dev/doc/tutorial/generics), which he
 
 Let's define a new common and generic struct:
 
-```go=
+```go
 type Response[T] struct {
     Name string
     Payload T
@@ -77,7 +75,7 @@ type Response[T] struct {
 
 and let's implement the methods:
 
-```go=
+```go
 func (r *Response[T]) GetName() string { return r.Name }
 func (r *Response[T]) GetSomething() SomeThing { ..logic to return something.. }
 
@@ -86,7 +84,7 @@ func (r *Response[T]) GetSomething() SomeThing { ..logic to return something.. }
 
 We can then easily reuse this generic struct to instantiate our response types without re-implementing all methods again and again.
 
-```go=
+```go
 responseOne := Response[TypeOneResponse]{
     Payload: TypeOneResponse{ ... },   
 }
@@ -105,7 +103,7 @@ As I wrote above, it requires our structs to implement the [dedicated interfaces
 
 Let's say I have a response like this:
 
-```go=
+```go
 type TypeOneResponse struct {
     Field: value,
 }
@@ -113,7 +111,7 @@ type TypeOneResponse struct {
 
 and I want to return it using a JSON:API format, it should result something like this:
 
-```json=
+```json
 {
   "type": "something",
   "id": "1",
@@ -127,7 +125,7 @@ How to achieve it for all our responses? Implementing implementing implementing.
 
 Let's create a common Response:
 
-```go=
+```go
 type Common[T any] struct {
    ID string `json:"-"`
    Payload T
@@ -136,13 +134,13 @@ type Common[T any] struct {
 
 Then we need to implement all methods as we have seen above:
 
-```go=
+```go
 func (c *Common[T]) GetID() string { return c.ID }
 ```
 
 The result will be something like this:
 
-```json=
+```json
 {
   "type": "something",
   "id": "1",
@@ -156,7 +154,7 @@ The result will be something like this:
 
 A bit different from what we expected right? We have to get rid of the `Payload` attribute and have only what it has inside. Let's fix it implementing our custom `MarshalJSON` and `UnmarshalJSON` methods!
 
-```go=
+```go
 func (c *Common[T]) MarshalJSON() ([]byte, error) {
  return json.Marshal(&c.Payload)
 }
@@ -168,7 +166,7 @@ func (c *Common[T]) UnmarshalJSON(v []byte) error {
 
 Obtaining as a result:
 
-```json=
+```json
 {
   "data": [
     {
@@ -184,7 +182,7 @@ Obtaining as a result:
 
 Now, every time we want to return our responses, we just need to instantiate our responses in this way:
 
-```go=
+```go
 resp1 := Common[TypeOneResponse]{
     Payload: TypeOneResponse{
         Field: value,
@@ -198,20 +196,20 @@ resp2 := Common[TypeTwoResponse]{
 
 Of course, we can further improve readability creating a factory function like:
 
-```go=
+```go
 func NewCommon(payload T, value valueType) Common[T]
 ```
 
 and create our custom types:
 
-```go=
+```go
 type CommonOne Common[TypeOneResponse]
 type CommonTwo Common[TypeTwoResponse]
 ```
 
 and use them accordingly:
 
-```go=
+```go
 resp1 := CommonOne{
     Payload: TypeOneResponse{
         Field: value,
@@ -224,4 +222,3 @@ resp2 := CommonTwo{
 ```
 
 This is just a small but very effective example about how to use generics to improve your codebase. Happy coding! :rocket:
-

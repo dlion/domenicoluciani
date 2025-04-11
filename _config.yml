@@ -1,40 +1,45 @@
 name: Domenico Luciani
 title: Domenico Luciani
-description: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer @ VMware, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
+description: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
 meta_description: "programming, coding, security, computer science"
-permalink: '/:year/:month/:day/:title.html'
+permalink: "/:year/:month/:day/:title.html"
 mastodon: dlion@mastodon.social
 
 markdown: kramdown
 logo: false
 paginate: 15
-baseurl: 
-domain_name: 'https://domenicoluciani.com'
+baseurl:
+domain_name: "https://domenicoluciani.com"
 google_analytics: false
 navigation:
-    - label: Home
-    - url: /
+  - label: Home
+  - url: /
 
-include: ["/.well-known" ]
+include: ["/.well-known"]
 exclude:
-    - README.md
-    - _config.yml
+  - README.md
+  - _config.yml
 
 # Details for the RSS feed generator
-url:            'https://domenicoluciani.com'
-author:         'Domenico Luciani'
-bio: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer @ VMware, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
-links: ['Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>', 'Twitter: <a href="https://twitter.com/DLion92">https://twitter.com/DLion92</a>', 'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>']
+url: "https://domenicoluciani.com"
+author: "Domenico Luciani"
+bio: "Passionate programmer, experienced Extreme Programmer, Senior Agile Software Engineer, remote worker from Spain, Open Source enthusiast, and avid learner with a focus on software craftsmanship, and IT security."
+links:
+  [
+    'Linkedin: <a href="https://linkedin.com/in/dlion">https://linkedin.com/in/dlion</a>',
+    'Twitter: <a href="https://twitter.com/DLion92">https://twitter.com/DLion92</a>',
+    'Github: <a href="https://github.com/dlion">https://github.com/dlion</a>',
+  ]
 location: Remote 🛰, Spain
 website: https://domenicoluciani.com
 plugins:
-    - jekyll-feed
-    - jemoji
-    - jekyll-mentions
-    - jekyll-redirect-from
-    - jekyll-sitemap
-    - jekyll-paginate
-    - jekyll-github-metadata
+  - jekyll-feed
+  - jemoji
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-github-metadata
 collections:
   category:
     output: true

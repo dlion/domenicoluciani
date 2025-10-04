@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Save 5 minutes web scraping with Rust"
-date: 2021-04-30 08:00:00
-categories: [Programming]
+title: Save 5 minutes web scraping with Rust
+description: Often I read that for simple tasks Rust is not a good choice. Go is more
+  adopted when we need to create a small script to automatize our jobs. But is it
+  true?
+tags:
+- engineering
 cover: "/assets/images/covers/mobile.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=27365846"
 ---
+
 
 Often I read that for simple tasks Rust is not a good choice. Go is more adopted when we need to create a small script to automatize our jobs. But is it true?
 

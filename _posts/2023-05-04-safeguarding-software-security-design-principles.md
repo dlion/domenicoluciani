@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Safeguarding Software: Embracing Security Design Principles in Software Development"
-date: 2023-05-04 08:00:00
-categories: [Programming]
+title: 'Safeguarding Software: Embracing Security Design Principles in Software Development'
+description: In today's digital landscape, developing software with a security-oriented
+  mindset is no longer an option – it's a top priority. I've had the opportunity to
+  attend the Secure…
+tags:
+- security
+- highlights
 cover: "/assets/images/covers/security-principles.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=35819941"
 ---
+
 
 In today's digital landscape, developing software with a security-oriented mindset is no longer an option – it's a top priority.   
 I've had the opportunity to attend the [Secure Software Development Fundamentals Course](https://training.linuxfoundation.org/training/developing-secure-software-lfd121/) by the [Open Source Security Foundation](https://openssf.org/), and I found it enlightening and a must for passionate Software Engineers.   

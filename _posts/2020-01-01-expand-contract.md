@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Migrate a shared database with the expand/contract pattern"
-date: 2020-01-01 08:00:00
-categories: [Programming]
+title: Migrate a shared database with the expand/contract pattern
+description: Migrating a database is one of the most sensitive things that can happen
+  to do at some point in our career, sometimes it is easy, sometimes it is not. Let's
+  see how to use the…
+tags:
+- engineering
 cover: "/assets/images/covers/expand_contract.png"
-lang: en
 ---
+
 
 Migrating a database is one of the most sensitive things that can happen to do at some point in our career, sometimes it is easy, sometimes it is not. Let's see how to use the expand/contract pattern to be able to do it in both cases ~
 
@@ -16,12 +18,12 @@ It allows managing changes to the schema and the code incrementally, by handling
 
 Let's say we have 3 applications that share the same relational database
 
-![shared db](/assets/images/posts/shared-application.png)
+![shared db]({{ '/assets/images/posts/shared-application.png' | relative_url }})
 
 If one of the applications need to evolve via schema change it could potentially break the other two applications.
 To handle this situation we can use the expand/contract pattern adding a transition phase into the refactoring.
 
-![transiction_phase](/assets/images/posts/expand_contract.png)
+![transiction_phase]({{ '/assets/images/posts/expand_contract.png' | relative_url }})
 
 Using this pattern you can maintain both states during the refactoring allowing backward compatibility.
 
@@ -29,7 +31,7 @@ Let's see a small real example:
 
 We have a `Product` table with `IdCode` column, the `IdCode` is an identification number formed by 2 things: and `internal code` and an `external code`. Our mission is to split the `IdCode` column and have the new columns to allow us to filter by `InternalCode` without breaking anything, we have different options:
 
-![flow](/assets/images/posts/flow.png)
+![flow]({{ '/assets/images/posts/flow.png' | relative_url }})
 
 ## No integration points and no legacy data
 

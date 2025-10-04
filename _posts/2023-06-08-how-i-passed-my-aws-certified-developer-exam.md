@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "How I Passed my AWS Certified Developer Exam"
-date: 2023-06-08 08:00:00
-categories: [Programming, Life]
+title: How I Passed my AWS Certified Developer Exam
+description: A few weeks ago I passed my AWS Certified Developer Associate (DVA-02)
+  exam and I thought it would have been nice to document how _heck_ I accomplished
+  to do it on a first try,…
+tags:
+- engineering
 cover: "/assets/images/covers/cloud_cert_aws.png"
-lang: en
 ---
+
 
 A few weeks ago [I passed my AWS Certified Developer Associate (DVA-02) exam](https://domenicoluciani.com/2023/05/16/aws-certified-developer-associate-certification.html) and I thought it would have been nice to document how _heck_ I accomplished to do it on a first try, and of course provide some hints to whoever wants to 
 do the same. 🧑🏻‍💻👨🏻‍💻
@@ -54,7 +56,7 @@ Open a new session of their sandbox and log in.
 
 From that moment till a bunch of hours, you will have the chance to play with an almost real AWS environment, bill-free. 👀
 
-![playground-aws-1](/assets/images/posts/playground-aws-1.png)
+![playground-aws-1]({{ '/assets/images/posts/playground-aws-1.png' | relative_url }})
 
 #### Developer Associate Course
 
@@ -62,7 +64,7 @@ Of course, A Cloud Guru has its course: [https://learn.acloud.guru/course/aws-ce
 I took it and I can say that it covers more or less everything you need to know to pass the exam.   
 Especially I want to call out the 4 mocked exams which have been super useful to get to know the exam env and the questions' style.
 
-![mocked-exam](/assets/images/posts/mocked-exam-aws.png)
+![mocked-exam]({{ '/assets/images/posts/mocked-exam-aws.png' | relative_url }})
 
 ### Tutorials Dojo
 
@@ -110,7 +112,7 @@ Worth to mention that Obsidian has an [Excalidraw plugin](https://github.com/zsv
 
 For me having a visual representation works quite well and it helps to remember better.
 
-![excalidrw-aws](/assets/images/posts/excalidraw-aws.png)
+![excalidrw-aws]({{ '/assets/images/posts/excalidraw-aws.png' | relative_url }})
 
 ### Mocked Exams
 

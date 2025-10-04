@@ -1,63 +1,71 @@
 ---
 layout: default
 title: Home
-cover: /assets/images/covers/robot.png
-about: false
+hide_progress: true
 ---
 
-<header class="main-header {%if page.cover%}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
-    <nav class="main-nav overlay clearfix">
-        {%if site.logo %}<a class="blog-logo" href="{{site.domain_name}}"><img src="{{site.logo}}" alt="{{site.name}}" /></a>{% endif %}
-        {%if site.navigation %}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {% endif %}
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{site.name}}</h1>
-        </div>
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
+{% assign hero_image = page.hero.image | default: page.hero_image | default: site.hero.image %}
+{% assign hero_kicker = page.hero.kicker | default: page.hero_kicker | default: site.hero.kicker %}
+{% assign hero_title = page.hero.title | default: page.hero_title | default: site.hero.title %}
+{% assign hero_subtext = page.hero.subtext | default: page.hero_subtext | default: site.hero.subtext %}
+{% assign hero_cta_label = page.hero.cta_label | default: page.hero_cta_label | default: site.hero.cta_label %}
+{% assign hero_cta_url = page.hero.cta_url | default: page.hero_cta_url | default: site.hero.cta_url %}
+{% assign hero_pos = page.hero.pos | default: site.hero.pos | default: '' %}
 
+{% assign hero_image_url = hero_image | default: '' %}
+{% if hero_image_url != '' and hero_image_url contains '://' %}
+  {% assign hero_image_url = hero_image_url %}
+{% elsif hero_image_url != '' %}
+  {% assign hero_image_url = hero_image_url | relative_url %}
+{% endif %}
 
-<main id="content" class="content" role="main">
+{% assign hero_cta_href = hero_cta_url | default: '' %}
+{% if hero_cta_href != '' and hero_cta_href contains '://' %}
+  {% assign hero_cta_href = hero_cta_href %}
+{% elsif hero_cta_href != '' %}
+  {% assign hero_cta_href = hero_cta_href | relative_url %}
+{% endif %}
 
-    <div class="extra-pagination inner">
-        {% include pagination.html %}
-    </div>
+<section class="home-hero" {% if hero_image_url != '' or hero_pos != '' %}style="{% if hero_image_url != '' %}--hero-image: url('{{ hero_image_url }}');{% endif %}{% if hero_pos != '' %} background-position: {{ hero_pos }};{% endif %}"{% endif %}>
+  <div class="hero-inner">
+    {% if hero_kicker %}<p class="hero-kicker">{{ hero_kicker }}</p>{% endif %}
+    {% if hero_title %}<h1 class="hero-title">{{ hero_title }}</h1>{% endif %}
+    {% if hero_subtext %}
+      <p class="hero-subtext">{{ hero_subtext }}</p>
+    {% endif %}
+    {% if hero_cta_label and hero_cta_href %}
+      <a class="hero-cta" href="{{ hero_cta_href }}">{{ hero_cta_label }}</a>
+    {% endif %}
+  </div>
+</section>
 
+<section class="post-list">
+  <h1 class="visually-hidden">Latest posts</h1>
 
-    {% assign paginator.posts=paginator.posts | where:"lang", "en" %}
-    
-    {% for post in paginator.posts %}
-
-    <article class="post">
-        <header class="post-header">
-            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-        <section class="post-excerpt">
-            {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
-        </section>
-        <footer class="post-meta">
-            {% if site.author %}
-		    <img class="author-thumb" src="{{site.domain_name}}/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
-                {{ site.author }}
-            {% endif %}
-	    {% if post.categories.size > 0 %}
-	        on 
-	        {% for cat in post.categories %}
-	            <a href="{{site.domain_name}}/category/{{cat | downcase}}">{{cat}}</a>{% unless forloop.last %}, {% endunless %}
-	       {% endfor %}
-	    {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
-                {{ post.date | date_to_string }}
-            </time>
-        </footer>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts | sort: 'date' | reverse %}
+{% endif %}
+{% for post in posts %}
+    <article class="post-card">
+      <h2 class="post-card-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-card-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+        <span class="dot">•</span>
+        {{ post.content | number_of_words | divided_by:200 | plus:1 }} min read
+      </p>
+      {% if post.description %}
+        <p class="post-card-excerpt">{{ post.description }}</p>
+      {% else %}
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+      {% endif %}
     </article>
+  {% endfor %}
 
-    {% endfor %}
-
+  {% if paginator %}
     {% include pagination.html %}
-
-</main>
+  {% endif %}
+</section>

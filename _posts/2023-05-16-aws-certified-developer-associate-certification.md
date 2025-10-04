@@ -1,11 +1,12 @@
 ---
-layout: page
-title: "I've got the AWS Certified Developer Associate - Certification"
-date: 2023-05-16 08:00:00
-categories: [Life]
+title: I've got the AWS Certified Developer Associate - Certification
+description: "\U0001F389 I am thrilled to share that I have recently achieved my AWS
+  Certified Developer – Associate certification! ☁️\U0001F9D1\U0001F3FB‍\U0001F4BB"
+tags:
+- personal
 cover: "/assets/images/covers/aws_cert.png"
-lang: en
 ---
+
 
 🎉 I am thrilled to share that I have recently achieved my AWS Certified Developer – Associate certification! ☁️🧑🏻‍💻
 

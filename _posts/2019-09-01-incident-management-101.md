@@ -1,11 +1,16 @@
 ---
-layout: post
-title: "Incident Management 101"
-date: 2019-09-01 8:00:00
-categories: [Programming, Security]
+title: Incident Management 101
+description: What's an incident? What to do in case of an incident? How to be a great
+  incident commander? Are you a good incident responder? This is what I discover during
+  my Incident…
+tags:
+- work
+- security
+- highlights
 cover: "/assets/images/covers/error.jpg"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=30367279"
 ---
+
 
 What's an incident? What to do in case of an incident? How to be a great incident commander? Are you a good incident responder? This is what I discover during my Incident Management workshop in @ThoughtWorks this week, let's take a look!
 

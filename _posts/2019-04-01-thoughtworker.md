@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "ThoughtWorker"
-date: 2019-04-01 8:00:00
-categories: [Life]
+title: ThoughtWorker
+description: 'Finally,, I found time to write this post, I want to say it to the world:
+  I moved abroad.'
+tags:
+- personal
+- work
 cover: "/assets/images/covers/thoughtworks.jpg"
-lang: en
 ---
+
 
 Finally,, I found time to write this post, I want to say it to the world: I moved abroad.
 
@@ -21,4 +23,4 @@ So: new life, new city, new job, new friends, new new new.
 
 Wish me luck!
 
-![tw](/assets/images/posts/tw.jpg)
+![tw]({{ '/assets/images/posts/tw.jpg' | relative_url }})

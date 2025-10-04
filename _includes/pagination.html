@@ -1,13 +1,37 @@
-<nav class="pagination" role="pagination">
+{% if paginator and paginator.total_pages > 1 %}
+<nav class="pagination" role="navigation" aria-label="Pagination">
+  <div class="pagination-inner">
     {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-            <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
-        {% else %}
-            <a class="newer-posts" href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Newer Posts</a>
-      {% endif %}
+      <a class="pagination-link pagination-prev" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">
+        <span class="icon" aria-hidden="true">←</span>
+        <span class="label">Newer posts</span>
+      </a>
+    {% else %}
+      <span class="pagination-link pagination-prev is-disabled" aria-disabled="true">
+        <span class="icon" aria-hidden="true">←</span>
+        <span class="label">Newer posts</span>
+      </span>
     {% endif %}
-    <span class="page-number"> Page {{paginator.page}} of {{paginator.total_pages}} </span>
+
+    <span class="pagination-status" aria-live="polite">
+      <span class="visually-hidden">Currently on</span>
+      <strong class="page">Page {{ paginator.page }}</strong>
+      <span class="divider" aria-hidden="true">/</span>
+      <span class="total">{{ paginator.total_pages }}</span>
+      <span class="visually-hidden">pages</span>
+    </span>
+
     {% if paginator.next_page %}
-        <a class="older-posts" href="/page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
+      <a class="pagination-link pagination-next" href="{{ paginator.next_page_path | relative_url }}" rel="next">
+        <span class="label">Older posts</span>
+        <span class="icon" aria-hidden="true">→</span>
+      </a>
+    {% else %}
+      <span class="pagination-link pagination-next is-disabled" aria-disabled="true">
+        <span class="label">Older posts</span>
+        <span class="icon" aria-hidden="true">→</span>
+      </span>
     {% endif %}
+  </div>
 </nav>
+{% endif %}

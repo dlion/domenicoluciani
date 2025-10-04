@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Exam Project 0"
-date: 2013-02-26 12:25:00
-categories: [Past, Programming, ComputerVision, OpenCV]
+title: Exam Project 0
+description: I'm very fascinated about the possibility to give sight to a machine
+  so for my final high school exam I made a computer vision project...
+tags:
+- engineering
+- personal
 cover: "/assets/images/covers/eyes.jpg"
-lang: en
 ---
+
 
 I'm very fascinated about the possibility to give sight to a machine so for my final high school exam I made a computer vision project...
 

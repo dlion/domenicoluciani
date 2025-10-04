@@ -1,10 +1,11 @@
 ---
-layout: post
-title: "How to mock with Jest and Typescript"
-date: 2022-06-17 08:00:00
-categories: [Programming]
+title: How to mock with Jest and Typescript
+description: As an Extreme Programmer I used to jumping often into different engagements,
+  each of them has challenges I need to overcome and problems I need to solve. This
+  time I jumped into…
+tags:
+- engineering
 cover: "/assets/images/covers/mock_typescript.png"
-lang: en
 ---
 
 

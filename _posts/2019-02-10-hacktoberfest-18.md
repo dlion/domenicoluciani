@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Hacktoberfest 2018"
-date: 2019-02-10 8:00:00
-categories: [Programming, Life]
+title: Hacktoberfest 2018
+description: Last year, as the previous one I partecipated to the Hacktoberfest and
+  of course I received a lot of swag, do you want it too? ~
+tags:
+- personal
 cover: "/assets/images/covers/hacktoberfest_18.jpg"
-lang: en
 ---
+
 
 Last year, as the previous one I partecipated to the Hacktoberfest and of course I received **a lot** of swag, do you want it too? ~
 
@@ -13,7 +14,7 @@ As I mentioned before, the hacktoberfest is an initiative by @Github and @Digita
 
 Last year I made 6 pull requests, one for a tool who help recruiters to [find how old a technology is](https://github.com/jsrn/howoldisit) and 5 pull requests to the [GoCV](https://github.com/hybridgroup/gocv/) project, a Golang porting of the Computer Vision libraries.
 
-![contributions](/assets/images/posts/contributions.png)
+![contributions]({{ '/assets/images/posts/contributions.png' | relative_url }})
 
 Of course after that all of my PRs have been merged, so I received my swag:
 

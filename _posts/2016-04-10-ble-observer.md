@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "BLE NUCLEO observer"
-date: 2016-04-10 20:05:00 +0100
-categories: [Programming, Electronics, Nucleo, MBED, ST, BLE]
+title: BLE NUCLEO observer
+description: For academic purposes I have to work with BLE, a new technology often
+  used nowadays, with a NUCLEO-F401RE board and the NUCLEO-IDB04A1 BLE extension board
+  by ST
+tags:
+- hardware
 cover: "/assets/images/covers/observer.jpg"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=11829161"
 ---
+
 
 For academic purposes I have to work with BLE, a new technology often used nowadays, with a NUCLEO-F401RE board and the NUCLEO-IDB04A1 BLE extension board by ST
 
@@ -56,4 +59,4 @@ In the ever true while loop we waiting for an event.
 
 Here the result:
 
-![ble1](/assets/images/posts/ble1.jpg)
+![ble1]({{ '/assets/images/posts/ble1.jpg' | relative_url }})

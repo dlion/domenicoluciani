@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "April 2018 - Bookmarks"
-date: 2018-04-01 08:00:00
-categories: [Bookmarks]
+title: April 2018 - Bookmarks
+description: "* The Liskov Substitution Principle * Understanding SOLID Principles:
+  Liskov Substitution Principle * Ten Reasons Why I Don't Like Golang * Composition
+  vs inheritance: How to…"
+tags:
+- bookmarks
 cover: "/assets/images/covers/bookmark.png"
-lang: en
 ---
+
 
 * [The Liskov Substitution Principle](https://drive.google.com/file/d/0BwhCYaYDn8EgNzAzZjA5ZmItNjU3NS00MzQ5LTkwYjMtMDJhNDU5ZTM0MTlh/view)
 * [Understanding SOLID Principles: Liskov Substitution Principle](https://codeburst.io/understanding-solid-principles-liskov-substitution-principle-e7f35277d8d5)

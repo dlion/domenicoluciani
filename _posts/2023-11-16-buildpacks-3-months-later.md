@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Buildpacks - 3 months later"
-date: 2023-11-16 08:00:00
-categories: [Programming, Life]
+title: Buildpacks - 3 months later
+description: Since the beginning of my career in this industry, I've always been fascinated
+  by the open-source world. After so many years of contributing on my own, this year,
+  I finally joined…
+tags:
+- work
+- engineering
 cover: "/assets/images/covers/take3.png"
-lang: en
 ---
+
 
 Since the beginning of my career in this industry, I've always been fascinated by the open-source world.   
 After so many years of contributing on my own, this year, I finally joined for 3 months an open-source team within VMware and discovered how an open-source team works.   

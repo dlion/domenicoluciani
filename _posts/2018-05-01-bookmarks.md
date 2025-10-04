@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "May 2018 - Bookmarks"
-date: 2018-05-01 08:00:00
-categories: [Bookmarks]
+title: May 2018 - Bookmarks
+description: "* SOLID Design principles : Software architecture, design and coding
+  * Understanding SOLID Principles: Open Closed Principle * Lesser-Known Features
+  of Go Test - Splice *…"
+tags:
+- bookmarks
 cover: "/assets/images/covers/bookmark.png"
-lang: en
 ---
+
 
 * [SOLID Design principles : Software architecture, design and coding](http://marchoeijmans.blogspot.com/2012/05/design-principles.html)
 * [Understanding SOLID Principles: Open Closed Principle](https://codeburst.io/understanding-solid-principles-open-closed-principle-e2b588b6491f)

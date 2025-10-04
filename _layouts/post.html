@@ -1,114 +1,123 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
-		<nav class="main-nav {% if image %} overlay{% endif %} clearfix">
-        {%if site.logo%}<a class="blog-logo" href="{{ site.domain_name }}"><img src="{{site.logo}}" alt="{{site.name}}" /></a>{%endif%}
-        {%if site.navigation %}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="headline">{{ page.title }}</h1>
+
+    <div class="post-meta">
+      {% assign avatar = site.author_avatar | default: '/assets/images/profile.png' %}
+      {% if avatar contains '://' %}
+        {% assign avatar_url = avatar %}
+      {% else %}
+        {% assign avatar_url = avatar | relative_url %}
+      {% endif %}
+      <img class="author-avatar" src="{{ avatar_url }}" alt="{{ site.author }}" width="28" height="28" />
+      <span class="author-name">{{ site.author }}</span>
+      <span class="dot">•</span>
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%d %b %Y" }}
+      </time>
+      {% if page.updated %}
+        <span class="dot">•</span>
+        <time class="dt-updated" datetime="{{ page.updated | date_to_xmlschema }}" itemprop="dateModified">
+          Updated {{ page.updated | date: "%d %b %Y" }}
+        </time>
+      {% endif %}
+      <span class="dot">•</span>
+      <span class="reading-time">{{ page.content | number_of_words | divided_by:200 | plus:1 }} min read</span>
+    </div>
+
+    {%- comment -%}
+      Hero image: will use page.image or page.cover.
+      Accepts absolute URLs or local paths. Optional caption via page.image_caption.
+    {%- endcomment -%}
+    {% assign hero = page.image | default: page.cover %}
+    {% if hero %}
+      {% if hero contains '://' %}
+        {% assign hero_url = hero %}
+      {% else %}
+        {% assign hero_url = hero | relative_url %}
+      {% endif %}
+
+      {%- comment -%}
+        Build a responsive srcset for well-known CDNs that accept width (w=) query params
+        like Unsplash and Pexels. Fall back to plain src if unknown host.
+      {%- endcomment -%}
+      {% assign host = hero_url | replace: 'http://','' | replace: 'https://','' | split: '/' | first %}
+      {% assign supports_w = false %}
+      {% if host contains 'images.unsplash.com' or host contains 'unsplash.com' or host contains 'images.pexels.com' %}
+        {% assign supports_w = true %}
+      {% endif %}
+      {% assign sizes_attr = '(max-width: 780px) 100vw, 980px' %}
+      {% if supports_w %}
+        {% assign joiner = '?' %}{% if hero_url contains '?' %}{% assign joiner = '&' %}{% endif %}
+        {% assign widths = '480,768,1024,1366,1600' | split: ',' %}
+        {% capture hero_srcset %}
+          {% for w in widths %}{{ hero_url }}{{ joiner }}w={{ w }} {{ w }}w{% unless forloop.last %}, {% endunless %}{% endfor %}
+        {% endcapture %}
+      {% endif %}
+
+      <figure class="post-hero">
+        <img src="{{ hero_url }}"
+             {% if supports_w %}srcset="{{ hero_srcset | strip }}" sizes="{{ sizes_attr }}"{% endif %}
+             alt="{{ page.image_alt | default: page.title }}"
+             loading="eager" fetchpriority="high" decoding="async" width="1600" height="840">
+        {% if page.image_caption %}
+          <figcaption>{{ page.image_caption }}</figcaption>
         {% endif %}
+      </figure>
+    {% endif %}
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <nav class="post-actions" aria-label="Post meta links">
+      <div class="post-actions-column post-actions-column--left">
+        {% if page.tags and page.tags != empty %}
+          <div class="actions-group post-tags">
+            <span class="label">Tags</span>
+            {% assign tags_sorted = page.tags | sort_natural %}
+            {% for t in tags_sorted %}
+              {% assign slug = t | slugify %}
+              <a class="tag" href="{{ '/tags/?t=' | append: slug | relative_url }}">#{{ t }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if page.hn_url or page.reddit_url %}
+          <div class="actions-group">
+            <span class="label">Discuss</span>
+            {% if page.hn_url %}
+              <a href="{{ page.hn_url }}" rel="nofollow noopener" target="_blank">Hacker News</a>
+            {% endif %}
+            {% if page.reddit_url %}
+              <a href="{{ page.reddit_url }}" rel="nofollow noopener" target="_blank">Reddit</a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <div class="actions-group">
+          <span class="label">Share</span>
+          <a href="https://news.ycombinator.com/submitlink?u={{ page.url | absolute_url | uri_escape }}&t={{ page.title | uri_escape }}" rel="noopener" target="_blank">HN</a>
+          <a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" rel="noopener" target="_blank">Reddit</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" rel="noopener" target="_blank">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" rel="noopener" target="_blank">Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" rel="noopener" target="_blank">X/Twitter</a>
+        </div>
+      </div>
+
+      <div class="post-actions-column post-actions-column--right">
+        <a class="rss" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
+        {% include kofi-button.html %}
+      </div>
     </nav>
-</header>
 
-<main class="content" role="main">
+    {% include human-badge.html %}
 
-    <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-                {% if page.categories.size > 0 %}
-                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
-                {% endif %}
-            </section>
-        </header>
-
-        <section class="post-content">
-            {{content}}
-      {%- if content contains 'mermaid' -%}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.8.0/mermaid.min.js"></script>
-        <script>
-        const config = {
-            startOnLoad:true,
-            theme: 'neutral',
-        };
-        mermaid.initialize(config);
-        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-        </script>
-        {% endif %}
-        </section>
-
-        {% if page.archive %}
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </section>
-        {% endif %}
-
-        <footer class="post-footer">
-            <!-- If we want to display author's name and bio -->
-            {% if site.author %}
-                <figure class="author-image">
-                    <a class="img" href="{{ site.domain_name }}" style="background-image: url(/assets/images/profile.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
-                </figure>
-                <section class="author">
-                    <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
-                    <!-- Author Bio -->
-                    {%if site.bio%}
-                    <p>{{site.bio}}</p>
-		    {% for link in site.links %}
-			    <p>{{link}}</p>
-		    {% endfor %}
-                    {%else%}
-                    <p>Read <a href="{{site.domain_name}}">more posts</a> by this author.</p>
-                    {%endif%}
-                    <div class="author-meta">
-                    {%if site.location%}<span class="author-location icon-location">{{site.location}}</span>{%endif%}
-                    {%if site.website%}<span class="author-link icon-link"><a href="{{site.website}}">{{site.website}}</a></span>{%endif%}
-                    </div>
-                </section>
-            {% endif %}
-
-            <!-- Share links section -->
-            {% include share.html %}
-
-            <!-- Disqus comments -->
-            {% if page.disqus %}
-                {% include disqus.html %}
-            {% endif %}
-
-        </footer>
-
-    </article>
-
-</main>
-
-<aside class="read-next">
-  {%if page.next%}
-  <a class="read-next-story {%if page.next.cover%}" style="background-image: url({{page.next.cover}}){%else%}no-cover{%endif%}" href="{{page.next.url}}">
-      <section class="post">
-          <h2>{{page.next.title}}</h2>
-          <p>{{ page.next.excerpt | truncatewords: 19 | strip_html}}&hellip;</p>
-      </section>
-  </a>
-  {%endif%}
-  {%if page.previous%}
-  <a class="read-next-story prev {%if page.previous.cover%}" style="background-image: url({{page.previous.cover}}){%else%}no-cover{%endif%}" href="{{page.previous.url}}">
-      <section class="post">
-          <h2>{{page.previous.title}}</h2>
-          <p>{{ page.previous.excerpt | truncatewords: 19 | strip_html}}&hellip;</p>
-      </section>
-  </a>
-  {%endif%}
-</aside>
+    {% include related-posts.html %}
+  </footer>
+</article>

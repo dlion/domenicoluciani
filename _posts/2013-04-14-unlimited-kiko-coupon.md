@@ -1,18 +1,20 @@
 ---
-layout: post
-title: "Unlimited Kiko Coupon"
-date: 2013-04-14 22:12:00
-categories: [Past, Security, Programming]
+title: Unlimited Kiko Coupon
+description: 'A few weeks ago I saw a Facebook application that allows to get a coupon
+  to receive a "free nail varnish", it''s very simple and clear: Put a "like", insert
+  yours data and done,…'
+tags:
+- security
 cover: "/assets/images/covers/kiko.jpg"
-lang: en
 ---
+
 
 A few weeks ago I saw a Facebook application that allows to get a coupon to receive a "free nail varnish", it's very simple and clear: Put a "like", insert yours data and done, you will receive your coupon and your free nail varnish, but there is a limitation: You can take it only once.... maybe.
 
 Just for fun (ok and for my girlfriend too) I studied how this application works and I ask to my self a simple question: Can I have more ?
 
 This Facebook application is a simple redirect to the true application hosted by the "provider" (kiko in this case), this application through the Facebook's API can see if the user is logged, etc. and when everything is done it returns an image with a barcode on it, like this:   
-![kikoCoupon](/assets/images/posts/coupon.jpg)   
+![kikoCoupon]({{ '/assets/images/posts/coupon.jpg' | relative_url }})   
 The address of image is like this: `http://www.fbappdev.com/kikoform/data/coupon/p_njkdndfjskf.jpg`, let me see deeper aaand, bingo! I found the main page of the application, using firebug I can inspect the code behind it, seems very interesting...
 
 ```js

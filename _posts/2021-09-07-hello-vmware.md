@@ -1,11 +1,14 @@
 ---
-layout: page
-title: "Hello VMware"
-date: 2021-09-07 08:00:00
-categories: [Life]
+title: Hello VMware
+description: Two years ago I completely changed my life joining Thoughtworks. I moved
+  abroad (Spain) and I grew so much in so many levels that it's difficult to explain
+  it...
+tags:
+- personal
+- work
 cover: "/assets/images/covers/tanzu.png"
-lang: en
 ---
+
 
 Two years ago I completely changed my life joining [Thoughtworks](https://www.thoughtworks.com/). I moved abroad (Spain) and I grew so much in so many levels that it's difficult to explain it...
 

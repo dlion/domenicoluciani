@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "How to use  generics to avoid duplications and make your code better"
-date: 2025-04-11 08:00:00
-categories: [Programming]
+title: How to use  generics to avoid duplications and make your code better
+description: I recently worked on a project that had a lot of code duplication due
+  to repeated implementations of the same interfaces. I quickly realized it was a
+  great opportunity to refactor…
+tags:
+- engineering
 cover: "/assets/images/covers/go_generics.jpg"
-lang: en
+reddit_url: "https://www.reddit.com/r/golang/comments/1jwus6c/how_to_use_generics_to_avoid_duplications_and/"
 ---
+
 
 I recently worked on a project that had a lot of code duplication due to repeated implementations of the same interfaces. I quickly realized it was a great opportunity to refactor the code, remove the duplication and make the code more scalable and maintainable.
 

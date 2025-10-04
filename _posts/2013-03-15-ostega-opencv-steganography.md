@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Ostega, steganography using OpenCV libraries"
-date: 2013-03-15 13:06:00
-categories: [Past, Programming, OpenCV]
+title: Ostega, steganography using OpenCV libraries
+description: The steganography[^1] is a technique that allows to "hide" information
+  inside an image or an audio files, it's a very interesting security field, I can
+  hide "secrets" into an…
+tags:
+- engineering
 cover: "/assets/images/covers/hide.jpg"
-lang: en
 ---
+
 
 The steganography[^1] is a technique that allows to "hide" information inside an image or an audio files, it's a very interesting security field, I can hide "secrets" into an image, pass it to my friend, and he, using a decoder can read what I wrote. Very useful to keep my "secrets" secret; so I wrote a simple C library to hide words into a bitmap images using the OpenCV libraries just for fun and profit...
 

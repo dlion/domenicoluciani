@@ -1,0 +1,37 @@
+{% assign post = include.post %}
+{% assign image = post.image | default: post.cover %}
+{% assign image_url = '' %}
+{% if image %}
+  {% if image contains '://' %}
+    {% assign image_url = image %}
+  {% else %}
+    {% assign image_url = image | relative_url %}
+  {% endif %}
+{% endif %}
+{% assign summary = post.description | default: post.excerpt | strip_html | truncate: 140 %}
+
+{% assign slug = post.title | slugify %}
+{% assign target = include.slot | default: 0 %}
+{% assign slot_class = target | prepend: 'related-split-card related-slot-' %}
+{% if include.single == 1 %}
+  {% assign slot_class = slot_class | append: ' is-single' %}
+{% endif %}
+{% assign summary = summary %}
+
+<article class="{{ slot_class }}">
+  <div class="related-split-media" {% if image_url %}style="--related-image: url('{{ image_url }}');"{% endif %}></div>
+  <div class="related-split-body">
+    <div class="related-copy">
+      <h3 class="related-split-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="related-split-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+        <span class="dot">•</span>
+        {{ post.content | number_of_words | divided_by:200 | plus:1 }} min read
+      </p>
+      {% if summary != '' %}
+        <p class="related-split-excerpt">{{ summary }}</p>
+      {% endif %}
+    </div>
+    <a class="related-split-link" href="{{ post.url | relative_url }}">Read more →</a>
+  </div>
+</article>

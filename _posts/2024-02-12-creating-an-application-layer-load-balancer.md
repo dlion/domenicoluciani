@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Create an application layer load balancer with Golang"
-date: 2024-02-12 08:00:00
-categories: [Programming]
+title: Create an application layer load balancer with Golang
+description: Since the last time I had too much fun, I wanted to repeat the experiment
+  by taking another Coding Challenge. This time I'm gonna explain how I implemented
+  an Application Load…
+tags:
+- engineering
+- highlights
 cover: "/assets/images/covers/loadbalancer.png"
-lang: en
 ---
+
 
 Since the last time I had too much fun, I wanted to [repeat the experiment by taking another Coding Challenge](https://domenicoluciani.com/2024/01/29/creating-a-word-count-clone-with-golang.html). This time I'm gonna explain how I implemented an Application Load Balancer in Golang.   
 Let's go! 🚀

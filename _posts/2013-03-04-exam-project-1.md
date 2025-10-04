@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Exam Project Part One"
-date: 2013-03-04 16:00:00
-categories: [Past, Programming, ComputerVision, OpenCV]
+title: Exam Project Part One
+description: In the previous article we saw a little library to semplify my work,
+  today I'm going to talk about a software that allows to track any color and at the
+  same time tell other…
+tags:
+- engineering
+- personal
 cover: "/assets/images/covers/roboteyes1.png"
-lang: en
 ---
+
 
 [In the previous article we saw a little library to semplify my work](https://domenicoluciani.com/2013/02/26/exam-project-prelude.html), today I'm going to talk about a software that allows to track any color and at the same time
 tell other softwares which colour we have chosen
@@ -194,6 +197,6 @@ it is in the `config` directory called `calibra.c`
 
 Here a screenshot:
 
-![screenshot](/assets/images/posts/examproject-parte-1.jpg)
+![screenshot]({{ '/assets/images/posts/examproject-parte-1.jpg' | relative_url }})
 
 As we can see the red rectangle is only around the colour we have choose.

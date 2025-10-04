@@ -1,10 +1,11 @@
 ---
-layout: post
-title: "SmagenBot"
-date: 2015-07-14 18:51:00
-categories: [Past, Programming, Node]
+title: SmagenBot
+description: I use Telegram, whatsapp alternative messaging application, it contains
+  more features than whatsapp and many benefits, one of these is the possibility to
+  create bots and to try it…
+tags:
+- engineering
 cover: "/assets/images/covers/hal.jpg"
-lang: en
 ---
 
 
@@ -50,4 +51,4 @@ Here you can find the repo: [SmagenBot](https://github.com/dlion/smagenBot)
 
 I made SmagenBot fo personal use so I wrote many plugins for my own needs, if you want to contribute with plugins you are welcome!
 
-![Example](/assets/images/posts/smagenbot.png)
+![Example]({{ '/assets/images/posts/smagenbot.png' | relative_url }})

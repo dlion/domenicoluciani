@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "March 2018 - Bookmarks"
-date: 2018-03-01 08:00:00
-categories: [Bookmarks]
+title: March 2018 - Bookmarks
+description: "* Clean Coder Blog * Don’t Pursue Programming if You Aren’t Passionate
+  About It * The Dependency Inversion Principle * Mocks Aren't Stubs * Testing and
+  Refactoring Legacy Code -…"
+tags:
+- bookmarks
 cover: "/assets/images/covers/bookmark.png"
-lang: en
 ---
+
 
 * [Clean Coder Blog](https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html)
 * [Don’t Pursue Programming if You Aren’t Passionate About It](https://medium.com/@ebbv/dont-pursue-programming-if-you-aren-t-passionate-about-it-a5bd4e33cd01)

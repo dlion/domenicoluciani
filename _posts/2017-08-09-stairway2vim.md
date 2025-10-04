@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Stairway to vim"
-date: 2017-08-09 10:00:00
-categories: [Programming]
+title: Stairway to vim
+description: Today I started to work on a Scala project, I spend most of my time using
+  vim (or in this case neovim) so I started to looking for plugins to write Scala
+  using [neo]vim.
+tags:
+- engineering
+- personal
 cover: "/assets/images/covers/scala.png"
-lang: en
 ---
+
 
 Today I started to work on a [Scala project](https://scala-lang.org/), I spend most of my time using vim (or in this case neovim) so I started to 
 looking for plugins to write Scala using [neo]vim.
@@ -43,6 +46,6 @@ I also use some plugins to improve my workflow like:
 
 ## Screenshot
 
-![scala](/assets/images/posts/scala.png)
+![scala]({{ '/assets/images/posts/scala.png' | relative_url }})
 
 

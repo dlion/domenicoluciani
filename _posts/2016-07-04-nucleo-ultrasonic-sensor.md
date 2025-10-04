@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Interfacing an ultrasonic sensor with NUCLEO board"
-date: 2016-07-04 10:20:00
-categories: [Programming, Electronics, Nucleo, MBED, ST, ultrasonic, sensor]
+title: Interfacing an ultrasonic sensor with NUCLEO board
+description: For academic purpose I have to interface the F401RE NUCLEO board with
+  the HY-SRF05 ultrasonic sensor, it uses the sonar principle to allow to measure
+  the distance to an obstacle.
+tags:
+- hardware
 cover: "/assets/images/covers/ultrasonic.jpg"
-excerpt_separator: <!--more-->
-lang: en
+excerpt_separator: "<!--more-->"
 ---
+
 
 For academic purpose I have to interface the F401RE NUCLEO board with the HY-SRF05 ultrasonic sensor, it uses the sonar principle to allow to measure the distance to an obstacle.
 
@@ -15,7 +17,7 @@ For academic purpose I have to interface the F401RE NUCLEO board with the HY-SRF
 For simplicity I used the [SRF05](https://developer.mbed.org/users/simon/code/SRF05/) library that provides all the methods that I needed to use the SRF05 sensor.   
 The sensor is composed by 5 pins:   
 
-![SRF05](/assets/images/posts/SRF05.jpg)
+![SRF05]({{ '/assets/images/posts/SRF05.jpg' | relative_url }})
 
 * Vcc
 * Trigger

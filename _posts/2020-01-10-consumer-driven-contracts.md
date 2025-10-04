@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Consumer Driven Contracts"
-date: 2020-01-10 08:00:00
-categories: [Programming]
+title: Consumer Driven Contracts
+description: During our journey as developers, we often have to use external APIs,
+  integrate our systems with them and be sure that everything works smoothly, sometimes
+  it becomes difficult…
+tags:
+- engineering
 cover: "/assets/images/covers/consumer_driven_contracts.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=22916474"
 ---
+
 
 During our journey as developers, we often have to use external APIs, integrate our systems with them and be sure that everything works smoothly, sometimes it becomes difficult because suddenly the systems we are interacting with change their behaviour, breaking our integration.   
 How to prevent it?
@@ -17,7 +20,7 @@ We have two types of contract testing:
 * Provider: The service which provides some APIs
 * Consumer: The service which consumes some APIs
 
-![ProviderConsumer](/assets/images/posts/provider_consumer.png)
+![ProviderConsumer]({{ '/assets/images/posts/provider_consumer.png' | relative_url }})
 
 Essentially a contract is an agreement between a consumer and provider, it means that if one of these actors change their behaviours breaking this agreement we will notice it automatically having a specific test behind it.
 
@@ -38,7 +41,7 @@ Moreover, a consumer contract gives insights and rapid feedbacks to identify how
 
 Usually, we can use a consumer contract as a fitness function putting it inside our pipeline but a failure in a contract test shouldn't necessarily break the build in the same way that a normal test failure would.
 
-![contract](/assets/images/posts/consumer_driven_contracts.png)
+![contract]({{ '/assets/images/posts/consumer_driven_contracts.png' | relative_url }})
 
 ## More 
 

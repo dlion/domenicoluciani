@@ -1,11 +1,13 @@
 ---
-layout: page
-title: "PointerPodcast - Buildpacks and Extreme Programming"
-date: 2024-01-12 08:00:00
-categories: [Life]
+title: PointerPodcast - Buildpacks and Extreme Programming
+description: I decided to expose myself more and more, I like to share my opinions
+  and experiences (you can say reading this blog), and this time I decided to attend
+  as a interviewee for a well known Podcast in Italy talking about something I've done for 3 months, are you curious about it?
+tags:
+- personal
 cover: "/assets/images/covers/podcast.png"
-lang: en
 ---
+
 
 I decided to expose myself more and more, I like to share my opinions and experiences (you can say reading this blog), and this time I decided to attend as a interviewee for a well known Podcast in Italy talking about something I've done for 3 months, are you curious about it?
 
@@ -17,5 +19,5 @@ Yeah sorry for any english speaker, it's in Italian 🇮🇹
 
 You can find the episode on Spotify and Apple Podcast here:
 
-[![pointerpodcast](/assets/images/posts/pointerpodcast.png)](https://pointerpodcast.it/p/pointer185-extreme-programming-e-buildpacks-con-domenico-luciani-tanzu-labs/)
+[![pointerpodcast]({{ '/assets/images/posts/pointerpodcast.png' | relative_url }})](https://pointerpodcast.it/p/pointer185-extreme-programming-e-buildpacks-con-domenico-luciani-tanzu-labs/)
 

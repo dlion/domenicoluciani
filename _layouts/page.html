@@ -1,31 +1,13 @@
 ---
 layout: default
-post_class: post-template page-template
-cover: false
 ---
+<article class="page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="page-desc">{{ page.description }}</p>{% endif %}
+  </header>
 
-<header class="main-header post-head {%if page.cover%}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
-    <nav class="main-nav {%if page.cover%}overlay{%endif%} clearfix">
-        {%if site.logo%}<a class="blog-logo" href="{{site.url}}"><img src="{{site.logo}}" alt="{{site.title}}" /></a>{%endif%}
-        {%if site.navigation %}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {% endif %}
-    </nav>
-</header>
-
-<main class="content" role="main">
-    <article class="post page">
-
-        <header class="post-header">
-            <h1 class="post-title">{{page.title}}</h1>
-        </header>
-
-        <section class="post-content">
-            {{content}}
-            <figure class="author-image" style="top: auto">
-                <a class="img" href="{{ site.domain_name }}" style="background-image: url(/assets/images/profile.png)"></a>
-            </figure>
-        </section>
-
-    </article>
-</main>
+  <section class="page-content">
+    {{ content }}
+  </section>
+</article>

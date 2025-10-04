@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "How to create an always up to date alias for your Mastodon account"
-date: 2022-11-19 08:00:00
-categories: [Life]
+title: How to create an always up to date alias for your Mastodon account
+description: Mastodon is a new hot-trend topic, so I spent some time trying to wrap
+  my head around it. The decentralisation is an exciting part of Mastodon; if tomorrow
+  I don't like the…
+tags:
+- personal
 cover: "/assets/images/covers/mastodon.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=33673765"
 ---
+
+
 Mastodon is a new hot-trend topic, so I spent some time trying to wrap my head around it.   
 The decentralisation is an exciting part of Mastodon; if tomorrow I don't like the instance where my account resides anymore, I can always switch to another instance and bring all my data seamlessly. It's fantastic, except that now it's like having another account with a different address, so I need to share it with my "audience" again and again.   
 Doing some research, I discover how to create a custom alias for my Mastodon account to have it always pointing to my current account; let's see how!
@@ -16,7 +20,7 @@ Doing some research, I discover how to create a custom alias for my Mastodon acc
 The alias I created for my account is `dlion@domenicoluciani.com` where `dlion` is my nickname, and `domenicoluciani.com` is my custom domain.   
 If you try to search it on Mastodon, you will find my current account, which resides on `mastodon.social`
 
-![Mastodon Search](/assets/images/posts/mastodon_search.png)
+![Mastodon Search]({{ '/assets/images/posts/mastodon_search.png' | relative_url }})
 
 ## Behind the scene
 

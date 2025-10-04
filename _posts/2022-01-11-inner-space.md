@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "InnerSpace 🚀"
-date: 2022-01-11 08:00:00
-categories: [Life]
+title: "InnerSpace \U0001F680"
+description: This year one of my annual resolutions was to be more present online.
+  I want to be more visible and share more content. I want to create more articles
+  and share them with more…
+tags:
+- personal
 cover: "/assets/images/covers/innerspace.png"
-lang: en
 ---
+
 
 This year one of my annual resolutions was to be more present online.   
 I want to be more visible and share more content.   
@@ -15,9 +17,12 @@ Learn from feedback and grow the number of people with whom I interact.
 So, today I decided to create my newsletter called: InnerSpace 🚀
 
 
-# UPDATE
+# UPDATE ---
 
-Elon Musk decided to delete Revue so for now I decided to stop deliverying it ~
+**Elon Musk decided to delete Revue so for now I decided to stop deliverying it ~**
+
+### UPDATE ---
+
 
 ---
 

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Hacktoberfest 2019"
-date: 2019-12-18 8:00:00
-categories: [Programming, Life]
+title: Hacktoberfest 2019
+description: My usual post of the year about the Hacktoberfest is back! Even this
+  year I participated in it and gained some swags and an amazing t-shirt ~
+tags:
+- personal
 cover: "/assets/images/covers/hacktoberfest_19.png"
-lang: en
 ---
+
 
 My usual post of the year about the Hacktoberfest is back! Even this year I participated in it and gained some swags and an amazing t-shirt ~
 
@@ -13,7 +14,7 @@ Since 2014 I try every year to participate in this incredible initiative and I l
 
 This year I focused my PR on a single project: GoCV.   
 
-![Contributions](/assets/images/posts/hacktoberfest19.png)
+![Contributions]({{ '/assets/images/posts/hacktoberfest19.png' | relative_url }})
 
 [I've already contributed to it in the past](https://domenicoluciani.com/2019/02/10/hacktoberfest-18.html) so this year I was more confident to continue it, simple and effective.
 

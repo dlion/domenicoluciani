@@ -1,0 +1,28 @@
+{% assign nav_posts = '' | split: '' %}
+{% if page.previous %}
+  {% assign nav_posts = nav_posts | push: page.previous %}
+{% endif %}
+{% if page.next %}
+  {% assign nav_posts = nav_posts | push: page.next %}
+{% endif %}
+
+{% if nav_posts == empty %}
+  {% assign fallback = site.posts | where_exp: 'candidate', 'candidate.url != page.url' | first %}
+  {% if fallback %}
+    {% assign nav_posts = nav_posts | push: fallback %}
+  {% endif %}
+{% endif %}
+
+{% assign nav_count = nav_posts | size %}
+{% assign nav_posts = nav_posts | sort: 'date' | reverse %}
+
+{% if nav_count > 0 %}
+<section class="related-split" aria-labelledby="related-heading">
+  <h2 id="related-heading" class="visually-hidden">Keep exploring</h2>
+  <div class="related-split-grid{% if nav_count == 1 %} is-single{% endif %}">
+    {% for candidate in nav_posts %}
+      {% include related-posts_card.html post=candidate slot=forloop.index0 single=nav_count %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

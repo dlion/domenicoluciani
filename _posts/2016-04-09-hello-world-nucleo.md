@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Hello World, NUCLEO"
-date: 2016-04-09 17:24:00 +0100
-categories: [Programming, Electronics, Nucleo, MBED, ST]
+title: Hello World, NUCLEO
+description: For academic purposes now I own a NUCLEO-F401RE board by ST Microeletronics,
+  it works with STM32 microcontrollers, it is arduino compatible, supported by MBED,
+  it has 3 leds and 2…
+tags:
+- hardware
 cover: "/assets/images/covers/helloworldnucleo.jpg"
-lang: en
 ---
+
 
 For academic purposes now I own a NUCLEO-F401RE board by ST Microeletronics, it works with STM32 microcontrollers, it is arduino compatible, supported by MBED, it has 3 leds and 2 pushbuttons on board; Obviously is fully programmable... but how ? Let's do it!
 
@@ -24,12 +26,12 @@ Click on "Compiler", after the init process click on "My Programs" with the righ
 Choose your platform, choose "Empty Program" template and insert the name of your program.   
 First of all we have to add to our project the MBED library to work with the our board; click on the project with the right button and choose "Import Library" and "From Import Wizard".
 
-![mbed1](/assets/images/posts/mbed1.png)
+![mbed1]({{ '/assets/images/posts/mbed1.png' | relative_url }})
 
 
 Search `mbed` and select the first one.
 
-![mbed2](/assets/images/posts/mbed2.png)
+![mbed2]({{ '/assets/images/posts/mbed2.png' | relative_url }})
 
 The [mbed](https://developer.mbed.org/users/mbed_official/code/mbed/) library is the official library by MBED, it provides the main functions to use Nucleo.
 
@@ -51,7 +53,7 @@ Save and click on "Compile", if everything is fine we can download a binary file
 
 Move that binary on the board (i.e. `mv ~/binary.bin /mnt/board ; sync`) and using screen read the result `screen /dev/ttyACM0 9600`, press the *reset* push button and on the screen we'll see the result.
 
-![mbed3](/assets/images/posts/mbed3.png)
+![mbed3]({{ '/assets/images/posts/mbed3.png' | relative_url }})
 
 Easy to understand the source is composed by a class `Serial` and the instantiated object `pc` passing which pins we want to use to the constructor and using the printf method.
 

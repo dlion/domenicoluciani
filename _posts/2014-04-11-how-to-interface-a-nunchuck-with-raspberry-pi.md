@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "How to interface a nunchuck with raspberry pi"
-date: 2014-04-11 23:00:00
-categories: [Past, Programming, Nunchuck, RaspberryPi, Electronics]
+title: How to interface a nunchuck with raspberry pi
+description: Walking around the city I found a cheap nunchuck and obviously I felt
+  the need to do something. This time I chose to interface my raspberry pi with it.
+  Let's see how!
+tags:
+- hardware
 cover: "/assets/images/covers/nunchuck.jpg"
-lang: en
 ---
+
 
 Walking around the city I found a cheap nunchuck and obviously I felt the need to do something. This time I chose to interface my raspberry pi with it.   
 Let's see how!
@@ -21,7 +23,7 @@ Let's see how!
 
 I bought "Funchuck" a cheap nunchuck for 5euros.
 
-![funchuck](/assets/images/posts/funchuck1.jpg)
+![funchuck]({{ '/assets/images/posts/funchuck1.jpg' | relative_url }})
 
 ### Scheme
 
@@ -39,7 +41,7 @@ I bought "Funchuck" a cheap nunchuck for 5euros.
 4. PRESENCE (useless)
 5. GND
 
-![funchuck2](/assets/images/posts/funchuck2.jpg)
+![funchuck2]({{ '/assets/images/posts/funchuck2.jpg' | relative_url }})
 
 1. PIN 3.3v -(red)-> IN
 2. PIN 2 (0 SDA)-(blue)-> DATA

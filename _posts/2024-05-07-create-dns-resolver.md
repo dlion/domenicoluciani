@@ -1,11 +1,17 @@
 ---
-layout: post
-title: "Create a DNS Resolver with Golang"
-date: 2024-05-07 08:00:00
-categories: [Programming]
+title: Create a DNS Resolver with Golang
+description: 'Following the previous post about creating an Application Layer Load
+  Balancer, today I''m going to share my journey about another challenge I took and
+  completed: Create a simple…'
+tags:
+- engineering
+- highlights
 cover: "/assets/images/covers/dns.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=43503561"
+reddit_url: "https://www.reddit.com/r/golang/comments/1cnul9f/create_a_dns_resolver_with_go/"
 ---
+
+
 Following the previous post about [creating an Application Layer Load Balancer](https://domenicoluciani.com/2024/02/12/creating-an-application-layer-load-balancer.html), today I'm going to share my journey about another challenge I took and completed:
 **Create a simple DNS Resolver with Go**, let's go! 🚀
 

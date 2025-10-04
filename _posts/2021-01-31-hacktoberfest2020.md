@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Hacktoberfest 2020"
-date: 2021-01-31 08:00:00
-categories: [Programming, Life]
+title: Hacktoberfest 2020
+description: Ah shit, here we go again. Another year passed, and another Hacktoberfest
+  is over. I've just received my swag, and I can't be more excited!
+tags:
+- personal
 cover: "/assets/images/covers/hacktoberfest_2020.png"
-lang: en
 ---
+
+
 Ah shit, here we go again. Another year passed, and another Hacktoberfest is over. I've just received my swag, and I can't be more excited!
 
 Since 2014, every year I try to find the time to contribute to some open-source projects that need help, [every](https://domenicoluciani.com/2018/01/10/hacktoberfest-swag.html) [year](https://domenicoluciani.com/2019/02/10/hacktoberfest-18.html) [I get swag](https://domenicoluciani.com/2019/10/25/hack-week-2019.html) and an awesome t-shirt from [@DigitalOcean](https://github.com/DigitalOcean) in exchange of my contributions. Amazing, eh?
@@ -15,7 +17,7 @@ Yes, I'm talking with you if I can find the time to contribute, help somebody an
 
 These are my contributions:
 
-![PR](/assets/images/posts/contributions_2020.png)
+![PR]({{ '/assets/images/posts/contributions_2020.png' | relative_url }})
 
 As you can see, I've contributed to just 4 projects, I didn't have much free time last year, but I think they were enough and I'm proud of it, even the smallest contribution can make the difference.
 

@@ -1,11 +1,16 @@
 ---
-layout: post
-title: "Misleading Pair Programming"
-date: 2022-07-22 08:00:00
-categories: [Programming]
+title: Misleading Pair Programming
+description: I often read tweets, threads and posts about a weird practice called
+  Pair Programming, full of complaints. But I find this usually due to a lack of understanding
+  and implementation
+tags:
+- engineering
+- highlights
 cover: "/assets/images/covers/pairing.png"
-lang: en
+reddit_url: "https://www.reddit.com/r/programming/comments/wj2e74/misleading_pair_programming/"
+hn_url: "https://news.ycombinator.com/item?id=32763229"
 ---
+
 
 I often read tweets, threads and posts about a weird practice called **Pair Programming**, full of complaints. But I find this usually due to a lack of understanding and improper implementation.   
 I'd like to clarify why those complaints are misleading and why you shouldn't write pair programming off completely.

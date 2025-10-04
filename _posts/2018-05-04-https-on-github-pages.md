@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Full HTTPS on your Github pages, for free"
-date: 2018-05-04 08:00:00
-categories: [Security]
+title: Full HTTPS on your Github pages, for free
+description: From today this blog is full encrypted by a full SSL protocol, for free.
+  How?
+tags:
+- security
 cover: "/assets/images/covers/letsencrypt.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=17001908"
 ---
+
 
 From today this blog is full encrypted by a full SSL protocol, for free. How?
 

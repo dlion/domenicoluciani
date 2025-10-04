@@ -1,0 +1,76 @@
+---
+layout: default
+title: Search
+permalink: /search/
+hide_progress: true
+---
+<section class="search">
+  <h1>Search</h1>
+  <input id="searchInput" class="search-input" type="search" placeholder="Search posts…"
+         aria-label="Search posts">
+  <ul id="results" class="search-results"></ul>
+</section>
+
+<script>
+  // Tiny client-side search (same as before if you kept it) – just wiring to theme vars
+  (function() {
+    var input = document.getElementById('searchInput');
+    var results = document.getElementById('results');
+    if (results) {
+      results.setAttribute('aria-live', 'polite');
+    }
+
+    var data = [
+      {% for post in site.posts %}
+      { title: {{ post.title | jsonify }},
+        url: {{ post.url | relative_url | jsonify }},
+        date: "{{ post.date | date: '%Y-%m-%d' }}",
+        desc: {{ post.description | default: '' | jsonify }} }
+      {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+
+    function escapeHtml(str) {
+      var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      };
+      return str.replace(/[&<>'"]/g, function(ch) { return map[ch]; });
+    }
+
+    function render(list, query) {
+      if (!query) {
+        results.innerHTML = '';
+        return;
+      }
+
+      if (!list.length) {
+        results.innerHTML = '<li class="search-empty">No articles match <strong>&ldquo;' + escapeHtml(query) + '&rdquo;</strong>. Try another keyword.</li>';
+        return;
+      }
+
+      results.innerHTML = list.map(function(p) {
+        var description = p.desc || '';
+        return '<li><a href="'+p.url+'">'+p.title+'</a><div class="meta">'+p.date+'</div><div class="desc">'+description+'</div></li>';
+      }).join('');
+    }
+
+    input.addEventListener('input', function() {
+      var raw = input.value;
+      var q = raw.toLowerCase().trim();
+      if (!q) {
+        render([], '');
+        return;
+      }
+
+      var matches = data.filter(function(p){
+        return (p.title.toLowerCase().indexOf(q) > -1) ||
+               (p.desc && p.desc.toLowerCase().indexOf(q) > -1);
+      });
+      render(matches, raw.trim());
+    });
+  })();
+</script>

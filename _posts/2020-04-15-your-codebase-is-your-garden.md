@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Your codebase is your garden"
-date: 2020-04-15 08:00:00
-categories: [Programming]
+title: Your codebase is your garden
+description: I always liked the your codebase is like a garden metaphor, it says that
+  writing software is like gardening, you have to take care of your garden in many
+  ways and from time to…
+tags:
+- engineering
+- highlights
 cover: "/assets/images/covers/garden.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=30298936"
 ---
+
 
 I always liked the `your codebase is like a garden` metaphor, it says that writing software is like gardening, you have to take care of your garden in many ways and from time to time you have to move plants around relative to each other, consider how to take advantage of the wind, rain and sunlight to help your plants grow and stay healthy. Every day you have to monitor them and make adjustments as needed. Like your code. But how can we do it in practice and become good gardeners?
 
@@ -14,7 +18,7 @@ I always liked the `your codebase is like a garden` metaphor, it says that writi
 The first very pragmatic case where we can find the word `refactor` is during the [TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) cycle: Red -> Green -> Refactor.   
 We have a specific step where we have to focus on making our code cleaner and better.
 
-![red-green-refactoring](/assets/images/posts/red-green-refactor.png)
+![red-green-refactoring]({{ '/assets/images/posts/red-green-refactor.png' | relative_url }})
 
 This part is so importat that we need to separate it from the implementation part. It's like we are wearing two hats. The first hat is for the implementation; creating and adding code. The second hat is about improving it.
 
@@ -30,27 +34,27 @@ There's not a specific rule for it, but I usually try to follow these points:
 
 ### Duplication
 
-![dup_flowers](/assets/images/posts/dup_flowers.gif)
+![dup_flowers]({{ '/assets/images/posts/dup_flowers.gif' | relative_url }})
 
 I always try to follow the [DRY principle](https://martinfowler.com/ieeeSoftware/repetition.pdf) or when duplicating is necessary I try to follow the [three-strikes rule](https://wiki.c2.com/?ThreeStrikesAndYouRefactor).   
 I suppose that how to spot a duplication is just a matter of practice. I found myself after many years of experience having a good sense of spotting duplications so my advice is to practice more.
 
 ### Non-orthogonal design
 
-![ortho_flowers](/assets/images/posts/ortho_flowers.gif)
+![ortho_flowers]({{ '/assets/images/posts/ortho_flowers.gif' | relative_url }})
 
 Non-orthogonality means that modifying a component has another effect somewhere else. For example, modifying the UI of our application results in a need to change our database too.   
 When we say that two components are orthogonal to each other, it means that if we make some changes to a component, they don't affect other components.
 
 ### Outdated knowledge
 
-![deaf_flowers](/assets/images/posts/dead_flowers.gif)
+![deaf_flowers]({{ '/assets/images/posts/dead_flowers.gif' | relative_url }})
 
 The nature of our software is evolving over time, so we have to update business and validation rules. Our needs change and so does our software.
 
 ### Performance
 
-![speed_flowers](/assets/images/posts/speed_flowers.gif)
+![speed_flowers]({{ '/assets/images/posts/speed_flowers.gif' | relative_url }})
 
 Of course, if we can improve our software's performance in terms of using the right data structures or a better algorithm, we should do so as much as we can.
 
@@ -65,7 +69,7 @@ Try to follow the [boy scout's rule](https://www.oreilly.com/library/view/97-thi
 The example I like most is a medical one and I think it fits very well:   
 let's think about our need to refactor as growth. Removing it requires invasive surgery, we can remove it now spending some time while it's small or we could wait until it grows. Then will be more expensive and dangerous and waiting even longer could bring our patient to death.
 
-![heart-flower](/assets/images/posts/heart-flower.gif)
+![heart-flower]({{ '/assets/images/posts/heart-flower.gif' | relative_url }})
 
 But I think the most important thing to mention to your boss is about economics. Martin Fowler talked about the [Design Stamina Hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html), which show us that a clean and well-maintained codebase help us to deliver more features faster; answering to the question `should I refactor my code?`
 
@@ -85,7 +89,7 @@ To maintain our garden beautiful and flourishing we should follow these steps as
  - Run tests as often as possible
  - Have fun
 
-![forest](/assets/images/posts/forest.jpeg)
+![forest]({{ '/assets/images/posts/forest.jpeg' | relative_url }})
 
 Happy gardening! 
 

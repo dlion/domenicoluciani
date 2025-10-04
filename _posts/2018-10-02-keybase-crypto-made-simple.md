@@ -1,11 +1,13 @@
 ---
-layout: post
-title: "Keybase - Crypto made simple"
-date: 2018-10-02 08:00:00
-categories: [security, life]
+title: Keybase - Crypto made simple
+description: For years cryptography was considered like a witchcraft, until now! Let's
+  see how Keybase made it.
+tags:
+- security
 cover: "/assets/images/covers/crypto.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=18252185"
 ---
+
 
 For years cryptography was considered like a witchcraft, until now! Let's see how Keybase made it.
 
@@ -15,7 +17,7 @@ From ancient times humankind ever wanted to communicate secrets or sensitive inf
 
 ## Symmetric
 
-![symmetric](/assets/images/posts/symmetric_encryption_diagram2.png)
+![symmetric]({{ '/assets/images/posts/symmetric_encryption_diagram2.png' | relative_url }})
 
 Alice (A) wants to send a SuPeRsEcReT message to Bob (B), how she can do that using symmetric cryptography?
 
@@ -43,7 +45,7 @@ All of these hypotheses allows an attacker to read **ALL** messages from and to 
 
 ## Asymmetric
 
-![asymmetric](/assets/images/posts/asymmetric_encryption_diagram.png)
+![asymmetric]({{ '/assets/images/posts/asymmetric_encryption_diagram.png' | relative_url }})
 
 Alice (A) wants to send a SuPeRsEcReT message to Bob (B), how she can do that using asymmetric cryptography?
 
@@ -71,7 +73,7 @@ Alice (A) wants to send a SuPeRsEcReT message to Bob (B), how she can do that us
 
 Currently, these worlds are combined to achieve a smart result, infact the asymmetric encryption is used to wrap the message encrypted using a symmetric encryption, it allows to sharing in security the message preserving speed.
 
-![pgp](/assets/images/posts/pgp.png)
+![pgp]({{ '/assets/images/posts/pgp.png' | relative_url }})
 
 ### CONS:
 
@@ -91,7 +93,7 @@ One of the problem with PGP is that you aren't secure of the public key you want
 If you want to send a message to me you need my public key, right? Ok so an attacker send to you his public key, how can you say THAT public key is mine or not without ask me? (and if the attacker pretend to be me through a fake account on a social network like Twitter? How can you be sure that account is really "me"?)   
 Keybase solve this problem in a nice way
 
-![my_account](/assets/images/posts/keybaseAccount.png)
+![my_account]({{ '/assets/images/posts/keybaseAccount.png' | relative_url }})
 
 
 Keybase allows to you to do a lot of stuff, one of these is to verify your identity through social networks like Twitter, Facebook, Github, Reddit, etc.   
@@ -125,7 +127,7 @@ Using keybase we can be sure that public key belongs to our receiver for real, n
 
 An interesting feature of keybase is the **Encrypted Chat**
 
-![chat](/assets/images/posts/keybase_chat.png)
+![chat]({{ '/assets/images/posts/keybase_chat.png' | relative_url }})
 
 You can create [Teams](https://keybase.io/blog/introducing-keybase-teams), channels, subteams and much more. Of course you have an app for your smartphone too!
 It's an end-to-end encrypted chat built into Keybase so you can use your _secure_ nickname of Hacker News as secure address to communicate; no phone number or email needed.
@@ -142,7 +144,7 @@ How? You have to put your file into the public directory of keybase filesystem w
 
 Last but not least Keybase will host these files for you into a public hosting, for example: `https://keybase.pub/dlion/`.
 
-![public](/assets/images/posts/public_dir.png)
+![public]({{ '/assets/images/posts/public_dir.png' | relative_url }})
 
 ### Private
 Of course you can sign, crypt and preserve your own files into your private dir, nobody will be able to read those files, how? Just put them into the right dir `keybase/private/dlion/`.
@@ -176,4 +178,4 @@ I use Keybase everyday and I'm happy to use a simple (it's an euphemism) tool th
 
 ## So follow me!
 
-![follow me](/assets/images/posts/keybaseAccount.png)
+![follow me]({{ '/assets/images/posts/keybaseAccount.png' | relative_url }})

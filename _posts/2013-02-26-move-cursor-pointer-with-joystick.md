@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Move the cursor pointer with a joystick"
-date: 2013-02-26 01:00:00
-categories: [Past, Electronics, Programming]
+title: Move the cursor pointer with a joystick
+description: I found a cool library online to interface my pc with any usb joystick
+  I have in my house... so why not to move my cursor pointer with a joystick ?
+tags:
+- hardware
 cover: "/assets/images/covers/joystick.png"
-lang: en
 ---
+
 
 I found a cool library online to interface my pc with any usb joystick I have in my house... so why not to move my cursor pointer with a joystick ?
 

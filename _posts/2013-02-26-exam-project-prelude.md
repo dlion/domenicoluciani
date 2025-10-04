@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "Exam Project Prelude"
-date: 2013-02-26 16:00:00
-categories: [Past, Programming, ComputerVision, OpenCV]
+title: Exam Project Prelude
+description: In the previous article I introduced you my exam project about computer
+  vision, now I'm going to explain to you how it works but first let me introduce
+  a small header file I wrote…
+tags:
+- engineering
+- personal
 cover: "/assets/images/covers/roboteye.png"
-lang: en
 ---
+
+
 In the [previous article](https://domenicoluciani.com/2013/02/26/exam-project-0.html) I introduced you my exam project about computer vision, now I'm going to explain to you how it works but first let me introduce a small header file I wrote to reuse useful functions and structs.
 
 Firs of all, you can find the project [here](https://github.com/DLion/ExamProject), you can find the header file in the `lib` directory.
@@ -167,7 +171,7 @@ To use color tracking I need to use a better color space than RGB so I used the 
 H = angle around the vertical axis   
 S = Saturation, from 0 on the axis to 1 on the surface   
 V = Brightness is the height of the cone   
-![HSV](/assets/images/posts/hsv.png)
+![HSV]({{ '/assets/images/posts/hsv.png' | relative_url }})
 
 The `Rettangolo`(Rectangle) structs allows to define **points** to manage rectangles.
 
@@ -181,7 +185,7 @@ The function `riduciNoise` (reduceNoise) allows to dilate, eroding and in the en
 
 The function `inserisci` has as parameters a big and a small images and 2 integer; it allows to insert a small image into a bigger one in the coordinates defined by the 2 integers. Inside the function we set a **ROI** that allows us to operate **ONLY** in that region of an image leave intact the rest.
 
-![ROI](/assets/images/posts/roi.gif)
+![ROI]({{ '/assets/images/posts/roi.gif' | relative_url }})
 
 That's all! In the next posts I will introduce the rest of the project, stay tuned!
 

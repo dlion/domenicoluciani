@@ -1,10 +1,9 @@
 ---
-layout: post
-title: "Hacktoberfest 2017"
-date: 2018-01-10 10:00:00
-categories: [Programming, Life]
+title: Hacktoberfest 2017
+description: Today I've got some swag from @github and @digitalocean for Hacktoberfest
+tags:
+- personal
 cover: "/assets/images/covers/hacktoberfest_17.jpg"
-lang: en
 ---
 
 
@@ -18,7 +17,7 @@ Hacktoberfest is open to everyone and involves any repos on Github, is a month-l
 everyone who wants to contribute to Open Source can have the opportunity to receive some swag due it by **DigitalOcean** and **Github**.
 
 
-![logoHacktoberfest](/assets/images/posts/logohacktoberfest.png)
+![logoHacktoberfest]({{ '/assets/images/posts/logohacktoberfest.png' | relative_url }})
 
 
 ## How does this work
@@ -36,7 +35,7 @@ between 1 and 31 October.
 
 You can check your status using tools like [Hacktoberfest Checker](https://hacktoberfestchecker.herokuapp.com), for example here my stats by the last year:
 
-![hackstats](/assets/images/posts/hackstats.png)
+![hackstats]({{ '/assets/images/posts/hackstats.png' | relative_url }})
 
 Visiting the [Hacktoberfest](https://hacktoberfest.digitalocean.com/) official site you can find how much PRs has been done, the most popular day to contribute and much more!
 

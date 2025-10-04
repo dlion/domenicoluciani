@@ -1,0 +1,131 @@
+/* About page (scoped) */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* avatar + text side-by-side by default */
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.about-avatar {
+  border-radius: 50%;
+  width: 72px; height: 72px;
+  object-fit: cover;       /* evita deformazioni */
+  object-position: 50% 50%;
+  background: color-mix(in srgb, var(--surface-1) 92%, transparent);
+  border: 2px solid color-mix(in srgb, var(--bg) 85%, var(--border) 15%);
+  box-shadow: 0 8px 20px rgba(15,23,42,0.08);
+}
+.about-intro { display: grid; grid-template-columns: auto; gap: 8px; min-width: 0; align-self: center; }
+.about-avatar { grid-column: 1; grid-row: 1; }
+.about-intro  { grid-column: 2; grid-row: 1; }
+.about-photos { grid-column: 1 / -1; grid-row: 2; }
+.about-name { margin: 0; font-size: clamp(1.2rem, 3vw, 1.6rem); }
+.about-tagline { margin: 0; color: var(--muted); white-space: normal; }
+.about-meta { display: flex; flex-wrap: wrap; gap: 10px 14px; margin: 0; padding: 0; list-style: none; }
+.about-meta .emoji { margin-right: .35rem; }
+.about-links a { text-decoration: none; }
+.about-links a:hover { text-decoration: underline; }
+
+.about-photos { display: grid; grid-template-columns: 1fr; gap: 8px; grid-column: 1 / -1; }
+.about-photos img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+  aspect-ratio: 4 / 3;          /* uniform height across the row */
+  object-fit: cover;            /* crop taller images to match */
+}
+
+@media (min-width: 560px) { .about-photos { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 860px) {
+  .about-photos { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+/* Timeline */
+.timeline { list-style: none; padding: 0; margin: 10px 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: color-mix(in srgb, var(--border) 70%, transparent); }
+.timeline-item { position: relative; padding-left: 28px; margin: 0 0 12px; }
+.timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--link); position: absolute; left: 5px; top: .55rem; box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 80%, transparent); }
+.timeline-body { min-width: 0; }
+.timeline-head { display: flex; align-items: baseline; gap: 12px; justify-content: space-between; }
+.timeline-head h3 { margin: 0; font-size: 1.0rem; }
+.timeline-head h3 a { text-decoration: none; }
+.timeline-head h3 a:hover { text-decoration: underline; }
+.timeline-head .timeline-when { color: var(--muted); font-size: .95rem; white-space: nowrap; }
+.timeline-body p { margin: 4px 0 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Collapsed older roles */
+/* (Removed collapse + residences timeline per request) */
+
+/* no additional reposition needed; grid already two-column by default */
+
+/* World map */
+.world-map { margin: 16px 0; }
+.world-map .map-surface {
+  position: relative;
+  aspect-ratio: 2 / 1;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 40%, transparent) 1px, transparent 1px) 0 0 / calc(100%/12) 100%,
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 40%, transparent) 1px, transparent 1px) 0 0 / 100% calc(100%/6),
+    color-mix(in srgb, var(--surface-1) 92%, transparent);
+}
+.world-map .pin {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.9);
+  box-shadow: 0 2px 8px rgba(15,23,42,0.25);
+}
+.world-map .pin.visited { background: #60a5fa; }
+.world-map .pin.lived   { background: #f59e0b; }
+.world-map .pin.living  { background: #22c55e; }
+
+.world-map .map-legend {
+  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+  margin-top: 8px; color: var(--muted); font-size: .95rem;
+}
+.world-map .leg { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.world-map .leg.visited { background: #60a5fa; }
+.world-map .leg.lived   { background: #f59e0b; }
+.world-map .leg.living  { background: #22c55e; }
+
+/* Leaflet map container used on about page */
+#placesMap.places-map {
+  height: clamp(260px, 48vh, 460px);
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15,23,42,.08);
+  margin: 12px 0 6px;
+}
+.pin-live { background: transparent !important; border: 0 !important; }
+.pin-live .live-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--live-color, #22c55e); display: block; position: relative; border: 2px solid #fff; box-shadow: 0 3px 10px rgba(15,23,42,.4); }
+.pin-live .live-dot::after { content: ""; position: absolute; inset: -8px; border: 2px solid var(--live-color, #22c55e); border-radius: 50%; opacity: .65; animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(.6); opacity: .75; } 100% { transform: scale(1.6); opacity: 0; } }
+.map-legend { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 4px 0 12px; color: var(--muted); }
+.map-legend .leg { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+.map-legend .leg.living { background:#22c55e; }
+.map-legend .leg.lived { background:#f59e0b; }
+.map-legend .leg.visited { background:#60a5fa; }
+.map-legend .sep { opacity:.6; }
+
+/* GitHub stats grid */
+/* GitHub metrics – stacked images at native size */
+.gh-stack { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.gh-row { display: grid; grid-template-columns: 1fr; gap: 12px; align-items: start; }
+@media (min-width: 820px) {
+  .gh-row { grid-template-columns: 1fr 1fr; }
+  .gh-row.gh-two .gh-img {
+    height: clamp(220px, 30vw, 320px);
+    object-fit: contain;
+    object-position: 50% 0%; /* keep image content aligned to the top */
+  }
+}
+.gh-center { display: flex; justify-content: center; }
+.gh-img { display: block; width: auto; max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 14px; background: color-mix(in srgb, var(--surface-1) 96%, transparent); box-shadow: 0 16px 36px rgba(15,23,42,.08); }
+.gh-row .gh-img { width: 100%; }
+.gh-center .gh-img { width: auto; max-width: 100%; }

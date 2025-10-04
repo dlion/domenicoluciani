@@ -1,11 +1,14 @@
 ---
-layout: post
-title: "Stop the data mess with the data mesh"
-date: 2021-04-20 08:00:00
-categories: [Programming]
+title: Stop the data mess with the data mesh
+description: One of the hottest topics of the moment in Big Data is undoubtedly the
+  Data Mesh, but what is it? Why is this better than the solutions we had before?
+  Do we need it? Should we…
+tags:
+- engineering
 cover: "/assets/images/covers/data_mesh.png"
-lang: en
+hn_url: "https://news.ycombinator.com/item?id=26902287"
 ---
+
 
 One of the hottest topics of the moment in Big Data is undoubtedly the Data Mesh, but what is it? Why is this better than the solutions we had before? Do we need it? Should we adopt it?
 
@@ -23,7 +26,7 @@ It seems friendly and relatively straightforward, but it's not always the best s
 
 Essentially a Data Mesh helps to get rid of this problem by having each team/business area responsible for handling their ETL pipeline. It means more flexibility and autonomy. It should be supported by a good self-service data platform, but while the data might be physically centralised in the platform, ownership of it is decentralised.
 
-![good_team](/assets/images/posts/good_team.png)
+![good_team]({{ '/assets/images/posts/good_team.png' | relative_url }})
 
 ## Should we adopt Data Mesh?
 

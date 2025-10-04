@@ -1,4 +1,4 @@
-Domenico Luciani — Blog (Jekyll)
+Domenico Luciani — Blog
 ================================
 
 This repository contains my personal blog built with Jekyll (GitHub Pages compatible). It includes a few custom UX features (code toolbar, callouts, mermaid, tag chips, human‑written badge, pretty RSS, About page with map/timeline) on top of a simple layout.
@@ -12,7 +12,7 @@ Quick Start
   - Install Ruby + Bundler, then:
     - `bundle install`
     - `bundle exec jekyll serve`
-  - Visit `http://127.0.0.1:4000/dryrun/` (respects `baseurl` in `_config.yml`).
+  - Visit `http://127.0.0.1:4000/` (respects `baseurl` in `_config.yml`).
 - Create a new post
   - See the “Post Template” section for a copy‑paste front matter.
 - Deploy

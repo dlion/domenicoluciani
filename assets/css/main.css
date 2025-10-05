@@ -1151,6 +1151,18 @@ html[data-theme='dark'] .human-badge-dark { display: inline-block; }
 .footer-inner a[href$='feed.xml'] { color: color-mix(in srgb, var(--muted) 55%, var(--link) 45%); }
 .footer-inner a[href$='feed.xml']:hover { color: var(--link); }
 
+.site-ads {
+  margin: -10px auto 40px;
+  display: flex;
+  justify-content: center;
+  padding-inline: 24px;
+  width: min(960px, 100%);
+}
+.site-ads [data-ea-publisher] {
+  max-width: 960px;
+  width: 100%;
+}
+
 /* Responsive tweaks */
 @media (max-width: 780px) {
   .home-hero { padding: 3rem 1.4rem 2.4rem; margin-top: -28px; }
@@ -1162,6 +1174,8 @@ html[data-theme='dark'] .human-badge-dark { display: inline-block; }
   .pagination-inner { flex-direction: column; align-items: center; gap: 10px; max-width: 100%; }
   .pagination-link { font-size: .95rem; }
   .pagination-status { font-size: .88rem; }
+
+  .site-ads { padding-inline: 16px; margin-bottom: 32px; }
 
   .related-split { margin-left: 0; margin-right: 0; padding: 2.6rem 0; }
   .related-split-grid { grid-template-columns: 1fr; }

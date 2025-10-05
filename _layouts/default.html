@@ -89,6 +89,7 @@ layout: none
           {% endfor %}
         </p>
       </div>
+      <div class="adaptive-css raised" data-ea-publisher="domenicolucianicom" data-ea-type="text" data-ea-style="fixedfooter" id="footer"></div>
     </footer>
 
     <script>
@@ -130,6 +131,49 @@ layout: none
           label();
         });
         label();
+      })();
+    </script>
+    <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <script>
+      (function() {
+        var placements = document.querySelectorAll('[data-ea-publisher]');
+        if (!placements.length) return;
+
+        function removeAll() {
+          placements.forEach(function(node) {
+            if (node && node.parentNode) {
+              node.parentNode.removeChild(node);
+            }
+          });
+        }
+
+        function attachListener() {
+          if (window.ethicalads && window.ethicalads.wait && typeof window.ethicalads.wait.then === 'function') {
+            window.ethicalads.wait.then(function(result) {
+              if (!result || !result.length) {
+                removeAll();
+              }
+            }).catch(function() {
+              removeAll();
+            });
+            return true;
+          }
+          return false;
+        }
+
+        if (!attachListener()) {
+          var attempts = 0;
+          var maxAttempts = 25;
+          var poll = setInterval(function() {
+            attempts += 1;
+            if (attachListener()) {
+              clearInterval(poll);
+            } else if (attempts >= maxAttempts) {
+              clearInterval(poll);
+              removeAll();
+            }
+          }, 200);
+        }
       })();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>

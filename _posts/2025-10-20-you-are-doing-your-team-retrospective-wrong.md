@@ -19,12 +19,12 @@ With more than 10 years of experience as a Software Engineer, I had the amazing 
 
 A retrospective is the time when a team can learn from its own mistakes, share gratitude, celebrate and talk about new ideas. Do you see the potential? 📈
 
-### We are continuously doing something wrong ❌
+### "We are continuously doing something wrong" ❌
 
 Do you either see in the team something that can be improved or that is bothering you and the rest of the team?   
 Raise your hand. This is the moment to speak up and talk about it.
 
-### What if? 🤔
+### "What if?" 🤔
 
 Do you have new ideas? Do you want to try something new and want to have the whole team opinion? Go for it!
 
@@ -143,7 +143,8 @@ Do it just once, and focus on finding an action item, then move to the following
 
 ### Anonymous Cards and Votes 🃏
 
-Some people in the team have more influence than others, and this can easily harm a retro meeting. Within a team there are multiple dynamics and we have to always remember that those dynamics influence how we interact and work with each other.
+Some people in the team have more influence than others, and this can easily harm a retro meeting. Within a team there are multiple dynamics, and we have always to remember that those dynamics influence how we interact and work with each other.
+So, to avoid having this hidden influence within our meeting, the vote should be anonymous.
 
 
 

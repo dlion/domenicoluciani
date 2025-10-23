@@ -11,33 +11,33 @@ published: false
 
 A team retrospective is not just another useless meeting, and if you feel so, it means you are doing it wrong, and this article is for you.
 
-With more than 10 years of experience as a Software Engineer, I had the amazing opportunity to attend hundreds of team retrospectives, and let me tell you one thing: it is the most important team meeting you could have if you know how to do it properly.
+With more than 10 years of experience as a Software Engineer, I had the incredible opportunity to attend hundreds of team retrospectives, and let me tell you one thing: it is the most important team meeting you could have, if you know how to do it properly.
 
 ---
 
 ## Why is it important? 🎩
 
-A retrospective is the time when a team can learn from its own mistakes, share gratitude, celebrate and talk about new ideas. Do you see the potential? 📈
+A retrospective is the time when a team can learn from its own mistakes, share gratitude, ask for help, celebrate and talk about new ideas. Do you already see the potential? 📈
 
-### "We are continuously doing something wrong" ❌
+### Self-improvement 🔁
 
-Do you either see in the team something that can be improved or that is bothering you and the rest of the team?   
-Raise your hand. This is the moment to speak up and talk about it.
+Do you either see in the team something that can be improved or that is slowing the team down?   
+Raise your hand. 🙋‍♂️ This is the moment to speak up and talk about it!
 
 ### "What if?" 🤔
 
-Do you have new ideas? Do you want to try something new and want to have the whole team opinion? Go for it!
+Do you have new ideas? Do you want to try something new, and want to have the team's opinion? Go for it!
 
 ### Celebration!! 🥳
 
-Does your team achieve an accomplishment, do you want to say thank you to a specific person that help you ? (making it in public is better😉)
+Does your team achieve an accomplishment, or do you want to say thank you to a specific person that helped you? (*making it in public is better 😉*)
 
-### Something went wrong 🙅
+### Reflection 🙅
 
-This is the most important reason: it makes the team to reflect upon something that happened in the past that went wrong.
+The power of this ceremony is that it makes the team to reflect upon something that happened in the past that went wrong or that could have been better.
 
 > **Caution**
-> It is about continous improvement, **not blaming**.
+> It is about continuous improvement, **not blaming**.
 {: .callout .warn}
 
 In a safe environment we should aim to point our fingers towards processes that didn't work, **not towards people**.
@@ -46,27 +46,35 @@ In a safe environment we should aim to point our fingers towards processes that 
 ## Team Psychological Safety
 
 > **Important:** Establish Psychological Safety
-> Psychological safety is a very important thing to have in your team, the aim to make the people feeling safe. This should be a priority, the sooner you have it in your team, the better.
+> Psychological safety is a very important thing to have in your team, the aim is to make the team feeling safe. This should be your top priority, the sooner you have it in your team, the better.
 {: .callout .warn}
 
-Have people in the team who feel safe is one of the most important thing to have when we talk about team dynamics. These people will be transparent, honest and they will take risks.   
-During a retro, we need people that have the courage to speak up and to address issues and talk about solutions and ideas. Without psychological safety we can't have it. If people don't feel safe, they will be afraid to be exposed and be accountable.
+Have people in the team who feel safe is one of the most important things to have when we talk about team dynamics. A team who feels safe, will be transparent, honest, and they will take risks. 
+During a retro, you want to have people that have the courage to speak up, and to address issues talking about solutions and ideas. You want your team not being afraid of taking the courage of saying "we should stop this" or "this is not working". Without psychological safety we can't have all the benefits we could have otherwise. If people don't feel safe, they will be afraid to be exposed and be accountable.
 
 ## Format 👾
 
-Most of the people I talked with thought that there is only one effective retrospective format
+Most of the people I talked with were convinced that there is only one effective retrospective format
 
 ![retro-default]({{ '/assets/images/posts/retro_default.png' | relative_url }})
 
 Which is completely false, changing retrospective format depending on your team situation **is crucial** to get the most out of this ceremony.
 
-Retros should be fun and effective, not all sprints look the same so why your retro should?
+Retros should be fun and effective, not all sprints or quarters look the same so why your retro should?
 
 ### Different formats?
 
-There are lots of templates online that can be used, for example:
-* [Fun Retrospectives](https://www.funretrospectives.com/category/retrospective/).
+There are lots of templates online that can be used, my favorites can be found here:
+* [Fun Retrospectives](https://app.funretrospectives.com/new/custom-session).
 * [Neatro Retro templates](https://www.neatro.io/retrospective-templates/)
+
+### Setup
+
+Let's pick as an example "The good, the bad and the ugly" retro format.
+We should set up 3 columns respectively with
+* The good 👍🏻
+* The bad 🙅🏻
+* The ugly 👹
 
 
 ## Common Pitfalls 👎🏻

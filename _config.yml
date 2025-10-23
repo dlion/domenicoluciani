@@ -294,6 +294,7 @@ about:
       }
     - { name: Glasgow, country: GB, lat: 55.8642, lon: -4.2518, kind: visited }
     - { name: Dublin, country: IE, lat: 53.3498, lon: -6.2603, kind: visited }
+    - { name: Cork, country: IE, lat: 51.8985, lon: -8.4756, kind: visited }
 
     # EUROPE — DACH & Central/Eastern
     - { name: Munich, country: DE, lat: 48.1351, lon: 11.5820, kind: visited }

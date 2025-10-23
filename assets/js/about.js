@@ -11,10 +11,12 @@
       attribution: '&copy; OpenStreetMap contributors',
       noWrap: true
     });
-    var darkTiles  = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap, &copy; CARTO',
+    var darkTiles  = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
       noWrap: true
-    });
+    }).addTo(map);
+
+    
 
     var worldBounds = L.latLngBounds(L.latLng(-85, -180), L.latLng(85, 180));
     var map = L.map(el, { zoomControl: true, scrollWheelZoom: true, attributionControl: true, maxBounds: worldBounds, maxBoundsViscosity: 0.9, worldCopyJump: true });

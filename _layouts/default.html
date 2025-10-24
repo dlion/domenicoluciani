@@ -41,14 +41,14 @@ layout: none
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
-    {% if page.extra_css %}
-      {% for css in page.extra_css %}
-        <link rel="stylesheet" href="{{ '/assets/css/' | append: css | append: '.css?v=1' | relative_url }}">
-      {% endfor %}
-    {% endif %}
     {% if page.cdn_css %}
       {% for url in page.cdn_css %}
         <link rel="stylesheet" href="{{ url }}">
+      {% endfor %}
+    {% endif %}
+    {% if page.extra_css %}
+      {% for css in page.extra_css %}
+        <link rel="stylesheet" href="{{ '/assets/css/' | append: css | append: '.css?v=1' | relative_url }}">
       {% endfor %}
     {% endif %}
   </head>

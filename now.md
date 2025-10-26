@@ -11,8 +11,6 @@ extra_css: [timeline]
 
 ---
 
-Last updated: **{{ page.updated | default: site.time | date: "%d %b %Y" }}** ⏳
-
 {% assign base_timeline = site.data.now.timeline | default: site.now.timeline %}
 {% if base_timeline %}
 {% assign timeline_entries = base_timeline | sort: "date" | reverse %}

@@ -1,0 +1,221 @@
+# EUROPE — Spain (incl. islands & territories)
+- { name: Malaga, country: ES, lat: 36.7213, lon: -4.4214, kind: living }
+- { name: Barcelona, country: ES, lat: 41.3874, lon: 2.1686, kind: lived }
+- {
+    name: Gran Canaria,
+    country: ES,
+    lat: 28.1248,
+    lon: -15.4300,
+    kind: lived,
+  }
+- { name: Madrid, country: ES, lat: 40.4168, lon: -3.7038, kind: visited }
+- { name: Seville, country: ES, lat: 37.3891, lon: -5.9845, kind: visited }
+- { name: Cadiz, country: ES, lat: 36.5271, lon: -6.2886, kind: visited }
+- { name: Ronda, country: ES, lat: 36.7460, lon: -5.1612, kind: visited }
+- { name: Toledo, country: ES, lat: 39.8628, lon: -4.0273, kind: visited }
+- { name: A Coruna, country: ES, lat: 43.3623, lon: -8.4115, kind: visited }
+- { name: Granada, country: ES, lat: 37.1773, lon: -3.5986, kind: visited }
+- { name: Cordoba, country: ES, lat: 37.8882, lon: -4.7794, kind: visited }
+- { name: Almería, country: ES, lat: 36.8340, lon: -2.4637, kind: visited }
+- { name: Tarragona, country: ES, lat: 41.1189, lon: 1.2445, kind: visited }
+- { name: Sitges, country: ES, lat: 41.2379, lon: 1.8059, kind: visited }
+- {
+    name: Costa Brava,
+    country: ES,
+    lat: 41.7740,
+    lon: 3.0309,
+    kind: visited,
+  }
+- {
+    name: Tenerife,
+    country: ES,
+    lat: 28.4636,
+    lon: -16.2518,
+    kind: visited,
+  }
+- {
+    name: Fuerteventura,
+    country: ES,
+    lat: 28.5004,
+    lon: -13.8620,
+    kind: visited,
+  }
+- { name: Ibiza, country: ES, lat: 38.9067, lon: 1.4206, kind: visited }
+- { name: Mallorca, country: ES, lat: 39.5696, lon: 2.6502, kind: visited }
+- {
+    name: Gibraltar,
+    country: GI,
+    lat: 36.1408,
+    lon: -5.3536,
+    kind: visited,
+  }
+
+# EUROPE — Italy (incl. islands)
+- { name: Palermo, country: IT, lat: 38.1157, lon: 13.3613, kind: lived }
+- { name: Milan, country: IT, lat: 45.4642, lon: 9.1900, kind: lived }
+- { name: Rome, country: IT, lat: 41.9028, lon: 12.4964, kind: visited }
+- { name: Turin, country: IT, lat: 45.0703, lon: 7.6869, kind: visited }
+- { name: Genoa, country: IT, lat: 44.4056, lon: 8.9463, kind: visited }
+- { name: Padova, country: IT, lat: 45.4064, lon: 11.8768, kind: visited }
+- { name: Venezia, country: IT, lat: 45.4408, lon: 12.3155, kind: visited }
+- { name: Ferrara, country: IT, lat: 44.8381, lon: 11.6198, kind: visited }
+- { name: Bologna, country: IT, lat: 44.4949, lon: 11.3426, kind: visited }
+- { name: Firenze, country: IT, lat: 43.7696, lon: 11.2558, kind: visited }
+- { name: Lucca, country: IT, lat: 43.8430, lon: 10.5080, kind: visited }
+- { name: Pisa, country: IT, lat: 43.7228, lon: 10.4017, kind: visited }
+- { name: Bari, country: IT, lat: 41.1171, lon: 16.8719, kind: visited }
+- { name: Naples, country: IT, lat: 40.8518, lon: 14.2681, kind: visited }
+- {
+    name: Favignana,
+    country: IT,
+    lat: 37.9360,
+    lon: 12.3290,
+    kind: visited,
+  }
+- { name: Trapani, country: IT, lat: 38.0176, lon: 12.5360, kind: visited }
+- { name: Ustica, country: IT, lat: 38.7080, lon: 13.1890, kind: visited }
+- { name: Lipari, country: IT, lat: 38.4710, lon: 14.9540, kind: visited }
+- { name: Catania, country: IT, lat: 37.5079, lon: 15.0830, kind: visited }
+- { name: Syracuse, country: IT, lat: 37.0755, lon: 15.2866, kind: visited }
+- {
+    name: Marzamemi,
+    country: IT,
+    lat: 36.7420,
+    lon: 15.1020,
+    kind: visited,
+  }
+
+# EUROPE — Portugal
+- { name: Lisbon, country: PT, lat: 38.7223, lon: -9.1393, kind: visited }
+- { name: Porto, country: PT, lat: 41.1579, lon: -8.6291, kind: visited }
+- { name: Madeira, country: PT, lat: 32.7607, lon: -16.9595, kind: visited }
+- { name: Malta, country: MT, lat: 35.8989, lon: 14.5146, kind: visited }
+
+# EUROPE — France
+- { name: Paris, country: FR, lat: 48.8566, lon: 2.3522, kind: visited }
+- { name: Marseille, country: FR, lat: 43.2965, lon: 5.3698, kind: visited }
+- {
+    name: Mont Saint-Michel,
+    country: FR,
+    lat: 48.6361,
+    lon: -1.5115,
+    kind: visited,
+  }
+
+# EUROPE — UK & Ireland
+- { name: London, country: GB, lat: 51.5074, lon: -0.1278, kind: visited }
+- {
+    name: Edinburgh,
+    country: GB,
+    lat: 55.9533,
+    lon: -3.1883,
+    kind: visited,
+  }
+- { name: Glasgow, country: GB, lat: 55.8642, lon: -4.2518, kind: visited }
+- { name: Dublin, country: IE, lat: 53.3498, lon: -6.2603, kind: visited }
+- { name: Cork, country: IE, lat: 51.8985, lon: -8.4756, kind: visited }
+
+# EUROPE — DACH & Central/Eastern
+- { name: Munich, country: DE, lat: 48.1351, lon: 11.5820, kind: visited }
+- { name: Dresden, country: DE, lat: 51.0504, lon: 13.7373, kind: visited }
+- { name: Vienna, country: AT, lat: 48.2082, lon: 16.3738, kind: visited }
+- { name: Zurich, country: CH, lat: 47.3769, lon: 8.5417, kind: visited }
+- { name: Prague, country: CZ, lat: 50.0755, lon: 14.4378, kind: visited }
+- { name: Terezin, country: CZ, lat: 50.5100, lon: 14.1500, kind: visited }
+- { name: Budapest, country: HU, lat: 47.4979, lon: 19.0402, kind: visited }
+- {
+    name: Bucharest,
+    country: RO,
+    lat: 44.4268,
+    lon: 26.1025,
+    kind: visited,
+  }
+- {
+    name: Stockholm,
+    country: SE,
+    lat: 59.3293,
+    lon: 18.0686,
+    kind: visited,
+  }
+- { name: Oslo, country: NO, lat: 59.9139, lon: 10.7522, kind: visited }
+
+# AFRICA — Morocco & Egypt
+- {
+    name: Marrakech,
+    country: MA,
+    lat: 31.6295,
+    lon: -7.9811,
+    kind: visited,
+  }
+- { name: Fes, country: MA, lat: 34.0331, lon: -4.9995, kind: visited }
+- {
+    name: Essaouira,
+    country: MA,
+    lat: 31.5085,
+    lon: -9.7595,
+    kind: visited,
+  }
+- { name: Asilah, country: MA, lat: 35.4653, lon: -6.0349, kind: visited }
+- {
+    name: Chefchaouen,
+    country: MA,
+    lat: 35.1715,
+    lon: -5.2697,
+    kind: visited,
+  }
+- { name: Cairo, country: EG, lat: 30.0444, lon: 31.2357, kind: visited }
+- { name: Luxor, country: EG, lat: 25.6872, lon: 32.6396, kind: visited }
+- { name: Aswan, country: EG, lat: 24.0889, lon: 32.8998, kind: visited }
+- {
+    name: Marsa Alam,
+    country: EG,
+    lat: 25.0670,
+    lon: 34.8900,
+    kind: visited,
+  }
+
+# ASIA — Japan
+- { name: Tokyo, country: JP, lat: 35.6762, lon: 139.6503, kind: visited }
+- { name: Kyoto, country: JP, lat: 35.0116, lon: 135.7681, kind: visited }
+- { name: Osaka, country: JP, lat: 34.6937, lon: 135.5023, kind: visited }
+- {
+    name: Hiroshima,
+    country: JP,
+    lat: 34.3853,
+    lon: 132.4553,
+    kind: visited,
+  }
+
+# ASIA — Thailand
+- { name: Bangkok, country: TH, lat: 13.7563, lon: 100.5018, kind: visited }
+- { name: Krabi, country: TH, lat: 8.0863, lon: 98.9063, kind: visited }
+- {
+    name: Phi Phi Islands,
+    country: TH,
+    lat: 7.7400,
+    lon: 98.7770,
+    kind: visited,
+  }
+
+# ASIA — Indonesia (Bali & Lombok)
+- { name: Ubud, country: ID, lat: -8.5069, lon: 115.2625, kind: visited }
+- {
+    name: Nusa Penida,
+    country: ID,
+    lat: -8.7276,
+    lon: 115.5444,
+    kind: visited,
+  }
+- { name: Uluwatu, country: ID, lat: -8.8187, lon: 115.0884, kind: visited }
+- { name: Canggu, country: ID, lat: -8.6478, lon: 115.1385, kind: visited }
+- { name: Kuta, country: ID, lat: -8.7177, lon: 115.1696, kind: visited }
+- { name: Lombok, country: ID, lat: -8.5833, lon: 116.1167, kind: visited }
+
+# NORTH AMERICA — USA
+- {
+    name: New York,
+    country: US,
+    lat: 40.7128,
+    lon: -74.0060,
+    kind: visited,
+  }

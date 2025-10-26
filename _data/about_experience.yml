@@ -1,0 +1,63 @@
+- org: Deel
+  role: Senior Software Engineer
+  from: 2025
+  to: present
+  url: https://www.deel.com/
+  summary: |-
+    Working in the infra team, a Deel's core team to ensure adoption of best practices, owning the most important services, and delivery new features working with node.js on AWS.
+- org: Qonto
+  role: Staff Backend Engineer
+  from: 2024
+  to: 2025
+  url: https://qonto.com/
+  summary: |-
+    I focused on driving technical excellence and delivering value to our customers, mentored both juniors and seniors, fostering a culture of collaboration and adherence to best practices.
+    Relied on cutting-edge technologies, with microservices primarily written in Go and hosted on AWS.
+- org: VMware Tanzu Labs
+  role: Senior Agile Software Engineer · Tech Lead
+  from: 2021
+  to: 2024
+  url: https://tanzu.vmware.com/labs
+  summary: Tech lead across multiple engagements; XP (TDD, pairing, CI/CD). Contributed to <a href="https://buildpacks.io/">Buildpacks (Go)</a> as OSS engineer.
+- org: Thoughtworks
+  role: Senior Software Engineer
+  from: 2019
+  to: 2021
+  url: https://www.thoughtworks.com/
+  summary: Product engineering for EU marketplaces/retailers with Go/Java; Azure; modernization and CD improvements.
+- org: Claranet Italia
+  role: Software Engineer
+  from: 2017
+  to: 2019
+  url: https://www.claranet.com/
+  summary: Java payment wallet; Scala + Spark/Zeppelin for big-data ingestion. Agile/TDD and pairing.
+- org: Intesa Sanpaolo
+  role: Software Engineer
+  from: 2017
+  to: 2017
+  url: https://www.intesasanpaolo.com/
+  summary: Spring Boot microservices with focus on agile methods and security.
+- org: STMicroelectronics
+  role: Software Engineer
+  from: 2016
+  to: 2016
+  url: https://www.st.com/
+  summary: Part-time software engineering role.
+- org: Hyperion
+  role: Back-end Lead Developer
+  from: 2014
+  to: 2016
+  url:
+  summary: Node.js backend with PostgreSQL/Sequelize; led delivery and technical decisions.
+- org: PanoramaFull
+  role: Full-stack and mobile developer
+  from: 2013
+  to: 2014
+  url:
+  summary: Hybrid mobile apps (Intel XDK) and REST APIs in PHP/Elgg.
+- org: ViviInPrimafila
+  role: Full-stack Developer
+  from: 2012
+  to: 2013
+  url: https://primafila.it.com/
+  summary: Full-stack development with php, js, html and css.

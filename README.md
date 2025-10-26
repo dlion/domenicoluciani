@@ -70,19 +70,15 @@ Human badge
 About page configuration (`about.*`)
 - `about.tagline` — short sentence below your name
 - `about.location` — e.g., `Málaga, ES (remote)`
-- `about.photos` — array of images for the photo strip. Each item can be either a string path or an object with:
-  - `src` — image path
-  - `alt` — alt text
-  - `pos` — optional `object-position` (e.g., `50% 35%`) to fine‑tune the crop
 - `about.avatar_pos` — default `object-position` for the avatar (e.g., `50% 50%`)
-- `about.experience` — array of jobs (rendered as a compact timeline)
-  - `org` — company; `role` — role/title
-  - `from`, `to` — years (use `present` for current)
-  - `url` — external link
-  - `summary` — short paragraph (clamped to 2 lines in the UI)
-- `about.places` — array of places for the world map (Leaflet). Each item:
-  - `name`, `country` (2‑letter code), `lat`, `lon`
-  - `kind` — one of: `living` (big pulsing green dot), `lived` (amber, larger than visited), `visited` (blue)
+
+Structured content now lives under `_data/` so it can be shared across pages:
+- `_data/about_photos.yml` — array of images for the photo strip (each item supports `src`, `alt`, `pos`)
+- `_data/about_experience.yml` — array of jobs rendered in the Experience timeline
+  - `org`, `role`, `from`, `to`, `url`, `summary` as before (use `present` for current roles)
+- `_data/about_places.yml` — array of places for the Leaflet world map
+  - `name`, `country` (2-letter code), `lat`, `lon`
+  - `kind` — one of `living`, `lived`, `visited`
 
 Page Front Matter Options
 -------------------------
@@ -208,8 +204,8 @@ About Page — Special Features
 -----------------------------
 - Avatar + bio area (two‑column on small screens and up).
 - Photo strip (1/2/3 columns responsive). Each image supports an optional `pos` to adjust the crop.
-- Experience timeline: shows all entries defined in `about.experience`.
-- World map (Leaflet) of places (`about.places`).
+- Experience timeline: shows all entries defined in `_data/about_experience.yml`.
+- World map (Leaflet) of places sourced from `_data/about_places.yml`.
   - `kind: living` shows a larger pulsing marker.
   - `kind: lived` shows a larger amber marker.
   - `kind: visited` shows a blue marker.

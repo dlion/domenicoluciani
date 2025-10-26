@@ -1,0 +1,9 @@
+- src: /assets/images/about/trip1.png
+  alt: Cabo da Roca
+  pos: 50% 50%
+- src: /assets/images/about/trip2.png
+  alt: Desert
+  pos: 50% 10% # show a bit more headroom for portrait framing
+- src: /assets/images/about/trip3.png
+  alt: Lisbon
+  pos: 50% 50%

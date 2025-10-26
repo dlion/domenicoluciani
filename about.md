@@ -11,6 +11,10 @@ extra_js: [about]
 hide_progress: true
 ---
 
+{% assign about_photos = site.data.about_photos | default: site.about.photos %}
+{% assign about_experience = site.data.about_experience | default: site.about.experience %}
+{% assign about_places = site.data.about_places | default: site.about.places %}
+
 <section class="about-hero">
   {% assign avatar_pos = site.about.avatar_pos | default: '50% 50%' %}
   <img class="about-avatar" src="{{ site.author_avatar | relative_url }}" alt="{{ site.author }}" width="72" height="72" style="object-position: {{ avatar_pos }};">
@@ -24,9 +28,9 @@ hide_progress: true
       {% if site.about.location %}<li><span class="emoji">📍</span>{{ site.about.location }}</li>{% endif %}
     </ul>
   </div>
-  {% if site.about.photos %}
+  {% if about_photos %}
   <div class="about-photos">
-    {% for p in site.about.photos %}
+    {% for p in about_photos %}
       {% assign src = p.src | default: p %}
       {% assign alt = p.alt | default: 'Photo ' | append: forloop.index %}
       {% assign pos = p.pos | default: '' %}
@@ -40,7 +44,7 @@ hide_progress: true
 
 ## Experience
 
-{% assign jobs = site.about.experience %}
+{% assign jobs = about_experience %}
 
 <ol class="timeline">
   {% for job in jobs %}
@@ -70,7 +74,7 @@ hide_progress: true
 </div>
 
 <script>
-  window.ABOUT_PLACES = {{ site.about.places | jsonify }};
+  window.ABOUT_PLACES = {{ about_places | jsonify }};
 </script>
 
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-extra_css: [about]
+extra_css: [about, timeline]
 cdn_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
 cdn_js:

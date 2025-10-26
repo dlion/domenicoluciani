@@ -1,0 +1,65 @@
+/* Shared timeline component (used on About + Now) */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 24px;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: color-mix(in srgb, var(--border) 70%, transparent);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+}
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--link);
+  position: absolute;
+  left: 5px;
+  top: .55rem;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 80%, transparent);
+}
+.timeline-body {
+  min-width: 0;
+}
+.timeline-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.timeline-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.timeline-head h3 a {
+  text-decoration: none;
+}
+.timeline-head h3 a:hover {
+  text-decoration: underline;
+}
+.timeline-head .timeline-when {
+  color: var(--muted);
+  font-size: .95rem;
+  white-space: nowrap;
+}
+.timeline-body > :first-child {
+  margin-top: 0;
+}
+.timeline-body > :last-child {
+  margin-bottom: 0;
+}
+.timeline-body p {
+  margin: 0 0 8px;
+}

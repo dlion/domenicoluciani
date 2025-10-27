@@ -15,3 +15,7 @@ List of things I want to do/have before I die ☠️
 7. Buy a home.
 8. <del>Visit Japan.</del>
 9. Have a dog.
+10. Surf in Hawaii.
+11. <del>Watch the sunrise and the sunset in the Sahara desert.</del>
+12. Sail around the Caribbean.
+13. <del>Watch bullfight in Spain.</del>

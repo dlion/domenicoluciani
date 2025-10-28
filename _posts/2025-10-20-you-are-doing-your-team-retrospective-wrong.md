@@ -36,7 +36,7 @@ Does your team achieve an accomplishment, or do you want to say thank you to a s
 
 The power of this ceremony is that it makes the team to reflect upon something that happened in the past that went wrong or that could have been better.
 
-> **Caution**
+> **Important**
 > It is about continuous improvement, **not blaming**.
 {: .callout .warn}
 
@@ -45,15 +45,15 @@ In a safe environment we should aim to point our fingers towards processes that 
 
 ## Team Psychological Safety
 
-> **Important:** Establish Psychological Safety
+> **Important**
 > Psychological safety is a very important thing to have in your team, the aim is to make the team feeling safe. This should be your top priority, the sooner you have it in your team, the better.
 {: .callout .warn}
 
 Have people in the team who feel safe is one of the most important things to have when we talk about team dynamics. A team who feels safe, will be transparent, honest, and they will take risks. 
 During a retro, you want to have people that have the courage to speak up, and to address issues talking about solutions and ideas. You want your team not being afraid of saying "we should stop this" or "this is not working for us". Without psychological safety, we can't have all the benefits we mentioned earlier. If people don't feel safe, your retrospective will be a complete failure. I'm not going to cover this topic here, but you can definitely have a look a some article online like:
-* https://www.thoughtworks.com/insights/blog/product-innovation/psychological-safety-product-innovation
-* https://www.ccl.org/articles/leading-effectively-articles/what-is-psychological-safety-at-work/
-* https://psychsafety.com/about-psychological-safety/
+* [https://www.thoughtworks.com/insights/blog/product-innovation/psychological-safety-product-innovation](https://www.thoughtworks.com/insights/blog/product-innovation/psychological-safety-product-innovation)
+* [https://www.ccl.org/articles/leading-effectively-articles/what-is-psychological-safety-at-work/](https://www.ccl.org/articles/leading-effectively-articles/what-is-psychological-safety-at-work/)
+* [https://psychsafety.com/about-psychological-safety/](https://psychsafety.com/about-psychological-safety/)
 
 ## Format 👾
 

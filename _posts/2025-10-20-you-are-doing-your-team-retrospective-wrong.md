@@ -4,14 +4,14 @@ description: A team retrospective is not just another useless meeting, and if yo
   feel so, it means you are doing it wrong, and this article is for you.
 tags:
 - work
-cover: "/assets/images/covers/go_generics.jpg"
+cover: "/assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg"
 published: false
 ---
 
 
 A team retrospective is not just another useless meeting, and if you feel so, it means you are doing it wrong, and this article is for you.
 
-With more than 10 years of experience as a Software Engineer, I had the incredible opportunity to attend hundreds of team retrospectives, and let me tell you one thing: it is the most important team meeting you could have, if you know how to do it properly.
+With more than 10 years of experience as a Software Engineer, I had the incredible opportunity to attend hundreds of team retrospectives, and let me tell you one thing: it is the most important team meeting you could have, if you know how to do it properly. 😏
 
 ---
 
@@ -26,11 +26,11 @@ Raise your hand. 🙋‍♂️ This is the moment to speak up and talk about it!
 
 ### "What if?" 🤔
 
-Do you have new ideas? Do you want to try something new, and want to have the team's opinion? Go for it!
+Do you have a new idea? Do you want to try something new, and want to have the team's opinion about it? Go for it!
 
 ### Celebration!! 🥳
 
-Does your team achieve an accomplishment, or do you want to say thank you to a specific person that helped you? (*making it in public is better 😉*)
+Does your team achieve an accomplishment, or do you want to say thank you to a specific person that helped you out? (*making it in public is better 😉*)
 
 ### Reflection 🙅
 
@@ -50,7 +50,10 @@ In a safe environment we should aim to point our fingers towards processes that 
 {: .callout .warn}
 
 Have people in the team who feel safe is one of the most important things to have when we talk about team dynamics. A team who feels safe, will be transparent, honest, and they will take risks. 
-During a retro, you want to have people that have the courage to speak up, and to address issues talking about solutions and ideas. You want your team not being afraid of taking the courage of saying "we should stop this" or "this is not working". Without psychological safety we can't have all the benefits we could have otherwise. If people don't feel safe, they will be afraid to be exposed and be accountable.
+During a retro, you want to have people that have the courage to speak up, and to address issues talking about solutions and ideas. You want your team not being afraid of saying "we should stop this" or "this is not working for us". Without psychological safety, we can't have all the benefits we mentioned earlier. If people don't feel safe, your retrospective will be a complete failure. I'm not going to cover this topic here, but you can definitely have a look a some article online like:
+* https://www.thoughtworks.com/insights/blog/product-innovation/psychological-safety-product-innovation
+* https://www.ccl.org/articles/leading-effectively-articles/what-is-psychological-safety-at-work/
+* https://psychsafety.com/about-psychological-safety/
 
 ## Format 👾
 
@@ -70,12 +73,45 @@ There are lots of templates online that can be used, my favorites can be found h
 
 ### Setup
 
-Let's pick as an example "The good, the bad and the ugly" retro format.
-We should set up 3 columns respectively with
+Let's pick as an example ["The good, the bad and the ugly" ](https://www.funretrospectives.com/the-good-the-bad-and-the-ugly/) retro format.
+
+Let's set up 3 columns respectively with
 * The good 👍🏻
 * The bad 🙅🏻
 * The ugly 👹
 
+### Old action items 📜
+
+Before starting the retro, let's spend sometimes reviewing the old one, specifically let's see if we tackled all action items we created during our last retro. Let's get some update on them, always remember to have them assigned to someone and let's put them into the sprint.
+
+
+### Let's start ⏲️
+
+In this phase the team can start creating stickies in the board, in theory to avoid being biased the stickies should be anonymous, but it's not a hard requirement, it is up to your team dynamics.
+
+![good-bad-ugly]({{ '/assets/images/posts/good_bad_ugly.png' | relative_url }})
+
+Each sticky should be in the appropriate column.
+* **The good**: things that went well, and we should repeat, do more of it
+* **The bad**: things that should have never happened, and we must get rid of it
+* **The ugly**: things that did not go so well, and we should look for improvements, turning it into it beautiful
+
+Try to write them in a way that the team can have enough context to understand what they are about just reading them:
+
+* ❌:  Our process doesn't work for me
+* ✅: The code review process is complicated and difficult to follow
+* ❌: Lack of privileges
+* ✅: Couldn't do the migration due to lack of privileges.
+
+
+_This activity should last between 3 and 5 minutes, if you don't see any activity from the team you can finish it earlier otherwise add 1/2 minute._
+
+### Clarification and grouping 🏘️
+
+In this phase the whole team review the stickies and try to clarify them if it is necessary, and start grouping similar stickies together.
+One thing that works out well for me it's creating a big square to summarize the grouped stickies together, like in the image
+
+![retro-grouping]({{ '/assets/images/posts/retro_grouping.png' | relative_url }})
 
 ## Common Pitfalls 👎🏻
 

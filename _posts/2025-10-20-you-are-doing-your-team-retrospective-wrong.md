@@ -151,6 +151,12 @@ Assign each action item to an owner that will be accountable for it to be execut
 > Adding an action item to the backlog and left there won't solve the issue, solving the issue will solve the issue.
 {: .callout .warn}
 
+### Round of Kudos and positive things 👏🏻 🎉
+
+Before closing the meeting, spend some time reviewing kudos and positive stickies, to end the retro with something good. 
+
+---
+
 ## Common Pitfalls 👎🏻
 
 ### Team members become spectators 🥱❌
@@ -229,6 +235,20 @@ So, to avoid having this hidden influence within our meeting, voting should be a
 ### Only one person doing the grouping 🏘️❌
 
 Grouping helps the team to clarify the stickies and to come-up with something that everybody understand and can vote, don't let one person doing the dirty job when the rest of the team just stay still, involve them into the process, ask questions and how to name things. Make them part of the process.
+
+### Talk about every single sticky 😴❌
+
+Voting helps to prioritize what really matter for the team, and those stickies should be discussed before the end of the meeting.
+If more stuff can be discussed go for it, but it's not necessary if the meeting runs over time.
+Take those stickies into consideration and move on, closing the meeting.
+
+> **Problem: We ran out of time** 
+>  But we are still talking about less important stuff.
+{: .callout .error}
+
+> **Win: Pick the top 3 stickies** 
+>  Pick the first 3 most voted topics and discuss it, it should be enough to tackle the important stuff. Close the meeting whenever you are done with them.
+{: .callout .success}
 
 
 

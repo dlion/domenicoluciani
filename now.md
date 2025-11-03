@@ -4,7 +4,7 @@ title: Now
 permalink: /now/
 hide_progress: true
 updated: 2025-10-04
-extra_css: [timeline]
+extra_css: [timeline, now]
 ---
 > This is a “now” page — a snapshot of what I’m doing at the moment.    
 > _Inspired by the [nownownow.com](https://nownownow.com/about) movement._

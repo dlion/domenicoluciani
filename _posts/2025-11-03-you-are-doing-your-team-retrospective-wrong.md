@@ -7,6 +7,7 @@ tags:
 cover: "/assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg"
 published: true
 hn_url: "https://news.ycombinator.com/item?id=45814074"
+reddit_url: "https://www.reddit.com/r/agile/comments/1oog1et/you_are_doing_your_team_retrospective_wrong/"
 ---
 
 

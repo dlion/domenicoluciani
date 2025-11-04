@@ -12,6 +12,29 @@ layout: none
     {%- seo -%}
     {% include social-preview-meta.html %}
 
+    <!-- Early theme set: run BEFORE any styles to avoid mismatched first paint -->
+    <script>
+      (function() {
+        try {
+          var key = 'theme';
+          var stored = localStorage.getItem(key);
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            root.style.backgroundColor = '#111726';
+            root.style.color = '#e5eaf6';
+            root.style.colorScheme = 'dark';
+          } else {
+            root.style.backgroundColor = '#ffffff';
+            root.style.color = '#111827';
+            root.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Self-hosted fonts preload (key UI weights) -->
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-SemiBold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
@@ -49,28 +72,7 @@ layout: none
       html[data-theme='dark'] .kofi-dark { display: inline-block; }
     </style>
 
-    <!-- Early theme set: prevents flash, persists across ALL pages -->
-    <script>
-      (function() {
-        try {
-          var key = 'theme';
-          var stored = localStorage.getItem(key);
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored || (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-          /* Paint background immediately to avoid UA white flash */
-          if (theme === 'dark') {
-            document.documentElement.style.backgroundColor = '#111726';
-            document.documentElement.style.color = '#e5eaf6';
-            document.documentElement.style.colorScheme = 'dark';
-          } else {
-            document.documentElement.style.backgroundColor = '#ffffff';
-            document.documentElement.style.color = '#111827';
-            document.documentElement.style.colorScheme = 'light';
-          }
-        } catch (e) {}
-      })();
-    </script>
+    
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">

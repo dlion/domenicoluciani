@@ -19,5 +19,3 @@ Intro paragraph with the problem, context, and payoff.
 Content…
 
 
-
-

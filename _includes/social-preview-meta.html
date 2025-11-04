@@ -2,13 +2,19 @@
 {% if page.hero and page.hero.image %}
   {% assign hero_from_page = page.hero.image %}
 {% endif %}
-{% assign candidate_image = page.social_image | default: page.image | default: page.cover | default: hero_from_page | default: site.hero.image %}
+
+{%- comment -%}
+  Social image policy: use the post's cover if present; otherwise fall back
+  to the page hero (page.image or page.hero.image), then to site.hero.image.
+  No ".og" variants or per‑post overrides required.
+{%- endcomment -%}
+{% assign candidate_image = page.cover | default: page.image | default: hero_from_page | default: site.hero.image %}
 {% if candidate_image %}
   {% assign image_url = candidate_image %}
   {% unless image_url contains '://' %}
     {% assign image_url = image_url | absolute_url %}
   {% endunless %}
-  {% assign image_alt = page.image_alt | default: page.social_image_alt | default: page.title | default: site.title %}
+  {% assign image_alt = page.image_alt | default: page.title | default: site.title %}
   <meta property="og:image" content="{{ image_url }}">
   <meta property="og:image:secure_url" content="{{ image_url }}">
   <meta name="twitter:card" content="summary_large_image">

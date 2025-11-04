@@ -30,7 +30,7 @@ Do you have a new idea? Do you want to try something new, and want to get the te
 
 ### Celebration!! 🥳
 
-DDid your team achieve something, or do you want to say thank you to a specific person that helped you out? (*making it in public is better 😉*)
+Did your team achieve something, or do you want to say thank you to a specific person that helped you out? (*making it in public is better 😉*)
 
 ### Reflection 🙅
 

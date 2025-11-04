@@ -6,6 +6,7 @@ tags:
 - work
 cover: "/assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg"
 published: true
+hn_url: "https://news.ycombinator.com/item?id=45814074"
 ---
 
 

@@ -26,7 +26,10 @@ hide_progress: true
   {% assign hero_cta_href = hero_cta_href | relative_url %}
 {% endif %}
 
-<section class="home-hero" {% if hero_image_url != '' or hero_pos != '' %}style="{% if hero_image_url != '' %}--hero-image: url('{{ hero_image_url }}');{% endif %}{% if hero_pos != '' %} background-position: {{ hero_pos }};{% endif %}"{% endif %}>
+<section class="home-hero"{% if hero_pos != '' %} style="background-position: {{ hero_pos }};"{% endif %}>
+  {% if hero_image_url != '' %}
+    <img class="hero-img" src="{{ hero_image_url }}" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" />
+  {% endif %}
   <div class="hero-inner">
     {% if hero_kicker %}<p class="hero-kicker">{{ hero_kicker }}</p>{% endif %}
     {% if hero_title %}<h1 class="hero-title">{{ hero_title }}</h1>{% endif %}

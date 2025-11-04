@@ -35,9 +35,16 @@ layout: none
       })();
     </script>
 
+    <!-- Connections and critical preloads -->
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+    <link rel="dns-prefetch" href="//images.pexels.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
     <!-- Self-hosted fonts preload (key UI weights) -->
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-SemiBold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ '/assets/fonts/source-serif/SourceSerif4-Variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
       <!-- Favicon / Icons -->

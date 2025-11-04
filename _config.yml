@@ -90,6 +90,7 @@ social_preview:
 
 # Twitter card type — ensure large image card
 twitter:
+  username: DLion92
   card: summary_large_image
 
 hero:

@@ -36,6 +36,10 @@
 }
 
 /* ========== Tokens ======================================================= */
+/* Explicit color-scheme for UA components */
+html { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
 :root {
   --radius: 10px;
   --radius-sm: 8px;

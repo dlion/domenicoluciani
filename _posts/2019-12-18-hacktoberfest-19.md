@@ -4,7 +4,7 @@ description: My usual post of the year about the Hacktoberfest is back! Even thi
   year I participated in it and gained some swags and an amazing t-shirt ~
 tags:
 - personal
-cover: "/assets/images/covers/hacktoberfest_19.png"
+cover: "/assets/images/covers/hacktoberfest_19.jpg"
 ---
 
 

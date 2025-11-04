@@ -4,7 +4,7 @@ description: I found a cool library online to interface my pc with any usb joyst
   I have in my house... so why not to move my cursor pointer with a joystick ?
 tags:
 - hardware
-cover: "/assets/images/covers/joystick.png"
+cover: "/assets/images/covers/joystick.jpg"
 ---
 
 
@@ -80,4 +80,3 @@ The source is very simple and clear: I initialize everything, detect the joystic
 To compile this source:
 
 `g++ joystick.cpp -o joystick -lplibjs -lplibsl -lplibsm -lplibul -lm -lX11 ; ./joystick`
-

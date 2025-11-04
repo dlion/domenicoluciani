@@ -26,7 +26,7 @@ hide_progress: true
   {% assign hero_cta_href = hero_cta_href | relative_url %}
 {% endif %}
 
-<section class="home-hero"{% if hero_pos != '' %} style="background-position: {{ hero_pos }};"{% endif %}>
+<section class="home-hero"{% if hero_pos != '' %} style="--hero-pos: {{ hero_pos }};"{% endif %}>
   {% if hero_image_url != '' %}
     <img class="hero-img" src="{{ hero_image_url }}" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" />
   {% endif %}

@@ -241,6 +241,7 @@ p { margin: .9em 0; color: var(--text); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--hero-pos, 50% 50%);
   z-index: 0;
 }
 

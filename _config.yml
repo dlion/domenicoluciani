@@ -83,6 +83,15 @@ exclude:
 include:
   - .well-known
 
+# Social preview defaults (used for og:image dimensions)
+social_preview:
+  default_width: 1200
+  default_height: 630
+
+# Twitter card type — ensure large image card
+twitter:
+  card: summary_large_image
+
 hero:
   image: /assets/images/covers/iron-giant-hero.jpg #https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg
   kicker: Domenico Luciani

@@ -8,12 +8,14 @@ layout: none
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0f172a">
+    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
     {%- seo -%}
     {% include social-preview-meta.html %}
 
     <!-- Early theme set: run BEFORE any styles to avoid mismatched first paint -->
-    <script>
+    <!-- <script>
       (function() {
         try {
           // Support both our 'theme' key and a generic 'appearance' key
@@ -39,7 +41,7 @@ layout: none
           }
         } catch (e) {}
       })();
-    </script>
+    </script> -->
 
     <!-- Connections and critical preloads -->
     <link rel="preconnect" href="https://images.pexels.com" crossorigin>
@@ -60,9 +62,9 @@ layout: none
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png?v=1' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
     <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#0f172a">
-    <meta name="theme-color" content="#0f172a">
+    
 
-    <!-- Critical theme paint to prevent flash before CSS loads -->
+    <!-- Critical theme paint to prevent flash before CSS loads
     <style>
       /* Default to light; respect OS dark quickly */
       html { background: #ffffff; color: #111827; color-scheme: light; }
@@ -83,7 +85,7 @@ layout: none
       html[data-theme='dark'] .kofi-light { display: none; }
       html[data-theme='dark'] .human-badge-dark,
       html[data-theme='dark'] .kofi-dark { display: inline-block; }
-    </style>
+    </style> -->
 
     
 
@@ -165,7 +167,6 @@ layout: none
 
       // Theme toggle moved to assets/js/theme.js
     </script>
-    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
     <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <script>
       (function() {

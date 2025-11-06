@@ -2,7 +2,7 @@
 layout: none
 ---
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js" data-theme="">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js" data-theme="" data-default-appearance="light" data-auto-appearance="true">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,20 +16,26 @@ layout: none
     <script>
       (function() {
         try {
-          var key = 'theme';
-          var stored = localStorage.getItem(key);
+          // Support both our 'theme' key and a generic 'appearance' key
+          var stored = null;
+          try { stored = localStorage.getItem('appearance') || localStorage.getItem('theme'); } catch (e) {}
           var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
           var theme = stored || (prefersDark ? 'dark' : 'light');
           var root = document.documentElement;
           root.setAttribute('data-theme', theme);
+          root.classList.toggle('dark', theme === 'dark');
           if (theme === 'dark') {
             root.style.backgroundColor = '#111726';
             root.style.color = '#e5eaf6';
             root.style.colorScheme = 'dark';
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', '#111726');
           } else {
             root.style.backgroundColor = '#ffffff';
             root.style.color = '#111827';
             root.style.colorScheme = 'light';
+            var metaL = document.querySelector('meta[name="theme-color"]');
+            if (metaL) metaL.setAttribute('content', '#ffffff');
           }
         } catch (e) {}
       })();

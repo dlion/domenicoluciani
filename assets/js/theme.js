@@ -10,10 +10,23 @@
     return (document.documentElement.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
   }
 
+  function setMetaThemeColorFromCSS() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    try {
+      var rootStyles = window.getComputedStyle(document.documentElement);
+      var bg = rootStyles.getPropertyValue('--bg');
+      bg = (bg || '').trim();
+      if (bg) meta.setAttribute('content', bg);
+    } catch (e) {}
+  }
+
   function applyTheme(theme, persist) {
     var root = document.documentElement;
     var isDark = (theme === 'dark');
     root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    // Also mirror a utility class many themes expect
+    root.classList.toggle('dark', isDark);
 
     // Paint immediately to avoid partial updates on long pages/Safari
     root.style.backgroundColor = isDark ? DARK_BG : LIGHT_BG;
@@ -47,12 +60,8 @@
       document.dispatchEvent(new CustomEvent('theme:change', { detail: isDark ? 'dark' : 'light' }));
     } catch (e) {}
 
-    // Optionally update meta theme-color to better match the page
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) {
-      // Keep the same color as configured unless you want a per-theme value
-      // meta.setAttribute('content', isDark ? '#0f172a' : '#0f172a');
-    }
+    // Update meta theme-color to better match the page background
+    setMetaThemeColorFromCSS();
   }
 
   function preferredTheme() {
@@ -65,6 +74,7 @@
   function init() {
     // Apply immediately using preference (keeps in sync with early inline script)
     applyTheme(preferredTheme(), false);
+    setMetaThemeColorFromCSS();
 
     // OS preference sync (only when there is no explicit stored choice)
     var hasStored = false;

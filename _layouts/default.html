@@ -10,8 +10,8 @@ layout: none
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#0f172a">
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
-    {%- seo -%}
     {% include social-preview-meta.html %}
 
     <!-- Early theme set: run BEFORE any styles to avoid mismatched first paint -->
@@ -90,7 +90,7 @@ layout: none
     
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
+
     {% if page.cdn_css %}
       {% for url in page.cdn_css %}
         <link rel="stylesheet" href="{{ url }}">

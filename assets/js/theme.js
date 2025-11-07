@@ -40,10 +40,9 @@
     else if (mq && mq.addListener) mq.addListener((e) => applyClass(e.matches));
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  function init() {
     setThemeColor();
-
-    const toggles = document.querySelectorAll('#themeToggle, [id^="themeToggle"]');
+    const toggles = document.querySelectorAll('#themeToggle, [id^="appearance-switcher"]');
     toggles.forEach((el) => {
       el.addEventListener('click', () => {
         const nextIsDark = !root.classList.contains('dark');
@@ -55,6 +54,11 @@
         try { localStorage.removeItem('appearance'); } catch (e) {}
       });
     });
-  });
-})();
+  }
 
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
+})();

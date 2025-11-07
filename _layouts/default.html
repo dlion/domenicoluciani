@@ -8,10 +8,8 @@ layout: none
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <!-- Set a light default to avoid dark UI flash; JS updates immediately -->
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Inline appearance bootstrap: runs before CSS to prevent theme flash -->
     <script>
       (function() {
         try {
@@ -181,7 +179,7 @@ layout: none
         <script src="{{ '/assets/js/' | append: js | append: '.js?v=1' | relative_url }}" defer></script>
       {% endfor %}
     {% endif %}
-    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <script data-cfasync="false" src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+    <script data-cfasync="false" src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

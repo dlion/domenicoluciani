@@ -2,22 +2,40 @@
 layout: none
 ---
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js" data-default-appearance="light" data-auto-appearance="true">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js" data-default-appearance="light" data-auto-appearance="true" data-theme="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+    <!-- Set a light default to avoid dark UI flash; JS updates immediately -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Inline appearance bootstrap: runs before CSS to prevent theme flash -->
+    <script>
+      (function() {
+        try {
+          var stored = null;
+          try { stored = localStorage.getItem('appearance') || localStorage.getItem('theme'); } catch (e) {}
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored || (prefersDark ? 'dark' : 'light');
+          var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          root.classList.toggle('dark', theme === 'dark');
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#111726' : '#ffffff');
+          root.style.backgroundColor = theme === 'dark' ? '#111726' : '#ffffff';
+          root.style.color = theme === 'dark' ? '#e5eaf6' : '#111827';
+          root.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
     <title>{{site.hero.kicker}} | {{site.hero.title}}</title>
 
     {% include social-preview-meta.html %}
-
-    <!-- Connections and critical preloads -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
     <!-- Self-hosted fonts preload (key UI weights) -->
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
@@ -163,6 +181,7 @@ layout: none
         <script src="{{ '/assets/js/' | append: js | append: '.js?v=1' | relative_url }}" defer></script>
       {% endfor %}
     {% endif %}
+    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

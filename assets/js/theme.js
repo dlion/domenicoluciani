@@ -1,9 +1,7 @@
 // Appearance logic adapted from the referenced site, wired to this theme.
 (function() {
   const root = document.documentElement;
-  const sitePreference = root.getAttribute('data-default-appearance') || 'light';
-  let userPreference = null;
-  try { userPreference = localStorage.getItem('appearance'); } catch (e) {}
+  // We rely on inline bootstrap for initial paint; no need to recompute here.
 
   function getCSSValue(name) {
     try { return (window.getComputedStyle(root).getPropertyValue(name) || '').trim(); }
@@ -18,42 +16,38 @@
     return true;
   }
 
-  function applyClass(isDark) {
-    root.classList.toggle('dark', isDark);
-    // Keep data-theme to drive our CSS variables
+  function applyTheme(isDark, persist) {
     root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    // Keep UA chrome color and any inline-first-paint styles in sync
     setThemeColor();
+    try {
+      const bg = getCSSValue('--bg');
+      const text = getCSSValue('--text');
+      if (bg) root.style.backgroundColor = bg;
+      if (text) root.style.color = text;
+      root.style.colorScheme = isDark ? 'dark' : 'light';
+    } catch {}
+    if (persist) { try { localStorage.setItem('appearance', isDark ? 'dark' : 'light'); } catch {} }
+    try { document.dispatchEvent(new CustomEvent('theme:change', { detail: isDark ? 'dark' : 'light' })); } catch {}
   }
 
-  // Initial preference
-  if ((sitePreference === 'dark' && userPreference === null) || userPreference === 'dark') {
-    applyClass(true);
-  }
-
-  // Auto appearance from OS preference
-  if (root.getAttribute('data-auto-appearance') === 'true') {
+  // Auto appearance from OS preference only when user has not set an explicit choice
+  const hasUserPref = (() => { try { return localStorage.getItem('appearance') != null; } catch { return false; } })();
+  if (!hasUserPref) {
     const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-    if (mq && mq.matches && userPreference !== 'light') {
-      applyClass(true);
-    }
-    if (mq && mq.addEventListener) mq.addEventListener('change', (e) => applyClass(e.matches));
-    else if (mq && mq.addListener) mq.addListener((e) => applyClass(e.matches));
+    if (mq && mq.addEventListener) mq.addEventListener('change', (e) => applyTheme(e.matches, false));
+    else if (mq && mq.addListener) mq.addListener((e) => applyTheme(e.matches, false));
   }
 
   function init() {
     setThemeColor();
-    const toggles = document.querySelectorAll('#themeToggle, [id^="appearance-switcher"]');
-    toggles.forEach((el) => {
-      el.addEventListener('click', () => {
-        const nextIsDark = !root.classList.contains('dark');
-        applyClass(nextIsDark);
-        try { localStorage.setItem('appearance', nextIsDark ? 'dark' : 'light'); } catch (e) {}
+    const btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const nextIsDark = root.getAttribute('data-theme') !== 'dark';
+        applyTheme(nextIsDark, true);
       });
-      el.addEventListener('contextmenu', (ev) => {
-        ev.preventDefault();
-        try { localStorage.removeItem('appearance'); } catch (e) {}
-      });
-    });
+    }
   }
 
   if (document.readyState === 'loading') {

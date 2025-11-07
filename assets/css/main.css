@@ -130,11 +130,17 @@ html[data-theme="dark"] {
   --callout-success: #34d399;
 }
 
+/* Apply theme colors to the root element to avoid body repaint flashes */
+html {
+  background: var(--bg);
+  color: var(--text);
+}
+
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  background: var(--bg);
+  background: transparent;
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;

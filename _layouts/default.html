@@ -2,15 +2,15 @@
 layout: none
 ---
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js" data-default-appearance="light" data-auto-appearance="true" data-theme="">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#ffffff">
 
-    <script>
+    <!-- Critical: set theme ASAP to avoid flash. Prevent Rocket Loader deferral. -->
+    <script data-cfasync="false">
       (function() {
         try {
           var stored = null;
@@ -19,7 +19,6 @@ layout: none
           var theme = stored || (prefersDark ? 'dark' : 'light');
           var root = document.documentElement;
           root.setAttribute('data-theme', theme);
-          root.classList.toggle('dark', theme === 'dark');
           var meta = document.querySelector('meta[name="theme-color"]');
           if (meta) meta.setAttribute('content', theme === 'dark' ? '#111726' : '#ffffff');
           root.style.backgroundColor = theme === 'dark' ? '#111726' : '#ffffff';
@@ -28,6 +27,15 @@ layout: none
         } catch (e) {}
       })();
     </script>
+
+    <!-- Fallback first paint if JS is delayed/blocked -->
+    <style>
+      html { background: #ffffff; color: #111827; color-scheme: light; }
+      @media (prefers-color-scheme: dark) {
+        html { background: #111726; color: #e5eaf6; color-scheme: dark; }
+      }
+      body { background: transparent; }
+    </style>
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
@@ -180,6 +188,6 @@ layout: none
       {% endfor %}
     {% endif %}
     <script data-cfasync="false" src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+    <script data-cfasync="false" src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

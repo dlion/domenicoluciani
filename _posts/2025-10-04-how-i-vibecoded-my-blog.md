@@ -2,7 +2,7 @@
 layout: post
 title: "How I vibecoded my blog"
 description: "I didn't want to spend hours searching for the right theme to modify, dive deeper into new techs and spent lots of times just to fix some css. So, I decided to vibecode my new blog theme using ChatGPT 5 and its brand new coding agent: Codex..."
-image: "https://images.pexels.com/photos/6120219/pexels-photo-6120219.jpeg"  # or image: "https://images.pexels.com/photos/…/pexels-photo.jpeg"
+image: "https://images.pexels.com/photos/6120219/pexels-photo-6120219.jpeg"
 # date: {{ "now" | date: "%Y-%m-%d %H:%M:%S %z" }} # optional; default is the date in the filename
 # updated: 2025-05-10 # If you update the article later
 tags: [engineering, personal]

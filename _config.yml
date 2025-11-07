@@ -94,7 +94,7 @@ twitter:
   card: summary_large_image
 
 hero:
-  image: /assets/images/covers/iron-giant-hero.jpg #https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg
+  image: /assets/images/covers/iron-giant-hero.jpg
   kicker: Domenico Luciani
   title: Tech Garden 🪴
   # Position the hero image so the eyes are prominent

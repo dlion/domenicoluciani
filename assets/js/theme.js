@@ -40,18 +40,10 @@
     else if (mq && mq.addListener) mq.addListener((e) => applyClass(e.matches));
   }
 
-  function add_to_top_elem() {
-    const n = document.body, e = document.documentElement;
-    const s = Math.max(n.scrollHeight, n.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight) - 150;
-    const t = document.getElementById('to-top');
-    if (!t) return; t.hidden = s < window.innerHeight;
-  }
-
   window.addEventListener('DOMContentLoaded', () => {
-    add_to_top_elem();
     setThemeColor();
 
-    const toggles = document.querySelectorAll('#themeToggle, [id^="appearance-switcher"]');
+    const toggles = document.querySelectorAll('#themeToggle, [id^="themeToggle"]');
     toggles.forEach((el) => {
       el.addEventListener('click', () => {
         const nextIsDark = !root.classList.contains('dark');

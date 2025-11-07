@@ -3,11 +3,6 @@
   {% assign hero_from_page = page.hero.image %}
 {% endif %}
 
-{%- comment -%}
-  Social image policy: use the post's cover if present; otherwise fall back
-  to the page hero (page.image or page.hero.image), then to site.hero.image.
-  No ".og" variants or per‑post overrides required.
-{%- endcomment -%}
 {% assign candidate_image = page.cover | default: page.image | default: hero_from_page | default: site.hero.image %}
 {% if candidate_image %}
 {% assign image_url = candidate_image %}

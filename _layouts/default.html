@@ -12,36 +12,9 @@ layout: none
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
-    {% include social-preview-meta.html %}
+    <title>{{site.hero.kicker}} | {{site.hero.title}}</title>
 
-    <!-- Early theme set: run BEFORE any styles to avoid mismatched first paint -->
-    <!-- <script>
-      (function() {
-        try {
-          // Support both our 'theme' key and a generic 'appearance' key
-          var stored = null;
-          try { stored = localStorage.getItem('appearance') || localStorage.getItem('theme'); } catch (e) {}
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored || (prefersDark ? 'dark' : 'light');
-          var root = document.documentElement;
-          root.setAttribute('data-theme', theme);
-          root.classList.toggle('dark', theme === 'dark');
-          if (theme === 'dark') {
-            root.style.backgroundColor = '#111726';
-            root.style.color = '#e5eaf6';
-            root.style.colorScheme = 'dark';
-            var meta = document.querySelector('meta[name="theme-color"]');
-            if (meta) meta.setAttribute('content', '#111726');
-          } else {
-            root.style.backgroundColor = '#ffffff';
-            root.style.color = '#111827';
-            root.style.colorScheme = 'light';
-            var metaL = document.querySelector('meta[name="theme-color"]');
-            if (metaL) metaL.setAttribute('content', '#ffffff');
-          }
-        } catch (e) {}
-      })();
-    </script> -->
+    {% include social-preview-meta.html %}
 
     <!-- Connections and critical preloads -->
     <link rel="preconnect" href="https://images.pexels.com" crossorigin>
@@ -62,32 +35,6 @@ layout: none
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png?v=1' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
     <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#0f172a">
-    
-
-    <!-- Critical theme paint to prevent flash before CSS loads
-    <style>
-      /* Default to light; respect OS dark quickly */
-      html { background: #ffffff; color: #111827; color-scheme: light; }
-      @media (prefers-color-scheme: dark) {
-        html { background: #111726; color: #e5eaf6; color-scheme: dark; }
-      }
-      /* Avoid double paint from body before main CSS */
-      body { background: transparent; }
-      /* Ensure theme-variant assets don't flash */
-      .human-badge-dark, .kofi-dark { display: none; }
-      .human-badge-light, .kofi-light { display: inline-block; }
-      @media (prefers-color-scheme: dark) {
-        .human-badge-light, .kofi-light { display: none; }
-        .human-badge-dark, .kofi-dark { display: inline-block; }
-      }
-      /* JS override via data-theme still takes precedence */
-      html[data-theme='dark'] .human-badge-light,
-      html[data-theme='dark'] .kofi-light { display: none; }
-      html[data-theme='dark'] .human-badge-dark,
-      html[data-theme='dark'] .kofi-dark { display: inline-block; }
-    </style> -->
-
-    
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
@@ -165,7 +112,6 @@ layout: none
         window.addEventListener('resize', update);
       })();
 
-      // Theme toggle moved to assets/js/theme.js
     </script>
     <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
     <script>
@@ -210,7 +156,6 @@ layout: none
         }
       })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
     {% if page.cdn_js %}
       {% for url in page.cdn_js %}
         <script src="{{ url }}" defer></script>

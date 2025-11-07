@@ -8,34 +8,7 @@ layout: none
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#ffffff">
-
-    <!-- Critical: set theme ASAP to avoid flash. Prevent Rocket Loader deferral. -->
-    <script data-cfasync="false">
-      (function() {
-        try {
-          var stored = null;
-          try { stored = localStorage.getItem('appearance') || localStorage.getItem('theme'); } catch (e) {}
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored || (prefersDark ? 'dark' : 'light');
-          var root = document.documentElement;
-          root.setAttribute('data-theme', theme);
-          var meta = document.querySelector('meta[name="theme-color"]');
-          if (meta) meta.setAttribute('content', theme === 'dark' ? '#111726' : '#ffffff');
-          root.style.backgroundColor = theme === 'dark' ? '#111726' : '#ffffff';
-          root.style.color = theme === 'dark' ? '#e5eaf6' : '#111827';
-          root.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
-        } catch (e) {}
-      })();
-    </script>
-
-    <!-- Fallback first paint if JS is delayed/blocked -->
-    <style>
-      html { background: #ffffff; color: #111827; color-scheme: light; }
-      @media (prefers-color-scheme: dark) {
-        html { background: #111726; color: #e5eaf6; color-scheme: dark; }
-      }
-      body { background: transparent; }
-    </style>
+    <script data-cfasync="false" src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
@@ -187,7 +160,6 @@ layout: none
         <script src="{{ '/assets/js/' | append: js | append: '.js?v=1' | relative_url }}" defer></script>
       {% endfor %}
     {% endif %}
-    <script data-cfasync="false" src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
     <script data-cfasync="false" src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

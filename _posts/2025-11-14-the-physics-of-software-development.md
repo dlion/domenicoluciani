@@ -6,6 +6,7 @@ tags:
   - work
 published: true
 cover: /assets/images/covers/software_physics.jpg
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7395803433209069568/
 ---
 
 

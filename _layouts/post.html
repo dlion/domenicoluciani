@@ -88,7 +88,7 @@ layout: default
             {% endfor %}
           </div>
         {% endif %}
-        {% if page.hn_url or page.reddit_url %}
+        {% if page.hn_url or page.reddit_url or page.linkedin_url %}
           <div class="actions-group">
             <span class="label">Discuss</span>
             {% if page.hn_url %}
@@ -96,6 +96,9 @@ layout: default
             {% endif %}
             {% if page.reddit_url %}
               <a href="{{ page.reddit_url }}" rel="nofollow noopener" target="_blank">Reddit</a>
+            {% endif %}
+            {% if page.linkedin_url %}
+              <a href="{{ page.linkedin_url }}" rel="nofollow noopener" target="_blank">LinkedIn</a>
             {% endif %}
           </div>
         {% endif %}

@@ -5,7 +5,7 @@ description: As a software engineer let's use a tool to discuss with business an
 tags:
   - work
 published: true
-cover: /assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg
+cover: /assets/images/covers/software_physics.jpg
 ---
 
 

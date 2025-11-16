@@ -1,13 +1,13 @@
 ---
 title: You are doing your team retrospective wrong
-description: A team retrospective is not just another useless meeting, and if you
-  feel so, it means you are doing it wrong, and this article is for you.
+description: A team retrospective is not just another useless meeting, and if you feel so, it means you are doing it wrong, and this article is for you.
 tags:
-- work
-cover: "/assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg"
+  - work
+cover: /assets/images/covers/you-are-doing-your-team-retrospective-wrong.jpg
 published: true
-hn_url: "https://news.ycombinator.com/item?id=45814074"
-reddit_url: "https://www.reddit.com/r/agile/comments/1oog1et/you_are_doing_your_team_retrospective_wrong/"
+hn_url: https://news.ycombinator.com/item?id=45814074
+reddit_url: https://www.reddit.com/r/agile/comments/1oog1et/you_are_doing_your_team_retrospective_wrong/
+layout: post
 ---
 
 

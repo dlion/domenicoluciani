@@ -1,11 +1,9 @@
 ---
 title: March 2018 - Bookmarks
-description: "* Clean Coder Blog * Don’t Pursue Programming if You Aren’t Passionate
-  About It * The Dependency Inversion Principle * Mocks Aren't Stubs * Testing and
-  Refactoring Legacy Code -…"
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"
+layout: page
 ---
 
 

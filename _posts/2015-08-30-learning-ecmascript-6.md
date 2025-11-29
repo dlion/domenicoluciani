@@ -4,6 +4,7 @@ description: Today PACKT is published my third book as _Technical Reviewer_ name
   "Learning ECMAScript 6". You can find it here
 tags:
 - personal
+layout: page
 ---
 
 

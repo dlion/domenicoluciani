@@ -5,6 +5,7 @@ description: Today I've talked with ItalianCoders about my experience abroad as 
   talking about their…
 tags:
 - personal
+layout: page
 ---
 
 

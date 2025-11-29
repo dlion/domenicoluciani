@@ -1,8 +1,6 @@
 ---
 title: May 2018 - Bookmarks
-description: "* SOLID Design principles : Software architecture, design and coding
-  * Understanding SOLID Principles: Open Closed Principle * Lesser-Known Features
-  of Go Test - Splice *…"
+layout: page
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

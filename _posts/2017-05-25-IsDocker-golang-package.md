@@ -4,6 +4,7 @@ description: I release a simple golang package named IsDocker useful to check if
   process is running inside a Docker container.
 tags:
 - engineering
+layout: page
 ---
 
 

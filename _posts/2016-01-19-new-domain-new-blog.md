@@ -6,6 +6,7 @@ description: Ok, I bought a new domain name; my domain name, so I think it's rig
 tags:
 - personal
 cover: "/assets/images/covers/roger.jpg"
+layout: page
 ---
 
 

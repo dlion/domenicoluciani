@@ -7,6 +7,7 @@ tags:
 - personal
 - work
 cover: "/assets/images/covers/tanzu.png"
+layout: page
 ---
 
 

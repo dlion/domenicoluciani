@@ -6,6 +6,7 @@ tags:
 - personal
 - work
 cover: "/assets/images/covers/thoughtworks.jpg"
+layout: page
 ---
 
 

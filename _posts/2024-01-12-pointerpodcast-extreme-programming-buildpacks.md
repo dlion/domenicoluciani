@@ -6,6 +6,7 @@ description: I decided to expose myself more and more, I like to share my opinio
 tags:
 - personal
 cover: "/assets/images/covers/podcast.png"
+layout: page
 ---
 
 

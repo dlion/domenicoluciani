@@ -5,6 +5,7 @@ description: "\U0001F389 I am thrilled to share that I have recently achieved my
 tags:
 - personal
 cover: "/assets/images/covers/aws_cert.png"
+layout: page
 ---
 
 

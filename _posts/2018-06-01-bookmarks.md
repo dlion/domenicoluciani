@@ -1,11 +1,9 @@
 ---
 title: June 2018 - Bookmarks
-description: "- The Wrong Abstraction — Sandi Metz - CORS in Dettaglio - ItalianCoders
-  - Java 8 Parte 1 - Optional e Interfacce Funzionali - ItalianCoders - Java 8 Parte
-  2 - Espressioni Lambda…"
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"
+layout: page
 ---
 
 

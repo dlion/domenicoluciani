@@ -945,6 +945,7 @@ p { margin: .9em 0; color: var(--text); }
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   color: var(--muted);
   font-size: .95rem;
 }

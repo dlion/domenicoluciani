@@ -2,6 +2,14 @@
 layout: default
 ---
 
+{% assign has_mermaid = page.mermaid | default: false %}
+{% if has_mermaid == false and content contains 'language-mermaid' %}
+  {% assign has_mermaid = true %}
+{% endif %}
+{% if has_mermaid == false and page.content contains '```mermaid' %}
+  {% assign has_mermaid = true %}
+{% endif %}
+
 <article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="headline">{{ page.title }}</h1>
@@ -122,6 +130,8 @@ layout: default
     {% include human-badge.html %}
 
     {% include related-posts.html %}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+    {% if has_mermaid %}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+    {% endif %}
   </footer>
 </article>

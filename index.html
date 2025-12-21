@@ -28,7 +28,7 @@ hide_progress: true
 
 <section class="home-hero"{% if hero_pos != '' %} style="--hero-pos: {{ hero_pos }};"{% endif %}>
   {% if hero_image_url != '' %}
-    <img class="hero-img" src="{{ hero_image_url }}" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" />
+    <img class="hero-img" src="{{ hero_image_url }}" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" width="1600" height="900" />
   {% endif %}
   <div class="hero-inner">
     {% if hero_kicker %}<p class="hero-kicker">{{ hero_kicker }}</p>{% endif %}

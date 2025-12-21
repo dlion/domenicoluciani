@@ -152,6 +152,26 @@ body {
 
 .wrap { width: min(100%, 980px); margin-inline: auto; padding-inline: 24px; }
 
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--surface-1);
+  color: var(--text);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transform: translateY(-220%);
+  transition: transform .2s ease;
+  z-index: 10000;
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid color-mix(in srgb, var(--link) 65%, transparent);
+  outline-offset: 2px;
+}
+
 /* Progress bar */
 #progress {
   position: fixed; inset: 0 0 auto 0; height: 3px;
@@ -195,6 +215,11 @@ body {
 }
 .site-nav a:hover::after,
 .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.site-nav a:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--link) 65%, transparent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
 
 /* Theme toggle dot mirrors Ghost */
 .theme-toggle {
@@ -246,6 +271,7 @@ p { margin: .9em 0; color: var(--text); }
   inset: 0;
   width: 100%;
   height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: var(--hero-pos, 50% 50%);
   z-index: 0;

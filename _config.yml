@@ -24,6 +24,7 @@ links:
     url: "https://x.com/DLion92"
   - label: "Mastodon"
     url: "https://mastodon.social/@dlion"
+    rel: "me"
 
 # ——— Navigation ——— (consumed by the header)
 nav:

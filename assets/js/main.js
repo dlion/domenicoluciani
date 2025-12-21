@@ -1,5 +1,41 @@
 // Optional: add anchor links to headings and smooth-scroll on hash links
 (function () {
+  const copyText = function (text, done) {
+    if (!text) {
+      if (typeof done === 'function') done(false);
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        if (typeof done === 'function') done(true);
+      }).catch(function () {
+        if (typeof done === 'function') done(false);
+      });
+      return;
+    }
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    const selected = document.getSelection && document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : null;
+    textarea.select();
+    let successful = false;
+    try {
+      successful = document.execCommand('copy');
+    } catch (err) {
+      successful = false;
+    }
+    document.body.removeChild(textarea);
+    if (selected) {
+      const selection = document.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(selected);
+    }
+    if (typeof done === 'function') done(successful);
+  };
+
   const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
   headings.forEach(function (h) {
     if (!h.textContent.trim()) return;
@@ -11,7 +47,8 @@
     const anchor = document.createElement('a');
     anchor.href = '#' + h.id;
     anchor.className = 'heading-anchor';
-    anchor.setAttribute('aria-label', 'Copy link to "' + h.textContent.trim() + '"');
+    anchor.dataset.label = 'Copy link to "' + h.textContent.trim() + '"';
+    anchor.setAttribute('aria-label', anchor.dataset.label);
     anchor.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M13.44 2.56a3.75 3.75 0 0 1 5.3 5.3l-2.12 2.12a.75.75 0 1 1-1.06-1.06l2.12-2.12a2.25 2.25 0 1 0-3.18-3.18l-2.12 2.12a.75.75 0 1 1-1.06-1.06l2.12-2.12Zm-6.88 6.88a.75.75 0 0 1 1.06 0l2.12 2.12a.75.75 0 0 1-1.06 1.06L6.56 10.5a.75.75 0 0 1 0-1.06Zm-1.06 1.06a.75.75 0 0 1 0 1.06l-2.12 2.12a2.25 2.25 0 1 0 3.18 3.18l2.12-2.12a.75.75 0 1 1 1.06 1.06l-2.12 2.12a3.75 3.75 0 1 1-5.3-5.3l2.12-2.12Zm8.25-2.12a.75.75 0 0 1 1.06 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06l5.25-5.25Z"/></svg>';
 
     h.classList.add('has-anchor');
@@ -31,9 +68,27 @@
     const target = document.getElementById(id);
     if (target) {
       e.preventDefault();
+      if (a.classList.contains('heading-anchor')) {
+        const originalLabel = a.dataset.label || a.getAttribute('aria-label');
+        const base = window.location.href.split('#')[0];
+        const link = base + '#' + id;
+        copyText(link, function (success) {
+          if (!success) return;
+          a.setAttribute('aria-label', 'Link copied');
+          setTimeout(function () {
+            a.setAttribute('aria-label', originalLabel);
+          }, 1200);
+        });
+      }
       const y = target.getBoundingClientRect().top + window.scrollY - 70;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      history.pushState(null, '', '#' + id);
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (a.classList.contains('skip-link') && typeof target.focus === 'function') {
+        target.focus({ preventScroll: true });
+      }
+      if (history && history.pushState) {
+        history.pushState(null, '', '#' + id);
+      }
     }
   });
 
@@ -151,34 +206,7 @@
         copyButton.setAttribute('aria-label', 'Code copied');
         setTimeout(resetCopyState, 1800);
       };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function () {
-          finish(true);
-        }).catch(function () {
-          finish(false);
-        });
-      } else {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.setAttribute('readonly', '');
-        textarea.style.position = 'absolute';
-        textarea.style.left = '-9999px';
-        document.body.appendChild(textarea);
-        const selected = document.getSelection && document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : null;
-        textarea.select();
-        try {
-          const successful = document.execCommand('copy');
-          finish(successful);
-        } catch (err) {
-          finish(false);
-        }
-        document.body.removeChild(textarea);
-        if (selected) {
-          const selection = document.getSelection();
-          selection.removeAllRanges();
-          selection.addRange(selected);
-        }
-      }
+      copyText(text, finish);
     });
 
     toggleButton.addEventListener('click', function () {
@@ -265,17 +293,38 @@
 
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
-  if (header && toggle) {
+  var nav = document.getElementById('primary-nav');
+  if (header && toggle && nav) {
+    var navQuery = window.matchMedia ? window.matchMedia('(max-width: 780px)') : null;
+    var syncNavA11y = function () {
+      var isOpen = header.classList.contains('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (navQuery && navQuery.matches) {
+        nav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      } else {
+        nav.setAttribute('aria-hidden', 'false');
+      }
+    };
+
     toggle.addEventListener('click', function () {
       header.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', header.classList.contains('open') ? 'true' : 'false');
+      syncNavA11y();
     });
-    header.querySelectorAll('.site-nav a').forEach(function (link) {
+    nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         header.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+        syncNavA11y();
       });
     });
+
+    if (navQuery) {
+      if (typeof navQuery.addEventListener === 'function') {
+        navQuery.addEventListener('change', syncNavA11y);
+      } else if (typeof navQuery.addListener === 'function') {
+        navQuery.addListener(syncNavA11y);
+      }
+    }
+    syncNavA11y();
   }
 
   // Tags page enhancements: chip-driven filtering (+ support for query param t and hash)

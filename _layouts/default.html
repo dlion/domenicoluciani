@@ -12,9 +12,24 @@ layout: none
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
 
-    <title>{{site.hero.kicker}} | {{site.hero.title}}</title>
+    {% assign page_title = page.title | default: site.title %}
+    {% if page.url == '/' or page_title == 'Home' %}
+      {% assign page_title = site.title %}
+    {% endif %}
+    {% assign site_title = site.title | default: page_title %}
+    {% if page_title == site_title %}
+      {% assign full_title = page_title %}
+    {% else %}
+      {% assign full_title = page_title | append: ' · ' | append: site_title %}
+    {% endif %}
+    {% assign page_desc = page.description | default: site.description %}
+    {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
 
-    {% include social-preview-meta.html %}
+    <title>{{ full_title | escape }}</title>
+    <meta name="description" content="{{ page_desc | strip_html | strip_newlines | strip | escape }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% include social-preview-meta.html title=full_title description=page_desc url=canonical_url %}
 
     <!-- Self-hosted fonts preload (key UI weights) -->
     <link rel="preload" href="{{ '/assets/fonts/inter/Inter-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
@@ -30,7 +45,7 @@ layout: none
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
     <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#0f172a">
 
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
     {% if page.cdn_css %}
       {% for url in page.cdn_css %}
@@ -44,6 +59,7 @@ layout: none
     {% endif %}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% unless page.hide_progress %}
       <!-- Top reading progress -->
       <div id="progress"></div>
@@ -52,10 +68,10 @@ layout: none
       <div class="wrap">
         <div class="header-bar">
           <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-          <button class="nav-toggle" type="button" aria-label="Toggle navigation" title="Toggle navigation" aria-expanded="false">☰</button>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation" title="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">☰</button>
         </div>
 
-        <nav class="site-nav" aria-label="Primary">
+        <nav id="primary-nav" class="site-nav" aria-label="Primary" aria-hidden="false">
           {% assign here = page.url | default: '/' %}
           {% for item in site.nav %}
             {% assign fullurl = item.url | relative_url %}
@@ -67,7 +83,7 @@ layout: none
       </div>
     </header>
 
-    <main class="wrap content">
+    <main id="main-content" class="wrap content" tabindex="-1">
       {{ content }}
     </main>
 

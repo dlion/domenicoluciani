@@ -13,6 +13,6 @@ layout: page
 - [Words Are Hard - An Essay on Communicating With Non-Programmers · Michael-F-Bryan](http://adventures.michaelfbryan.com/posts/words-are-hard/)
 - [InvisibleUp - Articles - Why I Procrastinate](https://invisibleup.com/articles/27/)
 - [Consumer-Driven Contracts: A Service Evolution Pattern](https://martinfowler.com/articles/consumerDrivenContracts.html)
-- [Consumer-Driven Contracts | Pacto](https://thoughtworks.github.io/pacto/patterns/cdc/)
+- [Consumer-Driven Contracts - Pacto](https://thoughtworks.github.io/pacto/patterns/cdc/)
 - [ContractTest](https://martinfowler.com/bliki/ContractTest.html)
 - [SelfInitializingFake](https://martinfowler.com/bliki/SelfInitializingFake.html)

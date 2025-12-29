@@ -15,4 +15,4 @@ layout: page
 - [What is WASI?](https://blog.yoshuawuyts.com/what-is-wasi/)
 - [(3) Intro to Cloud Native Buildpacks - Terence Lee, Heroku & Emily Casey, Pivotal - YouTube](https://www.youtube.com/watch?v=SK6e_ZatOaw)
 - [youtube.com/watch?v=Mi_fb5ToOa8&themeRefresh=1](https://www.youtube.com/watch?v=Mi_fb5ToOa8&themeRefresh=1)
-- [Gopher Wrangling. Effective error handling in Go | Stephen's Tech Blog](https://stephenn.com/2023/06/gopher-wrangling.-effective-error-handling-in-go/)
+- [Gopher Wrangling. Effective error handling in Go - Stephen's Tech Blog](https://stephenn.com/2023/06/gopher-wrangling.-effective-error-handling-in-go/)

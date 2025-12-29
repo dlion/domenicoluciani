@@ -11,7 +11,7 @@ layout: page
 - [In a git repository, where do your files live?](https://jvns.ca/blog/2023/09/14/in-a-git-repository--where-do-your-files-live-/)
 - [Working without mocks - Learn Go with tests](https://quii.gitbook.io/learn-go-with-tests/testing-fundamentals/working-without-mocks)
 - [The Ultimate Interactive JQ Guide](https://ishan.page/blog/2023-11-06-jq-by-example/)
-- [Don't disable buttons | Go Make Things](https://gomakethings.com/dont-disable-buttons/)
+- [Don't disable buttons - Go Make Things](https://gomakethings.com/dont-disable-buttons/)
 - [A better explanation of the Liskov Substitution Principle](https://www.hillelwayne.com/post/lsp/)
 - [Why deadlines are pointless and what to do instead](https://lucasfcosta.com/2022/09/15/deadlines.html)
 - [Sustainable Pace - What is Sustainable Pace?](https://web.archive.org/web/20221128151220/https://sustainablepace.net/what-is-sustainable-pace)

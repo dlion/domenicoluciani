@@ -15,5 +15,5 @@ layout: page
 - [How To Drive Change as a Software Engineer](https://www.lihaoyi.com/post/HowToDriveChangeasaSoftwareEngineer.html)
 - [Micro-optimizing your Scala code](https://www.lihaoyi.com/post/MicrooptimizingyourScalacode.html#arraycopy-and-copyofrange)
 - [How to Conquer an Introvert’s Fear and Loathing of Public Speaking](https://medium.com/invinciblecareer/how-to-conquer-an-introverts-fear-and-loathing-of-public-speaking-4d4e7b962b5a)
-- [How to come up with blog post ideas | Robert Heaton](https://robertheaton.com/2019/09/24/how-to-come-up-with-blog-post-ideas/)
-- [Lessons from a surprisingly successful blog | Robert Heaton](https://robertheaton.com/2014/07/26/lessons-from-a-surprisingly-successful-blog/)
+- [How to come up with blog post ideas - Robert Heaton](https://robertheaton.com/2019/09/24/how-to-come-up-with-blog-post-ideas/)
+- [Lessons from a surprisingly successful blog - Robert Heaton](https://robertheaton.com/2014/07/26/lessons-from-a-surprisingly-successful-blog/)

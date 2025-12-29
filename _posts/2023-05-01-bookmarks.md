@@ -11,7 +11,7 @@ layout: page
 - [(11) Lesson 9 - Analyzing Architecture: Macro Techniques - YouTube](https://www.youtube.com/watch?v=h1So8tVukS8)
 - [(25) Lesson 10 - Analyzing Architecture: Microservices - YouTube](https://www.youtube.com/watch?v=U7s7Hb6GZCU)
 - [(26) Lesson 11 - Analyzing Architecture: Code Metrics - YouTube](https://www.youtube.com/watch?v=pELKNy8B5Nw)
-- [(28) \[VDZ22\] Achieving an evolutionary architecture through simplicity by Urs Enzler - YouTube](https://www.youtube.com/watch?v=2VDDA6BvcAo)
+- [(28) VDZ22 Achieving an evolutionary architecture through simplicity by Urs Enzler - YouTube](https://www.youtube.com/watch?v=2VDDA6BvcAo)
 - [(30) Lesson 12 - CQRS and Microservices - YouTube](https://www.youtube.com/watch?v=pUGvXUBfvEE)
 - [(1) Lesson13 - Microservices and Reporting - YouTube](https://www.youtube.com/watch?v=n_7PCFkxPPw)
 - [(13) Lesson14 - Refactoring Patterns: Migration vs. Adaptation - YouTube](https://www.youtube.com/watch?v=DKPn0AcvLKo)

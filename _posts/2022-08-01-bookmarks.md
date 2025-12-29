@@ -7,4 +7,4 @@ layout: page
 ---
 
 
-- [People are not resources. Transforming organisations starts with… | by David Carboni | Notbinary | Medium](https://medium.com/notbinary/people-are-not-resources-13ac7a380f95)
+- [People are not resources. Transforming organisations starts with… - by David Carboni - Notbinary - Medium](https://medium.com/notbinary/people-are-not-resources-13ac7a380f95)

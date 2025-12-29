@@ -7,7 +7,7 @@ layout: page
 ---
 
 
-- [Lesson 12 - CQRS and Microservices (posted April 9, 2018) | Developer to Architect | Mark Richards](https://developertoarchitect.com/lessons/lesson12.html)
+- [Lesson 12 - CQRS and Microservices (posted April 9, 2018) - Developer to Architect - Mark Richards](https://developertoarchitect.com/lessons/lesson12.html)
 - [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [Story Points Revisited](https://ronjeffries.com/articles/019-01ff/story-points/Index.html)
 - [Shell Script Best Practices — The Sharat's](https://sharats.me/posts/shell-script-best-practices/)

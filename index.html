@@ -51,6 +51,7 @@ hide_progress: true
   {% assign posts = site.posts | sort: 'date' | reverse %}
 {% endif %}
 {% for post in posts %}
+  {% unless post.tags contains "bookmarks" %}
     <article class="post-card">
       <h2 class="post-card-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -66,7 +67,8 @@ hide_progress: true
         <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
       {% endif %}
     </article>
-  {% endfor %}
+  {% endunless %}
+{% endfor %}
 
   {% if paginator %}
     {% include pagination.html %}

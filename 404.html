@@ -43,10 +43,12 @@ hide_progress: true
     <h2>Latest posts</h2>
     <ul class="nf-list">
       {% for post in site.posts limit: 6 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="meta">· {{ post.date | date: "%d %b %Y" }}</span>
-        </li>
+        {% unless post.tags contains "bookmarks" %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="meta">· {{ post.date | date: "%d %b %Y" }}</span>
+          </li>
+        {% endunless %}
       {% endfor %}
     </ul>
   </div>

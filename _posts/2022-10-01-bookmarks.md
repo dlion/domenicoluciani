@@ -1,5 +1,6 @@
 ---
 title: October 2022 - Bookmarks
+description: "Bookmarks for October 2022: 7 links - Lesson 12 - CQRS and Microservices (posted April 9, 2018)...; CQRS; Story Points Revisited, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

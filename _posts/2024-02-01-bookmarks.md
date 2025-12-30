@@ -1,5 +1,6 @@
 ---
 title: February 2024 - Bookmarks
+description: "Bookmarks for February 2024: 6 links - How hard is it to cheat with ChatGPT in te...; Fixing the billion dollar mistake in Go by..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

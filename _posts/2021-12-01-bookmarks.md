@@ -1,5 +1,6 @@
 ---
 title: December 2021 - Bookmarks
+description: "Bookmarks for December 2021: 7 links - IGA, IAM, and PAM: Introduction of Identit...; When does a table become too big? – Learni..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

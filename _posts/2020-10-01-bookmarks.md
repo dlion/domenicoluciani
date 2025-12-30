@@ -1,5 +1,6 @@
 ---
 title: October 2020 - Bookmarks
+description: "Bookmarks for October 2020: 10 links - How to become a native English speaker; My 3 revenue streams as a developer - by M..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

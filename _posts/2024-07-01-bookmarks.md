@@ -1,5 +1,6 @@
 ---
 title: July 2024 - Bookmarks
+description: "Bookmarks for July 2024: 4 links - Reintroducing engineering thinking in the...; Process doesn’t scale. Knowledge does. - b..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

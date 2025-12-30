@@ -1,5 +1,6 @@
 ---
 title: March 2024 - Bookmarks
+description: "Bookmarks for March 2024: 47 links - Timestamp based Concurrency Control - Geek...; ACID Properties in DBMS - GeeksforGeeks, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

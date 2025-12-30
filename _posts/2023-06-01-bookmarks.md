@@ -1,5 +1,6 @@
 ---
 title: June 2023 - Bookmarks
+description: "Bookmarks for June 2023: 9 links - (2) Lesson 21 - Integration Styles: Remote Procedure Call...; Lesson 22 - Integration Styles: Messaging - YouTube; Some blogging myths, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

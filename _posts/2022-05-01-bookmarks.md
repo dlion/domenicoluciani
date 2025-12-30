@@ -1,5 +1,6 @@
 ---
 title: May 2022 - Bookmarks
+description: "Bookmarks for May 2022: 3 links - Legacy Mimic; ’Why Am I Not Rich & Famous?’ the Delusion of Our Times; Writing table driven tests in Go - Dave Cheney."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

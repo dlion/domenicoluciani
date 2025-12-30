@@ -1,5 +1,6 @@
 ---
 title: June 2019 - Bookmarks
+description: "Bookmarks for June 2019: 4 links - Rescuing Legacy Code by Extracting Pure Fu...; Surviving Legacy Code with Golden Master a..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: February 2022 - Bookmarks
+description: "Bookmarks for February 2022: 3 links - Scaling Databases; Architectural Decision Records: What were the engineers t...; Conducting User Testing Remotely - Thoughtworks."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

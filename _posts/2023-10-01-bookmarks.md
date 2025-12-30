@@ -1,5 +1,6 @@
 ---
 title: October 2023 - Bookmarks
+description: "Bookmarks for October 2023: 4 links - The Absolute Minimum Every Software Develo...; Dependency Injection - Learn Go with tests, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

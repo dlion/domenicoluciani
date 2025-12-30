@@ -1,5 +1,6 @@
 ---
 title: August 2018 - Bookmarks
+description: "Bookmarks for August 2018: 6 links - netdev day 1: IPsec!; Go proverbs; 5 tips for being an effective tech lead, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

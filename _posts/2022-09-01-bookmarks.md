@@ -1,5 +1,6 @@
 ---
 title: September 2022 - Bookmarks
+description: "Bookmarks for September 2022: 16 links - The Law of Leaky Abstractions – Joel on So...; React and the DOM - Dan Hollick 🇿🇦, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: December 2019 - Bookmarks
+description: "Bookmarks for December 2019: 4 links - To Domain Driven Design - DEV Community 👩‍💻👨‍💻; Organic Software Architecture - DEV Community 👩‍💻👨‍💻; Effective_Engineer.md, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

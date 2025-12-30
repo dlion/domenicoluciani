@@ -1,5 +1,6 @@
 ---
 title: April 2018 - Bookmarks
+description: "Bookmarks for April 2018: 7 links - The Liskov Substitution Principle; Understanding SOLID Principles: Liskov Substitution Princ...; Ten Reasons Why I Don't Like Golang, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: May 2024 - Bookmarks
+description: "Bookmarks for May 2024: 11 links - How to be an amateur polyglot — LessWrong; App Modernisation — Just Do It. As a consu..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: November 2019 - Bookmarks
+description: "Bookmarks for November 2019: 4 links - How to Speak Up When It Matters; Global Variables and States: Why So Much H..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

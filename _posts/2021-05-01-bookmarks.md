@@ -1,5 +1,6 @@
 ---
 title: May 2021 - Bookmarks
+description: "Bookmarks for May 2021: 6 links - Coding for Fun; Why I Actively Discourage Online Tooling like `jwt.io` an...; How To Manage Your Stress as a Developer, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

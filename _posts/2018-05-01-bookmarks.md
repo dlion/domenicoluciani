@@ -1,5 +1,6 @@
 ---
 title: May 2018 - Bookmarks
+description: "Bookmarks for May 2018: 13 links - SOLID Design principles : Software archite...; Understanding SOLID Principles: Open Close..., and more."
 layout: page
 tags:
 - bookmarks

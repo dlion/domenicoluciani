@@ -1,5 +1,6 @@
 ---
 title: November 2022 - Bookmarks
+description: "Bookmarks for November 2022: 23 links - What Does Technical Excellence Look Like?...; Objectives and Key Results: A Short How-to, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: December 2018 - Bookmarks
+description: "Bookmarks for December 2018: 1 link - The Art of Testing - Mat Ryer at dotGo 2017."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

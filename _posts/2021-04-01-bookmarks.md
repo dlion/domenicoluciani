@@ -1,5 +1,6 @@
 ---
 title: April 2021 - Bookmarks
+description: "Bookmarks for April 2021: 13 links - Programming is hard - dorinlazar.ro; Breaking GitHub Private Pages for $35k; Effective_Engineer.md, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

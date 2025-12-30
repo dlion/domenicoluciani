@@ -1,5 +1,6 @@
 ---
 title: November 2023 - Bookmarks
+description: "Bookmarks for November 2023: 13 links - Confusing git terminology; In a git repository, where do your files live?; Working without mocks - Learn Go with tests, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

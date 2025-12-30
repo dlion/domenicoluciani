@@ -1,5 +1,6 @@
 ---
 title: February 2021 - Bookmarks
+description: "Bookmarks for February 2021: 5 links - Stop being a generalist - Product Lessons; Short Fat Engineers Are Undervalued - Deeply Nested; On navigating a large codebase, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

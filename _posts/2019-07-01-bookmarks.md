@@ -1,5 +1,6 @@
 ---
 title: July 2019 - Bookmarks
+description: "Bookmarks for July 2019: 5 links - What To Tidy – Kent Beck – Medium; adams.co.tt blog - tagged with post; Contract Tests: An Example - The Code Whisperer, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

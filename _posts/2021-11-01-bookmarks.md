@@ -1,5 +1,6 @@
 ---
 title: November 2021 - Bookmarks
+description: "Bookmarks for November 2021: 8 links - Solving distributed transaction management...; How to build a second brain as a software..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

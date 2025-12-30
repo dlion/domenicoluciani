@@ -1,5 +1,6 @@
 ---
 title: May 2023 - Bookmarks
+description: "Bookmarks for May 2023: 17 links - An Architecture Path to Mainframe Moderniz...; (11) Lesson 9 - Analyzing Architecture: Ma..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

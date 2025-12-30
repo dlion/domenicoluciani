@@ -1,5 +1,6 @@
 ---
 title: April 2023 - Bookmarks
+description: "Bookmarks for April 2023: 23 links - (42) Lesson 2 - Kafka vs. Standard Messagi...; Building a collaborative asynchronous work..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: January 2021 - Bookmarks
+description: "Bookmarks for January 2021: 7 links - Beware the Google Password Manager - faste...; A half-hour to learn Rust - fasterthanli.me, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

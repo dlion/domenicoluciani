@@ -1,5 +1,6 @@
 ---
 title: August 2020 - Bookmarks
+description: "Bookmarks for August 2020: 6 links - When Should I Write an Architecture Decisi...; London vs Chicago TDD - DevLead.io, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

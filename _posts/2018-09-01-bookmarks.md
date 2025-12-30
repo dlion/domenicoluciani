@@ -1,5 +1,6 @@
 ---
 title: September 2018 - Bookmarks
+description: "Bookmarks for September 2018: 10 links - Golang UK Conference 2016 - Dave Cheney -...; Hacker0x01/hacker101: Hacker101, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

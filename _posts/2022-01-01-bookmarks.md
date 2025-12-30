@@ -1,5 +1,6 @@
 ---
 title: January 2022 - Bookmarks
+description: "Bookmarks for January 2022: 8 links - Don’t start with microservices – monoliths...; Telling the good stuff you know, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

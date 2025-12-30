@@ -1,5 +1,6 @@
 ---
 title: September 2019 - Bookmarks
+description: "Bookmarks for September 2019: 6 links - When is it safe to introduce test doubles?...; Why we wait: the neuroscience of procrasti..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

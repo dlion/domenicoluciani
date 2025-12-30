@@ -1,5 +1,6 @@
 ---
 title: February 2020 - Bookmarks
+description: "Bookmarks for February 2020: 5 links - Become a Better Developer by Reading Sourc...; 12 Signs You’re Working in a Feature Facto..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

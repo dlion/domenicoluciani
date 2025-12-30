@@ -1,5 +1,6 @@
 ---
 title: March 2018 - Bookmarks
+description: "Bookmarks for March 2018: 7 links - Clean Coder Blog; Don’t Pursue Programming if You Aren’t Passionate About It; The Dependency Inversion Principle, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

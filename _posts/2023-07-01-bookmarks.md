@@ -1,5 +1,6 @@
 ---
 title: July 2023 - Bookmarks
+description: "Bookmarks for July 2023: 2 links - How to Learn Better in the Digital Age; Nobody cares about your blog.."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

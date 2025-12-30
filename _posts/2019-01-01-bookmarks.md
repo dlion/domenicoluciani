@@ -1,5 +1,6 @@
 ---
 title: January 2019 - Bookmarks
+description: "Bookmarks for January 2019: 3 links - Doing Well by Doing Bad: Writing Bad Code...; When Writing Unit Tests, Don't Use Mocks -..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

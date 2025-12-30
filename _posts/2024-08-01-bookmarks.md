@@ -1,5 +1,6 @@
 ---
 title: August 2024 - Bookmarks
+description: "Bookmarks for August 2024: 9 links - Go, a reasonable good language — kokada; The adapter pattern in Go — Bitfield Consu..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: February 2019 - Bookmarks
+description: "Bookmarks for February 2019: 3 links - How I write Go HTTP services after seven y...; Microservices Are Something You Grow Into,..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

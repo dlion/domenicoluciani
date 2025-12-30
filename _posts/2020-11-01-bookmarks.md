@@ -1,5 +1,6 @@
 ---
 title: November 2020 - Bookmarks
+description: "Bookmarks for November 2020: 11 links - SmallData - Blog - Clean Code - Notes; iPhones, Armed Robbery, and Hacking - Many..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

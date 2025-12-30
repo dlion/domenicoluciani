@@ -1,5 +1,6 @@
 ---
 title: March 2021 - Bookmarks
+description: "Bookmarks for March 2021: 11 links - Your Thinking Rate Is Fixed; The Art of Reading More Effectively and Ef..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

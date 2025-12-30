@@ -1,5 +1,6 @@
 ---
 title: January 2023 - Bookmarks
+description: "Bookmarks for January 2023: 7 links - Tim McNamara – Agile isn't about speed, it's about direction; Bartosz Ciechanowski; Microservices are a Big Ball of Mud - Code-Held, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

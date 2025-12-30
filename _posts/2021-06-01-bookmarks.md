@@ -1,5 +1,6 @@
 ---
 title: June 2021 - Bookmarks
+description: "Bookmarks for June 2021: 5 links - Your Life in Weeks — Wait But Why; SQL Query Optimization: Understanding Key..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

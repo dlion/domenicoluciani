@@ -1,5 +1,6 @@
 ---
 title: October 2018 - Bookmarks
+description: "Bookmarks for October 2018: 14 links - Builder Pattern un ottima alternativa al C...; JMock v. Mockito, but not to the death - T..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

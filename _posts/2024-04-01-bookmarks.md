@@ -1,5 +1,6 @@
 ---
 title: April 2024 - Bookmarks
+description: "Bookmarks for April 2024: 3 links - How I write tests in Go :: Very Good Software, Not Virus; Why you need a \"WTF Notebook\"; How to boost your metabolism at any age - CNN."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

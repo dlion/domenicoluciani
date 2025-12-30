@@ -1,5 +1,6 @@
 ---
 title: September 2023 - Bookmarks
+description: "Bookmarks for September 2023: 11 links - Measuring developer productivity? A respon...; How to pass a coding interview with me - R..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

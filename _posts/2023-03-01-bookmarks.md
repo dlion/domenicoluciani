@@ -1,5 +1,6 @@
 ---
 title: March 2023 - Bookmarks
+description: "Bookmarks for March 2023: 6 links - Patterns - How Do I Strangle Client-Server...; EventStorming - What's it all about? - Do..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

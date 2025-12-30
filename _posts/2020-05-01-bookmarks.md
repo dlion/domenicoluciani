@@ -1,5 +1,6 @@
 ---
 title: May 2020 - Bookmarks
+description: "Bookmarks for May 2020: 4 links - How does a TCP Reset Attack work? - Robert Heaton; AnemicDomainModel; Email Sender Reputation - What You Need to Know, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

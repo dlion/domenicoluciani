@@ -1,5 +1,6 @@
 ---
 title: January 2024 - Bookmarks
+description: "Bookmarks for January 2024: 5 links - Perfectionism and Procrastination: How The...; Advice to Young People, The Lies I Tell My..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

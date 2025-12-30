@@ -1,5 +1,6 @@
 ---
 title: November 2024 - Bookmarks
+description: "Bookmarks for November 2024: 6 links - What is a Staff Engineer?; Please just stop saying \"just\"; Breaking Down Tasks - Jacob Kaplan-Moss, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

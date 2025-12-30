@@ -1,5 +1,6 @@
 ---
 title: June 2022 - Bookmarks
+description: "Bookmarks for June 2022: 6 links - \"Integration Tests are a Scam\" is a Scam - The Code Whisp...; Hertzbleed Attack; BranchByAbstraction, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: February 2023 - Bookmarks
+description: "Bookmarks for February 2023: 12 links - Screw motivation, what you need is discipline. – WISDOMIN...; Lean Inception; Write the Product Vision, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

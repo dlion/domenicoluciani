@@ -1,5 +1,6 @@
 ---
 title: November 2018 - Bookmarks
+description: "Bookmarks for November 2018: 3 links - Mistaeks I Hav Made: Visualising Test Term...; Demystifying the Dependency Inversion Prin..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: September 2021 - Bookmarks
+description: "Bookmarks for September 2021: 18 links - How to work from home and not go crazy; Securing Netflix Studios At Scale Netflix..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

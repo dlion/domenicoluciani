@@ -1,5 +1,6 @@
 ---
 title: April 2022 - Bookmarks
+description: "Bookmarks for April 2022: 16 links - Micro Frontends - extending the microservice idea to fron...; Microfrontends Overview - single-spa; Event sourcing, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

@@ -1,5 +1,6 @@
 ---
 title: March 2020 - Bookmarks
+description: "Bookmarks for March 2020: 3 links - Composition vs. Inheritance: How to Choose...; A Guide to Saying 'No' to Things You Don't..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

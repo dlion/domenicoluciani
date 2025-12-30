@@ -1,5 +1,6 @@
 ---
 title: January 2020 - Bookmarks
+description: "Bookmarks for January 2020: 9 links - Understanding Fake Agile; arialdomartini/Back-End-Developer-Interview-Questions: A...; Factory Method Design Pattern, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

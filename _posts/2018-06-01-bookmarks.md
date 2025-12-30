@@ -1,5 +1,6 @@
 ---
 title: June 2018 - Bookmarks
+description: "Bookmarks for June 2018: 14 links - The Wrong Abstraction — Sandi Metz; CORS in Dettaglio - ItalianCoders; Java 8 Parte 1 - Optional e Interfacce Funzionali - Itali..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

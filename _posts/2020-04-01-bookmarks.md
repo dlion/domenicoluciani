@@ -1,5 +1,6 @@
 ---
 title: April 2020 - Bookmarks
+description: "Bookmarks for April 2020: 10 links - How to Resolve a Conflict When Both Sides...; The Death of Hype: What's Next for Scala, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

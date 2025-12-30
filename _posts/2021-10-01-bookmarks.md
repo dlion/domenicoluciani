@@ -1,5 +1,6 @@
 ---
 title: October 2021 - Bookmarks
+description: "Bookmarks for October 2021: 7 links - How to quit playing video games; How to Create a Personal Vision Statement..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

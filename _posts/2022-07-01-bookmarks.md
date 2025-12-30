@@ -1,5 +1,6 @@
 ---
 title: July 2022 - Bookmarks
+description: "Bookmarks for July 2022: 8 links - Scattered Thoughts on Why I Waste My Own T...; (176) AWS re:Invent 2021 - Evolutionary AW..., and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

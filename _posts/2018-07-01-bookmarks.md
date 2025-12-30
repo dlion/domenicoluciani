@@ -1,5 +1,6 @@
 ---
 title: July 2018 - Bookmarks
+description: "Bookmarks for July 2018: 10 links - How to start go project; When should I remove duplication?; Just Say No to More End-to-End Tests, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

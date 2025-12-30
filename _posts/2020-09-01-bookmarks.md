@@ -1,5 +1,6 @@
 ---
 title: September 2020 - Bookmarks
+description: "Bookmarks for September 2020: 2 links - No, Moving Your SSH Port Isn't Security by Obscurity - Da...; When Feature Flags Do And Don’t Make Sense – Software the...."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

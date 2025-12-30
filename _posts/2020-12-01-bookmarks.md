@@ -1,5 +1,6 @@
 ---
 title: December 2020 - Bookmarks
+description: "Bookmarks for December 2020: 4 links - How I read books: a guide on how to learn - by Denys Zhad...; How to type 3x faster; How to remember what you learn, and more."
 tags:
 - bookmarks
 cover: "/assets/images/covers/bookmark.png"

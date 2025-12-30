@@ -8,6 +8,12 @@ hide_progress: true
   <h1>Search</h1>
   <input id="searchInput" class="search-input" type="search" placeholder="Search posts…"
          aria-label="Search posts">
+  <div class="search-options">
+    <label class="search-option">
+      <input id="searchContentToggle" type="checkbox">
+      Search post content
+    </label>
+  </div>
   <ul id="results" class="search-results"></ul>
 </section>
 
@@ -16,19 +22,13 @@ hide_progress: true
   (function() {
     var input = document.getElementById('searchInput');
     var results = document.getElementById('results');
+    var contentToggle = document.getElementById('searchContentToggle');
     if (results) {
       results.setAttribute('aria-live', 'polite');
     }
 
-    var data = [
-      {% for post in site.posts %}
-      { title: {{ post.title | jsonify }},
-        url: {{ post.url | relative_url | jsonify }},
-        date: "{{ post.date | date: '%Y-%m-%d' }}",
-        desc: {{ post.description | default: '' | jsonify }} }
-      {% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    ];
+    var data = [];
+    var dataReady = false;
 
     function escapeHtml(str) {
       var map = {
@@ -39,6 +39,33 @@ hide_progress: true
         "'": '&#39;'
       };
       return str.replace(/[&<>'"]/g, function(ch) { return map[ch]; });
+    }
+
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlight(text, query) {
+      if (!text) return '';
+      if (!query) return escapeHtml(text);
+      var safeText = escapeHtml(text);
+      var re = new RegExp(escapeRegExp(query), 'ig');
+      return safeText.replace(re, function(match) {
+        return '<mark class="search-hit">' + match + '</mark>';
+      });
+    }
+
+    function buildSnippet(text, query, radius) {
+      if (!text || !query) return '';
+      var lower = text.toLowerCase();
+      var q = query.toLowerCase();
+      var idx = lower.indexOf(q);
+      if (idx === -1) return '';
+      var start = Math.max(0, idx - radius);
+      var end = Math.min(text.length, idx + q.length + radius);
+      var prefix = start > 0 ? '…' : '';
+      var suffix = end < text.length ? '…' : '';
+      return prefix + text.slice(start, end) + suffix;
     }
 
     function render(list, query) {
@@ -52,13 +79,59 @@ hide_progress: true
         return;
       }
 
-      results.innerHTML = list.map(function(p) {
-        var description = p.desc || '';
-        return '<li><a href="'+p.url+'">'+p.title+'</a><div class="meta">'+p.date+'</div><div class="desc">'+description+'</div></li>';
+      results.innerHTML = list.map(function(item) {
+        var p = item.post || item;
+        var description = p.desc || p.excerpt || '';
+        var titleHtml = highlight(p.title, query);
+        var descHtml = description ? '<div class="desc">' + highlight(description, query) + '</div>' : '';
+        var snippet = '';
+        if (item.contentHit) {
+          snippet = buildSnippet(p.content, query, 60);
+        }
+        var snippetHtml = snippet ? '<div class="desc content-snippet">Content: ' + highlight(snippet, query) + '</div>' : '';
+        var where = [];
+        if (item.titleHit) where.push('Title');
+        if (item.descHit) where.push('Description');
+        if (item.contentHit) where.push('Content');
+        var whereHtml = where.length ? '<span class="search-hits">Found in: ' + where.join(', ') + '</span>' : '';
+        return '<li><a href="'+p.url+'">'+titleHtml+'</a><div class="meta">'+p.date+whereHtml+'</div>'+descHtml+snippetHtml+'</li>';
       }).join('');
     }
 
-    input.addEventListener('input', function() {
+    function normalizeData(list) {
+      return (list || []).map(function(item) {
+        return {
+          title: item.title || '',
+          url: item.url || '',
+          date: item.date || '',
+          desc: item.description || '',
+          excerpt: item.excerpt || '',
+          content: item.content || ''
+        };
+      });
+    }
+
+    function loadData() {
+      var dataUrl = {{ "/search.json" | relative_url | jsonify }};
+      fetch(dataUrl)
+        .then(function(response) {
+          if (!response.ok) {
+            throw new Error('Search index unavailable');
+          }
+          return response.json();
+        })
+        .then(function(json) {
+          data = normalizeData(json);
+          dataReady = true;
+          runSearch();
+        })
+        .catch(function() {
+          data = [];
+          dataReady = true;
+        });
+    }
+
+    function runSearch() {
       var raw = input.value;
       var q = raw.toLowerCase().trim();
       if (!q) {
@@ -66,11 +139,33 @@ hide_progress: true
         return;
       }
 
-      var matches = data.filter(function(p){
-        return (p.title.toLowerCase().indexOf(q) > -1) ||
-               (p.desc && p.desc.toLowerCase().indexOf(q) > -1);
-      });
+      if (!dataReady) {
+        results.innerHTML = '<li class="search-empty">Loading search index…</li>';
+        return;
+      }
+
+      var includeContent = contentToggle && contentToggle.checked;
+      var matches = data.reduce(function(acc, p) {
+        var titleHit = p.title.toLowerCase().indexOf(q) > -1;
+        var descHit = p.desc && p.desc.toLowerCase().indexOf(q) > -1;
+        var contentHit = includeContent && p.content && p.content.toLowerCase().indexOf(q) > -1;
+        if (titleHit || descHit || contentHit) {
+          acc.push({
+            post: p,
+            titleHit: titleHit,
+            descHit: descHit,
+            contentHit: contentHit
+          });
+        }
+        return acc;
+      }, []);
       render(matches, raw.trim());
-    });
+    }
+
+    loadData();
+    input.addEventListener('input', runSearch);
+    if (contentToggle) {
+      contentToggle.addEventListener('change', runSearch);
+    }
   })();
 </script>

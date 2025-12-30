@@ -13,6 +13,10 @@ hide_progress: true
       <input id="searchContentToggle" type="checkbox">
       Search post content
     </label>
+    <label class="search-option">
+      <input id="searchBookmarksToggle" type="checkbox">
+      Include bookmarks
+    </label>
   </div>
   <ul id="results" class="search-results"></ul>
 </section>
@@ -23,6 +27,7 @@ hide_progress: true
     var input = document.getElementById('searchInput');
     var results = document.getElementById('results');
     var contentToggle = document.getElementById('searchContentToggle');
+    var bookmarksToggle = document.getElementById('searchBookmarksToggle');
     if (results) {
       results.setAttribute('aria-live', 'polite');
     }
@@ -100,13 +105,15 @@ hide_progress: true
 
     function normalizeData(list) {
       return (list || []).map(function(item) {
+        var tags = Array.isArray(item.tags) ? item.tags : [];
         return {
           title: item.title || '',
           url: item.url || '',
           date: item.date || '',
           desc: item.description || '',
           excerpt: item.excerpt || '',
-          content: item.content || ''
+          content: item.content || '',
+          tags: tags.map(function(tag) { return String(tag || '').toLowerCase(); })
         };
       });
     }
@@ -145,7 +152,11 @@ hide_progress: true
       }
 
       var includeContent = contentToggle && contentToggle.checked;
+      var includeBookmarks = bookmarksToggle && bookmarksToggle.checked;
       var matches = data.reduce(function(acc, p) {
+        if (!includeBookmarks && p.tags.indexOf('bookmarks') > -1) {
+          return acc;
+        }
         var titleHit = p.title.toLowerCase().indexOf(q) > -1;
         var descHit = p.desc && p.desc.toLowerCase().indexOf(q) > -1;
         var contentHit = includeContent && p.content && p.content.toLowerCase().indexOf(q) > -1;
@@ -166,6 +177,9 @@ hide_progress: true
     input.addEventListener('input', runSearch);
     if (contentToggle) {
       contentToggle.addEventListener('change', runSearch);
+    }
+    if (bookmarksToggle) {
+      bookmarksToggle.addEventListener('change', runSearch);
     }
   })();
 </script>

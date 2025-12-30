@@ -1,16 +1,48 @@
+{% assign filtered_posts = '' | split: '' %}
+{% for candidate in site.posts %}
+  {% if candidate.layout == "post" %}
+    {% unless candidate.tags contains "bookmarks" %}
+      {% assign filtered_posts = filtered_posts | push: candidate %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
 {% assign nav_posts = '' | split: '' %}
-{% if page.previous %}
-  {% assign nav_posts = nav_posts | push: page.previous %}
+{% assign prev_candidate = nil %}
+{% assign next_candidate = nil %}
+{% assign found_current = false %}
+
+{% for candidate in filtered_posts %}
+  {% if found_current and next_candidate == nil %}
+    {% assign next_candidate = candidate %}
+  {% endif %}
+  {% if candidate.url == page.url %}
+    {% assign found_current = true %}
+  {% endif %}
+  {% unless found_current %}
+    {% assign prev_candidate = candidate %}
+  {% endunless %}
+{% endfor %}
+
+{% if prev_candidate %}
+  {% assign nav_posts = nav_posts | push: prev_candidate %}
 {% endif %}
-{% if page.next %}
-  {% assign nav_posts = nav_posts | push: page.next %}
+{% if next_candidate %}
+  {% assign nav_posts = nav_posts | push: next_candidate %}
 {% endif %}
 
-{% if nav_posts == empty %}
-  {% assign fallback = site.posts | where_exp: 'candidate', 'candidate.url != page.url' | first %}
-  {% if fallback %}
-    {% assign nav_posts = nav_posts | push: fallback %}
-  {% endif %}
+{% assign nav_posts = nav_posts | uniq %}
+{% assign nav_count = nav_posts | size %}
+{% if nav_count < 2 %}
+  {% for candidate in filtered_posts %}
+    {% if candidate.url != page.url %}
+      {% unless nav_posts contains candidate %}
+        {% assign nav_posts = nav_posts | push: candidate %}
+      {% endunless %}
+    {% endif %}
+    {% if nav_posts.size >= 2 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
 {% assign nav_count = nav_posts | size %}

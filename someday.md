@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Before I die 📋
-permalink: /before-i-die/
+title: Someday 📋
+permalink: /someday/
 ---
 
-List of things I want to do/have before I die ☠️
+Things you someday would like to achieve, accomplish, explore, experience, create, learn, understand
 
 1. Travel to at least 6 continents. [^1]
 2. See the Northern Lights in person.   

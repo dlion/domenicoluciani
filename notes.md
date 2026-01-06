@@ -65,7 +65,7 @@ extra_js: [notes]
             {% endif %}
             <time class="note-date" datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: "%d %b %Y" }}</time>
             <span class="note-sep" aria-hidden="true">·</span>
-            <span class="note-location">{{ location }}</span>
+            <span class="note-location">📍 {{ location }}</span>
           </header>
           <div class="note-content">
             {{ note.content | markdownify }}

@@ -17,6 +17,10 @@ hide_progress: true
       <input id="searchBookmarksToggle" type="checkbox">
       Include bookmarks
     </label>
+    <label class="search-option">
+      <input id="searchNotesToggle" type="checkbox">
+      Include notes
+    </label>
   </div>
   <ul id="results" class="search-results"></ul>
 </section>
@@ -28,12 +32,26 @@ hide_progress: true
     var results = document.getElementById('results');
     var contentToggle = document.getElementById('searchContentToggle');
     var bookmarksToggle = document.getElementById('searchBookmarksToggle');
+    var notesToggle = document.getElementById('searchNotesToggle');
     if (results) {
       results.setAttribute('aria-live', 'polite');
     }
 
-    var data = [];
-    var dataReady = false;
+    var sources = {
+      posts: null,
+      bookmarks: null,
+      notes: null
+    };
+    var loading = {
+      posts: false,
+      bookmarks: false,
+      notes: false
+    };
+    var urls = {
+      posts: {{ "/posts.json" | relative_url | jsonify }},
+      bookmarks: {{ "/bookmarks.json" | relative_url | jsonify }},
+      notes: {{ "/notes.json" | relative_url | jsonify }}
+    };
 
     function escapeHtml(str) {
       var map = {
@@ -99,11 +117,17 @@ hide_progress: true
         if (item.descHit) where.push('Description');
         if (item.contentHit) where.push('Content');
         var whereHtml = where.length ? '<span class="search-hits">Found in: ' + where.join(', ') + '</span>' : '';
-        return '<li><a href="'+p.url+'">'+titleHtml+'</a><div class="meta">'+p.date+whereHtml+'</div>'+descHtml+snippetHtml+'</li>';
+        var classes = 'search-item';
+        if (p.type === 'note') {
+          classes += ' is-note';
+        } else if (p.type === 'bookmark') {
+          classes += ' is-bookmark';
+        }
+        return '<li class="'+classes+'"><a href="'+p.url+'">'+titleHtml+'</a><div class="meta">'+p.date+whereHtml+'</div>'+descHtml+snippetHtml+'</li>';
       }).join('');
     }
 
-    function normalizeData(list) {
+    function normalizeData(list, type) {
       return (list || []).map(function(item) {
         var tags = Array.isArray(item.tags) ? item.tags : [];
         return {
@@ -113,14 +137,16 @@ hide_progress: true
           desc: item.description || '',
           excerpt: item.excerpt || '',
           content: item.content || '',
+          type: type || item.type || 'post',
           tags: tags.map(function(tag) { return String(tag || '').toLowerCase(); })
         };
       });
     }
 
-    function loadData() {
-      var dataUrl = {{ "/search.json" | relative_url | jsonify }};
-      fetch(dataUrl)
+    function loadIndex(kind, url, type) {
+      if (loading[kind]) return Promise.resolve();
+      loading[kind] = true;
+      return fetch(url)
         .then(function(response) {
           if (!response.ok) {
             throw new Error('Search index unavailable');
@@ -128,14 +154,40 @@ hide_progress: true
           return response.json();
         })
         .then(function(json) {
-          data = normalizeData(json);
-          dataReady = true;
-          runSearch();
+          sources[kind] = normalizeData(json, type);
         })
         .catch(function() {
-          data = [];
-          dataReady = true;
+          sources[kind] = [];
+        })
+        .finally(function() {
+          loading[kind] = false;
         });
+    }
+
+    function ensureData(includeBookmarks, includeNotes, showLoading) {
+      var tasks = [];
+      if (!sources.posts) {
+        tasks.push(loadIndex('posts', urls.posts, 'post'));
+      }
+      if (includeBookmarks && !sources.bookmarks) {
+        tasks.push(loadIndex('bookmarks', urls.bookmarks, 'bookmark'));
+      }
+      if (includeNotes && !sources.notes) {
+        tasks.push(loadIndex('notes', urls.notes, 'note'));
+      }
+      if (!tasks.length) return Promise.resolve();
+      if (showLoading) {
+        results.innerHTML = '<li class="search-empty">Loading search index…</li>';
+      }
+      return Promise.all(tasks).then(function() { return true; }, function() { return false; });
+    }
+
+    function buildData(includeBookmarks, includeNotes) {
+      var list = [];
+      if (sources.posts) list = list.concat(sources.posts);
+      if (includeBookmarks && sources.bookmarks) list = list.concat(sources.bookmarks);
+      if (includeNotes && sources.notes) list = list.concat(sources.notes);
+      return list;
     }
 
     function runSearch() {
@@ -146,40 +198,50 @@ hide_progress: true
         return;
       }
 
-      if (!dataReady) {
-        results.innerHTML = '<li class="search-empty">Loading search index…</li>';
-        return;
-      }
-
-      var includeContent = contentToggle && contentToggle.checked;
       var includeBookmarks = bookmarksToggle && bookmarksToggle.checked;
-      var matches = data.reduce(function(acc, p) {
-        if (!includeBookmarks && p.tags.indexOf('bookmarks') > -1) {
+      var includeNotes = notesToggle && notesToggle.checked;
+
+      ensureData(includeBookmarks, includeNotes, true).then(function() {
+        var liveRaw = input.value;
+        var liveQ = liveRaw.toLowerCase().trim();
+        if (!liveQ) {
+          render([], '');
+          return;
+        }
+
+        var includeContent = contentToggle && contentToggle.checked;
+        var includeBookmarksNow = bookmarksToggle && bookmarksToggle.checked;
+        var includeNotesNow = notesToggle && notesToggle.checked;
+        var data = buildData(includeBookmarksNow, includeNotesNow);
+        var matches = data.reduce(function(acc, p) {
+          var titleHit = p.title.toLowerCase().indexOf(liveQ) > -1;
+          var descHit = p.desc && p.desc.toLowerCase().indexOf(liveQ) > -1;
+          var allowContent = includeContent || p.type === 'note';
+          var contentHit = allowContent && p.content && p.content.toLowerCase().indexOf(liveQ) > -1;
+          if (titleHit || descHit || contentHit) {
+            acc.push({
+              post: p,
+              titleHit: titleHit,
+              descHit: descHit,
+              contentHit: contentHit
+            });
+          }
           return acc;
-        }
-        var titleHit = p.title.toLowerCase().indexOf(q) > -1;
-        var descHit = p.desc && p.desc.toLowerCase().indexOf(q) > -1;
-        var contentHit = includeContent && p.content && p.content.toLowerCase().indexOf(q) > -1;
-        if (titleHit || descHit || contentHit) {
-          acc.push({
-            post: p,
-            titleHit: titleHit,
-            descHit: descHit,
-            contentHit: contentHit
-          });
-        }
-        return acc;
-      }, []);
-      render(matches, raw.trim());
+        }, []);
+        render(matches, liveRaw.trim());
+      });
     }
 
-    loadData();
+    ensureData(false, false, false);
     input.addEventListener('input', runSearch);
     if (contentToggle) {
       contentToggle.addEventListener('change', runSearch);
     }
     if (bookmarksToggle) {
       bookmarksToggle.addEventListener('change', runSearch);
+    }
+    if (notesToggle) {
+      notesToggle.addEventListener('change', runSearch);
     }
   })();
 </script>

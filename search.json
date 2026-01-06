@@ -4,8 +4,15 @@ permalink: /search.json
 ---
 [
 {% assign posts = site.posts | sort: 'date' | reverse %}
+{% assign notes = site.data.notes | default: site.notes %}
+{% assign total_entries = posts | size %}
+{% if notes and notes.size > 0 %}
+  {% assign total_entries = total_entries | plus: notes.size %}
+{% endif %}
+{% assign written = 0 %}
 {% for post in posts %}
   {
+    "type": "post",
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
     "date": "{{ post.date | date: "%Y-%m-%d" }}",
@@ -13,6 +20,41 @@ permalink: /search.json
     "description": {{ post.description | default: '' | jsonify }},
     "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
     "content": {{ post.content | strip_html | strip_newlines | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
+  }{% assign written = written | plus: 1 %}{% if written < total_entries %},{% endif %}
 {% endfor %}
+{% if notes and notes.size > 0 %}
+  {% assign note_records = '' | split: '' %}
+  {% for note in notes %}
+    {% assign ts = note.date | date: "%s" | plus: 0 %}
+    {% assign ts_str = ts | append: "" %}
+    {% assign ts_pad = ts_str | prepend: "0000000000000" | slice: -13, 13 %}
+    {% assign rec = ts_pad | append: "::" | append: forloop.index0 %}
+    {% assign note_records = note_records | push: rec %}
+  {% endfor %}
+  {% assign note_records = note_records | sort | reverse %}
+  {% assign notes_sorted = '' | split: '' %}
+  {% for rec in note_records %}
+    {% assign idx = rec | split: "::" | last | plus: 0 %}
+    {% assign notes_sorted = notes_sorted | push: notes[idx] %}
+  {% endfor %}
+  {% for note in notes_sorted %}
+    {% assign note_seed = note.id | default: note.date | date: "%Y%m%d" | append: "-" | append: forloop.index %}
+    {% assign note_id = note_seed | slugify %}
+    {% assign note_title = note.title | default: '' %}
+    {% if note_title == '' %}
+      {% assign note_date = note.date | date: "%d %b %Y" %}
+      {% assign note_title = "Note · " | append: note_date %}
+    {% endif %}
+  {
+    "type": "note",
+    "title": {{ note_title | jsonify }},
+    "url": {{ '/notes/' | relative_url | append: '#' | append: note_id | jsonify }},
+    "date": "{{ note.date | date: "%Y-%m-%d" }}",
+    "tags": [{% if note.tags %}{% for t in note.tags %}{{ t | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}],
+    "description": "",
+    "excerpt": {{ note.content | strip_html | strip_newlines | truncate: 180 | jsonify }},
+    "content": {{ note.content | strip_html | strip_newlines | jsonify }}
+  }{% assign written = written | plus: 1 %}{% if written < total_entries %},{% endif %}
+  {% endfor %}
+{% endif %}
 ]

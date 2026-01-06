@@ -1194,6 +1194,26 @@ html[data-theme='dark'] .human-badge-dark { display: inline-block; }
 .search-results { list-style: none; padding: 0; margin: 18px 0 0; }
 .search-results li { padding: 10px 0; border-bottom: 1px solid var(--border); }
 .search-results a { color: var(--link); text-decoration: none; }
+.search-results .search-item {
+  border-left: 3px solid color-mix(in srgb, var(--callout-info) 70%, transparent);
+  padding-left: 12px;
+}
+.search-results .search-item > a {
+  color: color-mix(in srgb, var(--callout-info) 70%, var(--link));
+}
+.search-results .search-item.is-bookmark > a {
+  color: color-mix(in srgb, var(--callout-warn) 70%, var(--link));
+}
+.search-results .search-item.is-note {
+  border-left: 3px solid color-mix(in srgb, var(--callout-success) 70%, transparent);
+}
+.search-results .search-item.is-note > a {
+  color: color-mix(in srgb, var(--callout-success) 70%, var(--link));
+}
+.search-results .search-item.is-bookmark {
+  border-left: 3px solid color-mix(in srgb, var(--callout-warn) 70%, transparent);
+  padding-left: 12px;
+}
 .search-results .meta { font-size: 13px; color: var(--muted); }
 .search-results .desc { margin-top: 2px; }
 .search-results .content-snippet { color: var(--muted); }

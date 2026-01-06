@@ -1,0 +1,46 @@
+---
+layout: null
+permalink: /notes.json
+---
+[
+{% assign notes = site.data.notes | default: site.notes %}
+{% if notes and notes.size > 0 %}
+  {% assign note_records = '' | split: '' %}
+  {% for note in notes %}
+    {% assign ts = note.date | date: "%s" | plus: 0 %}
+    {% assign ts_str = ts | append: "" %}
+    {% assign ts_pad = ts_str | prepend: "0000000000000" | slice: -13, 13 %}
+    {% assign note_records = note_records | push: ts_pad %}
+  {% endfor %}
+  {% assign note_records = note_records | uniq | sort | reverse %}
+  {% assign notes_sorted = '' | split: '' %}
+  {% for ts_pad in note_records %}
+    {% for note in notes %}
+      {% assign note_ts = note.date | date: "%s" | plus: 0 %}
+      {% assign note_ts_str = note_ts | append: "" %}
+      {% assign note_ts_pad = note_ts_str | prepend: "0000000000000" | slice: -13, 13 %}
+      {% if note_ts_pad == ts_pad %}
+        {% assign notes_sorted = notes_sorted | push: note %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% for note in notes_sorted %}
+    {% assign note_seed = note.id | default: note.date | date: "%Y%m%d" | append: "-" | append: forloop.index %}
+    {% assign note_id = note_seed | slugify %}
+    {% assign note_title = note.title | default: '' %}
+    {% if note_title == '' %}
+      {% assign note_date = note.date | date: "%d %b %Y" %}
+      {% assign note_title = "Note - " | append: note_date %}
+    {% endif %}
+  {
+    "title": {{ note_title | jsonify }},
+    "url": {{ '/notes/' | relative_url | append: '#' | append: note_id | jsonify }},
+    "date": "{{ note.date | date: "%Y-%m-%d" }}",
+    "tags": [{% if note.tags %}{% for t in note.tags %}{{ t | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}],
+    "description": "",
+    "excerpt": {{ note.content | strip_html | strip_newlines | truncate: 180 | jsonify }},
+    "content": {{ note.content | strip_html | strip_newlines | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endif %}
+]

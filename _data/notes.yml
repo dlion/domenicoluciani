@@ -1,4 +1,12 @@
 - date: 2026-01-06
+  mood: "✍️"
+  tags:
+    - post
+    - reminder
+  content: |
+    I should definitely create a new blog post about how many things I added in this blog, and how it is becoming my real digital garden and not another tech blog.
+    
+- date: 2026-01-06
   mood: "🌱"
   tags:
     - updates

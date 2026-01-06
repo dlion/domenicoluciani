@@ -16,14 +16,19 @@ extra_js: [notes]
       {% assign ts = note.date | date: "%s" | plus: 0 %}
       {% assign ts_str = ts | append: "" %}
       {% assign ts_pad = ts_str | prepend: "0000000000000" | slice: -13, 13 %}
-      {% assign rec = ts_pad | append: "::" | append: forloop.index0 %}
-      {% assign note_records = note_records | push: rec %}
+      {% assign note_records = note_records | push: ts_pad %}
     {% endfor %}
-    {% assign note_records = note_records | sort | reverse %}
+    {% assign note_records = note_records | uniq | sort | reverse %}
     {% assign notes_sorted = '' | split: '' %}
-    {% for rec in note_records %}
-      {% assign idx = rec | split: "::" | last | plus: 0 %}
-      {% assign notes_sorted = notes_sorted | push: notes[idx] %}
+    {% for ts_pad in note_records %}
+      {% for note in notes %}
+        {% assign note_ts = note.date | date: "%s" | plus: 0 %}
+        {% assign note_ts_str = note_ts | append: "" %}
+        {% assign note_ts_pad = note_ts_str | prepend: "0000000000000" | slice: -13, 13 %}
+        {% if note_ts_pad == ts_pad %}
+          {% assign notes_sorted = notes_sorted | push: note %}
+        {% endif %}
+      {% endfor %}
     {% endfor %}
     <div class="notes-filter" aria-live="polite" hidden>
       <span class="notes-filter-label">Filtered by</span>

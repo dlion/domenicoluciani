@@ -6,18 +6,19 @@
 #   location: Lisbon, PT
 
 - src: /assets/images/photos/2024/07/18446821654044993.heic
-  alt: "Swimming"
+  tags: [sea]
   date: 2024-07-19
-  location: Palermo, Italy
+  location: 🇮🇹 Palermo, Italy
 - src: /assets/images/photos/2024/04/18330076237136377.jpg
-  alt: "Tokyo Tower"
   date: 2024-04-07
-  location: Tokyo, Japan
+  tags: [asia, japan]
+  location: 🇯🇵 Tokyo, Japan
 - src: /assets/images/photos/2016/04/17856487420059430.jpg
-  alt: "To the sky"
+  tags: [parkour, friends]
   date: 2016-04-04
-  location: Catania, Italy
+  location: 🇮🇹 Catania, Italy
 - src: /assets/images/photos/2016/04/17849397436070108.jpg
-  alt: "Jumping from 10 meters"
+  tags: [parkour, extreme, experiences]
   date: 2016-04-04
-  location: Palermo, Italy
+  location: 🇮🇹 Palermo, Italy
+

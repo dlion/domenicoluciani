@@ -7,37 +7,103 @@
   margin-top: 12px;
 }
 
-.photo-grid .photo-card {
+.photos-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-2) 85%, transparent);
+  font-size: 0.88rem;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.photos-filter-tag {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.photos-filter-clear {
+  color: var(--muted);
+  text-decoration: none;
+}
+.photos-filter-clear:hover { color: var(--link); text-decoration: underline; }
+
+.photo-card {
   margin: 0;
   width: 100%;
   text-align: left;
 }
 
-.photo-grid .photo-card img {
+.photo-card img {
   width: 100%;
   display: block;
   height: auto;
-  border-radius: 0;
+  border-radius: 10px;
   margin: 0;
+  background: var(--surface-2);
 }
 
-.photo-grid .photo-meta {
+.photo-meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-.photo-grid .photo-date {
-  color: var(--muted);
-  font-size: 0.8rem;
+.photo-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
 }
 
-.photo-grid .photo-location {
+.photo-marker {
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.photo-location {
   color: var(--text);
   font-size: 0.98rem;
   font-weight: 500;
 }
+
+.photo-sep {
+  color: var(--muted);
+}
+
+.photo-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.photo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: center;
+}
+
+.photo-tag {
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface-2) 85%, transparent);
+}
+.photo-tag:hover { color: var(--link); }
+
+.photo-related {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+.photo-related:hover { color: var(--link); }
+
+.photo-card.is-hidden { display: none; }
 
 @media (min-width: 840px) {
   .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

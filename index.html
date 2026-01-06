@@ -42,16 +42,47 @@ hide_progress: true
   </div>
 </section>
 
+{% assign all_posts = site.posts | sort: 'date' | reverse %}
+{% assign filtered_posts = '' | split: '' %}
+{% for post in all_posts %}
+  {% unless post.tags contains "bookmarks" %}
+    {% assign filtered_posts = filtered_posts | push: post %}
+  {% endunless %}
+{% endfor %}
+
+{% assign invalid_page = false %}
+{% if paginator %}
+  {% assign per_page = paginator.per_page | default: site.paginate | default: 10 %}
+  {% assign current_page = paginator.page | default: 1 %}
+  {% assign offset = per_page | times: current_page | minus: per_page %}
+  {% assign page_posts = filtered_posts | slice: offset, per_page %}
+  {% assign total_posts = filtered_posts | size %}
+  {% assign total_pages = total_posts | plus: per_page | minus: 1 | divided_by: per_page %}
+  {% if total_pages > 0 and current_page > total_pages %}
+    {% assign invalid_page = true %}
+  {% endif %}
+  {% if current_page > 1 %}
+    {% assign prev_page = current_page | minus: 1 %}
+    {% if prev_page == 1 %}
+      {% assign prev_path = "/" %}
+    {% else %}
+      {% assign prev_path = site.paginate_path | replace: ":num", prev_page %}
+    {% endif %}
+  {% endif %}
+  {% if current_page < total_pages %}
+    {% assign next_page = current_page | plus: 1 %}
+    {% assign next_path = site.paginate_path | replace: ":num", next_page %}
+  {% endif %}
+{% else %}
+  {% assign page_posts = filtered_posts %}
+{% endif %}
+
+{% if invalid_page %}
+  {% include not-found.html %}
+{% else %}
 <section class="post-list">
   <h1 class="visually-hidden">Latest posts</h1>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts | sort: 'date' | reverse %}
-{% endif %}
-{% for post in posts %}
-  {% unless post.tags contains "bookmarks" %}
+{% for post in page_posts %}
     <article class="post-card">
       <h2 class="post-card-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -67,10 +98,10 @@ hide_progress: true
         <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
       {% endif %}
     </article>
-  {% endunless %}
 {% endfor %}
 
-  {% if paginator %}
-    {% include pagination.html %}
+  {% if paginator and total_pages > 1 and current_page <= total_pages %}
+    {% include pagination.html page=current_page total_pages=total_pages prev_path=prev_path next_path=next_path %}
   {% endif %}
 </section>
+{% endif %}

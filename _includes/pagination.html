@@ -1,8 +1,20 @@
-{% if paginator and paginator.total_pages > 1 %}
+{% if include.total_pages %}
+  {% assign page_num = include.page | default: 1 %}
+  {% assign total_pages = include.total_pages %}
+  {% assign prev_path = include.prev_path %}
+  {% assign next_path = include.next_path %}
+{% else %}
+  {% assign page_num = paginator.page %}
+  {% assign total_pages = paginator.total_pages %}
+  {% assign prev_path = paginator.previous_page_path %}
+  {% assign next_path = paginator.next_page_path %}
+{% endif %}
+
+{% if page_num and total_pages and total_pages > 1 %}
 <nav class="pagination" role="navigation" aria-label="Pagination">
   <div class="pagination-inner">
-    {% if paginator.previous_page %}
-      <a class="pagination-link pagination-prev" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">
+    {% if prev_path %}
+      <a class="pagination-link pagination-prev" href="{{ prev_path | relative_url }}" rel="prev">
         <span class="icon" aria-hidden="true">←</span>
         <span class="label">Newer posts</span>
       </a>
@@ -15,14 +27,14 @@
 
     <span class="pagination-status" aria-live="polite">
       <span class="visually-hidden">Currently on</span>
-      <strong class="page">Page {{ paginator.page }}</strong>
+      <strong class="page">Page {{ page_num }}</strong>
       <span class="divider" aria-hidden="true">/</span>
-      <span class="total">{{ paginator.total_pages }}</span>
+      <span class="total">{{ total_pages }}</span>
       <span class="visually-hidden">pages</span>
     </span>
 
-    {% if paginator.next_page %}
-      <a class="pagination-link pagination-next" href="{{ paginator.next_page_path | relative_url }}" rel="next">
+    {% if next_path %}
+      <a class="pagination-link pagination-next" href="{{ next_path | relative_url }}" rel="next">
         <span class="label">Older posts</span>
         <span class="icon" aria-hidden="true">→</span>
       </a>

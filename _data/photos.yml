@@ -1,0 +1,19 @@
+# Add photo entries in reverse chronological order or let the page sort by date.
+# Example:
+# - src: /assets/images/photos/2024-05-18-lisbon.jpg
+#   alt: "Tram climbing a hill"
+#   date: 2024-05-18
+#   location: Lisbon, PT
+
+- src: /assets/images/photos/2024/04/18330076237136377.jpg
+  alt: "Tokyo Tower"
+  date: 2024-04-07
+  location: Tokyo, Japan
+- src: /assets/images/photos/2016/04/17856487420059430.jpg
+  alt: "To the sky"
+  date: 2016-04-04
+  location: Catania, Italia
+- src: /assets/images/photos/2016/04/17849397436070108.jpg
+  alt: "Jumping from 10 meters"
+  date: 2016-04-04
+  location: Palermo, Italia

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Notes
+title: Notes 🌱
 description: "Short thoughts, tiny moments, and small discoveries."
 permalink: /notes/
 hide_progress: true
@@ -35,6 +35,7 @@ extra_js: [notes]
         {% assign note_seed = note.id | default: note.date | date: "%Y%m%d" | append: "-" | append: forloop.index %}
         {% assign note_id = note_seed | slugify %}
         {% assign location = note.location | default: "Málaga, Spain" %}
+        {% assign mood = note.mood | default: "🌱" %}
         {% assign tags = note.tags | default: "" %}
         {% assign tags_attr = "" %}
         {% if tags and tags.size > 0 %}
@@ -59,7 +60,11 @@ extra_js: [notes]
         {% endif %}
         <article class="note-item" id="{{ note_id }}" data-tags="{{ tags_attr }}">
           <header class="note-meta">
+            {% if mood != "" %}
+              <span class="note-marker" aria-hidden="true">{{ mood }}</span>
+            {% endif %}
             <time class="note-date" datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: "%d %b %Y" }}</time>
+            <span class="note-sep" aria-hidden="true">·</span>
             <span class="note-location">{{ location }}</span>
           </header>
           <div class="note-content">
@@ -68,6 +73,7 @@ extra_js: [notes]
           {% if tags and tags.size > 0 %}
             <footer class="note-footer">
               <div class="note-tags">
+                <span class="note-tags-label">↳ tagged:</span>
                 {% for tag in tags %}
                   <a class="note-tag" href="{{ '/notes/' | relative_url }}?t={{ tag | url_encode }}">#{{ tag }}</a>
                 {% endfor %}

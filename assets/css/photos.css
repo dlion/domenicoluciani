@@ -1,0 +1,46 @@
+/* Photos page (scoped) */
+
+.photo-grid {
+  column-count: 1;
+  column-gap: clamp(16px, 4vw, 32px);
+  column-fill: balance;
+  margin-top: 12px;
+}
+
+.photo-grid .photo-card {
+  margin: 0 0 26px;
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  text-align: left;
+}
+
+.photo-grid .photo-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 0;
+  margin: 0;
+}
+
+.photo-grid .photo-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+
+.photo-grid .photo-date {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.photo-grid .photo-location {
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+@media (min-width: 840px) {
+  .photo-grid { column-count: 2; }
+}

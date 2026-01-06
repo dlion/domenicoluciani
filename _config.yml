@@ -31,6 +31,7 @@ nav:
   - { title: Home, url: "/" }
   - { title: About, url: "/about/" }
   - { title: Photos, url: "/photos/" }
+  - { title: Notes, url: "/notes/" }
   - { title: Search, url: "/search/" }
 
 # ——— Writing ———

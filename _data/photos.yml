@@ -5,6 +5,10 @@
 #   date: 2024-05-18
 #   location: Lisbon, PT
 
+- src: /assets/images/photos/2024/07/18446821654044993.heic
+  alt: "Swimming"
+  date: 2024-07-19
+  location: Palermo, Italy
 - src: /assets/images/photos/2024/04/18330076237136377.jpg
   alt: "Tokyo Tower"
   date: 2024-04-07
@@ -12,8 +16,8 @@
 - src: /assets/images/photos/2016/04/17856487420059430.jpg
   alt: "To the sky"
   date: 2016-04-04
-  location: Catania, Italia
+  location: Catania, Italy
 - src: /assets/images/photos/2016/04/17849397436070108.jpg
   alt: "Jumping from 10 meters"
   date: 2016-04-04
-  location: Palermo, Italia
+  location: Palermo, Italy

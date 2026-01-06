@@ -1,17 +1,15 @@
 /* Photos page (scoped) */
 
 .photo-grid {
-  column-count: 1;
-  column-gap: clamp(16px, 4vw, 32px);
-  column-fill: balance;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 32px;
   margin-top: 12px;
 }
 
 .photo-grid .photo-card {
-  margin: 0 0 26px;
-  display: inline-block;
+  margin: 0;
   width: 100%;
-  break-inside: avoid;
   text-align: left;
 }
 
@@ -42,5 +40,5 @@
 }
 
 @media (min-width: 840px) {
-  .photo-grid { column-count: 2; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

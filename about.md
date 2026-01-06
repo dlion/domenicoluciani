@@ -51,10 +51,8 @@ hide_progress: true
 
 ## Experience
 
-{% assign jobs = about_experience %}
-
 <ol class="timeline">
-  {% for job in jobs %}
+  {% for job in about_experience %}
   <li class="timeline-item">
     <div class="timeline-dot" aria-hidden="true"></div>
     <div class="timeline-body">

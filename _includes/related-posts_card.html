@@ -10,13 +10,11 @@
 {% endif %}
 {% assign summary = post.description | default: post.excerpt | strip_html | truncate: 140 %}
 
-{% assign slug = post.title | slugify %}
 {% assign target = include.slot | default: 0 %}
 {% assign slot_class = target | prepend: 'related-split-card related-slot-' %}
 {% if include.single == 1 %}
   {% assign slot_class = slot_class | append: ' is-single' %}
 {% endif %}
-{% assign summary = summary %}
 
 <article class="{{ slot_class }}">
   <div class="related-split-media" {% if image_url %}style="--related-image: url('{{ image_url }}');"{% endif %}></div>

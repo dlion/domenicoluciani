@@ -11,11 +11,9 @@ layout: default
 {% endif %}
 
 {% assign share_url = page.canonical_url | default: page.url %}
-{% if share_url contains '://' %}
-  {% assign share_url = share_url %}
-{% else %}
+{% unless share_url contains '://' %}
   {% assign share_url = share_url | absolute_url %}
-{% endif %}
+{% endunless %}
 {% assign share_url_escaped = share_url | uri_escape %}
 {% assign share_title = page.title | default: site.title %}
 {% assign share_title_escaped = share_title | uri_escape %}

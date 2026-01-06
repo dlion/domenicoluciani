@@ -19,17 +19,17 @@ hero:
 {% assign hero_pos = page.hero.pos | default: site.hero.pos | default: '' %}
 
 {% assign hero_image_url = hero_image | default: '' %}
-{% if hero_image_url != '' and hero_image_url contains '://' %}
-  {% assign hero_image_url = hero_image_url %}
-{% elsif hero_image_url != '' %}
-  {% assign hero_image_url = hero_image_url | relative_url %}
+{% if hero_image_url != '' %}
+  {% unless hero_image_url contains '://' %}
+    {% assign hero_image_url = hero_image_url | relative_url %}
+  {% endunless %}
 {% endif %}
 
 {% assign hero_cta_href = hero_cta_url | default: '' %}
-{% if hero_cta_href != '' and hero_cta_href contains '://' %}
-  {% assign hero_cta_href = hero_cta_href %}
-{% elsif hero_cta_href != '' %}
-  {% assign hero_cta_href = hero_cta_href | relative_url %}
+{% if hero_cta_href != '' %}
+  {% unless hero_cta_href contains '://' %}
+    {% assign hero_cta_href = hero_cta_href | relative_url %}
+  {% endunless %}
 {% endif %}
 
 <section class="home-hero"{% if hero_pos != '' %} style="--hero-pos: {{ hero_pos }};"{% endif %}>

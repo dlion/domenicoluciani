@@ -40,6 +40,13 @@ hide_progress: true
   {% endif %}
 </section>
 
+> You can check out my [now](/now) page to see what I've been up to recently.
+{: .callout }
+
+> 📚 You can check out my [bookmarks](/bookmarks) list.   
+> I will populate it monthly with the best bookmarks I think its worth to keep.
+{: .callout }
+
 ---
 
 ## Experience

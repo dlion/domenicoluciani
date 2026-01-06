@@ -16,6 +16,10 @@
   margin-bottom: 14px;
 }
 
+.notes-filter[hidden] {
+  display: none;
+}
+
 .notes-filter-tag {
   color: var(--text);
   font-weight: 600;

@@ -19,6 +19,10 @@
   margin-bottom: 14px;
 }
 
+.photos-filter[hidden] {
+  display: none;
+}
+
 .photos-filter-tag {
   color: var(--text);
   font-weight: 600;

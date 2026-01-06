@@ -14,12 +14,8 @@
   const applyFilter = (tag) => {
     const active = tag || '';
     if (filter) {
-      if (active) {
-        filter.hidden = false;
-        if (filterTag) filterTag.textContent = `#${active}`;
-      } else {
-        filter.hidden = true;
-      }
+      filter.hidden = !active;
+      if (active && filterTag) filterTag.textContent = `#${active}`;
     }
     notes.forEach((note) => {
       const tags = (note.dataset.tags || '').split(',').filter(Boolean);

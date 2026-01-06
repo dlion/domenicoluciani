@@ -24,8 +24,6 @@
 .about-tagline { margin: 0; color: var(--muted); white-space: normal; }
 .about-meta { display: flex; flex-wrap: wrap; gap: 10px 14px; margin: 0; padding: 0; list-style: none; }
 .about-meta .emoji { margin-right: .35rem; }
-.about-links a { text-decoration: none; }
-.about-links a:hover { text-decoration: underline; }
 
 .about-photos { display: grid; grid-template-columns: 1fr; gap: 8px; grid-column: 1 / -1; }
 .about-photos img {
@@ -46,38 +44,6 @@
 /* (Removed collapse + residences timeline per request) */
 
 /* no additional reposition needed; grid already two-column by default */
-
-/* World map */
-.world-map { margin: 16px 0; }
-.world-map .map-surface {
-  position: relative;
-  aspect-ratio: 2 / 1;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  background:
-    linear-gradient(to right, color-mix(in srgb, var(--border) 40%, transparent) 1px, transparent 1px) 0 0 / calc(100%/12) 100%,
-    linear-gradient(to bottom, color-mix(in srgb, var(--border) 40%, transparent) 1px, transparent 1px) 0 0 / 100% calc(100%/6),
-    color-mix(in srgb, var(--surface-1) 92%, transparent);
-}
-.world-map .pin {
-  position: absolute; transform: translate(-50%, -50%);
-  width: 10px; height: 10px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,.9);
-  box-shadow: 0 2px 8px rgba(15,23,42,0.25);
-}
-.world-map .pin.visited { background: #60a5fa; }
-.world-map .pin.lived   { background: #f59e0b; }
-.world-map .pin.living  { background: #22c55e; }
-
-.world-map .map-legend {
-  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
-  margin-top: 8px; color: var(--muted); font-size: .95rem;
-}
-.world-map .leg { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
-.world-map .leg.visited { background: #60a5fa; }
-.world-map .leg.lived   { background: #f59e0b; }
-.world-map .leg.living  { background: #22c55e; }
 
 /* Leaflet map container used on about page */
 #placesMap.places-map {

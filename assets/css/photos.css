@@ -63,11 +63,6 @@
   align-items: baseline;
 }
 
-.photo-marker {
-  font-size: 0.92rem;
-  line-height: 1;
-}
-
 .photo-location {
   color: var(--text);
   font-size: 0.98rem;

@@ -10,16 +10,12 @@ hide_progress: true
          aria-label="Search posts">
   <div class="search-options">
     <label class="search-option">
-      <input id="searchContentToggle" type="checkbox">
-      Search post content
-    </label>
-    <label class="search-option">
       <input id="searchBookmarksToggle" type="checkbox">
-      Include bookmarks
+      Search only bookmarks
     </label>
     <label class="search-option">
       <input id="searchNotesToggle" type="checkbox">
-      Include notes
+      Search only notes
     </label>
   </div>
   <ul id="results" class="search-results"></ul>
@@ -30,7 +26,6 @@ hide_progress: true
   (function() {
     var input = document.getElementById('searchInput');
     var results = document.getElementById('results');
-    var contentToggle = document.getElementById('searchContentToggle');
     var bookmarksToggle = document.getElementById('searchBookmarksToggle');
     var notesToggle = document.getElementById('searchNotesToggle');
     if (results) {
@@ -98,7 +93,7 @@ hide_progress: true
       }
 
       if (!list.length) {
-        results.innerHTML = '<li class="search-empty">No articles match <strong>&ldquo;' + escapeHtml(query) + '&rdquo;</strong>. Try another keyword.</li>';
+        results.innerHTML = '<li class="search-empty">No articles/bookmarks/notes match <strong>&ldquo;' + escapeHtml(query) + '&rdquo;</strong>. Try another keyword.</li>';
         return;
       }
 
@@ -164,16 +159,18 @@ hide_progress: true
         });
     }
 
-    function ensureData(includeBookmarks, includeNotes, showLoading) {
+    function ensureData(scope, showLoading) {
       var tasks = [];
-      if (!sources.posts) {
+      if (scope === 'bookmarks') {
+        if (!sources.bookmarks) {
+          tasks.push(loadIndex('bookmarks', urls.bookmarks, 'bookmark'));
+        }
+      } else if (scope === 'notes') {
+        if (!sources.notes) {
+          tasks.push(loadIndex('notes', urls.notes, 'note'));
+        }
+      } else if (!sources.posts) {
         tasks.push(loadIndex('posts', urls.posts, 'post'));
-      }
-      if (includeBookmarks && !sources.bookmarks) {
-        tasks.push(loadIndex('bookmarks', urls.bookmarks, 'bookmark'));
-      }
-      if (includeNotes && !sources.notes) {
-        tasks.push(loadIndex('notes', urls.notes, 'note'));
       }
       if (!tasks.length) return Promise.resolve();
       if (showLoading) {
@@ -182,12 +179,20 @@ hide_progress: true
       return Promise.all(tasks).then(function() { return true; }, function() { return false; });
     }
 
-    function buildData(includeBookmarks, includeNotes) {
-      var list = [];
-      if (sources.posts) list = list.concat(sources.posts);
-      if (includeBookmarks && sources.bookmarks) list = list.concat(sources.bookmarks);
-      if (includeNotes && sources.notes) list = list.concat(sources.notes);
-      return list;
+    function buildData(scope) {
+      if (scope === 'bookmarks') {
+        return sources.bookmarks ? sources.bookmarks.slice() : [];
+      }
+      if (scope === 'notes') {
+        return sources.notes ? sources.notes.slice() : [];
+      }
+      return sources.posts ? sources.posts.slice() : [];
+    }
+
+    function getScope() {
+      if (bookmarksToggle && bookmarksToggle.checked) return 'bookmarks';
+      if (notesToggle && notesToggle.checked) return 'notes';
+      return 'posts';
     }
 
     function runSearch() {
@@ -198,10 +203,9 @@ hide_progress: true
         return;
       }
 
-      var includeBookmarks = bookmarksToggle && bookmarksToggle.checked;
-      var includeNotes = notesToggle && notesToggle.checked;
+      var scope = getScope();
 
-      ensureData(includeBookmarks, includeNotes, true).then(function() {
+      ensureData(scope, true).then(function() {
         var liveRaw = input.value;
         var liveQ = liveRaw.toLowerCase().trim();
         if (!liveQ) {
@@ -209,15 +213,12 @@ hide_progress: true
           return;
         }
 
-        var includeContent = contentToggle && contentToggle.checked;
-        var includeBookmarksNow = bookmarksToggle && bookmarksToggle.checked;
-        var includeNotesNow = notesToggle && notesToggle.checked;
-        var data = buildData(includeBookmarksNow, includeNotesNow);
+        var liveScope = getScope();
+        var data = buildData(liveScope);
         var matches = data.reduce(function(acc, p) {
           var titleHit = p.title.toLowerCase().indexOf(liveQ) > -1;
           var descHit = p.desc && p.desc.toLowerCase().indexOf(liveQ) > -1;
-          var allowContent = includeContent || p.type === 'note';
-          var contentHit = allowContent && p.content && p.content.toLowerCase().indexOf(liveQ) > -1;
+          var contentHit = p.content && p.content.toLowerCase().indexOf(liveQ) > -1;
           if (titleHit || descHit || contentHit) {
             acc.push({
               post: p,
@@ -232,16 +233,25 @@ hide_progress: true
       });
     }
 
-    ensureData(false, false, false);
+    ensureData('posts', false);
     input.addEventListener('input', runSearch);
-    if (contentToggle) {
-      contentToggle.addEventListener('change', runSearch);
-    }
     if (bookmarksToggle) {
-      bookmarksToggle.addEventListener('change', runSearch);
+      bookmarksToggle.addEventListener('change', function() {
+        if (bookmarksToggle.checked && notesToggle) {
+          notesToggle.checked = false;
+        }
+        runSearch();
+      });
     }
     if (notesToggle) {
-      notesToggle.addEventListener('change', runSearch);
+      notesToggle.addEventListener('change', function() {
+        if (notesToggle.checked && bookmarksToggle) {
+          bookmarksToggle.checked = false;
+        }
+        runSearch();
+      });
+    } else {
+      bookmarksToggle.addEventListener('change', runSearch);
     }
   })();
 </script>

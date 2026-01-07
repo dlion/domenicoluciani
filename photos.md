@@ -60,7 +60,9 @@ extra_js: [photos]
           {% endfor %}
         {% endif %}
         <figure class="photo-card" data-tags="{{ tags_attr }}">
-          <img src="{{ src | relative_url }}" alt="" loading="lazy">
+          <div class="photo-frame">
+            <img class="photo-img" src="{{ src | relative_url }}" alt="" loading="lazy">
+          </div>
           <figcaption class="photo-meta">
             <div class="photo-line">
               {% if location %}

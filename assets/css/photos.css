@@ -38,15 +38,23 @@
   margin: 0;
   width: 100%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.photo-card img {
+.photo-frame {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.photo-img {
   width: 100%;
   display: block;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
   margin: 0;
-  background: var(--surface-2);
 }
 
 .photo-meta {
@@ -106,4 +114,9 @@
 
 @media (min-width: 840px) {
   .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo-frame { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 520px) {
+  .photo-frame { aspect-ratio: 1 / 1; }
 }

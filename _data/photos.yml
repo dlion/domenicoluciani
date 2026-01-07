@@ -5,20 +5,52 @@
 #   date: 2024-05-18
 #   location: Lisbon, PT
 
+- src: /assets/images/photos/2024/10/18104318656437553.webp
+  tags: [sicily]
+  date: 2024-10-14
+  location: 🇪🇸 Málaga, Spain
 - src: /assets/images/photos/2024/07/18446821654044993.heic
-  tags: [sea]
+  tags: [sea, sicily]
   date: 2024-07-19
   location: 🇮🇹 Palermo, Italy
 - src: /assets/images/photos/2024/04/18330076237136377.jpg
   date: 2024-04-07
-  tags: [asia, japan]
+  tags: [asia, japan, travels]
   location: 🇯🇵 Tokyo, Japan
+- src: /assets/images/photos/2024/04/18133189876323919.heic
+  date: 2024-04-04
+  tags: [asia, japan, travels]
+  location: 🇯🇵 Tokyo, Japan
+- src: /assets/images/photos/2022/12/18163596883262372.webp
+  date: 2022-12-10
+  tags: [scotland, edinburgh, travels]
+  location: 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh, Scotland
+- src: /assets/images/photos/2022/12/18166588090258554.webp
+  date: 2022-12-10
+  tags: [spain, canarias, travels]
+  location: 🇪🇸 Gran Canaria, Spain
+- src: /assets/images/photos/2020/11/18123054541154360.jpg
+  date: 2022-11-26
+  tags: [spain, canarias, travels]
+  location: 🇪🇸 Fuerteventura, Spain
+- src: /assets/images/photos/2019/06/17851142224464239.jpg
+  tags: [catalunya, spain]
+  date: 2019-06-23
+  location: 🇪🇸 Barcelona, Spain
+- src: /assets/images/photos/2018/07/17851290031275883.jpg
+  tags: [italy]
+  date: 2018-07-10
+  location: 🇮🇹 Monza, Italy
 - src: /assets/images/photos/2016/04/17856487420059430.jpg
-  tags: [parkour, friends]
+  tags: [parkour, friends, sicily]
   date: 2016-04-04
   location: 🇮🇹 Catania, Italy
 - src: /assets/images/photos/2016/04/17849397436070108.jpg
-  tags: [parkour, extreme, experiences]
+  tags: [parkour, extreme, experiences, sicily]
+  date: 2016-04-04
+  location: 🇮🇹 Palermo, Italy
+- src: /assets/images/photos/2016/04/17856490015029476.jpg
+  tags: [sicily, home]
   date: 2016-04-04
   location: 🇮🇹 Palermo, Italy
 

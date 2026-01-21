@@ -75,6 +75,7 @@
 - { name: Bucharest, country: RO, lat: 44.4268, lon: 26.1025, kind: visited }
 - { name: Stockholm, country: SE, lat: 59.3293, lon: 18.0686, kind: visited }
 - { name: Oslo, country: NO, lat: 59.9139, lon: 10.7522, kind: visited }
+- { name: Iceland, country: IS, lat: 64.9631, lon: -19.0208, kind: visited }
 
 # EUROPE — Greece
 - { name: Athens, country: GR, lat: 37.9838, lon: 23.7275, kind: visited }

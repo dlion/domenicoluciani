@@ -1,64 +1,620 @@
-# Add photo entries in reverse chronological order or let the page sort by date.
-# Example:
-# - src: /assets/images/photos/2024-05-18-lisbon.jpg
-#   alt: "Tram climbing a hill"
-#   date: 2024-05-18
-#   location: Lisbon, PT
-
-- src: /assets/images/photos/2024/10/18104318656437553.webp
-  tags: [sicily]
+- src: "/assets/images/photos/2025/10/17945676237062519.heic"
+  tags: [athens, greece, travels]
+  date: 2025-10-29
+  location: "🇬🇷 Athens, Greece"
+- src: "/assets/images/photos/2025/10/18038196917703146.heic"
+  tags: [athens, greece, travels]
+  date: 2025-10-29
+  location: "🇬🇷 Athens, Greece"
+- src: "/assets/images/photos/2025/10/18046267166417868.heic"
+  tags: [athens, greece, travels]
+  date: 2025-10-29
+  location: "🇬🇷 Athens, Greece"
+- src: "/assets/images/photos/2025/07/17916606318147093.heic"
+  tags: [egypt, cairo, travels]
+  date: 2025-07-28
+  location: "🇪🇬 Cairo, Egypt"
+- src: "/assets/images/photos/2025/07/17953706852846416.heic"
+  tags: [egypt, luxor, travels]
+  date: 2025-07-28
+  location: "🇪🇬 Luxor, Egypt"
+- src: "/assets/images/photos/2025/07/18039714590361408.heic"
+  tags: [egypt, cairo, travels]
+  date: 2025-07-28
+  location: "🇪🇬 Cairo, Egypt"
+- src: "/assets/images/photos/2025/07/18057366029457217.heic"
+  tags: [egypt, cairo, travels]
+  date: 2025-07-28
+  location: "🇪🇬 Cairo, Egypt"
+- src: "/assets/images/photos/2025/07/18066220007230428.heic"
+  tags: [egypt, luxor, travels]
+  date: 2025-07-28
+  location: "🇪🇬 Luxor, Egypt"
+- src: "/assets/images/photos/2025/07/17945896257008297.heic"
+  tags: [malaga, spain]
+  date: 2025-07-24
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2025/07/17923714539093210.heic"
+  tags: [egypt, luxor, travels]
+  date: 2025-07-05
+  location: "🇪🇬 Luxor, Egypt"
+- src: "/assets/images/photos/2025/07/18077195857917483.heic"
+  tags: [egypt, luxor, travels]
+  date: 2025-07-05
+  location: "🇪🇬 Luxor, Egypt"
+- src: "/assets/images/photos/2025/07/18514588009032076.heic"
+  tags: [egypt, luxor, travels]
+  date: 2025-07-05
+  location: "🇪🇬 Luxor, Egypt"
+- src: "/assets/images/photos/2025/02/18057815482865277.webp"
+  tags: [cordoba, spain, travels]
+  date: 2025-02-26
+  location: "🇪🇸 Cordoba, Spain"
+- src: "/assets/images/photos/2025/02/18355024039177644.webp"
+  tags: [osaka, japan, travels]
+  date: 2025-02-21
+  location: "🇯🇵 Osaka, Japan"
+- src: "/assets/images/photos/2025/02/18481535020042300.webp"
+  tags: [andalucia, spain]
+  date: 2025-02-06
+  location: "🇪🇸 Andalucia, Spain"
+- src: "/assets/images/photos/2025/01/17949694619919062.webp"
+  tags: [granada, spain, travels]
+  date: 2025-01-11
+  location: "🇪🇸 Granada, Spain"
+- src: "/assets/images/photos/2024/12/18055124296820977.webp"
+  tags: [malaga, spain]
+  date: 2024-12-28
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2024/11/17873505798217234.webp"
+  tags: [mijas, spain, travels]
+  date: 2024-11-19
+  location: "🇪🇸 Mijas, Spain"
+- src: "/assets/images/photos/2024/10/18106294492427626.webp"
+  tags: [cadiz, spain, friends]
+  date: 2024-10-15
+  location: "🇪🇸 Cadiz, Spain"
+- src: "/assets/images/photos/2024/10/18341525761126571.webp"
+  tags: [cadiz, spain, travels, confs]
+  date: 2024-10-15
+  location: "🇪🇸 Cadiz, Spain"
+- src: "/assets/images/photos/2024/10/18104318656437553.webp"
+  tags: [tatoos, sicily]
   date: 2024-10-14
-  location: 🇪🇸 Málaga, Spain
-- src: /assets/images/photos/2024/07/18446821654044993.heic
-  tags: [sea, sicily]
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2024/10/17881571283134253.heic"
+  tags: [toledo, spain, travels]
+  date: 2024-10-03
+  location: "🇪🇸 Toledo, Spain"
+- src: "/assets/images/photos/2024/10/18038149294964024.heic"
+  tags: [madrid, spain, travels]
+  date: 2024-10-03
+  location: "🇪🇸 Madrid, Spain"
+- src: "/assets/images/photos/2024/10/18059158894705146.heic"
+  tags: [toledo, spain, travels]
+  date: 2024-10-03
+  location: "🇪🇸 Toledo, Spain"
+- src: "/assets/images/photos/2024/08/18026832179229033.heic"
+  tags: [malaga, spain]
+  date: 2024-08-02
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2024/07/18446821654044993.heic"
+  tags: [palermo, italy]
   date: 2024-07-19
-  location: 🇮🇹 Palermo, Italy
-- src: /assets/images/photos/2024/04/18330076237136377.jpg
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2024/07/17890370145049719.heic"
+  tags: [malaga, spain]
+  date: 2024-07-06
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2024/04/18335874586113147.heic"
+  tags: [kinosaki, japan, travels]
+  date: 2024-04-13
+  location: "🇯🇵 Kinosaki, Japan"
+- src: "/assets/images/photos/2024/04/18051713473611450.heic"
+  tags: [japan, tokyo, travels]
   date: 2024-04-07
-  tags: [asia, japan, travels]
-  location: 🇯🇵 Tokyo, Japan
-- src: /assets/images/photos/2024/04/18133189876323919.heic
-  date: 2024-04-04
-  tags: [asia, japan, travels]
-  location: 🇯🇵 Tokyo, Japan
-- src: /assets/images/photos/2022/12/18163596883262372.webp
+  location: "🇯🇵 Tokyo, Japan"
+- src: "/assets/images/photos/2024/04/18330076237136377.heic"
+  tags: [tokyo, japan]
+  date: 2024-04-06
+  location: "🇯🇵 Tokyo, Japan"
+- src: "/assets/images/photos/2024/04/17855135628151637.heic"
+  tags: [tokyo, japan]
+  date: 2024-04-03
+  location: "🇯🇵 Tokyo, Japan"
+- src: "/assets/images/photos/2024/04/18133189876323919.heic"
+  tags: [tokyo, japan]
+  date: 2024-04-03
+  location: "🇯🇵 Tokyo, Japan"
+- src: "/assets/images/photos/2023/12/18005853164023920.heic"
+  tags: [thailand, travels]
+  date: 2023-12-20
+  location: "🇹🇭 Thailand"
+- src: "/assets/images/photos/2023/12/18048225094540452.heic"
+  tags: [thailand, travels]
+  date: 2023-12-13
+  location: "🇹🇭 Thailand"
+- src: "/assets/images/photos/2023/11/17946416816722874.heic"
+  tags: [palermo, italy]
+  date: 2023-11-20
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2023/11/18070941775442035.heic"
+  tags: [milan, italy, travels]
+  date: 2023-11-16
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2023/11/18004875070950641.heic"
+  tags: [algarve, portugal, travels]
+  date: 2023-11-04
+  location: "🇵🇹 Algarve, Portugal"
+- src: "/assets/images/photos/2023/10/17873331617978707.heic"
+  tags: [morocco, sahara, travels]
+  date: 2023-10-16
+  location: "🇲🇦 Sahara, Morocco"
+- src: "/assets/images/photos/2023/09/17848792938061617.heic"
+  tags: [ibiza, spain, travels]
+  date: 2023-09-25
+  location: "🇪🇸 Ibiza, Spain"
+- src: "/assets/images/photos/2023/07/17998214350977211.heic"
+  tags: [setenil, spain, travels]
+  date: 2023-07-17
+  location: "🇪🇸 Setenil, Spain"
+- src: "/assets/images/photos/2023/06/17998239931795204.webp"
+  tags: [spain, travels]
+  date: 2023-06-24
+  location: "🇪🇸 Caminito del rei, Spain"
+- src: "/assets/images/photos/2023/06/18030708448518323.heic"
+  tags: [oslo, norway, travels]
+  date: 2023-06-12
+  location: "🇳🇴 Oslo, Norway"
+- src: "/assets/images/photos/2023/05/18012698905627286.heic"
+  tags: [algarve, portugal]
+  date: 2023-05-27
+  location: "🇵🇹 Algarve, Portugal"
+- src: "/assets/images/photos/2023/05/17955312434557036.heic"
+  tags: [algarve, portugal]
+  date: 2023-05-22
+  location: "🇵🇹 Algarve, Portugal"
+- src: "/assets/images/photos/2023/03/17967365216106759.webp"
+  tags: [seville, spain, travels]
+  date: 2023-03-15
+  location: "🇪🇸 Seville, Spain"
+- src: "/assets/images/photos/2023/03/17925507785585593.webp"
+  tags: [seville, spain, travels]
+  date: 2023-03-14
+  location: "🇪🇸 Seville, Spain"
+- src: "/assets/images/photos/2023/01/18004523230560773.webp"
+  tags: [malaga, spain]
+  date: 2023-01-22
+  location: "🇪🇸 Málaga, Spain"
+- src: "/assets/images/photos/2022/12/18166588090258554.webp"
+  tags: [grancanaria, spain, travels]
+  date: 2022-12-15
+  location: "🇪🇸 Gran Canaria, Spain"
+- src: "/assets/images/photos/2022/12/17997418858585266.webp"
+  tags: [palermo, italy, travels]
+  date: 2022-12-14
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2022/12/18163596883262372.webp"
+  tags: [edinburgh, scotland, travels]
   date: 2022-12-10
-  tags: [scotland, edinburgh, travels]
-  location: 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh, Scotland
-- src: /assets/images/photos/2022/12/18166588090258554.webp
-  date: 2022-12-10
-  tags: [spain, canarias, travels]
-  location: 🇪🇸 Gran Canaria, Spain
-- src: /assets/images/photos/2020/11/18123054541154360.jpg
-  date: 2022-11-26
-  tags: [spain, canarias, travels]
-  location: 🇪🇸 Fuerteventura, Spain
-- src: /assets/images/photos/2019/06/17851142224464239.jpg
-  tags: [catalunya, spain]
+  location: "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh, Scotland"
+- src: "/assets/images/photos/2022/11/17940442367293812.webp"
+  tags: [grancanaria, spain, travels]
+  date: 2022-11-01
+  location: "🇪🇸 Gran Canaria, Spain"
+- src: "/assets/images/photos/2022/10/17911070357548406.webp"
+  tags: [marseille, france, travels]
+  date: 2022-10-07
+  location: "🇫🇷 Marseille, France"
+- src: "/assets/images/photos/2022/08/17894374643662661.webp"
+  tags: [barcelona, spain, friends]
+  date: 2022-08-12
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2022/07/18184365361172475.webp"
+  tags: [palermo, italy, family]
+  date: 2022-07-30
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2022/06/17934617972110941.webp"
+  tags: [venice, italy, travels]
+  date: 2022-06-26
+  location: "🇮🇹 Venice, Italy"
+- src: "/assets/images/photos/2022/06/18234171787186210.webp"
+  tags: [italy, murano, travels]
+  date: 2022-06-15
+  location: "🇮🇹 Murano, Italy"
+- src: "/assets/images/photos/2022/06/17961001285753252.webp"
+  tags: [venice, italy, travels]
+  date: 2022-06-13
+  location: "🇮🇹 Venice, Italy"
+- src: "/assets/images/photos/2022/05/17845794653785945.webp"
+  tags: [spain, tarragona, travels]
+  date: 2022-05-31
+  location: "🇪🇸 Tarragona, Spain"
+- src: "/assets/images/photos/2022/05/18018822574383124.webp"
+  tags: [spain, cataluña, travels]
+  date: 2022-05-26
+  location: "🇪🇸 Cataluña, Spain"
+- src: "/assets/images/photos/2022/05/17948034040937172.webp"
+  tags: [porto, portugal, travels]
+  date: 2022-05-18
+  location: "🇵🇹 Porto, Portugal"
+- src: "/assets/images/photos/2022/04/17938622611914724.webp"
+  tags: [porto, portugal, travels]
+  date: 2022-04-24
+  location: "🇵🇹 Porto, Portugal"
+- src: "/assets/images/photos/2022/04/17914709579456528.webp"
+  tags: [barcelona, spain]
+  date: 2022-04-06
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2022/01/17975435104476964.jpg"
+  tags: [valencia, spain, travels]
+  date: 2022-01-17
+  location: "🇪🇸 Valencia, Spain"
+- src: "/assets/images/photos/2022/01/17961706018532138.jpg"
+  tags: [valencia, spain, travels]
+  date: 2022-01-10
+  location: "🇪🇸 Valencia, Spain"
+- src: "/assets/images/photos/2021/12/18138704137222624.jpg"
+  tags: [prague, czechia, travels]
+  date: 2021-12-11
+  location: "🇨🇿 Prague, Czech Republic"
+- src: "/assets/images/photos/2021/12/17911501070198063.jpg"
+  tags: [dresden, germany, travels]
+  date: 2021-12-10
+  location: "🇩🇪 Dresden, Germany"
+- src: "/assets/images/photos/2021/12/17921417897014489.jpg"
+  tags: [barcelona, spain]
+  date: 2021-12-01
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2021/11/17936207929744482.jpg"
+  tags: [stockholm, sweden, travels]
+  date: 2021-11-21
+  location: "🇸🇪 Stockholm, Sweden"
+- src: "/assets/images/photos/2021/08/17941480273562595.jpg"
+  tags: [malta, travels]
+  date: 2021-08-26
+  location: "🇲🇹 Malta"
+- src: "/assets/images/photos/2021/08/17931122731721200.jpg"
+  tags: [malta, travels]
+  date: 2021-08-22
+  location: "🇲🇹 Malta"
+- src: "/assets/images/photos/2021/07/18233731930053603.jpg"
+  tags: [madrid, spain, travels]
+  date: 2021-07-01
+  location: "🇪🇸 Madrid, Spain"
+- src: "/assets/images/photos/2021/06/17844256037617675.jpg"
+  tags: [barcelona, spain]
+  date: 2021-06-22
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2021/06/17901725482947023.jpg"
+  tags: [palermo, italy, travels]
+  date: 2021-06-19
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2021/06/17930697145555837.jpg"
+  tags: [palermo, sicily, italy, travels]
+  date: 2021-06-14
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2021/05/18165224662135899.jpg"
+  tags: [girona, spain, travels]
+  date: 2021-05-16
+  location: "🇪🇸 Girona, Spain"
+- src: "/assets/images/photos/2021/03/17878790816170008.jpg"
+  tags: [tarragona, spain, travels]
+  date: 2021-03-28
+  location: "🇪🇸 Tarragona, Spain"
+- src: "/assets/images/photos/2021/03/17879701673124529.jpg"
+  tags: [barcelona, spain]
+  date: 2021-03-22
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2021/03/17861566880412907.jpg"
+  tags: [barcelona, spain]
+  date: 2021-03-15
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2020/11/18123054541154360.jpg"
+  tags: [fuerteventura, spain, travels]
+  date: 2020-11-26
+  location: "🇪🇸 Fuerteventura, Spain"
+- src: "/assets/images/photos/2020/11/17927058988447445.jpg"
+  tags: [algarve, portugal, travels]
+  date: 2020-11-01
+  location: "🇵🇹 Algarve, Portugal"
+- src: "/assets/images/photos/2020/10/17853370010310560.jpg"
+  tags: [sintra, portugal, travels]
+  date: 2020-10-25
+  location: "🇵🇹 Sintra, Portugal"
+- src: "/assets/images/photos/2020/10/17895682081621937.jpg"
+  tags: [algarve, portugal, travels]
+  date: 2020-10-11
+  location: "🇵🇹 Algarve, Portugal"
+- src: "/assets/images/photos/2020/10/17905063033528015.jpg"
+  tags: [costabrava, spain, travels]
+  date: 2020-10-08
+  location: "🇪🇸 Costa Brava, Spain"
+- src: "/assets/images/photos/2020/07/17972046643311370.jpg"
+  tags: [palermo, sicily, italy]
+  date: 2020-07-24
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2020/07/18149691466012332.jpg"
+  tags: [palermo, italy, travels]
+  date: 2020-07-02
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2020/07/17878223113693509.jpg"
+  tags: [monza, italy, travels]
+  date: 2020-07-01
+  location: "🇮🇹 Monza, Italy"
+- src: "/assets/images/photos/2020/04/17843679992104325.jpg"
+  tags: [marsala, sicily, travels]
+  date: 2020-04-19
+  location: "🇮🇹 Marsala, Italy"
+- src: "/assets/images/photos/2020/04/18114028303096307.jpg"
+  tags: [newyork, usa, travels]
+  date: 2020-04-18
+  location: "🇺🇸 New York, USA"
+- src: "/assets/images/photos/2020/04/17861348422812119.jpg"
+  tags: [barcelona, spain, travels]
+  date: 2020-04-13
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2020/01/17860860745658784.jpg"
+  tags: [paris, france, travels]
+  date: 2020-01-13
+  location: "🇫🇷 Paris, France"
+- src: "/assets/images/photos/2020/01/18037499389242110.jpg"
+  tags: [france, montsaintmichel, travels]
+  date: 2020-01-11
+  location: "🇫🇷 Mont Saint Michel, France"
+- src: "/assets/images/photos/2019/12/18121982335029433.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2019-12-31
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2019/12/17880322333484436.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2019-12-26
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2019/11/17873750491497932.jpg"
+  tags: [grancanaria, spain, travels]
+  date: 2019-11-17
+  location: "🇪🇸 Gran Canaria, Spain"
+- src: "/assets/images/photos/2019/11/18112958407051725.jpg"
+  tags: [barcelona, spain, travels]
+  date: 2019-11-11
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2019/09/17850303274614701.jpg"
+  tags: [newyork, usa, travels]
+  date: 2019-09-28
+  location: "🇺🇸 New York, USA"
+- src: "/assets/images/photos/2019/09/18018031063232689.jpg"
+  tags: [newyork, usa, travels]
+  date: 2019-09-07
+  location: "🇺🇸 New York, USA"
+- src: "/assets/images/photos/2019/08/18063741403190689.jpg"
+  tags: [newyork, usa, travels]
+  date: 2019-08-26
+  location: "🇺🇸 New York, USA"
+- src: "/assets/images/photos/2019/08/17903322016353936.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2019-08-05
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2019/07/18090546418050233.jpg"
+  tags: [mallorca, spain, travels]
+  date: 2019-07-28
+  location: "🇪🇸 Mallorca, Spain"
+- src: "/assets/images/photos/2019/06/17851142224464239.jpg"
+  tags: [barcelona, spain, travels]
   date: 2019-06-23
-  location: 🇪🇸 Barcelona, Spain
-- src: /assets/images/photos/2018/07/17851290031275883.jpg
-  tags: [italy]
-  date: 2018-07-10
-  location: 🇮🇹 Monza, Italy
-- src: /assets/images/photos/2016/04/17856487420059430.jpg
-  tags: [parkour, friends, sicily]
-  date: 2016-04-04
-  location: 🇮🇹 Catania, Italy
-- src: /assets/images/photos/2016/11/17866017199025473.jpg
-  tags: [sicily, cats]
-  date: 2016-11-04
-  location: 🇮🇹 Palermo, Italy
-- src: /assets/images/photos/2016/10/17865212218041888.jpg
-  tags: [sicily, events]
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2019/04/17980064590241049.jpg"
+  tags: [barcelona, spain, travels]
+  date: 2019-04-22
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2019/04/17933747641280084.jpg"
+  tags: [barcelona, spain, travels]
+  date: 2019-04-06
+  location: "🇪🇸 Barcelona, Spain"
+- src: "/assets/images/photos/2019/02/17920603309304610.jpg"
+  tags: [venice, italy, travels]
+  date: 2019-02-28
+  location: "🇮🇹 Venice, Italy"
+- src: "/assets/images/photos/2019/02/17999943874146044.jpg"
+  tags: [brussels, belgium, travels]
+  date: 2019-02-07
+  location: "🇧🇪 Brussels, Belgium"
+- src: "/assets/images/photos/2019/01/17851635808321554.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2019-01-03
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2018/12/17951603782222044.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2018-12-30
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2018/12/17993519230082657.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2018-12-30
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2018/12/18007583995078531.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2018-12-29
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2018/12/17978713798152642.jpg"
+  tags: [bucharest, romania, travels]
+  date: 2018-12-12
+  location: "🇷🇴 Bucharest, Romania"
+- src: "/assets/images/photos/2018/10/17950412854199424.jpg"
+  tags: [mallorca, spain, travels]
+  date: 2018-10-19
+  location: "🇪🇸 Mallorca, Spain"
+- src: "/assets/images/photos/2018/09/17984686780005950.jpg"
+  tags: [mallorca, spain, travels]
+  date: 2018-09-30
+  location: "🇪🇸 Mallorca, Spain"
+- src: "/assets/images/photos/2018/09/17953747498179826.jpg"
+  tags: [milan, italy]
+  date: 2018-09-23
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2018/07/17947636144125869.jpg"
+  tags: [cefalu, sicily, italy, travels]
+  date: 2018-07-30
+  location: "🇮🇹 Cefalù, Italy"
+- src: "/assets/images/photos/2018/07/17956566877073134.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2018-07-29
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2018/07/17851290031275883.jpg"
+  tags: [monza, italy, travels]
+  date: 2018-07-09
+  location: "🇮🇹 Monza, Italy"
+- src: "/assets/images/photos/2018/05/17945762608012538.jpg"
+  tags: [vienna, austria, travels]
+  date: 2018-05-18
+  location: "🇦🇹 Vienna, Austria"
+- src: "/assets/images/photos/2018/05/17937769840075283.jpg"
+  tags: [brussels, belgium, travels]
+  date: 2018-05-13
+  location: "🇧🇪 Brussels, Belgium"
+- src: "/assets/images/photos/2018/05/17947531351000561.jpg"
+  tags: [milan, italy]
+  date: 2018-05-11
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2018/05/17913487270166942.jpg"
+  tags: [antwerp, belgium, travels]
+  date: 2018-05-09
+  location: "🇧🇪 Antwerp, Belgium"
+- src: "/assets/images/photos/2018/05/17929863817112907.jpg"
+  tags: [liege, belgium, travels]
+  date: 2018-05-08
+  location: "🇧🇪 Liege, Belgium"
+- src: "/assets/images/photos/2018/04/17939249515021407.jpg"
+  tags: [paris, france, travels]
+  date: 2018-04-15
+  location: "🇫🇷 Disneyland, France"
+- src: "/assets/images/photos/2018/04/17921663182125815.jpg"
+  tags: [milan, italy]
+  date: 2018-04-12
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2018/03/17854443556240069.jpg"
+  tags: [munich, germany, travels]
+  date: 2018-03-08
+  location: "🇩🇪 Munich, Germany"
+- src: "/assets/images/photos/2018/02/17918999590069435.jpg"
+  tags: [venice, italy, travels]
+  date: 2018-02-15
+  location: "🇮🇹 Venice, Italy"
+- src: "/assets/images/photos/2018/01/17890599082189086.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2018-01-02
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2017/12/17898500824093641.jpg"
+  tags: [naples, italy]
+  date: 2017-12-28
+  location: "🇮🇹 Naples, Italy"
+- src: "/assets/images/photos/2017/12/17914013632030110.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2017-12-23
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2017/12/17889998635141770.jpg"
+  tags: [palermo, italy, sicily, travels]
+  date: 2017-12-20
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2017/12/17854540414212480.jpg"
+  tags: [milan, italy]
+  date: 2017-12-19
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2017/12/17913846781037212.jpg"
+  tags: [naples, italy, travels]
+  date: 2017-12-13
+  location: "🇮🇹 Naples, Italy"
+- src: "/assets/images/photos/2017/12/17852777566221856.jpg"
+  tags: [naples, italy, travels]
+  date: 2017-12-12
+  location: "🇮🇹 Naples, Italy"
+- src: "/assets/images/photos/2017/12/17898696418117410.jpg"
+  tags: [milan, italy]
+  date: 2017-12-08
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2017/12/17910523291060788.jpg"
+  tags: [bologna, italy, travels]
+  date: 2017-12-02
+  location: "🇮🇹 Bologna, Italy"
+- src: "/assets/images/photos/2017/11/17907173938025241.jpg"
+  tags: [pisa, italy, travels]
+  date: 2017-11-07
+  location: "🇮🇹 Pisa, Italy"
+- src: "/assets/images/photos/2017/11/17890760476088102.jpg"
+  tags: [pisa, italy, travels]
+  date: 2017-11-06
+  location: "🇮🇹 Pisa, Italy"
+- src: "/assets/images/photos/2017/10/17892150820096935.jpg"
+  tags: [trento, italy, travels]
+  date: 2017-10-19
+  location: "🇮🇹 Trento, Italy"
+- src: "/assets/images/photos/2017/10/17879121907187964.jpg"
+  tags: [milan, italy]
+  date: 2017-10-15
+  location: "🇮🇹 Milan, Italy"
+- src: "/assets/images/photos/2017/08/17870785090191864.jpg"
+  tags: [ivrea, italy, travel]
+  date: 2017-08-29
+  location: "🇮🇹 Ivrea, Italy"
+- src: "/assets/images/photos/2017/06/17858058433173127.jpg"
+  tags: [gardaland, italy, travels]
+  date: 2017-06-10
+  location: "🇮🇹 Gardaland, Italy"
+- src: "/assets/images/photos/2017/04/17867219680098912.jpg"
+  tags: [amsterdam, netherlands, travels]
+  date: 2017-04-25
+  location: "🇳🇱 Amsterdam, Netherlands"
+- src: "/assets/images/photos/2017/02/17871172294059643.jpg"
+  tags: [turin, italy, travels]
+  date: 2017-02-05
+  location: "🇮🇹 Turin, Italy"
+- src: "/assets/images/photos/2016/11/17866017199025473.jpg"
+  tags: [cats, palermo, sicily]
+  date: 2016-11-21
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2016/10/17843740531189630.jpg"
+  tags: [unipa, palermo, sicily]
   date: 2016-10-29
-  location: 🇮🇹 Palermo, Italy
-- src: /assets/images/photos/2016/04/17849397436070108.jpg
-  tags: [parkour, extreme, experiences, sicily]
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2016/08/17850515059084511.jpg"
+  tags: [budapest, hungary, travels]
+  date: 2016-08-13
+  location: "🇭🇺 Budapest, Hungary"
+- src: "/assets/images/photos/2016/08/17859938992007702.jpg"
+  tags: [budapest, hungary, travels]
+  date: 2016-08-12
+  location: "🇭🇺 Budapest, Hungary"
+- src: "/assets/images/photos/2016/08/17860469224018113.jpg"
+  tags: [budapest, hungary, travels]
+  date: 2016-08-12
+  location: "🇭🇺 Budapest, Hungary"
+- src: "/assets/images/photos/2016/08/17851597048072210.jpg"
+  tags: [munich, germany, travels]
+  date: 2016-08-11
+  location: "🇩🇪 Munich, Germany"
+- src: "/assets/images/photos/2016/04/17849397436070108.jpg"
+  tags: [palermo, sicily]
   date: 2016-04-04
-  location: 🇮🇹 Palermo, Italy
-- src: /assets/images/photos/2016/04/17856490015029476.jpg
-  tags: [sicily, home]
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2016/04/17856256285034215.jpg"
+  tags: [london, uk]
   date: 2016-04-04
-  location: 🇮🇹 Palermo, Italy
-
+  location: "🇬🇧 London, UK"
+- src: "/assets/images/photos/2016/04/17856487420059430.jpg"
+  tags: [catania, italy, friends]
+  date: 2016-04-04
+  location: "🇮🇹 Catania, Italy"
+- src: "/assets/images/photos/2016/03/17853729946037695.jpg"
+  tags: [palermo, italy]
+  date: 2016-03-10
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2015/12/17844397780072539.jpg"
+  tags: [cats, palermo, sicily]
+  date: 2015-12-17
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2015/12/17843488618114955.jpg"
+  tags: [cats, palermo, sicily]
+  date: 2015-12-05
+  location: "🇮🇹 Palermo, Italy"
+- src: "/assets/images/photos/2015/12/17843500675120508.jpg"
+  tags: [unipa, palermo, sicily]
+  date: 2015-12-04
+  location: "🇮🇹 Palermo, Italy"

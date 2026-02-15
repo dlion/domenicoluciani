@@ -20,7 +20,7 @@ The software we talk about is this:
 # This file is part of Computer Vision Exam Project
 #
 # Copyright(c) 2012 Domenico Luciani
-# domenicoleoneluciani@gmail.com
+# vendetta-stuck-mud@duck.com
 #
 #
 # This file may be licensed under the terms of of the

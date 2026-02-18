@@ -146,11 +146,15 @@ class BlueskyNotesSync
 
     {
       "id" => "bsky-#{post[:rkey]}",
-      "date" => post[:created_at].iso8601,
+      "date" => local_date(post[:created_at]),
       "mood" => mood,
       "tags" => note_tags,
       "content" => content
     }
+  end
+
+  def local_date(timestamp)
+    with_timezone(@target_timezone) { timestamp.getlocal.strftime("%F") }
   end
 
   def extract_hashtags(text, facets)

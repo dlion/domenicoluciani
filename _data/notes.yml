@@ -1,3 +1,11 @@
+- id: 'bsky-3mf632znvis23'
+  date: 2026-02-18T21:56:18Z
+  mood: "🌱"
+  tags:
+    - rant
+  content: |
+    So I discovered that I can't add a GitHub App to a CODEOWNERS file nor a team, which it means that despite my app can approve a PR, it can't bypass the CODEOWNERS check and merge the PR automatically.
+
 - date: 2026-02-04
   mood: "🌱"
   tags:

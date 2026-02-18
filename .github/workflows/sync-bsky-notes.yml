@@ -1,0 +1,60 @@
+name: Sync Bluesky Notes
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      sync_date:
+        description: "Optional local date to sync (YYYY-MM-DD)"
+        required: false
+        type: string
+      timezone:
+        description: "Timezone for the daily window (IANA, e.g. Europe/Madrid)"
+        required: false
+        default: "Europe/Madrid"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  sync-notes:
+    runs-on: ubuntu-latest
+    env:
+      BLUESKY_HANDLE: domenicoluciani.com
+      REQUIRED_TAG: notes
+      NOTES_FILE: _data/notes.yml
+      TARGET_TIMEZONE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.timezone || 'Europe/Madrid' }}
+      SYNC_DATE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.sync_date || '' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Sync notes from Bluesky
+        run: ruby scripts/sync_bsky_notes.rb
+
+      - name: Commit and push updates
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+        run: |
+          if git diff --quiet -- _data/notes.yml; then
+            echo "No note changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/notes.yml
+          git commit -m "chore(notes): sync from Bluesky"
+
+          if [ -n "${GH_PAGES_TOKEN}" ]; then
+            git remote set-url origin "https://x-access-token:${GH_PAGES_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          fi
+
+          git push origin "HEAD:${GITHUB_REF_NAME}"

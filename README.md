@@ -17,6 +17,7 @@ Quick Start
   - See the “Post Template” section for a copy‑paste front matter.
 - Deploy
   - Push to the default branch on GitHub. The site is GitHub Pages compatible.
+  - Optional automation: `.github/workflows/sync-bsky-notes.yml` can import daily notes from Bluesky into `_data/notes.yml` and commit them.
 
 Repository Layout
 -----------------
@@ -258,6 +259,23 @@ Troubleshooting
 - “Mermaid renders as text after theme switch” — handled automatically; ensure the fenced block uses `mermaid`.
 - “Bad badge path” — badge paths are under `assets/images/notai/`; edit `_includes/human-badge.html` if you rename them.
 - Clean build: `bundle exec jekyll clean && bundle exec jekyll serve`.
+
+Bluesky Notes Sync
+------------------
+- Script: `scripts/sync_bsky_notes.rb`
+- Workflow: `.github/workflows/sync-bsky-notes.yml`
+- Expected posting pattern: include `#notes` in each Bluesky post you want imported.
+- Mood mapping (first hashtag after `#notes`): `#updates -> 🌱`, `#ideas -> 💭`, `#reminder -> ✍️` (fallback: `🌱`).
+- All hashtags except `#notes` are added to `tags`.
+- Daily window defaults to “yesterday” in `TARGET_TIMEZONE` (workflow default: `Europe/Madrid`).
+- Useful env vars:
+  - `BLUESKY_HANDLE` (required)
+  - `TARGET_TIMEZONE` (optional, default `UTC`)
+  - `REQUIRED_TAG` (optional, default `notes`)
+  - `SYNC_DATE` (optional manual backfill, format `YYYY-MM-DD`)
+  - `DRY_RUN=1` (optional, fetch/transform without writing `_data/notes.yml`)
+- Optional repository secret:
+  - `GH_PAGES_TOKEN` (PAT used for `git push` so downstream workflows, including Pages workflows, can be triggered reliably)
 
 License & Notes
 ---------------

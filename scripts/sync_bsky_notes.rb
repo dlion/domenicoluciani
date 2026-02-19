@@ -20,6 +20,7 @@ class BlueskyNotesSync
 
   def initialize
     @api_base = ENV.fetch("BLUESKY_API_BASE", "https://public.api.bsky.app")
+    @identity_base = ENV.fetch("BLUESKY_IDENTITY_BASE", "https://bsky.social")
     @handle = ENV.fetch("BLUESKY_HANDLE")
     @required_tag = ENV.fetch("REQUIRED_TAG", "notes").downcase
     @target_timezone = ENV.fetch("TARGET_TIMEZONE", "UTC")
@@ -85,7 +86,7 @@ class BlueskyNotesSync
       response = xrpc_get(
         "/xrpc/app.bsky.feed.getAuthorFeed",
         {
-          actor: @handle,
+          actor: author_did,
           limit: 100,
           cursor: cursor
         }.compact
@@ -373,7 +374,7 @@ class BlueskyNotesSync
   end
 
   def resolve_did(handle)
-    response = xrpc_get("/xrpc/com.atproto.identity.resolveHandle", handle: handle)
+    response = xrpc_get("/xrpc/com.atproto.identity.resolveHandle", { handle: handle }, base: @identity_base)
     did = response["did"].to_s
     raise "Could not resolve DID for handle #{handle}" if did.empty?
 
@@ -405,8 +406,8 @@ class BlueskyNotesSync
     nil
   end
 
-  def xrpc_get(path, params)
-    uri = URI.join(@api_base, path)
+  def xrpc_get(path, params, base: @api_base)
+    uri = URI.join(base, path)
     uri.query = URI.encode_www_form(params)
 
     request = Net::HTTP::Get.new(uri)

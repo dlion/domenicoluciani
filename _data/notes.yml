@@ -1,3 +1,13 @@
+- id: 'bsky-3mf6e5nea4s22'
+  date: 2026-02-19
+  mood: "🌱"
+  tags:
+    - updates
+  content: |
+    I implemented a Blue Sky sync with my blog note's section, every day at midnight a github action runs a script and it takes all new posts from my Blue Sky account and it adds them up into my notes page.
+    
+    God, I love being a software engineer. 🤖
+
 - id: 'bsky-3mf632znvis23'
   date: 2026-02-18
   mood: "🌱"

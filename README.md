@@ -267,6 +267,8 @@ Bluesky Notes Sync
 - Expected posting pattern: include `#notes` in each Bluesky post you want imported.
 - Mood mapping (first hashtag after `#notes`): `#updates -> 🌱`, `#ideas -> 💭`, `#reminder -> ✍️` (fallback: `🌱`).
 - All hashtags except `#notes` are added to `tags`.
+- Image embeds in Bluesky posts are appended to note content as Markdown images.
+- Reruns are idempotent: existing `bsky-*` notes are updated in place (same post id) instead of duplicated.
 - Daily window defaults to “yesterday” in `TARGET_TIMEZONE` (workflow default: `Europe/Madrid`).
 - Useful env vars:
   - `BLUESKY_HANDLE` (required)

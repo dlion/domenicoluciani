@@ -36,13 +36,17 @@ class BlueskyNotesSync
     posts = fetch_posts(window[:start_utc], window[:end_utc])
     puts "Fetched #{posts.length} Bluesky post(s) in time window."
 
-    notes = posts.filter_map { |post| build_note(post) }
+    notes = []
+    posts.each do |post|
+      note = build_note(post)
+      notes << note unless note.nil?
+    end
     puts "Found #{notes.length} post(s) tagged ##{@required_tag}."
 
-    added_count = prepend_new_notes(notes)
-    puts "Added #{added_count} note(s) to #{@notes_file}."
+    results = prepend_new_notes(notes)
+    puts "Added #{results[:added]} note(s), updated #{results[:updated]} note(s) in #{@notes_file}."
 
-    added_count
+    results[:changed]
   end
 
   private
@@ -119,7 +123,8 @@ class BlueskyNotesSync
           rkey: post_rkey(post_view["uri"]),
           created_at: created_at,
           text: record["text"].to_s,
-          facets: normalize_facets(record["facets"])
+          facets: normalize_facets(record["facets"]),
+          images: extract_images(post_view)
         }
       end
 
@@ -141,6 +146,7 @@ class BlueskyNotesSync
     mood = MOOD_BY_TAG.fetch(primary_tag, DEFAULT_MOOD)
 
     content = markdown_from(post[:text], post[:facets])
+    content = append_images_to_content(content, post[:images])
     if content.empty?
       content = "[View this post on Bluesky](#{post_url(post[:rkey])})"
     end
@@ -156,6 +162,54 @@ class BlueskyNotesSync
 
   def local_date(timestamp)
     with_timezone(@target_timezone) { timestamp.getlocal.strftime("%F") }
+  end
+
+  def extract_images(post_view)
+    images = []
+    embed = post_view["embed"]
+    return images unless embed.is_a?(Hash)
+
+    image_entries =
+      case embed["$type"]
+      when "app.bsky.embed.images#view"
+        embed["images"]
+      when "app.bsky.embed.recordWithMedia#view"
+        media = embed["media"]
+        if media.is_a?(Hash) && media["$type"] == "app.bsky.embed.images#view"
+          media["images"]
+        else
+          []
+        end
+      else
+        []
+      end
+
+    seen_urls = Set.new
+    Array(image_entries).each do |image_entry|
+      next unless image_entry.is_a?(Hash)
+
+      url = image_entry["fullsize"].to_s.strip
+      next if url.empty? || seen_urls.include?(url)
+
+      seen_urls << url
+      alt = image_entry["alt"].to_s.strip
+      images << { "url" => url, "alt" => (alt.empty? ? "Bluesky image" : alt) }
+    end
+
+    images
+  end
+
+  def append_images_to_content(content, images)
+    return content if images.nil? || images.empty?
+
+    image_lines = images.map { |image| markdown_image(image["alt"], image["url"]) }
+    return image_lines.join("\n") if content.empty?
+
+    "#{content}\n\n#{image_lines.join("\n")}"
+  end
+
+  def markdown_image(alt, url)
+    "![#{escape_markdown_label(alt)}](#{url})"
   end
 
   def extract_hashtags(text, facets)
@@ -281,27 +335,99 @@ class BlueskyNotesSync
   end
 
   def prepend_new_notes(notes)
-    return 0 if notes.empty?
+    return { added: 0, updated: 0, changed: 0 } if notes.empty?
 
     existing_text = File.exist?(@notes_file) ? File.read(@notes_file) : ""
     existing_ids = extract_existing_ids(existing_text)
+    updated_text = existing_text
+    added_notes = []
+    updated_notes = 0
 
-    deduped_notes = notes.reject { |note| existing_ids.include?(note["id"]) }
-    return 0 if deduped_notes.empty?
+    notes.each do |note|
+      id = note["id"].to_s.strip
+      if id.empty? || !existing_ids.include?(id)
+        added_notes << note
+        next
+      end
 
-    deduped_notes.sort_by! { |note| parse_time(note["date"]) || Time.at(0) }
-    deduped_notes.reverse!
-
-    return deduped_notes.length if @dry_run
-
-    rendered_notes = deduped_notes.map { |note| render_note(note) }.join("\n\n")
-    if existing_text.strip.empty?
-      File.write(@notes_file, "#{rendered_notes}\n")
-    else
-      File.write(@notes_file, "#{rendered_notes}\n\n#{existing_text.lstrip}")
+      replacement = render_note(note)
+      replaced_text, replaced_entries = replace_note_entry_by_id(updated_text, id, replacement)
+      if replaced_entries.positive? && replaced_text != updated_text
+        updated_text = replaced_text
+        updated_notes += 1
+      elsif replaced_entries.zero?
+        added_notes << note
+      end
     end
 
-    deduped_notes.length
+    added_count = added_notes.length
+    changed_count = added_count + updated_notes
+    return { added: added_count, updated: updated_notes, changed: changed_count } if @dry_run
+
+    rendered_new_notes = added_notes.map { |note| render_note(note) }.join("\n\n")
+    final_text = updated_text
+    unless rendered_new_notes.empty?
+      final_text =
+        if final_text.strip.empty?
+          "#{rendered_new_notes}\n"
+        else
+          "#{rendered_new_notes}\n\n#{final_text.lstrip}"
+        end
+    end
+
+    final_text = ensure_trailing_newline(final_text)
+    if final_text != existing_text
+      File.write(@notes_file, final_text)
+    else
+      changed_count = 0
+    end
+
+    { added: added_count, updated: updated_notes, changed: changed_count }
+  end
+
+  def replace_note_entry_by_id(existing_text, id, rendered_note)
+    lines = existing_text.lines
+    output = []
+    index = 0
+    replaced_entries = 0
+
+    while index < lines.length
+      line = lines[index]
+      entry_id = id_from_id_line(line)
+      if entry_id == id
+        replaced_entries += 1
+        index += 1
+        index += 1 while index < lines.length && !lines[index].start_with?("- ")
+        separator = index < lines.length ? "\n\n" : "\n"
+        output << "#{rendered_note}#{separator}"
+        next
+      end
+
+      output << line
+      index += 1
+    end
+
+    [output.join, replaced_entries]
+  end
+
+  def id_from_id_line(line)
+    return nil unless line.start_with?("- id:")
+
+    match = line.chomp.match(/\A-\s+id:\s*(.+?)\s*\z/)
+    return nil unless match
+
+    raw = match[1]
+    if raw.start_with?("'") && raw.end_with?("'")
+      raw[1..-2].gsub("''", "'")
+    elsif raw.start_with?("\"") && raw.end_with?("\"")
+      raw[1..-2].gsub("\\\"", "\"").gsub("\\\\", "\\")
+    else
+      raw
+    end
+  end
+
+  def ensure_trailing_newline(text)
+    text.end_with?("\n") ? text : "#{text}\n"
   end
 
   def extract_existing_ids(existing_text)
@@ -310,13 +436,14 @@ class BlueskyNotesSync
     loaded = YAML.safe_load(existing_text, permitted_classes: [Date, Time], aliases: false)
     return Set.new unless loaded.is_a?(Array)
 
-    ids = loaded.filter_map do |note|
+    ids = []
+    loaded.each do |note|
       next unless note.is_a?(Hash)
 
       id = note["id"].to_s.strip
       next if id.empty?
 
-      id
+      ids << id
     end
     Set.new(ids)
   rescue Psych::SyntaxError => error

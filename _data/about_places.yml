@@ -81,6 +81,10 @@
 - { name: Athens, country: GR, lat: 37.9838, lon: 23.7275, kind: visited }
 - { name: Chania, country: GR, lat: 35.5138, lon: 24.0180, kind: visited }
 
+# EUROPE — Turkey
+- { name: Istanbul, country: TR, lat: 41.0082, lon: 28.9784, kind: visited }
+- { name: Cappadocia, country: TR, lat: 38.6431, lon: 34.8270, kind: visited }
+
 # AFRICA — Morocco & Egypt
 - { name: Marrakech, country: MA, lat: 31.6295, lon: -7.9811, kind: visited }
 - { name: Fes, country: MA, lat: 34.0331, lon: -4.9995, kind: visited }

@@ -1,3 +1,11 @@
+- id: 'bsky-3mlg4cpa7v22l'
+  date: 2026-05-09
+  mood: "🌱"
+  tags:
+    - til
+  content: |
+    How to export your Health data from your smartwatch/mobile in Android -> Search "Health Connect" -> Manage Data -> Backup and Restore -> Export
+
 - id: 'bsky-3mk4dlpf3ws2u'
   date: 2026-04-22
   mood: "💭"

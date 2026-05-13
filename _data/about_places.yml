@@ -46,7 +46,6 @@
 # EUROPE — Portugal & Malta
 - { name: Lisbon, country: PT, lat: 38.7223, lon: -9.1393, kind: visited }
 - { name: Porto, country: PT, lat: 41.1579, lon: -8.6291, kind: visited }
-- { name: Madeira, country: PT, lat: 32.7607, lon: -16.9595, kind: visited }
 - { name: Malta, country: MT, lat: 35.8989, lon: 14.5146, kind: visited }
 
 # EUROPE — France

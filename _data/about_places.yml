@@ -90,6 +90,7 @@
 - { name: Essaouira, country: MA, lat: 31.5085, lon: -9.7595, kind: visited }
 - { name: Asilah, country: MA, lat: 35.4653, lon: -6.0349, kind: visited }
 - { name: Chefchaouen, country: MA, lat: 35.1715, lon: -5.2697, kind: visited }
+- { name: Taghazout, country: MA, lat: 30.5458, lon: -9.7069, kind: visited }
 - { name: Cairo, country: EG, lat: 30.0444, lon: 31.2357, kind: visited }
 - { name: Luxor, country: EG, lat: 25.6872, lon: 32.6396, kind: visited }
 - { name: Aswan, country: EG, lat: 24.0889, lon: 32.8998, kind: visited }

@@ -23,3 +23,15 @@
   display: block;
   object-position: 50% 70%;
 }
+
+.timeline .timeline-body .now-gallery-uncropped {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 220px));
+  align-items: start;
+}
+
+.timeline .timeline-body .now-gallery-uncropped img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: initial;
+  object-position: center;
+}

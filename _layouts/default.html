@@ -27,6 +27,7 @@ layout: none
 
     <title>{{ full_title | escape }}</title>
     <meta name="description" content="{{ page_desc | strip_html | strip_newlines | strip | escape }}">
+    {% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% endif %}
     <link rel="canonical" href="{{ canonical_url }}">
 
     {% include social-preview-meta.html title=full_title description=page_desc url=canonical_url %}

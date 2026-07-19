@@ -1,82 +1,137 @@
-/* Notes page (scoped) */
+/* Notes page: a lightweight, searchable digital-garden stream. */
 
-.notes-page {
-  margin-top: 8px;
-}
+.notes-page { margin-top: 8px; }
 
 .notes-filter {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface-2) 85%, transparent);
-  font-size: 0.88rem;
-  border-radius: 999px;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: .84rem;
 }
 
-.notes-filter[hidden] {
-  display: none;
-}
+.notes-filter[hidden],
+.note-item.is-hidden,
+.notes-month[hidden] { display: none; }
 
 .notes-filter-tag {
   color: var(--text);
   font-weight: 600;
 }
 
-.notes-filter-clear {
-  color: var(--muted);
-  text-decoration: none;
-}
-.notes-filter-clear:hover { color: var(--link); text-decoration: underline; }
-
 .notes-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
 }
 
-.note-item {
-  padding: 14px 0 16px;
-  border-bottom: 1px solid var(--border);
+.notes-month {
+  margin: 1.7rem 0 .25rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+  color: var(--muted);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
-.note-item:last-child { border-bottom: 0; }
+
+.notes-month:first-child { margin-top: .25rem; }
+
+.note-item {
+  position: relative;
+  padding: 18px 4px 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+  border-radius: 10px;
+  scroll-margin-top: 74px;
+  transition: background .18s ease, box-shadow .18s ease;
+}
+
+.note-item:target {
+  background: color-mix(in srgb, var(--link) 7%, transparent);
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--link) 7%, transparent);
+}
 
 .note-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  align-items: baseline;
-  margin-bottom: 8px;
+  gap: 8px 10px;
+  align-items: center;
+  margin-bottom: 9px;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 .note-marker {
-  font-size: 0.95rem;
+  width: 24px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface-2) 85%, transparent);
+  font-size: .9rem;
   line-height: 1;
 }
 
 .note-date {
-  font-size: 0.88rem;
   color: var(--muted);
+  font-size: .84rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.note-sep {
-  color: var(--muted);
-}
+.note-date:hover,
+.note-date:focus-visible { color: var(--link); text-decoration: underline; }
+
+.note-sep { color: var(--muted); }
 
 .note-location {
-  font-size: 0.92rem;
-  font-weight: 500;
   color: var(--text);
+  font-size: .86rem;
+  font-weight: 500;
+}
+
+.note-source {
+  color: var(--muted);
+  font-size: .76rem;
+  text-decoration: none;
+}
+
+.note-copy {
+  margin-left: auto;
+  padding: .25rem .45rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: .74rem;
+  cursor: pointer;
+}
+
+.note-source:hover,
+.note-copy:hover { color: var(--link); text-decoration: underline; }
+
+.note-date:focus-visible,
+.note-source:focus-visible,
+.note-copy:focus-visible,
+.note-tag:focus-visible,
+.note-photo-trail:focus-visible,
+.note-connections summary:focus-visible,
+.note-connections a:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--link) 66%, transparent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .note-content {
-  font-size: 1rem;
-  line-height: 1.65;
+  max-width: 76ch;
+  font-size: 1.02rem;
+  line-height: 1.68;
 }
 
-.note-content p { margin: 0 0 0.75rem; }
+.note-content p { margin: 0 0 .8rem; }
 .note-content p:last-child { margin-bottom: 0; }
 
 .note-content img,
@@ -84,13 +139,13 @@
 .note-content iframe {
   width: 100%;
   height: auto;
-  margin: 0.7rem 0 0.9rem;
-  border-radius: 0;
+  margin: .85rem 0 1rem;
+  border-radius: 12px;
   box-shadow: none;
 }
 
 .note-footer {
-  margin-top: 8px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -102,32 +157,76 @@
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 .note-tags-label {
-  font-size: 0.82rem;
   color: var(--muted);
+  font-size: .78rem;
 }
 
 .note-tag {
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 2px 8px;
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--surface-2) 85%, transparent);
+  color: var(--muted);
+  font-size: .8rem;
+  text-decoration: none;
 }
-.note-tag:hover { color: var(--link); }
 
-.note-related {
-  font-size: 0.82rem;
+.note-tag:hover,
+.note-tag:focus-visible { color: var(--link); }
+
+.note-photo-trail {
+  color: var(--muted);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: .76rem;
+  text-decoration: none;
+}
+
+.note-photo-trail:hover,
+.note-photo-trail:focus-visible { color: var(--link); text-decoration: underline; }
+
+.note-connections {
+  max-width: 76ch;
+  margin-top: 11px;
+  color: var(--muted);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: .78rem;
+}
+
+.note-connections summary {
+  width: fit-content;
+  padding: .2rem 0;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.note-connections summary:hover { color: var(--link); }
+
+.note-connections ul {
+  margin: .5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.note-connections li { margin: .35rem 0; }
+
+.note-connections a {
   color: var(--muted);
   text-decoration: none;
 }
-.note-related:hover { color: var(--link); text-decoration: underline; }
 
-.note-item.is-hidden { display: none; }
+.note-connections a:hover { color: var(--link); text-decoration: underline; }
 
-@media (min-width: 720px) {
-  .note-item { padding: 16px 0 18px; }
+@media (max-width: 560px) {
+  .note-item { padding: 16px 2px 18px; }
+  .note-copy { margin-left: 0; }
+  .note-content { font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note-item { transition: none; }
 }

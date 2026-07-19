@@ -12,6 +12,7 @@ kofi_link: "https://ko-fi.com/I2I23YM3I"
 # ——— Author ———
 author: "Domenico Luciani"
 author_avatar: "/assets/images/profile.png" # used by post layout
+bluesky_handle: "domenicoluciani.com"
 
 # Social links (render anywhere)
 links:
@@ -104,11 +105,8 @@ hero:
 # ——— About page config ———
 about:
   tagline: |-
-    Passionate programmer, 🧑🏻‍💻
-    with 10+ years of experience as a software engineer, including 8 years as eXtreme programmer 🪂🤸
-    Working remotely from Spain. 🛰️ 🇪🇸
-    Open Source enthusiast and greedy learner. 📚🧑🏻‍🏫🧑🏻‍🎓
-    Focusing on software craftsmanship, and product engineering. 🪚🔨📐
+    Software engineer with 10+ years of experience, including eight years practising eXtreme Programming. 🧑🏻‍💻
+    Working remotely from Málaga and learning in public through open source, writing, and experiments. 🌱
   location: Málaga, ES 🇪🇸
   github:
     username: dlion

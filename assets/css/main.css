@@ -253,6 +253,23 @@ h2 { font-size: clamp(22px, 2.2vw, 28px); }
 p { margin: .9em 0; color: var(--text); }
 .muted { color: var(--muted); }
 
+.page-header {
+  margin-bottom: 1.35rem;
+}
+
+.page-header h1 {
+  margin: 0 0 .25rem;
+}
+
+.page-header .page-desc {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.page-content > h2[id] { scroll-margin-top: 76px; }
+
 /* Home hero */
 .home-hero {
   position: relative;

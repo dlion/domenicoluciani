@@ -10,7 +10,7 @@ layout: none
     <meta name="theme-color" content="#ffffff">
     <script data-cfasync="false" src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=11' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=12' | relative_url }}">
 
     {% assign page_title = page.title | default: site.title %}
     {% if page.url == '/' or page_title == 'Home' %}
@@ -55,7 +55,7 @@ layout: none
     {% endif %}
     {% if page.extra_css %}
       {% for css in page.extra_css %}
-        <link rel="stylesheet" href="{{ '/assets/css/' | append: css | append: '.css?v=1' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/' | append: css | append: '.css?v=2' | relative_url }}">
       {% endfor %}
     {% endif %}
   </head>
@@ -174,7 +174,7 @@ layout: none
     {% endif %}
     {% if page.extra_js %}
       {% for js in page.extra_js %}
-        <script src="{{ '/assets/js/' | append: js | append: '.js?v=1' | relative_url }}" defer></script>
+        <script src="{{ '/assets/js/' | append: js | append: '.js?v=2' | relative_url }}" defer></script>
       {% endfor %}
     {% endif %}
     <script data-cfasync="false" src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

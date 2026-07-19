@@ -153,6 +153,7 @@ class BlueskyNotesSync
 
     {
       "id" => "bsky-#{post[:rkey]}",
+      "source_url" => post_url(post[:rkey]),
       "date" => local_date(post[:created_at]),
       "mood" => mood,
       "tags" => note_tags,

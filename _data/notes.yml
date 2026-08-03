@@ -1,3 +1,11 @@
+- id: 'bsky-3ms3mdjffek2d'
+  date: 2026-08-02
+  mood: "🌱"
+  tags:
+    - rant
+  content: |
+    One thing I really like about Claude in VSCode is that I can submit feedback just selecting the plan's text, then once I have done it for every bit I just send it and Claude take that to re-elaborate. When I switch to Codex I feel slower and this feature is definitely missing.
+
 - id: 'bsky-3mlg4cpa7v22l'
   date: 2026-05-09
   mood: "🌱"

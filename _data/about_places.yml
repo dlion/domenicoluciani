@@ -1,15 +1,15 @@
 # EUROPE — Spain (incl. islands & territories)
-- { name: Malaga, country: ES, lat: 36.7213, lon: -4.4214, kind: living }
+- { name: Málaga, country: ES, lat: 36.7213, lon: -4.4214, kind: living }
 - { name: Barcelona, country: ES, lat: 41.3874, lon: 2.1686, kind: lived }
 - { name: Gran Canaria, country: ES, lat: 28.1248, lon: -15.4300, kind: lived }
 - { name: Madrid, country: ES, lat: 40.4168, lon: -3.7038, kind: visited }
 - { name: Seville, country: ES, lat: 37.3891, lon: -5.9845, kind: visited }
-- { name: Cadiz, country: ES, lat: 36.5271, lon: -6.2886, kind: visited }
+- { name: Cádiz, country: ES, lat: 36.5271, lon: -6.2886, kind: visited }
 - { name: Ronda, country: ES, lat: 36.7460, lon: -5.1612, kind: visited }
 - { name: Toledo, country: ES, lat: 39.8628, lon: -4.0273, kind: visited }
-- { name: A Coruna, country: ES, lat: 43.3623, lon: -8.4115, kind: visited }
+- { name: A Coruña, country: ES, lat: 43.3623, lon: -8.4115, kind: visited }
 - { name: Granada, country: ES, lat: 37.1773, lon: -3.5986, kind: visited }
-- { name: Cordoba, country: ES, lat: 37.8882, lon: -4.7794, kind: visited }
+- { name: Córdoba, country: ES, lat: 37.8882, lon: -4.7794, kind: visited }
 - { name: Almería, country: ES, lat: 36.8340, lon: -2.4637, kind: visited }
 - { name: Tarragona, country: ES, lat: 41.1189, lon: 1.2445, kind: visited }
 - { name: Sitges, country: ES, lat: 41.2379, lon: 1.8059, kind: visited }
@@ -62,19 +62,24 @@
 
 # EUROPE — DACH, Nordics & Central/Eastern
 - { name: Copenhagen, country: DK, lat: 55.6761, lon: 12.5683, kind: visited }
-- { name: Malmo, country: SE, lat: 55.6050, lon: 13.0038, kind: visited }
+- { name: Malmö, country: SE, lat: 55.6050, lon: 13.0038, kind: visited }
 - { name: Munich, country: DE, lat: 48.1351, lon: 11.5820, kind: visited }
 - { name: Dresden, country: DE, lat: 51.0504, lon: 13.7373, kind: visited }
 - { name: Berlin, country: DE, lat: 52.5200, lon: 13.4050, kind: visited }
 - { name: Vienna, country: AT, lat: 48.2082, lon: 16.3738, kind: visited }
 - { name: Zurich, country: CH, lat: 47.3769, lon: 8.5417, kind: visited }
 - { name: Prague, country: CZ, lat: 50.0755, lon: 14.4378, kind: visited }
-- { name: Terezin, country: CZ, lat: 50.5100, lon: 14.1500, kind: visited }
+- { name: Terezín, country: CZ, lat: 50.5100, lon: 14.1500, kind: visited }
 - { name: Budapest, country: HU, lat: 47.4979, lon: 19.0402, kind: visited }
 - { name: Bucharest, country: RO, lat: 44.4268, lon: 26.1025, kind: visited }
 - { name: Stockholm, country: SE, lat: 59.3293, lon: 18.0686, kind: visited }
 - { name: Oslo, country: "NO", lat: 59.9139, lon: 10.7522, kind: visited }
 - { name: Iceland, country: IS, lat: 64.9631, lon: -19.0208, kind: visited }
+
+# EUROPE — Poland
+- { name: Kraków, country: PL, lat: 50.0614, lon: 19.9378, kind: visited }
+- { name: Oświęcim (Auschwitz-Birkenau), country: PL, lat: 50.0266, lon: 19.2036, kind: visited }
+- { name: Wieliczka Salt Mine, country: PL, lat: 49.9832, lon: 20.0556, kind: visited }
 
 # EUROPE — Greece
 - { name: Athens, country: GR, lat: 37.9838, lon: 23.7275, kind: visited }
